@@ -1,0 +1,987 @@
+
+%\documentclass[mathserif,aspectratio=1610]{beamer}
+\documentclass[mathserif,handout,aspectratio=1610]{beamer}
+%\usepackage{beamerthemeshadow}
+%\documentclass[mathserif]{beamer}
+
+\input{$HOME/tex/inputs/defsSkript}%$
+\input{$HOME/tex/inputs/styleBeamerVkoekMa}%$
+%\input{styleBeamerVkoekMa}%$
+
+\usepackage{graphicx}
+
+\newcommand{\pathDiscrChoice}{$HOME/vorlesungen/Verkehrsoekonometrie_Ma/discrChoice_cc_Levmar} %$
+
+%##############################################################
+
+\begin{document}
+
+\section{Chapter 7: Discrete-Choice Theory: the Basics}
+
+%###################################################
+\frame{  %title layout
+%###################################################
+\makePale{1.00}{0.50}{0.70}{1.40}{1.40}
+
+\placebox{0.50}{0.45}{
+  \figSimple{1.10\textwidth}{figsDiscr/vierstufenmodellDiscr_eng.png}}
+%makePale{opacity}{centerXrel}{centerYrel}{wrel}\{hrel} 
+\makePale{0.70}{0.50}{0.70}{1.40}{1.40}
+
+\placebox{0.50}{0.90}{\parbox{0.8\textwidth}{\myheading{
+7. Discrete-Choice Theory: the Basics
+}}}
+
+\placebox{0.45}{0.40}{\parbox{0.8\textwidth}{
+{\large
+\bi
+\item 7.1 The Nature of Discrete Decisions
+\item 7.2 Basic Concepts: Alternatives, Utilities, Homo Oeconomicus
+\item 7.3 Deterministic utilities and how to model them
+\item 7.4 Random Utilities
+\item 7.5 Choice Probabilities
+\ei
+}
+}}
+
+}
+
+
+
+
+\subsection{7.1 The Nature of Discrete Decisions}
+
+%##############################################################
+\frame{\frametitle{7.1 The Nature of Discrete Decisions}
+%##############################################################
+
+\visible<1>{\placebox{0.50}{0.43}{
+  \figSimple{1.10\textwidth}{figsDiscr/vierstufenmodellDiscr1_eng.png}}}
+\visible<2>{\placebox{0.50}{0.43}{
+  \figSimple{1.10\textwidth}{figsDiscr/vierstufenmodellDiscr2_eng.png}}}
+\visible<3>{\placebox{0.50}{0.43}{
+  \figSimple{1.10\textwidth}{figsDiscr/vierstufenmodellDiscr3_eng.png}}}
+\visible<4>{\placebox{0.50}{0.43}{
+  \figSimple{1.10\textwidth}{figsDiscr/vierstufenmodellDiscr4_eng.png}}}
+\visible<5>{\placebox{0.50}{0.43}{
+  \figSimple{1.10\textwidth}{figsDiscr/vierstufenmodellDiscr5_eng.png}}}
+
+\placebox{0.50}{0.84}{Example: the four-step model of transportation planning}
+
+}
+
+\subsection{7.2 Basic Concepts: Alternatives, Utilities, and Homo Oeconomicus}
+
+%##############################################################
+\frame{\frametitle{7.2 Basic Concepts: Alternatives}
+%##############################################################
+
+\bi
+\item Each person  $n$ has a certain set of discrete
+  alternatives: 
+  ${\cal A}_n=\{a_{ni}\}$ containing alternatives $i=1, ..., I_n$.\\
+\colAnswer{Example: Person~1 can chose the modes pedestrian or public
+  transport, Person~2 pedestrian, bike, and car}\\[1em]
+
+\pause \item The number $I_n$ of alternatives is finite and should not
+be too large. \\
+\colAnswer{Example: speeding or not speeding;}
+\red{counterexample: choosing the speed [km/h]}\\[1em]
+
+\pause \item The alternative set needs to be \bfdef{exclusive}
+  (non-cumulative), i.e., a 
+  person can chose at most one alternative. \\
+\colAnswer{Example: you
+    cannot live at two places simultaneously}\\[1em]
+
+\pause \item The set must be \bfdef{complete}, i.e., at least one
+  alternative must be chosen. Complete and exclusive $\Rightarrow$
+  exactly one alternative must be chosen. \\
+\red{Counterexample: Till
+    Eulenspiegel adopted several (fake) professions}\\[1em]
+
+\pause \item The alternatives need to be sufficiently different 
+from each other. \\
+\red{Counterexample: two routes differing by only a
+ small fraction of links}
+\ei
+
+}
+
+%##############################################################
+\frame{\frametitle{Questions on specifying alternatives}
+%##############################################################
+
+\bi
+\itemAsk \colAsk{What to do if a person has the option to
+not select anything or possibly select something that is not on the list?}
+
+\pause\itemAnswer \colAnswer{Just include a ``do-nothing'' and/or an
+  ``other'' alternative} \\[1.2ex]
+
+\pause\itemAsk \colAsk{What to do if multi-modal trips (e.g., bike+tram) are
+  possible?} 
+\pause\itemAnswer \colAnswer{Just add a ``multi-modal'' alternative}\\[1.2ex]
+
+\pause\itemAsk \colAsk{Assume that someone  has no
+car or bike available. How to model the four alternatives 
+ped, bike, car, PT for this person? Give two possible solutions}
+\pause\itemAnswer \colAnswer{1. Exclude these alternatives for this person
+  by reducing his/her choice set ${\cal A}_n$;\\ 2. Give prohibitive
+  penalties for the ``forbidden'' alternatives }\\[1.2ex]
+
+\pause\itemAsk \colAsk{Explain ``sufficiently different alternatives'' by red and
+blue buses.}
+\pause\itemAnswer \colAnswer{Red and blue buses are much less different than
+both buses from trams, and even buses and trams have many ``public
+transport'' 
+commonalities (such as fixed schedules and stops), hence are very
+similar compared to, e.g., cars or bikes}\\[1.2ex]
+
+\pause\itemAsk \colAsk{What to do with continuous alternatives such as
+  desired speed?} 
+\pause\itemAnswer \colAnswer{Define ordinal scales (speed classes) or
+  nominal scales (speeding or not speeding)}
+\ei
+}
+
+%##############################################################
+\frame{\frametitle{7.2 The essence of the Homo Oeconomicus: two alternatives}
+%##############################################################
+
+\visible<1> {\placebox{0.50}{0.54}
+ {\figSimple{0.65\textwidth}{figsDiscr/zweiAlternat-U3_eng.png}}}
+
+\visible<2> {\placebox{0.50}{0.54}
+ {\figSimple{0.65\textwidth}{figsDiscr/zweiAlternat-U4_eng.png}}}
+
+\visible<3->{\placebox{0.50}{0.54}
+ {\figSimple{0.65\textwidth}{figsDiscr/zweiAlternat-U5_eng.png}}}
+
+\visible<1> {\placebox{0.15}{0.12}{\textbf{Time $\bfmath{t_0}$}:}}
+\visible<1> {\placebox{0.60}{0.12}{\parbox{0.75\textwidth}{
+Chosen alternative $i\sub{selected}=\text{arg} \max_i U_i=1$ 
+ (public transport)
+}}}
+
+\visible<2> {\placebox{0.15}{0.12}{\textbf{Time $\bfmath{t_1}$}:}}
+\visible<2> {\placebox{0.60}{0.12}{\parbox{0.75\textwidth}{
+Chosen alternative $i\sub{selected}=\text{arg} \max_i U_i=1$ 
+ (public transport)
+}}}
+
+
+\visible<3> {\placebox{0.15}{0.12}{\textbf{Time $\bfmath{t_2}$}:}}
+\visible<3> {\placebox{0.60}{0.12}{\parbox{0.75\textwidth}{
+Chosen alternative $i\sub{selected}=\text{arg} \max_i U_i=2$ 
+ (car) \\
+\bfred{sudden change $\bfmath{\Rightarrow}$ intrinsically nonlinear response!}
+}}}
+
+
+}
+
+%##############################################################
+\frame{\frametitle{Decisions under uncertainty}
+%##############################################################
+
+\fig{0.95\textwidth}{figsDiscr/zweiAlternat-P_eng.png}
+
+\bdm
+\text{Alternative } i\sub{selected}=\text{arg} \max_i U_i
+= \text{arg} \max_i V_i+\epsilon_i
+\edm
+
+\bi
+\pause\item On an \emph{individual} level, the decision is ``yes''
+  (1) or ``no'' (0)
+\pause\item On an \emph{aggregated} level, we have a certain
+  probability between  0 and 1.
+\ei
+}
+
+%##############################################################
+\frame{\frametitle{Structure and classification of dicrete-choice models}
+%##############################################################
+
+\visible<1> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng2.png}}}
+
+\visible<2> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng3.png}}}
+
+\visible<3> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng4.png}}}
+
+\visible<4> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng5.png}}}
+
+\visible<5> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng6.png}}}
+
+\visible<6> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng7.png}}}
+
+\visible<7> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng8.png}}}
+
+\visible<8> {\placebox{0.50}{0.44}
+ {\figSimple{0.95\textwidth}{figsDiscr/discrKomp_eng9.png}}}
+
+
+}
+
+
+\subsection{7.3 Deterministic Utilities}
+
+
+%##############################################################
+\frame{\frametitle{7.3 Deterministic Utilities}
+%##############################################################
+\bi
+\item The \bfdef{deterministic utilities} $V_{ni}$ of alternative
+  $i$ for person $n$ are like the endogenous
+variables of regression models: continuous and made up of linear
+factors:
+\bdm
+V_{ni}=\sum_m \beta_{m} X_{mni}
+\edm
+\vspace{-0.8em}
+
+\pause \item The person index (or choice-set index) $n$ plays the role of a
+  data-point index $i$ in regression models (the index naming is by
+  convention) and $X_{mni}$ corresponds to the system matrix.
+\\[1em]
+
+\pause \item The factors may contain alternative-specific constants and
+three categories of exogenous variables: 
+\bi
+\item \bfdef{alternative-specific constants (ACs)}
+  play the role of constants in regression models,
+\item \bfdef{characteristics} are attributes of the alternatives,
+\item \bfdef{socioeconomic factors} are attributes of the decision makers,
+\item \bfdef{external factors} depend neither on the alternatives nor the
+  persons but influence the decisions.
+\ei
+
+
+\ei
+}
+
+
+%##############################################################
+\frame{\frametitle{Factors I: Alternative-specific constants (ACs)}
+%##############################################################
+\bi
+\item In most situations, there are systematic (``ad-hoc'')
+  preferences for certain 
+  alternatives not 
+  explained by the characteristics or socioeconomic variables.
+\pause \item Since only utility
+  \emph{differences} are relevant for the choice, 
+normal constants are of no use. We need
+  \bfdef{alternative-specific constants} or \bfdef{ACs} which are
+  essentially \emph{selector dummy variables}: 
+\bdm
+V_{ni}=\beta_{01}\delta_{1i}+...+\beta_{0,I-1}\delta_{I-1,i},\quad
+\delta_{ji}=\twoCases{1}{i=j}{0}{i\neq j}
+\edm
+\pause \item The parameter $\beta_{0i}$ denotes the \bfdef{ad-hoc
+  preference}  of Alternative
+  $i$ (in utility units) over 
+the \bfdef{reference alternative }$I$ if all non-AC factors are zero.
+\ei
+\bi
+
+\pause \itemAsk \colAsk{What would happen if using a normal 
+constant, $V_{ni}=\beta_0$? }\\[-0.5ex]
+\pause \colAnswer{\scriptsize{Nothing since the utility differences
+    are unchanged}}
+
+\pause \itemAsk \colAsk{Give the ad-hoc preference of 
+alternative $j$ over $k$, $j,k \neq I$}\\[-0.5ex]
+\pause
+\colAnswer{\scriptsize{$\beta_{0j}\delta_{ji}-\beta_{0k}\delta_{ki}$
+    such that $V_{nj}-V_{nk}=\beta_{0j}-\beta_{0k}+ \text{other
+      factors}$}}
+
+\pause \itemAsk \colAsk{What changes when making Alternative 1 the
+reference?}\\[-0.5ex]
+\pause \colAnswer{\scriptsize{$V_{ni}=\beta_{02}\delta_{2i}+ ... 
++ \beta_{0I}\delta_{Ii}$}}
+\ei
+
+}
+
+
+
+%##############################################################
+\frame{\frametitle{Factors II: Characteristics}
+%##############################################################
+\bi
+\item The characteristic $C_{mni}$ is the $m\sup{th}$ attribute of
+  alternative $i$ for person (choice set) $n$.
+
+\pause \item Examples: 
+\bi
+\item Complex travel time $C_{1in}=T_{ni}$ for person $n$ when
+  travelling by transport mode $i$,
+\item Ad-hoc costs $C_{2in}=C_{ni}$ for person $n$ when using mode $i$
+\ei
+
+\pause \item Characteristics can be identified directly with factors,
+$X_{mni}=C_{mni}$. Modelling variants:
+\bi
+\item \bfdef{generic} ansatz
+  $V_{ni}=...+\beta_mC_{mni}$  (the same parameter $\beta_m$ for all alternatives $i$),
+\item \bfdef{alternative-specific} ansatz
+  $V_{ni}=...+\beta_{mi}C_{mni}$ with
+  alternative-specific parameters $\beta_{mi}$.
+\ei
+\ei
+
+
+\bi
+\pause \itemAsk Which way is to be preferred when modelling 
+(i) travel times and
+(ii) costs? (justify!)\\[-0.5ex]
+\pause
+\colAnswer{\scriptsize{One minute of public transport is weighted
+    differently to a bike minute $\Rightarrow$ model travel times
+    alternative-specifically. 
+    However, people typically have only one \emph{mental account} for
+    small spendings $\Rightarrow$ model costs
+    generically}}
+\pause \itemAsk Give an example of a characteristic not depending
+ on the person.\\[-0.5ex]
+\pause
+\colAnswer{\scriptsize{Tricky since both time and costs generally
+    depend on the person (even for the same OD
+    relation). \emph{Reliability} would be a good candidate}}
+\ei
+
+}
+
+
+%##############################################################
+\frame{\frametitle{Factors III: Socio-economic variables}
+%##############################################################
+\bi
+\item The \bfdef{socioeconomic variable} $S_{mn}$ denotes the $m\sup{th}$
+  attribute of person $n$, e.g., age, gender, income, or
+  the distance to the next PT station.\\[1ex]
+
+\pause\item Sometimes, socio-economic variables have a \emph{nominal}
+scaling, e.g. having a season ticket or not, or the gender $g_n$ with
+the values \emph{male} and \emph{female}. As 
+in regression, the way to deal with this are \bfdef{dummy variables},
+e.g. 
+\bdm
+g_n=\twoCases{1}{\visible<2->{\femalepng}}{0}{\visible<2->{\malepng}}
+\edm
+
+\pause \item Since, by definition, socio-economic variables do \emph{not}
+  depend on the alternative and the choice depend on utility
+  \emph{differences}, they cannot identified directly as a
+  factor.\\[1ex]
+\pause \item Instead, there are two ways to specify valid linear factors: 
+\benum
+\item formulate it in an alternative-specific way with ACs:
+\bdm
+V_{ni}=...+\beta_{m1}S_{mn}\delta_{1i}+...+\beta_{m,I-1}S_{mn}\delta_{I-1,i},\quad
+\delta_{ji}=\twoCases{1}{i=j}{0}{i\neq j}
+\edm
+\pause \item let it \bfdef{interact} with a characteristic $m'$, e.g.,
+  $X_{mni}=S_{mn}C_{m'ni}$ and model it in an alternative-specific way
+  $V_{ni}= ... + \beta_{mi}S_{mn}C_{m'ni}$
+\eenum
+
+\ei
+}
+
+
+%##############################################################
+\frame{\frametitle{Questions on socio-economic variables}
+%##############################################################
+
+\bi
+\itemAsk \colAsk{What would happen when setting
+$V_{ni}=...+\beta_mS_{mn}$ for all $i$?}\\
+\pause \colAnswer{\small{nothing}}
+
+\pause \itemAsk \colAsk{How to model that woman prefer 
+PT over other modes more than men?}\\
+
+\pause \colAnswer{\small{
+Assume $i=3$ is the PT
+ and $S_{mn}=g_n=1$ for woman and =0 for men. 
+
+\bi
+\colAnswer{
+\item If the PT alternative $i=3$ is not the reference alternative, add
+    a term $ +\beta_g g_n\delta_{i3}$
+with $\beta_g$ expected to be
+    positive
+
+\item If the PT alternative $i=3$ is the reference, then add a term
+$-\beta_g g_n\sum_{j\neq 3} \delta_{ji}$
+ where $\beta_g$ has
+    \emph{exactly} the same value \colAsk{(why?)}
+}
+\ei}}
+
+
+\pause \itemAsk \colAsk{How to model an income-dependent time sensitivity?}\\
+\pause \colAnswer{\small{Let the income $I_n$ interact with the
+    travel time by a factor $+\beta_{I}I_nT_{ni}$ with $\beta_{I}$
+    expected to be negative}}
+\pause \itemAsk \colAsk{Why it is not possible to use the age directly?}\\
+\pause \colAnswer{\small{Since very young and very old persons
+    often act more similar than middle-aged persons, age (as a
+    socio-economic variable) needs not
+    only be coupled to ACs or characteristics but also be formulated
+    in terms of age-group dummies, e.g., $S_{yn}=1$ if young, zero
+    otherwise,  $S_{on}=1$ if old, zero
+    otherwise (the reference is the ``middle age'')}}
+
+\ei
+}
+
+
+%##############################################################
+\frame{\frametitle{Factors IV: External variables}
+%##############################################################
+\bi
+\item \bfdef{External variables} influence the decisions although they neither
+  depend on the alternatives nor the persons, e.g., the weather with
+  the dummy $W=0$
+  (no rain) or $W=1$ (rain).
+\pause \item The specification depends on the way they influence decisions:
+\bi
+\item Affecting the alternatives directly: $X_{mni}=W\delta_{mi}$,
+\item affecting the \emph{alternatives} indirectly via a characteristic
+  $m'$, e.g. travel time:  $X_{mni}=WC_{m'ni}$,
+\item affecting the \emph{decision maker} via a socioeconomic
+  attribute $m'$, e.g., the gender:
+   $X_{mni}=WS_{m'n}\delta_{mi}$,
+\item combinations thereof.
+\ei
+\ei
+
+\pause 
+
+{\small
+\colAsk{Assume there are three modes bike, PT and car and define
+$W=0$ (not snowing) and $W=1$ (snowing). Model the effect of snow on
+the decision making in following situations:}
+
+\bi
+\itemAsk \colAsk{The car becomes less attractive because I need to
+  shovel off the snow} 
+ \pause \colAnswer{\scriptsize{On-off disutility
+    $\Rightarrow$ coupling $W$ directly
+    with the AC for cars}}
+
+\pause \itemAsk \colAsk{The bike is protected in a shed but driving becomes
+  less attractive because the road is slippery 
+  and it's cold} 
+ \pause \colAnswer{\scriptsize{Disutility increases with time
+      $\Rightarrow$ let the weather dummy interact
+      with the bike travel time}}
+\pause \itemAsk \colAsk{Woman dislike biking even more than men when
+  it's snowing}
+ \pause \colAnswer{\scriptsize{Make a douple interaction 
+gender dummy-weather dummy-bike travel time (in addition to the
+previous factor)}}
+\ei
+}
+}
+
+%##############################################################
+\frame{\frametitle{Wrap up: modelling a certain choice situation}
+%##############################################################
+
+{\small
+Given is a SP survey for mode choice with three
+alternatives 
+\bi
+\item $i=1$: pedestrian mode: door-to-door travel time $T_1$
+\vspace{-0.5em}
+
+\item $i=2$: bicycle: door-to-door travel time $T_2$
+\vspace{-0.5em}
+
+\item $i=3$: motorized: door-to-door travel time $T_3$, ad-hoc costs
+  $C_3$
+\ei
+
+Furthermore, we distinguish the gender of the deciding person ($g=0$:
+male; $g=1$: female) and the weather ($W=0$: good; $W=1$: bad).
+\bi
+\itemAsk Specify a model for generic time and
+  cost sensitivities making $i=3$ the reference. Give the meaning and
+  expected signs of
+  the parameters. 
+\pause \itemAsk Now, formulate the travel time dependence
+  alternative-specifically.
+\pause \itemAsk Include the weather dependence assuming that the
+  motorized mode is favoured in bad weather proportionally to the travel time.
+\pause \itemAsk Now assume that women give the motorized modes a
+  fixed ``bonus'' compared to men and that they also are more sensitive to
+  the weather.
+\pause \itemAsk Which parameters would change in which way (i) if $W=1$
+  stands for good instead of bad weather; (ii) if $g=1$ stands for
+  men instead of woman; (iii) if the reference alternative is $i=1$
+  instead of $i=3$?
+\ei
+}
+
+}
+
+
+%##############################################################
+\frame{\frametitle{Example: SP In-class survey WS18/19 
+\red{(red: bad weather)}}
+%##############################################################
+
+\placebox{0.34}{0.45}{\parbox{0.7\textwidth}
+{\small
+\begin{tabular}{|r||c|c|c||r|r|r|}
+\hline 
+\myBox{2.5em}{Choice\\Set} &
+  \myBox{3em}{Alt. 1:\\Ped} &
+  \myBox{3em}{Alt. 2:\\Bike} &
+  \myBox{3em}{Alt. 3:\\ PT/Car} &
+  Alt 1 & Alt 2 & Alt 3 \\ \hline\hline
+1  & 30\,min & 20\,min & 20\,min+0\euro{} & 1  & 3 & 7 \\[0.1em] \hline
+2  & 30\,min & 20\,min & 20\,min+2\euro{} & 2  & 9 & 2\\[0.1em] \hline
+3  & 30\,min & 20\,min & 20\,min+1\euro{} & 1  & 5 & 7\\[0.1em] \hline
+4  & 30\,min & 20\,min & 30\,min+0\euro{} & 2  & 9 & 3\\[0.1em] \hline
+5  & 50\,min & 20\,min & 30\,min+0\euro{} & 0  & 9 & 4\\[0.1em] \hline
+6  & 50\,min & 30\,min & 30\,min+0\euro{} & 0  & 3 & 9\\[0.1em] \hline
+7  & 50\,min & 40\,min & 30\,min+0\euro{} & 0  & 2 & 10\\[0.1em] \hline
+8  & 180\,min & 60\,min & 60\,min+2\euro{} & 0 & 4 & 11\\[0.1em] \hline
+9  & 180\,min & 40\,min & 60\,min+2\euro{} & 0 & 9 & 6\\[0.1em] \hline
+\red{10}  & \red{180\,min}  & \red{40\,min} & \red{60\,min+2\euro{}}
+  & \red{0}  & \red{1}  & \red{14}                   \\[0.1em] \hline
+11 & 12\,min & 8\,min & 10\,min+0\euro{} & 3  & 5 & 6\\[0.1em] \hline
+12 & 12\,min & 8\,min & 10\,min+1\euro{} & 5  & 7 & 2\\[0.1em] \hline
+\end{tabular}
+}}
+
+\placebox{0.84}{0.45}{\parbox{0.3\textwidth}{
+{\small
+\begin{center}
+$
+\begin{array}{lll}
+ V_i &= & \beta_0\delta_{i1} + \beta_1\delta_{i2}\\
+& + & \beta_2 K_i\\
+& + & \beta_{31} T_1\delta_{i1}+ \beta_{32} T_2\delta_{i2}\\
+& + & \beta_{33} T_3\delta_{i3}+\beta_4 W\delta_{i3}
+\end{array}
+$
+\\[2em]
+or
+\\[2em]
+$
+\begin{array}{l}
+V_1 =  \beta_0 + \beta_2 K_1 + \beta_{31} K_1,\\
+V_2 =  \beta_1 + \beta_2 K_2 + \beta_{32} K_2,\\
+V_3 =  \beta_2 K_3 + \beta_{33} K_3+\beta_4 W  
+\end{array}
+$
+\end{center}
+}
+}}
+
+}
+
+
+\subsection{7.4 Random Utilities}
+
+%##############################################################
+\frame{\frametitle{7.4 Random Utilities\\
+where do randum utilities come from?}
+%##############################################################
+\bi
+\item Not all relevant characteristics $\vec{C}$ and socioeconomic
+  variables $\vec{S}$ are included:
+\bdm
+U_i=U(\underbrace{\vec{C}_i, \vec{S}}_{\textrm{known}}, 
+          \underbrace{\vec{C}'_i, \vec{S}'}_{\textrm{unknown}})
+  =V(\vec{C}_i, \vec{S})+ \epsilon^{(1)}_i.
+\edm
+\red{whatch out} for neglected systematic influences leading to a bias
+
+\pause \item Measuring/observation errors
+\bdm
+U_i=U(\vec{C}_i \underbrace{+\vec{\epsilon}_i}_{\textrm{measuring\ error}}, 
+  \vec{S} \underbrace{+\vec{\epsilon}}_{\textrm{measuring\ error}})
+  =V(\vec{C}_i, \vec{S}) + \epsilon^{(2)}_i.
+\edm
+
+\pause \item Relevant variables are only indirectly observable via
+  \bfdef{instrument variables} such as the address $S'$ of one's home for
+  the income $S$:
+\bdm
+U_i=U(\vec{C}_i, \vec{S})
+  =V(\vec{C'}_i, \vec{S}')+ \epsilon^{(3)}_i.
+\edm
+
+
+\pause \item True irrationality $\epsilon^{(4)}_i$.
+\ei
+}
+
+\subsection{7.5 Choice Probabilities}
+
+%##############################################################
+\frame{\frametitle{7.5 Choice probabilities}
+%##############################################################
+
+\bi
+\item The three basic components of discrete-choice models are
+  \bfdef{determinstic (explained)
+utilities} $V_i$, \bfdef{random utilities (RUs)} $\epsilon_i$, and a decision
+rule based on the 
+\bfdef{Homo Oeconomicus}:
+
+\maindm{i\sub{selected}=\text{arg} \max_i U_i
+= \text{arg} \max_i (V_i+\epsilon_i)}
+\vspace{0.5em}
+
+\pause\item By virtue of the RUs, this microscopically fixed decision
+rule leads 
+to \bfdef{choice probabilities} $P_i$ when aggregating over many
+decisions. 
+\ei
+\vspace{0.5em}
+
+\begin{align*}
+ \visible<3->
+  {\text{\emph{Binomial case: \quad }}P_1 &= \text{Prob}(U_1 \ge U_2)\\}
+ \visible<4->{&= \text{Prob}(V_1+\epsilon_1\ge V_2+\epsilon_2)\\}
+ \visible<5->{&= \text{Prob}(\epsilon_2-\epsilon_1\le V_1-V_2)\\}
+ \visible<6->{&= F_{\epsilon_2-\epsilon_1}(V_1-V_2)}
+\end{align*}
+}
+
+
+%##############################################################
+\frame{\frametitle{Questions on choice probabilities}
+%##############################################################
+
+\bi
+\itemAsk \colAsk{What does this general result 
+$P_1=F_{\epsilon_2-\epsilon_1}(V_1-V_2)$  mean in words?}\\
+\pause \colAnswer{\scriptsize{The probability of chosing 
+   alternative~1 ist given
+    by the  distribution function of the RU
+    difference at the deterministic utility difference}}
+
+\pause \itemAsk \colAsk{Is the result plausible? Check the change if
+  $V_1-V_2$ changes and the limits of $V_1-V_2\to \pm \infty$}\\
+\pause \bi
+\colAnswer{\scriptsize{
+\item The probability depends only on the deterministic utility
+  difference $V_1-V_2$ OK
+\item The sensitivity $\partial P_1/\partial \Delta
+  V=f_{\epsilon_2-\epsilon_1}(\Delta V)$ is given by the probability
+  density of the RU diference, i.e. nonnegative OK
+\item For $\Delta V\to -\infty$, we obtain $P_1\to 0$ because of the
+  s-shaped form of the distribution function OK \\[-0.5ex]
+\item For the same reason, $P_1\to 1$ for $\Delta V\to +\infty$ OK
+}}
+\ei
+
+
+\pause \itemAsk \colAsk{Derive explicit formulas for 
+$\epsilon_i \sim$ i.i.d $U(-1,1)$
+and $\epsilon_i \sim $ i.i.d $N(0,1)$}\\
+\pause \colAnswer{\scriptsize{
+The probability density of a sum of independent random variables is
+equal to the convolution of the individual densities. For symmetric
+densities this also applies for the difference.}}
+\bi
+\colAnswer{\scriptsize{
+\pause \item The convolution of two i.i.d. uniform densities is the triangular 
+density
+$f^{(1)}_{\Delta \epsilon}=1/2(1-1/2|\Delta \epsilon|)$ and
+$P_1$ is the integral of it at $V_1-V_2$
+\pause \item The convolution of two i.i.d $N(0,1)$ distributed RUs is $\sim
+  N(0,2)$, hence $P_1(V_1-V_2)=\Phi((V_1-V_2)/\sqrt{2})$ with
+  $\Phi(.)$ the standardnormal distribution
+}}
+\ei
+
+
+\pause \itemAsk \colAsk{What would happen for \unit[100]{\%} correlated RUs?}
+\pause \colAnswer{\scriptsize{The RU difference $\Delta \epsilon=0$. Hence, we
+    have a deterministic situation $P_1=1$ if $V_1-V_2\ge 0$ and
+    $P_1=0$, otherwise.}}
+
+\ei
+}
+
+
+%##############################################################
+\frame{\frametitle{Translation and scale invariance}
+%##############################################################
+
+The general choice formula $i\sub{selected}=\text{arg} \max_i
+(V_i+\epsilon_i)$ leads to two far-reaching consequences:
+\bi
+\item \bfdef{Translation invariance}: 
+\maindm{V_1+\epsilon_1>V_2+\epsilon_2 \Longleftrightarrow 
+V_1+\epsilon_1+c>V_2+\epsilon_2+c, \quad c \in I\!\!R}
+ 
+\bi
+\pause \item Only differences matter. In particular, one can set one
+  deterministic utility $V_{i'}=0$  making $i'$ the reference alternative.
+\pause \item Nonzero expectation values $E(\epsilon_i)$ (as in
+  Logit models) are irrelevant.
+\ei
+\vspace{2em}
+
+\pause \item \bfdef{Scale invariance}: 
+\maindm{V_1+\epsilon_1>V_2+\epsilon_2 \Longleftrightarrow 
+\lambda(V_1+\epsilon_1)>\lambda(V_2+\epsilon_2), \quad \lambda>0}
+
+\bi
+\pause \item A \emph{simultaneous} scaling of all $V_i$ \emph{and} $\epsilon$ leaves
+  the choice unchanged (one could even apply a strictly monotonously
+  increasing 
+  function defined in $I\!\!R$ such as $\exp(.)$ to all $V_i+\epsilon_i$)
+\pause \item One can normalize $\epsilon_i$ without loss of generality.
+In any case, $V_i$ is given in multiples of the standard deviation of
+  $\epsilon_i$
+\ei
+\ei
+
+
+}
+
+ 
+
+\end{document}
+
+
+%##############################################################
+\frame{\frametitle{Example: RP Survey in the audience}
+%##############################################################
+
+% from
+% ~/vorlesungen/Verkehrsoekonometrie_Ma/discrChoice_cc_Levmar/RC_SS18_3alt.tex
+
+Distance classes for the trip home to university
+\vspace{0em}
+
+Weather: perfect, cloudless, 15 degrees Celsius (Apr 11, 2018)
+\vspace{2em}
+
+\hspace{0.08\textwidth}
+{\small\begin{tabular}{|r|r||c|c|c|}
+\hline 
+\myBox{4em}{Distance} & 
+  \myBox{4em}{Class-\\center} &
+  \myBox{3em}{Choice\\Alt. 1:\\ped} &
+  \myBox{3em}{Choice\\Alt. 2:\\bike} &
+  \myBox{3em}{Choice\\Alt. 3:\\ PT} \\ \hline\hline
+\unit[0-1]{km} & \unit[0.5]{km}    &  5 & 1 & 0\\[0.2em] \hline
+\unit[1-2]{km} & \unit[1.5]{km}    &  2 & 2 & 6\\[0.2em] \hline
+\unit[2-3]{km} & \unit[2.5]{km}    &  0 & 2 & 7\\[0.2em] \hline
+\unit[3-5]{km} & \unit[4.0]{km}    &  0 & 1 & 6\\[0.2em] \hline
+\unit[5-10]{km} & \unit[7.5]{km}   &  0 & 0 & 3\\[0.2em] \hline
+\unit[10-20]{km} & \unit[12.5]{km} &  0 & 0 & 1\\[0.2em] \hline
+\end{tabular}}
+}
+
+
+%###################################################
+\frame{\frametitle{Model specification and calibration}
+%###################################################
+
+\placebox{0.36}{0.78}{\parbox{0.7\textwidth}{\normalsize
+  Deterministic utilities:\\[0.3em]
+  %
+  $V_i(r)=\beta_1 \delta_{i1}+\beta_2 \delta_{i2}
+  +r \left(\beta_3 \delta_{i1}+\beta_4 \delta_{i2}\right)$
+}}
+
+\pause
+\placebox{0.82}{0.75}{\parbox{0.4\textwidth}{\normalsize
+or \quad
+$
+\begin{array}{l}
+V_1=\beta_1 + \beta_3 r,\\ 
+V_2=\beta_2 + \beta_4 r,\\
+V_3=0
+\end{array}
+$
+}}
+
+\placebox{0.35}{0.37}{
+  \figSimple{0.75\textwidth}{\pathDiscrChoice/RC_SS18_3alt_fProb.png}
+}
+\pause
+\placebox{0.80}{0.30}{\parbox{0.20\textwidth}{
+   $
+   \begin{array}{l}
+   \ln L\sub{init}=-39.55,\\
+   \ln L=-20.9,\\
+   \hatbeta_1=4.1\pm 1.7, \\
+   \hatbeta_2=0.3\pm 1.1, \\
+   \hatbeta_3=-3.5\pm 1.3, \\
+   \hatbeta_4=-0.6\pm 0.5
+   \end{array}
+   $
+}}
+
+
+}
+
+%###################################################
+\frame{\frametitle{Prediction: modal split as a function of distance}
+%###################################################
+%\\[1em]
+
+\placebox{0.50}{0.78}{\parbox{0.7\textwidth}{\normalsize
+$V_i(r)=\beta_1 \delta_{i1}+\beta_2 \delta_{i2}
++r \left(\beta_3 \delta_{i1}+\beta_4 \delta_{i2}\right)$
+}}
+
+\placebox{0.35}{0.37}{
+ \figSimple{0.75\textwidth}{\pathDiscrChoice/RC_SS18_3alt_fProbKumDist.png}
+}
+
+
+\placebox{0.80}{0.30}{
+  \parbox{0.20\textwidth}{
+   $
+   \begin{array}{l}
+   \hatbeta_1=4.1\pm 1.7, \\
+   \hatbeta_2=0.3\pm 1.1, \\
+   \hatbeta_3=-3.5\pm 1.3, \\
+   \hatbeta_4=-0.6\pm 0.5
+   \end{array}
+   $
+  }
+}
+
+}
+
+
+%##############################################################
+\frame{\frametitle{Example: SP In-class survey WS18/19 
+\red{(red: bad weather)}}
+%##############################################################
+
+\placebox{0.25}{0.45}{\parbox{0.7\textwidth}
+{\small
+\begin{tabular}{|r||c|c|c||r|r|r|}
+\hline 
+\myBox{2.5em}{Choice\\Set} &
+  \myBox{3em}{Alt. 1:\\Ped} &
+  \myBox{3em}{Alt. 2:\\Bike} &
+  \myBox{3em}{Alt. 3:\\ PT/Car} &
+  Alt 1 & Alt 2 & Alt 3 \\ \hline\hline
+1  & 30\,min & 20\,min & 20\,min+0\euro{} & 1  & 3 & 7 \\[0.1em] \hline
+2  & 30\,min & 20\,min & 20\,min+2\euro{} & 2  & 9 & 2\\[0.1em] \hline
+3  & 30\,min & 20\,min & 20\,min+1\euro{} & 1  & 5 & 7\\[0.1em] \hline
+4  & 30\,min & 20\,min & 30\,min+0\euro{} & 2  & 9 & 3\\[0.1em] \hline
+5  & 50\,min & 20\,min & 30\,min+0\euro{} & 0  & 9 & 4\\[0.1em] \hline
+6  & 50\,min & 30\,min & 30\,min+0\euro{} & 0  & 3 & 9\\[0.1em] \hline
+7  & 50\,min & 40\,min & 30\,min+0\euro{} & 0  & 2 & 10\\[0.1em] \hline
+8  & 180\,min & 60\,min & 60\,min+2\euro{} & 0 & 4 & 11\\[0.1em] \hline
+9  & 180\,min & 40\,min & 60\,min+2\euro{} & 0 & 9 & 6\\[0.1em] \hline
+\red{10}  & \red{180\,min}  & \red{40\,min} & \red{60\,min+2\euro{}}
+  & \red{0}  & \red{1}  & \red{14}                   \\[0.1em] \hline
+11 & 12\,min & 8\,min & 10\,min+0\euro{} & 3  & 5 & 6\\[0.1em] \hline
+12 & 12\,min & 8\,min & 10\,min+1\euro{} & 5  & 7 & 2\\[0.1em] \hline
+\end{tabular}
+}}
+%}\end{document}
+\placebox{0.85}{0.45}{Test}
+\placebox{0.85}{0.45}{\parbox{0.3\textwidth}{
+$
+\begin{array}{ll}
+ V_i= & \beta_0\delta_{i1} + \beta_1\delta_{i2} + \beta_2 K
+ + \beta_3 T\\
+ & + \beta_4 W\delta_{i3}
+\end{array}
+$
+}}
+
+}
+
+
+%###################################################
+\frame{\frametitle{Model specification and calibration}
+%###################################################
+
+\placebox{0.35}{0.40}{
+  \figSimple{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_fProb.png}
+}
+
+\placebox{0.36}{0.82}{\parbox{0.7\textwidth}{\small
+\colorbox{orange}{
+$
+\begin{array}{ll}
+ V_i= & \beta_0\delta_{i1} + \beta_1\delta_{i2} + \beta_2 K
+ + \beta_3 T\\
+ & + \beta_4 W\delta_{i3}
+\end{array}
+$
+}}}
+
+\pause
+
+\placebox{0.79}{0.84}{\parbox{0.5\textwidth}{\small
+or \quad
+\colorbox{orange}{$
+\begin{array}{l}
+V_1=\beta_0 + \beta_2 K + \beta_3 T,\\ 
+V_2=\beta_1 + \beta_2 K + \beta_3 T,\\ 
+V_3=\beta_2 K + \beta_3 T + \beta_4 W
+\end{array}
+$
+}}}
+
+
+\pause
+
+\placebox{0.78}{0.54}{\parbox{0.20\textwidth}{\small\fbox{ 
+  $
+  \begin{array}{l}
+  \ln L\sub{init}=-176.9,\\
+  \ln L=-128.5, \\
+  \beta_0=-0.65 \pm 0.37, \\
+  \beta_1=-0.42 \pm 0.25, \\
+  \beta_2=-0.10 \pm 0.20, \\
+  \beta_3=-0.09 \pm 0.02, \\
+  \beta_4= 4.2  \pm 1.1
+  \end{array}
+ $
+}}}
+
+\pause
+
+\placebox{0.80}{0.18}{{\scriptsize
+   $
+   \begin{array}{l}
+   \frac{\beta_0}{-\beta_3}=\unit[-7.1]{min},\\
+   \frac{\beta_1}{-\beta_3}=\unit[-4.6]{min},\\
+   \frac{\beta_0}{-\beta_2}=\unit[-6.7]{\text{\euro{}}},\\
+   \frac{\beta_1}{-\beta_2}=\unit[-4.3]{\text{\euro{}}},\\
+   \frac{60\beta_3}{\beta_2}=\unit[+57]{\text{\euro{}}/h},\\
+   \frac{\beta_4}{-\beta_2}=\unit[+44]{\text{\euro{}}}
+   \end{array}
+   $
+}}
+
+}
+
+
+
+
+\end{document}

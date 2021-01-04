@@ -1,0 +1,61 @@
+## user-defined ignores (avoid committing large files)
+
+## video files
+
+*.mkv
+
+## program generated files
+
+
+*.o
+*_beta[0-9]_beta[0-9]
+figsCorona/sim/*.dat
+figsDiscr/calibDiscrChoice/*.png
+figsDiscr/calibDiscrChoice/*.eps
+figsDiscr/calibDiscrChoice/*.outData
+
+
+## Core latex/pdflatex auxiliary files:
+
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+logfile
+
+## Intermediate documents:
+
+*.dvi
+*-converted-to.*
+*.ps
+
+## beamer generated files
+
+*.nav
+*.snm
+*.glo
+
+## variable output
+*.ps
+*.pdf
+Verkehrsoekonometrie_work.*
+
+## general
+tmp
+*save
+*old
+*~
+test.*
+*.zip
+*.bak
+epsfiles
+
+## directories
+
+uml_savedFiles
+
+
+## Auxiliary and intermediate files from other packages:

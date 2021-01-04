@@ -1,0 +1,619 @@
+%#############################################
+% New pdflatex format,
+% only png, jpg (or svg?) images but positioning now ok
+% template in ~/tex/inputs/template_folien.tex
+% [TODO now specialized to Vkoem_Ma; make general]
+%#############################################
+
+
+%\documentclass[mathserif]{beamer}
+\documentclass[mathserif,handout]{beamer}
+%\usepackage{beamerthemeshadow}
+\input{$HOME/tex/inputs/defsSkript} %$
+\input{$HOME/tex/inputs/styleBeamerVkoekMa} %$
+\usepackage{graphicx}
+
+
+%##############################################################
+
+\begin{document}
+
+\section{2. Linear (Regression) Models}
+
+%##############################################################
+\frame{ %title other layout
+%##############################################################
+\placebox{0.50}{0.47}{
+  \figSimple{1.40\textwidth}{figsRegr/scatterplot10title_eng.png}}
+
+\makePale{0.85}{0.50}{0.55}{1.20}{1.50}
+
+\placebox{0.50}{0.50}{\parbox{0.6\textwidth}{
+\bi
+  \item[2.1] Flow Chart of the Econometric Method\\[1em]
+  \item[2.2] Model Specification
+  \bi
+   \item[2.2.1] Functional specification
+   \item[2.2.2] Statistical specification
+   \item[2.2.3] Data specification
+  \ei
+  \vspace{1em}
+  \item[2.3] Ordinary Least Squares (OLS) Estimation
+\ei}}
+
+\placebox{0.50}{0.90}{\myheading{Lecture 02: Linear (Regression) Models}}
+
+}
+
+\subsection{2.1 Flow Chart of the Econometric Method}
+
+%##############################################################
+\frame{\frametitle{2.1 Flow Chart of the Econometric Method}
+%##############################################################
+
+\visible<1>{\placebox{0.302}{0.735}{
+\figSimple{0.25\textwidth}{figsRegr/flussdiagRegr02_eng.png}}}
+
+\visible<2>{\placebox{0.5}{0.74}{
+\figSimple{0.7\textwidth}{figsRegr/flussdiagRegr03_eng.png}}}
+
+\visible<3>{\placebox{0.5}{0.70}{
+\figSimple{0.7\textwidth}{figsRegr/flussdiagRegr04_eng.png}}}
+
+\visible<4>{\placebox{0.525}{0.61}{
+\figSimple{0.76\textwidth}{figsRegr/flussdiagRegr05_eng.png}}}
+
+\visible<5>{\placebox{0.515}{0.615}{
+\figSimple{0.78\textwidth}{figsRegr/flussdiagRegr06_eng.png}}}
+
+\visible<6>{\placebox{0.515}{0.54}{
+\figSimple{0.78\textwidth}{figsRegr/flussdiagRegr07_eng.png}}}
+
+\visible<7>{\placebox{0.515}{0.54}{
+\figSimple{0.78\textwidth}{figsRegr/flussdiagRegr08_eng.png}}}
+
+\visible<8>{\placebox{0.515}{0.455}{
+\figSimple{0.78\textwidth}{figsRegr/flussdiagRegr09_eng.png}}}
+
+\visible<9>{\placebox{0.515}{0.455}{
+\figSimple{0.78\textwidth}{figsRegr/flussdiagRegr10_eng.png}}}
+
+
+
+}
+
+
+\subsection{2.2. Model Specification}
+
+%##############################################################
+\frame{\frametitle{2.2. Model Specification}
+%##############################################################
+
+As \bfdef{model specification}, we denote the \emph{complete
+  structural definition} of the model and its consistency with the
+available data. There are three aspects:
+\bi
+\pause \item \bfdef{Functional specification}: The model's exogenous and
+endogenous variables and the functional form in which they appear,
+particularly how the original exogenous variables $\tilde{\vec{x}}$
+are expressed in terms of linear \bfdef{factors} $x_j=g_j(\tilde{\vec{x}})$
+by fixed, generally nonlinear functions $g_j(.)$
+
+\pause \item \bfdef{Statistical specification}: If the model contains
+  stochastic elements, e.g., residual ``error'' terms we want to know
+  how they are distributed and correlated with each other
+
+\pause \item The \bfdef{data specification} should ensure that the available
+  data can be used to analyze the data, for example, sufficient number of data
+  sets, check if each set contains all the exogenous and endogenous
+  variables
+\ei
+
+
+}
+
+%##############################################################
+\frame{\frametitle{WARNING}
+%##############################################################
+
+\placebox{0.50}{0.53}{\parbox{0.90\textwidth}{
+\maintextbox{0.90\textwidth}{If the
+ econometric model is not specified
+  correctly, all sorts of problems occur, from mild to nasty:
+\bi
+\pause \item \blue{irrelevant:} some mis-specification are
+detected automatically during model estimation producing ``zero/zero''
+errors and the like
+ \pause \item \green{mild:} a mis-specification is not detected
+ automatically but there is no bias and the estimation method is even
+ efficient. However, inferential conclusions may be incorrect
+\pause \item \orange{medium:} the results are still 
+  unbiased but the inferential analysis is not efficient and generally
+  gives erroneous conclusions
+  (higher significance than in reality)
+\pause \item \red{nasty:} the results are biased in an unpredictable way
+\ei
+}}}
+
+\pause \placebox{0.25}{0.10}{\bfred{Junk in, junk out!}}
+\pause \placebox{0.75}{0.10}{\parbox{0.25\textwidth}{
+\red{There are lies, damned lies, and \bfred{statistics!}}}}
+
+
+
+}
+
+
+ 
+
+\subsection{2.2.1 Functional specification}
+
+%##############################################################
+\frame{\frametitle{2.2.1 Functional specification 1: relevant factors}
+%##############################################################
+
+\vspace{-0.0em}
+\fig{0.5\textwidth}{figsRegr/linRegBivar_eng.png}
+\vspace{-1.0em}
+\fig{0.7\textwidth}{figsRegr/linRegBivar_xz_yz_eng.png}
+\vspace{-1em}
+
+{\small
+\bi
+\item All relevant influencing factors should be taken into account (top),
+no one missed (bottom).
+\pause \item \textbf{Consequences of missing factors:} a 
+\bfred{bias}, i.e., \bfred{``junk in, junk out''} 
+\pause \item \textbf{\hspace{1.5em} ``\hspace{1.5em} of superfluous factors:} 
+\bforange{no bias, higher estimation errors}
+\pause \item \textbf{Solution:} check for superfluous factors:
+\emph{F-test}; finding missing factors: \emph{your expertise!}
+\ei
+}
+
+}
+
+%###################################################
+\frame{\frametitle{Example: modeling the demand for hotel rooms}
+%###################################################
+
+\placebox{0.26}{0.67}
+{\figSimple{0.46\textwidth}{figsRegr/hotel_scatterplot_x1x2_eng.png}}
+
+
+\placebox{0.26}{0.25}
+{\figSimple{0.46\textwidth}{figsRegr/hotel_scatterplot_x1y_eng.png}}
+
+\placebox{0.74}{0.25}
+{\figSimple{0.46\textwidth}{figsRegr/hotel_scatterplot_x2y_eng.png}}
+
+\placebox{0.74}{0.67}
+{\parbox{0.53\textwidth}{\scriptsize
+\bi
+\item $y=\beta_0+\beta_1x_1+\beta_2x_2+\epsilon$ with the factors:
+  $x_0=1$, $x_1$: proxy for quality [\# stars]; $x_2$: price 
+  [\euro{}/night].
+\item The exogenous variables/factors are non-perfectly correlated: \OK
+\item Endogenous variable: booking rate [\%]
+\item The demand is positively correlated with both the quality and
+  the price (!)
+\ei
+}}
+
+}
+
+%###################################################
+\frame{\frametitle{Visualization of the fit quality}
+%###################################################
+
+
+\hspace{-0.02\textwidth}
+\includegraphics[width=0.50\textwidth]{figsRegr/hotel_scatter3d_1_eng.png}
+\hspace{-0.02\textwidth}
+\includegraphics[width=0.50\textwidth]{figsRegr/hotel_scatter3d_2_eng.png}
+
+\bi
+\item Surface: model
+$\hat{y}(\vec{x})=\hat{\beta}_0+\hat{\beta}_1x_1+\hat{\beta}_2x_2$\\[0ex]
+
+\pause \item Black bullets: data (right graphics: rotated clockwise by
+90 degrees)
+
+\pause \item OLS estimate: $\hatbeta_0=25.5$, $\hatbeta_1=38.2$, $\hatbeta_2=-0.953$.
+
+\pause \item Blue or pink bars: residuals
+$\epsilon_i$ ($\le 0$ if below the model plane)
+\ei
+}
+
+
+%###################################################
+\frame{\frametitle{Effect of the correlations between the exogenous
+    variables} 
+%###################################################
+
+\fig{0.9\textwidth}{figsRegr/hotel_scatterplot_x2ycondx1_eng.png}
+}
+
+
+
+%###################################################
+\frame{\frametitle{Functional specification 2: linearity}
+%###################################################
+
+\fig{0.6\textwidth}{figsRegr/scatterplot2_eng.png}
+\bi
+\item The model should be linear which is not fulfilled here.
+\pause \item \textbf{Consequences of violation:} \bfred{``junk in,
+  junk out''}  
+\pause \item \textbf{Solution:} A change of the independent variable
+into several 
+\bfdef{factors} would be a
+solution here,
+e.g. $x_0'=1,x_1'=1/x,x_2'=x^2$ or $x_0'=1,x_1'=x,x_2'=x^2$.
+\ei
+}
+
+%###################################################
+\frame{\frametitle{Example: fuel consumption}
+%###################################################
+Assuming a constant efficiency chemical energy $\to$ mechanical
+energy, the required fuel per \unit[100]{km}, $y$, is proportional to the
+driving resistance with the contributions
+\bi
+\item Friction tire-road: contributions independent of the speed
+  $\tilde{x}_1$ and proportional to the mass $\tilde{x}_2$.
+\pause \item Air drag: proportional to speed squared, $x^2$, and independent
+  from mass
+\pause \item Gradient: proportional to mass times gradient $\tilde{x}_3$
+\ei
+\pause In addition, there is a base consumption rate (about
+\unit[0.6]{liters/h}) when the car is idling/driving very slowly
+$\Rightarrow$ contribution proportional to 1/speed [liters/km=liters/h
+  * h/km] $\Rightarrow$ model
+\pause
+\bdm
+y(\vec{x})=\sum_{j=1}^4\beta_jx_j+\epsilon, \quad
+x_1=\tilde{x}_2, \quad x_2=\tilde{x}_1^2, \quad
+x_3=\tilde{x}_2\tilde{x}_3, \quad
+x_4=\frac{1}{\tilde{x}_1}
+\edm
+
+}
+
+
+%###################################################
+\frame{\frametitle{Transformation of the endogenous variable I}
+%###################################################
+
+\placebox{0.5}{0.55}{
+ \figSimple{0.8\textwidth}{figsAllg/dowJones_lin.png}}
+
+\placebox{0.5}{0.15}{
+ \parbox{0.9\textwidth}{
+  Transformation of time $\tilde{x}$ to a factor $x=\exp(\tilde{x})$
+  would lineariz but the fluctuations are not i.i.d (see statistical
+  specification below)}}
+
+}
+
+%###################################################
+\frame{\frametitle{Transformation of the endogenous variable II}
+%###################################################
+
+\placebox{0.5}{0.55}{
+ \figSimple{0.8\textwidth}{figsAllg/dowJones_log.png}}
+
+\placebox{0.5}{0.15}{
+ \parbox{0.9\textwidth}{
+  Transformation of the endogenous variable $y \to u=\ln(y)$ and
+  $x=\tilde{x}$ gives a
+  properly specified linear model $u(x)=\beta_0+\beta_1x+\epsilon$,
+  $\epsilon \sim \text{i.i.d.}$}}
+
+
+}
+
+%###################################################
+\frame{\frametitle{Functional specification 3: homogeneity}
+%###################################################
+%\vspace{2em}
+\fig{0.8\textwidth}{figsRegr/scatterplot6_eng.png}
+%\vspace{2em}
+{\small
+\bi
+\item \textbf{Consequences:} an untreated discontinuity (``structural
+  break'') in the space of the 
+exogenous variables leads to a \bfred{bias}, i.e., \bfred{junk in,
+  junk out}
+\pause \item \textbf{Solution:} a \emph{dummy
+variable} with values 0 before, 1 after the break. 
+\pause \itemAsk \colAsk{What could possibly cause a structural break?}
+\pause \itemAnswer \tiny{\colAnswer{1. new data basis (GDR+West
+    Germany $\to$ Germany); 2. Redefinition of a variable (e.g.,
+    seriously injured from visit to hospital to overnight visit)}}
+\ei
+}
+
+
+}
+
+
+\subsection{2.2.2 Statistical specification}
+
+%###################################################
+\frame{\frametitle{2.2.2 Statistical Specification\\1. the residual
+    $\epsilon$ has zero expectation}
+%###################################################
+\vspace{0em}
+\fig{1.0\textwidth}{figsRegr/scatterplot7_eng.png}
+\vspace{0em}
+\bi
+\item The expectation value of the residual deviation should be
+  $E(\epsilon)=0$.
+\pause\item \textbf{Consequences:} \bfdef{None}: The Ordinary Least
+Squares (OLS) method takes care for you. If only differences matter
+(discrete-choice theory), this 
+is even not relevant at all.
+\ei
+}
+
+
+%###################################################
+\frame{\frametitle{Statistical specification 2: homoskedasticity}
+%###################################################
+\vspace{0em}
+\fig{1.0\textwidth}{figsRegr/scatterplot8_eng.png}
+\vspace{0em}
+\bi
+\item The residual $\epsilon$ should be homoscedastic (on the right),
+  not heteroscedastic (left). 
+\pause \item \textbf{Consequences:} if violated, OLS estimation
+remains \bforange{unbiased 
+but is no longer efficient} (a relatively ``mild'' error).
+\pause \item \textbf{Solution:} Advanced methods, e.g. weighted OLS;
+sometimes automatically resolved when transforming $y$ as in the
+Dow-Jones example 
+\ei
+}
+
+%##################################################
+\frame{\frametitle{Statistical specification 3: no correlations}
+%###################################################
+\vspace{0em}
+\fig{1.0\textwidth}{figsRegr/scatterplot9_eng.png}
+\vspace{0em}
+\bi
+\item There should be no correlation of $\epsilon$ relative to $x_i$ or $y$
+(on the right). The model on the left is mis-specified.
+\pause \item \textbf{Consequences:} relatively \bforange{mild:}
+(OLS estimator not efficient; underestimation of model errors;
+possibly a small bias).
+\pause \item \textbf{Solution:} try identify a missing systematic factor
+such as a periodicity.
+\ei
+}
+
+
+%###################################################
+\frame{\frametitle{Statistical specification 4: Gaussian distribution}
+%###################################################
+
+\fig{1.0\textwidth}{figsRegr/scatterplot10_eng.png}
+{\small
+\bi
+\item The residual $\epsilon$ should be Gaussian distributed (right),
+not, e.g., bimodally distributed (left).
+\pause \item \textbf{Consequences:} a violation has \bfgreen{very
+  mild}  consequences: OLS remains
+unbiased \emph{and} efficient but the error estimates are wrong).
+\pause \item All four statistical specifications can be summarized by
+requiring
+ \maindm{\epsilon \sim \text{i.i.d.} N(0,\sigma^2) \quad 
+\text{i.i.d.: \textbf{i}dentical \textbf{i}ndependent 
+ \textbf{d}istributions}}
+\ei
+}
+
+}
+
+\subsubsection{2.2.3 Data specification}
+%###################################################
+\frame{\frametitle{Data specification 1: enough data}
+%###################################################
+
+\bi
+\item There must be more data sets (containing all exogenous variables
+  and the endogenous variale, each) than model parameters: $n>J+1$
+\pause
+\item This means, the data should overdetermine the model which is the
+  basis for fitting.
+\pause \item \textbf{Consequences:} If $n=J+1$, the data determine the
+model exactly, i.e., 
+it can be calibrated to zero residuals 
+  $\epsilon_i=0$: \emph{overfitting}. This is still \bfgreen{harmless}
+since OLS will detect it for you (zero residuals) and the inferential
+analysis will retur a ``0/0 error''
+
+\pause \item If there are only a few more data points than parameters, the
+  data specification is OK, the estimation unbiased and efficient but
+  the \bforange{estimation errors are big} 
+
+\pause \item \textbf{Solution:} Get more data ...
+\ei
+}
+
+%###################################################
+\frame{\frametitle{Data specification 2: no multicollinearity}
+%###################################################
+
+\fig{0.80\textwidth}{figsRegr/scatterplot4_eng.png}
+\vspace{-1em}
+{\small
+\bi
+\item A given  exogenous variable  must not be represented as a linear
+combination of other exogenous variables. 
+\pause \item However, nonperfect
+correlations $\neq \pm 1$ are allowed.
+\pause \item Nonperfect correlations appear regularly, e.g., price vs
+quality
+\pause\item \textbf{Consequences:} OLS \bfdef{detects a perfect
+  multicollinearity for you} by a ``division by zero'' error. A nearly
+perfect multicollinearity will lead to \bforange{large estimation errors}
+\ei
+}
+
+\pause \maintextbox{0.8\textwidth}{If all items of all three specification
+  categories are 
+fulfilled, the econometric problem satisfies the 
+\bfred{Gau\3-Markov assumptions}}
+
+}
+
+%###################################################
+\frame{\frametitle{How to detect multicollinearity}
+%###################################################
+
+{\small
+\bi
+\item Assume $n$ data sets $\{x_{i0}, ..., x_{ij}, ..., x_{iJ}\}$,
+  $i=1,..., n$ (the data sets also contain the endogenous variable but
+  it is not relevant here)
+\item $x_{ij}$ is the $j\sup{th}$ exogenous factor in the
+  $i\sup{th}$ data set
+\pause \item
+Multicollinearity exists if there is one exogenous factor $x_k$ that can be
+expressed as a linear combination of all other factors $j\neq k$ in
+\emph{all} data sets:
+\bdm
+x_{ik}=\sum_{j\neq k} c_j x_{ij} \quad \forall i=1, ..., n, \quad
+\text{constant $c_j$}
+\edm
+
+\pause \item A linear relation $x_2=c_0 x_1$ is easy to detect but this is
+  not the case for more
+  complex relationships
+\pause \item Solution: Check whether the \bfdef{descriptive
+  variance-covariance matrix} 
+\bdm
+S_{jk}=\frac{1}{n}\sum_{i=1}^n(x_{ij}-\bar{x}_j)(
+x_{ik}-\bar{x}_k)
+\edm
+has the full rank $J+1$ or if $\text{det}\,\m{S}\neq 0$
+\ei
+}
+
+}
+
+
+%###################################################
+\frame{\frametitle{Data specification 2: example}
+%###################################################
+
+\vspace{0em}
+
+\fig{0.8\textwidth}{figsRegr/linRegBivar_eng.png}
+\bi
+\item The normalized demand $y_i$ for public transport in city $i$
+  depends on the price $x_{i1}$ and the quality $x_{i2}$ (proxy:
+  speed) of the  service.
+\pause \item Parameters: intercept $\beta_0$, price sensitivity $\beta_1$,
+  appraisal for quality $\beta_2$.
+\pause \item Price and quality are correlated but not perfectly so.
+\pause \item This model structure is quite generic for products and services.
+\ei
+}
+
+
+\subsection{2.3. Ordinary Least Squares Estimation}
+
+%###################################################
+\frame{\frametitle{2.3. Ordinary  Least Squares (OLS) Estimation}
+%###################################################
+\bi
+\pause \item Given is a linear model of the form
+\bdm
+y(\vec{x})=\vecbeta\tr \vec{x}+\epsilon=\hat{y}(\vec{x})+\epsilon, 
+\quad \epsilon \sim i.i.d.\, N(0,\sigma^2)
+\edm 
+satisfying the Gau\3-Markow specifications,
+
+\pause \item Given is also data in the form of $n$ multidimensional
+data points containing all observations and satisfying the
+Gau\3-Markow specifications 
+as well:
+\bdm
+\left\{ \vec{p}_i=(x_{i0},..., x_{iJ},y_i)\tr, \quad i=1, ..., n \right\}
+\edm
+
+\pause \item Searched for is a parameter estimator $\hatvecbeta$
+minimizing the sum of squared errors between data and model prediction
+with respect to the parameters:
+
+\maindm{\hatvecbeta = \text{arg min}_{\vecbeta} \,
+  S(\vecbeta)}
+where
+\bdm
+S(\vecbeta)=\veceps\tr \veceps=(\vec{y}-\m{X}\vecbeta)\tr
+ (\vec{y}-\m{X}\vecbeta).
+\edm
+
+\ei
+
+}
+
+
+
+%###################################################
+\frame{\frametitle{Determining the OLS estimator}
+%###################################################
+
+\vspace{-1em}
+
+\bdma
+S &=&  \left(\vec{y}-\m{X} \vec{\beta}\right)\tr 
+    \left(\vec{y}-\m{X} \vec{\beta}\right) \\
+ \visible<2->{\remark{distributivity}
+% \visible<2->{\text{\scriptsize{\blue{[distributivity $\to$]}}}
+      &=& \vec{y}\tr  \vec{y} - (\m{X} \vec{\beta})\tr  \vec{y}
+       - \vec{y}\tr \m{X} \vec{\beta}
+       + (\m{X} \vec{\beta})\tr   \m{X} \vec{\beta} \\}
+ \visible<3->{\remark{transpose rule}
+      &=& \vec{y}\tr \vec{y} - \vec{\beta}\tr \m{X}\tr \vec{y}
+       - \vec{y}\tr \m{X} \vec{\beta}
+       +  \vec{\beta}\tr \m{X}\tr\m{X} \vec{\beta} \\}
+ \visible<4->{\remark{transpose rule}
+      &=& \vec{y}\tr \vec{y} - 2 \vec{\beta}\tr (\m{X}\tr \vec{y})
+       +  \vec{\beta}\tr \left(\m{X}\tr\m{X}\right) \vec{\beta} \\}
+\edma
+
+\visible<5->{Taking the derivative $\ablpart{}{\vecbeta}$ respecting 
+$\ablpart{}{\vecbeta}(\vecbeta\tr \vec{a})=\vec{a}$ and
+$\ablpart{}{\vecbeta}(\vecbeta\tr
+\m{A}\vecbeta)=(\m{A}+\m{A}\tr)\vecbeta$ with $\m{A}=\m{X}\tr\m{X}$
+symmetric:} 
+
+\visible<6->{
+\bdm
+\ablpart{S(\vecbeta)}{\vecbeta}=0-2\m{X}\tr\vec{y}
++2\m{X}\tr\m{X}\vecbeta \stackrel{!}{=}0
+\edm}
+
+\vspace{-1.5em}
+
+\bdma
+\visible<7->{\m{X}\tr\m{X}\vecbeta &=& \m{X}\tr\vec{y}}
+\visible<8->{ \red{\hspace{1em} | \cdot (\m{X}\tr\m{X})^{-1}}}
+\edma
+
+\visible<9->{\maindm{\hatvecbeta =\left(\m{X}\tr\m{X}\right)^{-1}\m{X}\tr\vec{y}}}
+
+%\visible<9->{\hatvecbeta &=& (\m{X}\tr\m{X})^{-1} \m{X}\tr\vec{y}} 
+%\edma
+}
+
+
+
+\end{document}
+
+
