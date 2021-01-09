@@ -1,0 +1,300 @@
+0. Vorbereitung
+=============
+
+0.1. Browser
+==========
+
+Chromium-Browser (wg Schreiben) ohne Bookmarks Leiste starten
+corona-simulation.de laden
+
+
+0.2. Webcam
+=========
+Besser: vlc mit Crop-Moeglichkeiten
+
+[EXTRA Terminal:]
+vlc v4l2:///dev/video0
+
+vlc input "--video-filter=croppadd{cropright=200,cropleft=200}" v4l2:///dev/video0
+vlc input "--video-filter=croppadd{cropright=150,cropleft=150}" v4l2:///dev/video0
+vlc input "--video-filter=croppadd{cropright=100,cropleft=100}" v4l2:///dev/video0
+vlc input "--video-filter=croppadd{croptop=100,cropbottom=100}" v4l2:///dev/video0
+ACHTUNG: v4l2 mit lowercase 'l', not '1' !
+
+Manipulieren Helligkeit/Kontrast: 
+guvcview
+(hat auf alle Webcam Viewer (vlc, cheese) Einfluss!!)
+
+ACHTUNG: Nicht vlc mit 'x' schliessen, sondern immer mit 'q' im
+Terminal, braucht extra Terminal
+
+
+0.3. Screenrecorder, Verhueterli
+==============================
+
+
+############################
+Video-1:
+Zwischen-den-Jahren-Effekt
+############################
+
+
+[Bild]
+
+Hallo, liebe Simulanten und
+Freunde der gepflegten
+Corona-Simulation.
+
+Zun\"achst ein gesundes neues
+jahr, mit der Betonung
+auf gesund!
+
+Ehe mir im nächsten Video
+zu den Impfungen kommen, ein
+sog. Zwischen-Den-Jahren-Effekt:
+Scheinbarer starker Rueckgang.
+
+Ist der wirklich oder ein
+Artefakt niedrigerer Testzahlen
+
+[start simulation]
+
+Ich lasse die Sim nochmal laufen
+Schauen Sie auf den
+Hellfeld-Regler
+
+=> geht zum Schluss stark
+   runter von 20% auf 13%
+
+[Ansicht Tests]
+
+Blaue Punkte
+=> Viel mehr Tage nahe null
+
+[Zurueck Wocheninzidens]
+[Hellfeld auf 20%]
+[Go][stop]
+
+=> Anstieg
+
+[Ansicht Tests vs Infektionen]
+
+In Wahrheit gibt es diese
+Sprünge nicht! Die
+*simulierte* Zahl der Neuin-
+fektionen geht schon Anfang
+Dezember zurück!
+
+[Ansicht Tägliche Fälle]
+
+Dennoch zeigen die *simulierten*
+sog. Fälle, also positive
+Tests, genau das beobachtete
+Muster. Danach ist die Sim
+schließlich kalibriert
+
+[Bild]
+
+Sie sehen also, dass die
+Simulation nicht nur des
+Infektionsgeschehens, sondern
+auch der Messungen entscheidend
+ist, um Aussagen zu treffen.
+
+Insbesondere müssen
+schwankende
+Testzahlen sowie False-negative
+und False-positive-Fehler
+berücksichtigt werden!
+
+
+############################
+Video 2:
+Simulation der Impfungen
+###########################
+
+[Bild]
+
+Hallo, liebe 
+Freunde der gepflegten
+Corona-Simulation.
+
+Zur Zeit ist ja die
+schnellere oder langsamere
+Impfrate in den
+verschiedenen Ländern das
+hot Topic.
+
+Da will ich natürlich nicht
+hintanstehen und zeige 
+in meinem Corona-Simulator
+corona-simulation.de,
+wie sich schnellere
+oder langsamere
+Impfungen in Deutschland
+und Israel
+auswirken. Ich habe in
+corona-simulation.de daher den
+Moderna-Impfstoff eingebaut
+
+Im Gegensatz
+zu den Simulation der
+Lockdown-
+Maßnahmen, bei denen
+immer viel Spekulation dabei
+ist, steht man hier auf
+soliden Beinen.
+
+zumindest wenn folgende
+Annahmen zutreffen:
+
+* Man benötigt 2 Impfungen
+  im Abstand von 3 Wochen
+
+* Etwa eine Woche
+  nach der zweiten
+  Dosis ist die volle Wirkung
+  von 95% erreicht.
+
+* Ohne große Fehler kann
+  ich einen
+  linearen Anstieg der
+  Wirksamkeit
+  von null auf 95% in 4 Wochen
+  annehmen
+
+* Wenn die Impfung wirkt, sind
+  geimpfte Personen nicht
+  ansteckend
+
+Nur die letzte Annahme
+ist kritisch.
+Alternativ können Geimpfte
+zwar zu 95% weniger
+erkranken, aber
+dennoch positiv testen und
+ansteckend sein.
+Auch halbe-halbe
+mit geringerer
+Ansteckbarkeit ist
+möglich. Alles ist simulierbar
+und ich passe die Simulation
+an, sobald Näheres bekannt ist
+
+
+[auf Sim zeigen]
+
+Um den im anderen Video
+erw\"ahnten  Sondereffekt
+zwischen
+den Jahren zu beseitigen,
+simuliere ich nun mit fester
+Testzahl
+
+[Regler auf 100% stellen]
+
+Ferner ohne Dunkelfeld, also
+mit der unrealist. Annahme,
+dass alle Infizierten getestet
+werden. Dadurch reduzierte
+sich die in Wirklichlkeit
+schon erreichte
+Teilimmunit\"at von 15% auf
+wenige Prozent und die
+Herdenimmunit\"at wird
+unrealistischerweise allein
+von den Impfungen erbracht.
+Ich will aber den Effekt
+klar herausarbeiten
+
+
+[Hellfeld 100%]
+[Kalibriere neu Anf Dez]
+[R0=1.02]
+
+Sim bis Jan
+[scrollen zum Vergroessern]
+[sim Anf Feb]
+[Strich]
+
+[=>Massnahmenansicht]
+[Impfrate 1% pro Woche]
+[21 Tage sim]
+
+Es tut sich nichts!
+1. geringe Impfrate 3%
+2. Wirkung erst nach einigen
+Wochen voll
+
+[weiter sim]
+
+erst nach Mai unter Inzidenz 50 pro Woche
+
+[neu mit Impfrate 10% pro Woche wie israel]
+
+[ ab Maerz vorbei]
+
+Nun real mit Beruecks Tests usw, Beibehaltung der
+Lockdown-Massnahmen
+
+[Beruecksichtige Tests]
+[bis gegenwart sim]
+35 000 Tote jetzt
+Keine Aenderung, keine Impfung
+
+[weitersim bis April]
+Ich habe Hellfeld nicht
+auf normale Werte hochgesetzt
+wie in letzter Sim.
+Macht aber nichts, da wie auf
+die reale
+Situation/Todesfaelle
+schauen
+
+70 000 Tote,
+Noch weitere 35 000 trotz
+Lockdown
+
+Nun nur milden Ma\3nahmen
+wie im Herbst, R0 um 0.2
+auf 1.3
+
+[kalibriere]
+[Gegenwart]
+[R0 auf 1.3 steigern]
+[keine Impfung]
+
+Nicht so toll, 130 000 Tote
+95 000 neue
+
+[dasselbe mit Impfung 1% pro Woche]
+
+105 000 Tote
+70 000 Neue
+
+
+[dasselbe mit Impfung 10%]
+[R0 auf 1.3]
+65000 Tote,
+30 000 Neue. das Bringt's!
+
+[dasselbe mit Lockdown]
+[Impfung 10%]
+[R0 unveraendert]
+
+[Israel ohne Impfung]
+14000 Todesopfer
+
+[Mit Impfung 10% pro Woche]
+7500 Todesopfer
+
+[Mit Impfung 1% pro Woche]
+12500 Todesopfer
+Bringt fast nix!
+
+
+
+
+
+
+

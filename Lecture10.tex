@@ -1,5 +1,5 @@
-%\documentclass[mathserif,aspectratio=1610]{beamer}
-\documentclass[mathserif,handout,aspectratio=1610]{beamer}
+\documentclass[mathserif,aspectratio=1610]{beamer}
+%\documentclass[mathserif,handout,aspectratio=1610]{beamer}
 %\usepackage{beamerthemeshadow}
 
 \input{$HOME/tex/inputs/defsSkript}%$
@@ -22,23 +22,28 @@
 %###################################################
 \makePale{1.00}{0.50}{0.70}{1.40}{1.40}
 
-\placebox{0.50}{0.45}{
-  \figSimple{1.10\textwidth}{figsDiscr/vierstufenmodellDiscr_eng.png}}
+\placebox{0.50}{0.42}{
+  \figSimple{1.60\textwidth}
+    {figsDiscr/nonlinUtility_4param_lnL_beta2_beta3_eng.png}}
 %makePale{opacity}{centerXrel}{centerYrel}{wrel}\{hrel} 
 \makePale{0.70}{0.50}{0.70}{1.40}{1.40}
 
 \placebox{0.50}{0.90}{\parbox{0.8\textwidth}{\myheading{
-7. Discrete-Choice Theory: the Basics
+10 Discrete-Choice Theory: Advanced Concepts
 }}}
 
 \placebox{0.45}{0.40}{\parbox{0.8\textwidth}{
 {\large
 \bi
-\item 7.1 The Nature of Discrete Decisions
-\item 7.2 Basic Concepts: Alternatives, Utilities, Homo Oeconomicus
-\item 7.3 Deterministic utilities and how to model them
-\item 7.4 Random Utilities
-\item 7.5 Choice Probabilities
+\item 10.1 Parameter Nonlinear Models
+\item 10.2 GEV and Nested Logit Models
+\bi
+\item 10.2.1 General Specification
+\item 10.2.2 Nested Logit Model
+\item 10.2.3 Example: Combined Destination and Mode Choice
+\ei
+%\item 10.3 Mixed-Logit Models (German script)
+%\item 10.4 Models for Reliability (German script)
 \ei
 }
 }}
@@ -49,15 +54,16 @@
 
 
 
-\subsection{4.12. Parameter Nonlinear Models}
+\subsection{10.1 Parameter Nonlinear Models}
 
 %##############################################################
-\frame{\frametitle{4.12.  \EinsteinPdflatex Parameter Nonlinear Models}
+\frame{\frametitle{10.1  \EinsteinPdflatex Parameter Nonlinear Models}
 %##############################################################
 
 Application: Determining subjective thresholds/indifference regions
 \vspace{1em}
 
+\begin{center}
 \begin{tabular}{|c||c|c|c|c|} \hline
 \myBox{3em}{Person\\class}
  & \myBox{5em}{Time\\Alternative~1 \\ \text{[min]}}
@@ -73,33 +79,35 @@ Application: Determining subjective thresholds/indifference regions
 7 & 55 & 30 & 1 & 15 \\
 8 & 60 & 30 & 0 & 15 \\ \hline
 \end{tabular}
-
+\end{center}
 }
 
 %##############################################################
-\frame{\frametitle{\EinsteinPdflatex Modelling the threshold}
+\frame{\frametitle{Modelling the threshold}
 %##############################################################
-\vspace{-1em}
 
-% F... png software error; 
-% further F... error does not recongize .SkriptFig.jpg
+\placebox{0.5}{0.62}{\figSimple{1.0\textwidth}
+  {figsDiscr/nonlinUtility_4param_skriptFig_eng.png}}
 
-\fig{1.0\textwidth}{figsDiscr/nonlinUtility_4param_skriptFig_eng.png}
-\vspace{-1em}
-
+\placebox{0.26}{0.16}{\parbox{0.5\textwidth}{
 {\small
 \bdm
 V_{n1}-V_{n2}=\beta_1 +\beta_2\left[\Delta T_n+\beta_3 \,
   \tanh\left(\frac{\Delta T_n}{\beta_4}\right)\right]
 \edm
+\vspace{-2em}
+\begin{align*}
+\visible<2->{\hatbeta_1 &= 0.043 \pm 0.236 \ \text{\red{AC}}\\[-0.8ex]}
+\visible<3->{\hatbeta_2 &= -0.29 \pm 0.38 
+   \ \text{\red{asymptotic time sensitivity}}\\[-0.8ex]}
+\visible<4->{\hatbeta_3 &= -15 \pm 18
+   \ \text{\red{degree of nonlinearity $ \ge \beta_4$}}\\[-0.8ex]}
+\visible<5->{\hatbeta_4 &= 14 \pm 21
+   \ \text{\red{threshold width}} }
+\end{align*}
+}}}
 
-$
-\hatbeta_1= 0.043 \pm 0.236, \quad
-\hatbeta_2= -0.29 \pm 0.38, \quad
-\hatbeta_3= -15 \pm 18, \quad
-\hatbeta_4= 14 \pm 21.
-$
-
+\visible<6->{\placebox{0.74}{0.15}{\parbox{0.4\textwidth}{
 \red{\textbf{!!}} Generally, $L(\vecbeta)$ has no longer a unique maximum,
 here, because of
 \bdm
@@ -107,18 +115,19 @@ here, because of
 =
 -\beta_3 \,\tanh\left(\frac{\Delta T_n}{-\beta_4}\right)
 \edm
-}
+}}}
 
 
 }
 
 
 %##############################################################
-\frame{\frametitle{\EinsteinPdflatex The reverse: Increased
+\frame{\frametitle{The reverse: Increased
     sensitivity at reference point}
 %##############################################################
 
 
+\begin{center}
 \begin{tabular}{|c||c|c|c|c|} \hline
 \myBox{3em}{Person\\class}
  & \myBox{5em}{Time\\Alternative~1 \\ \text{[min]}}
@@ -134,6 +143,8 @@ here, because of
 7 & 55 & 30 & 1 & 17 \\
 8 & 60 & 30 & 2 & 50 \\ \hline
 \end{tabular}
+\end{center}
+
 \vspace{1em}
 
 Such increased sensitivity at the reference (here: equal trip times)
@@ -142,40 +153,47 @@ by the Prospect Theory of Kahneman/Twersky in certain situations
 }
 
 %##############################################################
-\frame{\frametitle{\EinsteinPdflatex Modelling the increased sensitivity}
+\frame{
 %##############################################################
-\vspace{0em}
 
-\hspace*{-0.05\textwidth}
-\includegraphics[width=1.1\textwidth]{figsDiscr/nonlinUtility_4param_Tversky_skriptFig_eng.jpg}
-\vspace{-0.5em}
+\placebox{0.5}{0.62}{\figSimple{1.0\textwidth}
+  {figsDiscr/nonlinUtility_4param_Tversky_skriptFig_eng.jpg}}
+
+
+\placebox{0.50}{0.16}{\parbox{0.5\textwidth}{
+{\small
 \bdm
 V_{n1}-V_{n2}=\beta_1 +\beta_2\left[\Delta T_n+\beta_3 \,
   \tanh\left(\frac{\Delta T_n}{\beta_4}\right)\right]
 \edm
+\vspace{-2em}
+\begin{align*}
+\hatbeta_1 &= -0.08 \pm 0.25, \\[-0.8ex]
+\hatbeta_2 &= -0.05 \pm 0.10,\\[-0.8ex]
+\hatbeta_3 &= 27 \pm 101, \\[-0.8ex]
+\hatbeta_4 &= 10 \pm 16
+\end{align*}
+}}}
 
-{\small $
-\hatbeta_1= -0.08 \pm 0.25, \quad
-\hatbeta_2= -0.05 \pm 0.10, \quad
-\hatbeta_3= 27 \pm 101, \quad
-\hatbeta_4= 10 \pm 16.
-$}
+\placebox{0.50}{0.90}{\parbox{0.65\textwidth}{
+ \myheading{Modelling the increased sensitivity}} 
+} 
 
 }
 
 %##############################################################
-\frame{\frametitle{\EinsteinPdflatex 
+\frame{\frametitle{
 Four further models applied to the threshold data}
 %##############################################################
 
-\fig{1.0\textwidth}{figsDiscr/nonlinUtility_3param2param.png}
+\fig{0.88\textwidth}{figsDiscr/nonlinUtility_3param2param.png}
 
 }
 
-\subsection{4.13. GEV and Nested Logit Models}
+\subsection{10.2 GEV and Nested Logit Models}
 
 %##############################################################
-\frame{\frametitle{4.13. GEV and Nested Logit Models}
+\frame{\frametitle{10.2 GEV and Nested Logit Models}
 %##############################################################
 \textbf{Motivation}
 
@@ -400,13 +418,13 @@ from the outer decision and obeys a normal MNL.
 
 
 
-\subsection{4.13a. Nested Logit Example}
+\subsubsection{10.2.3 Example: Combined Destination and Mode Choice}
 
 % from ~/vorlesungen/Verkehrsoekonometrie_Ma/discrChoice_cc_Levmar/
 % = \pathDiscrChoic
 
 %##############################################################
-\frame{\frametitle{4.13a. Example: Combined destination and mode choice}
+\frame{\frametitle{10.2.3 Example: Combined Destination and Mode Choice}
 %##############################################################
 \fig{1.0\textwidth}{figsDiscr/NL-Beispiel_eng.png}
 
@@ -587,20 +605,20 @@ $}
 
 }
 
-\subsection{4.14. Mixed-Logit models}
+\subsection{10.3 Mixed-Logit models}
 
 %##############################################################
-\frame{\frametitle{4.14. Mixed-Logit models}
+\frame{\frametitle{10.3 Mixed-Logit models}
 %##############################################################
 
 if time allows, see German script, Sec. 4.14
 
 }
 
-\subsection{4.15. Models for Reliability}
+\subsection{10.4 Models for Reliability}
 
 %##############################################################
-\frame{\frametitle{4.15. Models for Reliability}
+\frame{\frametitle{10.4  Models for Reliability}
 %##############################################################
 
 [if time allows, see German script, Sec. 4.15]
