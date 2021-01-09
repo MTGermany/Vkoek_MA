@@ -28,11 +28,11 @@
 %makePale{opacity}{centerXrel}{centerYrel}{wrel}\{hrel} 
 \makePale{0.70}{0.50}{0.70}{1.40}{1.40}
 
-\placebox{0.50}{0.90}{\parbox{0.8\textwidth}{\myheading{
-10 Discrete-Choice Theory: Advanced Concepts
+\placebox{0.75}{0.81}{\parbox{0.45\textwidth}{\myheading{
+10 Discrete-Choice Theory:\\ \hspace*{1em} Advanced Concepts
 }}}
 
-\placebox{0.45}{0.40}{\parbox{0.8\textwidth}{
+\placebox{0.40}{0.30}{\parbox{0.8\textwidth}{
 {\large
 \bi
 \item 10.1 Parameter Nonlinear Models
@@ -221,6 +221,77 @@ for the choice probabilities?
 
 
 %##############################################################
+\frame{\frametitle{The \red{Red-Bus}-\blue{Blue-Bus} Problem}
+%##############################################################
+\visible<1>{\placebox{0.52}{0.45}{\figSimple{0.8\textwidth}
+  {figsDiscr/redBus_only.png}}}
+
+\visible<2->{\placebox{0.52}{0.45}{\figSimple{0.8\textwidth}
+  {figsDiscr/redBus_only_perc.png}}}
+
+\placebox{0.30}{0.20}{\parbox{0.3\textwidth}
+  {Times and costs equal,\\
+  AC zero}}
+
+}
+
+%##############################################################
+\frame{\frametitle{The \red{Red-Bus}-\blue{Blue-Bus} Problem}
+%##############################################################
+
+\visible<1>{\placebox{0.52}{0.45}{\figSimple{0.8\textwidth}
+ {figsDiscr/redBus_blueBus.png}}}
+
+\visible<2->{\placebox{0.52}{0.45}{\figSimple{0.8\textwidth}
+ {figsDiscr/redBus_blueBus_perc.png}}}
+
+
+\placebox{0.30}{0.20}{\parbox{0.3\textwidth}
+  {Times and costs equal,\\
+  AC zero}}
+
+\visible<2>{\placebox{0.45}{0.10}{\bfred{Not plausible!}}}
+
+}
+
+
+%##############################################################
+\frame{\frametitle{Problem solved: 100\% correlated random utilities}
+%##############################################################
+
+\placebox{0.52}{0.45}{\figSimple{0.9\textwidth}
+  {figsDiscr/redBus_blueBus_resolved_perc.png}}
+
+\placebox{0.18}{0.25}{\parbox{0.3\textwidth}
+  {Car and public transport\\
+  have equal times and costs,\\
+  AC zero}}
+
+}
+
+%##############################################################
+\frame{\frametitle{Nontrivial nested decision: partial correlations}
+%##############################################################
+
+\visible<1>{\placebox{0.52}{0.45}{\figSimple{0.9\textwidth}
+  {figsDiscr/redBus_blueBus_nontrivial.png}}}
+
+\visible<2->{\placebox{0.52}{0.45}{\figSimple{0.9\textwidth}
+  {figsDiscr/redBus_blueBus_nontrivial_perc.png}}}
+
+\placebox{0.18}{0.25}{\parbox{0.3\textwidth}
+  {All three modes \\
+  have equal times and costs,\\
+  AC zero}}
+
+\visible<2->{\placebox{0.50}{0.08}{\parbox{\textwidth}
+ {\bfred{Average PT utiliy higher than
+that of bus or tram alone\\because some prefer tram, some bus}}}}
+
+}
+
+
+%##############################################################
 \frame{\frametitle{The general GEV generating function}
 %##############################################################
 
@@ -267,10 +338,43 @@ Any GEV function  $G(\vec{y})$ satisfying the above four conditions
 \ei
 \vspace{2em}
 
-\pause
 \bfAsk{?} Check why the above conditions for $G(\vec{y})$ must be true
 
 }
+
+
+%##############################################################
+\frame{\frametitle{Question: Check the conditions for $G(\vec{y})$}
+%##############################################################
+
+\bi
+\itemAsk \colAsk{Why $G(\vec{y}) \ge 0 \ \text{for all} \ \vec{y}$?}
+
+\pause \itemAnswer \colAnswer{Because a distribution function $F=e^{-G}$
+  must be $\le 1$ (the condition $F\ge 0$ is satisfied automatically)}
+
+\pause \itemAsk \colAsk{Why $G \to \infty \ \text{if any} \ y_i \to \infty$?}
+
+\pause \itemAnswer \colAnswer{If $y_i \to \infty$ then the argument 
+$e_i=-\ln y_i$ of the distribution function tends to $-\infty$. Since
+  the corresponding random variable $\epsilon_i$ is always $>-\infty$,
+  we have $F=e^{-G}=0$, hence $G \to \infty$}
+
+\pause \itemAsk \colAsk{Sign of derivatives of $G$?}
+
+\pause \itemAnswer \colAnswer{We check only the first derivative
+  $G_i=\ablpart{G}{y_i}$. We have $P_i=y_iG_i/G$ with $P_i$,
+  $y_i=e^{-e_i}$ and $G$ because of the first requirement all
+  $\ge 0$. Hence $G_i\ge 0$. The other conditions follow from the
+  non-negativity of the distribution functions}
+\pause \itemAsk \colAsk{Homogeneity $ G(\alpha \vec{y})=\alpha G(\vec{y})$
+  for any $\alpha>0$?}
+\pause \itemAnswer \colAnswer{Because of $P_i=y_iG_i/G$ and the scaling
+  invariance $P(\epsilon_1<e_1)=P(\lambda \epsilon_1<\lambda e_1)$
+  with $\alpha=e^{\lambda}$}
+\ei
+}
+
 
 %##############################################################
 \frame{\frametitle{Special Case I: Multinomial-Logit}
@@ -317,9 +421,10 @@ G\sup{NL}(\vec{y})=\sum_{l=1}^L
 where $\lambda_l \in [0,1]$ determine the correlations of the RUs in
 ``nest'' $l$:% with $M_l$ dependent alternatives:
 \bi
-\item $\lambda_l \to 1$: Limit of MNL, zero correlation \red{$\Rightarrow$
+\item $\lambda_l \to 1$: Limit of MNL, zero correlation \colAsk{$\Rightarrow$
   check it!}
-\item  $\lambda_l \to 0$: no RUs inside the nests, correlation=1: \bfdef{sequential model}
+\item  $\lambda_l \to 0$: no RUs inside the nests, correlation=1:
+  \bfdef{sequential model: blue and red buses}
 \ei
 \vspace{0.5em}
 
@@ -352,23 +457,24 @@ P_i=P_{lm}=P_l P_{m|l}
     e^{V_{l'm'}/\lambda_{l'}}\right)^{\lambda_{l'}}}
 \edm
 
-\pause
-{\small
-\bi
-\itemAsk Show that, if all $\lambda_l=1$, the normal MNL choice
-probabilities are obtained, i.e.,  all combinations $lm$ are independent
-\pause \itemAsk Show that, in the limit of all  $\lambda_l \to 0$, the choice
-probabilities are
-\bdm
-P_{lm}=\frac{\exp(V_{lm^*_l})}{\sum_l' \exp(V_{l'm^*_{l'}})}
-\edm
-if, for a given nest $l$, the alternative $m=m^*_l$ has the maximum
-utility $V$ of this nest, and $P_{lm}=0$, otherwise.
-\pause \itemAsk Diskuss why, in the case $\lambda_l \to 0$, the inner choice
-is deterministic, and each nest is a given single alternative
-subjected to a normal MNL: \bfdef{sequential model}
-\ei
-}
+%\pause
+%{\small
+%\bi
+%\itemAsk Show that, if all $\lambda_l=1$, the normal MNL choice
+%probabilities are obtained, i.e.,  all combinations $lm$ are independent
+%\pause \itemAsk Show that, in the limit of all  $\lambda_l \to 0$, the choice
+%probabilities are
+%\bdm
+%P_{lm}=\frac{\exp(V_{lm^*_l})}{\sum_l' \exp(V_{l'm^*_{l'}})}
+%\edm
+%if, for a given nest $l$, the alternative $m=m^*_l$ has the maximum
+%utility $V$ of this nest, and $P_{lm}=0$, otherwise.
+%\pause \itemAsk Diskuss why, in the case $\lambda_l \to 0$, the inner choice
+%is deterministic, and each nest is a given single alternative
+%subjected to a normal MNL: \bfdef{sequential model}
+%\ei
+%}
+
 }
 
 %##############################################################
@@ -376,14 +482,14 @@ subjected to a normal MNL: \bfdef{sequential model}
 %##############################################################
 
 \bi
-\item Set
+\item Set/assume
 \maindmIntext{
 V_{lm}=W_l+\tilde{V}_{lm}
 }
 \bi
-\item $V_{lm}$: top-level contributions
-\item $W_l$: inner
-  contributions
+\item $W_l$: top-level contributions not appearing inside the nests
+\item $\tilde{V}_{lm}$: inner
+  contributions of alternative $m$ in nest $l$
 \ei
 
 \pause \item Then, the NL choice probabilities can be formulated as
@@ -403,13 +509,22 @@ with the \bfdef{inclusion values}
 \bi
 \pause \itemAsk Argue that the outer nest decision is a normal MNL with the
 \emph{effective nest utilities} given by $\lambda_lI_l$.
+\pause \scriptsize{\colAnswer{Because for these assumptions $P_l$ has
+    the normal  MNL form}}
 \pause \itemAsk Show that  $\lambda_lI_l$ is
 at least as high as the utility $\tilde{V}_{lm^*_l}$ 
 of the best alternative within the nest and
 that $\lambda_lI=\tilde{V}_{lm^*_l}$ for $\lambda_l\to 0$.
+\pause \scriptsize{\colAnswer{All contributions of the sum inside the log are
+  exponentials and thus positive. \\[-0.7ex]
+  Hence, $\lambda_lI_l$ is larger than
+  any single $\tilde{V}_{lm}$ including the maximum. For $\lambda_l\to
+  0$, only the maximum contributes to the sum}}
 \pause \itemAsk Argue that the (potential) selection within a nest is
 independent 
-from the outer decision and obeys a normal MNL.
+from the outer decision and obeys a normal MNL
+\pause \scriptsize{\colAnswer{Independent because $P_{lm}=P_l P_{m|l}$, MNL for
+  the utilities $\tilde{V}_{lm}/\lambda_l$ for fixed $l$}}
 \ei
 }
 
@@ -465,69 +580,75 @@ from the outer decision and obeys a normal MNL.
 \frame{\frametitle{Conditional modal splits}
 %##############################################################
 
-\placebox[center]{0.25}{0.65}
-{\figSimple{0.53\textwidth}
+\placebox{0.25}{0.65}
+{\figSimple{0.44\textwidth}
  {\pathDiscrChoice/NL_Skript_2x2alt_Nest1_fProb.png}}
-%}\end{document}
 
-\placebox[center]{0.75}{0.65}
-{\figSimple{0.53\textwidth}
- {\pathDiscrChoice/NL_Skript_2x2alt_Nest2_fProb.png}}
 
-\placebox[center]{0.25}{0.21}
-{\parbox{0.5\textwidth}{Observed and modelled modal split when driving
+\visible<3->{\placebox{0.75}{0.65}
+{\figSimple{0.44\textwidth}
+  {\pathDiscrChoice/NL_Skript_2x2alt_Nest2_fProb.png}}}
+
+
+\placebox{0.25}{0.20}
+{\parbox{0.45\textwidth}{Observed and modelled modal split when driving
     to  ``Aunt Emma''\\[-1em]
-{\small \bdma
+\visible<2->{{\small 
+\bdma
 P_{m|n1} &=& \frac{\exp(\tilV_{n1m}/\lambda_1)}
            {\sum_{m'}\exp(\tilV_{n1m'}/\lambda_1)},\\
 \tilV_{n1m}/\lambda_1 &=& \beta_1 T_{n1m}+\beta_2 \delta_{m1},\\
 \hatbeta_1 &=&-0.18, \ \hatbeta_2=+0.88
-\edma}
+\edma}}
 }}
 
-\placebox[center]{0.75}{0.21}
-{\parbox{0.5\textwidth}{Observed and modelled modal split when driving
-    to the supermarket\\[-1em]
-{\small \bdma
+\placebox{0.75}{0.20}{\parbox{0.45\textwidth}
+{ 
+ \visible<3->{Observed and modelled modal
+     split when driving  to the supermarket\\[-1em]}
+\visible<4->{{\small 
+\bdma
 P_{m|n2} &=& \frac{\exp(\tilV_{n2m}/\lambda_2)}
            {\sum_{m'}\exp(\tilV_{n2m'}/\lambda_2)},\\
 \tilV_{n2m}/\lambda_2 &=& \beta_3 T_{n2m}+\beta_4 \delta_{m1},\\
 \hatbeta_3 &=&-0.29, \ \hatbeta_4=-0.42
-\edma}
+\edma}}
 }}
 
 }
 
 
+
+
 %##############################################################
-\frame{\frametitle{Top-level choice\\of the type\\of shop}
+\frame{\frametitle{Top-level choice of the type of shop}
 %##############################################################
 
-\placebox[center]{0.66}{0.67}
-{\figSimple{0.70\textwidth}
+\placebox{0.30}{0.52}
+{\figSimple{0.59\textwidth}
   {\pathDiscrChoice/NL_Skript_2x2alt_Toplevel_fProb.png}}
 
-\placebox[center]{0.18}{0.35}
+\placebox{0.80}{0.62}
 {\parbox{0.36\textwidth}{
 Choice of the type of shop: ``Aunt Emma'' vs supermarket:
 {\small \bdma
 P_{nl} &=& \frac{\exp(W_{nl}+\lambda_l I_{nl})} 
-{\sum_{l'}\exp(W_{nl'}+\lambda_l' I_{nl'})},\\[1em]
+{\sum_{l'}\exp(W_{nl'}+\lambda_l' I_{nl'})}\\[1em]
 W_{nl} &=& \beta_5 F_n \delta_{l1} + \beta_6 \delta_{l1}
 \edma }
 }}
 
-\placebox[center]{0.70}{0.24}
-{\parbox{0.6\textwidth}{
+\placebox{0.80}{0.24}
+{\parbox{0.4\textwidth}{
 {\footnotesize \bdma
 I_{n1} &=& \ln\bigg[
-  \sum_m \exp\left(\hatbeta_1 T_{n1m}+\hatbeta_2 \delta_{m1}\right)\bigg],\\
+  \sum_m \exp\left(\hatbeta_1 T_{n1m}+\hatbeta_2 \delta_{m1}\right)\bigg]\\
 I_{n2} &=& \ln\bigg[
-  \sum_m \exp\left(\hatbeta_3 T_{n2m}+\hatbeta_4 \delta_{m1}\right)\bigg].\\
+  \sum_m \exp\left(\hatbeta_3 T_{n2m}+\hatbeta_4 \delta_{m1}\right)\bigg]\\
 \edma}
 }}
 
-\placebox[center]{0.50}{0.08}
+\placebox{0.50}{0.08}
 {\parbox{0.8\textwidth}{
 {\small \bdm
 \hatbeta_5=2.9, \
@@ -540,19 +661,19 @@ I_{n2} &=& \ln\bigg[
 }
 
 %##############################################################
-\frame{\frametitle{Final\\combined\\probabilities}
+\frame{\frametitle{Final combined probabilities}
 %##############################################################
 
-\placebox[center]{0.64}{0.63}
-{\figSimple{0.80\textwidth}
+\placebox{0.35}{0.54}
+{\figSimple{0.60\textwidth}
   {\pathDiscrChoice/NL_Skript_2x2alt_NL_fProb.png}}
 
 \pause
-\placebox[center]{0.15}{0.22}
+\placebox{0.80}{0.55}
 {\parbox{0.22\textwidth}{
 Combined\\nested choice of shop type and transport mode}}
 
-\placebox[center]{0.62}{0.20}
+\placebox{0.50}{0.15}
 {\parbox{0.8\textwidth}{
 \maindm{
 \begin{array}{ll}
@@ -565,23 +686,23 @@ P_{ni} &=P_{nl} P_{m|nl}\\
 
 
 %##############################################################
-\frame{\frametitle{Counter\\check:\\normal\\MNL}
+\frame{\frametitle{Counter check: normal MNL}
 %##############################################################
 
-\placebox[center]{0.64}{0.63}
-{\figSimple{0.80\textwidth}
+\placebox{0.42}{0.58}
+{\figSimple{0.55\textwidth}
   {\pathDiscrChoice/NL_Skript_2x2alt_fProb.png}}
 
 
-\placebox[center]{0.16}{0.40}
-{\parbox{0.32\textwidth}{
+\placebox{0.82}{0.50}
+{\parbox{0.36\textwidth}{
 \bdm
 P_{ni} =\frac{\exp(V_{ni})}{\sum_{i'=1}^4 \exp(V_{ni'})}
 \edm
 }}
 
-\placebox[center]{0.45}{0.20}
-{\parbox{1.0\textwidth}{
+\placebox{0.50}{0.18}
+{\parbox{0.8\textwidth}{
 {\small $\begin{array}{rcll}
 V_1 &=& \beta_1T_1+\beta_2 +\beta_5F+\beta_6 & (l,m)=(1,1) \text{ Emma+PT}\\
 V_2 &=& \beta_1T_2+\beta_6 +\beta_5F & (l,m)=(1,2) \text{ Emma+car}\\
@@ -590,17 +711,15 @@ V_4 &=& \beta_3T_4 & (l,m)=(2,2) \text{ supermarket+car}
 \end{array}$}
 }}
 
-\placebox[center]{0.47}{0.07}
-{\parbox{1.0\textwidth}{
-{\small $
+\placebox{0.50}{0.05}{{\small $
 \hatbeta_1=-0.15, \
 \hatbeta_2=0.60, \
 \hatbeta_3=-0.09, \
 \hatbeta_4=-0.84, \
 \hatbeta_5=3.49, \
 \hatbeta_6=-1.76
-$}
-}}
+$}}
+
 
 
 }
