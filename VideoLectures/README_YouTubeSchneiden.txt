@@ -6,6 +6,7 @@ Besser, da losslessCut buggy! (check ob mkvmerge is OK)
    [wird ergaenzt um meinen persoenlichen Teil]
 
 3. content - video auswaehlen (auf Bild klicken)
+   (oder direkt in Ansicht nach Hochladen)
    -  Links auf Editor (die stilisierte Filmklappe) klicken
    => oben Video, unten Timeline Video und Timeline Sound,
    schwarze duenne verschiebbare Linie, um Zeitpunkte zu setzen

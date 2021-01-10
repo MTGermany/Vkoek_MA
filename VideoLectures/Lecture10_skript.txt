@@ -1,0 +1,34 @@
+0. Vorbereitung
+=============
+
+0.1. Browser
+==========
+
+Chromium-Browser (wg Schreiben) ohne Bookmarks Leiste starten
+corona-simulation.de laden
+
+
+0.2. Webcam
+=========
+Besser: vlc mit Crop-Moeglichkeiten
+
+[EXTRA Terminal:]
+vlc v4l2:///dev/video0
+
+vlc input "--video-filter=croppadd{cropright=200,cropleft=200}" v4l2:///dev/video0
+vlc input "--video-filter=croppadd{cropright=150,cropleft=150}" v4l2:///dev/video0
+vlc input "--video-filter=croppadd{cropright=100,cropleft=100}" v4l2:///dev/video0
+vlc input "--video-filter=croppadd{croptop=100,cropbottom=100}" v4l2:///dev/video0
+ACHTUNG: v4l2 mit lowercase 'l', not '1' !
+
+Manipulieren Helligkeit/Kontrast: 
+guvcview
+(hat auf alle Webcam Viewer (vlc, cheese) Einfluss!!)
+
+ACHTUNG: Nicht vlc mit 'x' schliessen, sondern immer mit 'q' im
+Terminal, braucht extra Terminal
+
+
+0.3. Screenrecorder, Verhueterli
+==============================
+

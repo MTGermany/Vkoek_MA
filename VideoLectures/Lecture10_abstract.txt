@@ -1,0 +1,14 @@
+https://youtu.be/UQEVu_jwRT4
+
+Lecture 10: Advanced Concepts of Discrete-Choice Theory
+
+
+In this lecture, I will present two advanced concepts. First, nonlinear
+utilities which are needed to model indifference regimes or,
+reversely, increased sensitivity near the reference point according to
+the prospect theory of Kahnemann and Tversky. Secend, I will
+introduce general extreme value (GEV) models which are the simplest
+models to include correlated random utilities. This is needed in
+hierarchical decisions such as simultaneous destination and mode
+choice or chosing between a car and different variants of public
+transport, e.g., buses and trams
