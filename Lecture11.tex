@@ -224,22 +224,87 @@ needed vehicles ($A_{21}$)
 %##############################################################
 
 \bi
-\item[\bfAsk{?}] Argue that a national economy with sectors $i$ satisfying 
+\itemAsk \colAsk{Argue that a national economy with sectors $i$ satisfying 
 $\sum_jA_{ij}x_j>x_i$ would not be sustainable or needs external help
-  (``GDR''). 
-\item[\bfAsk{?}] Give reasons why all $A_{ij}$ and $B_{ij}$ are $\ge 0$ and
-  $B_{ii}\ge 1$.
-\item[\bfAsk{?}] Assume that the external demand $y_i$ for
+  (``GDR'').}
+
+\pause\itemAnswer\colAnswer{In such an economy, sector $i$  
+must deliver more units to operate itself ($A_{ii}x_i$) and the
+ other sectors 
+ ($A_{ij}x_j$) than this sector produces in total ($x_i$).}
+
+\pause\itemAsk \colAsk{Give reasons why all $A_{ij}$ and $B_{ij}$ are $\ge 0$ and
+  $B_{ii}\ge 1$.}
+\pause\itemAnswer\colAnswer{Since sectors \emph{need} products and
+services from other sectors. }
+
+\pause\itemAsk \colAsk{Assume that the external demand $y_k$ for
   products/services of 
-  sector $i$ suddenly increases by one percent (e.g., driven by
+  sector $k$ suddenly increases by $r_k=\unit[1]{\%}$ (e.g., driven by
   politics). Give a 
   general expression for the
-  percentaged increase of the total production of all the sectors in
-  order to re-attain the steady state. Show that the result is
-  independent from the price of an unit. 
-\item[\bfAsk{?}] Give some additional elements and concepts needed to make the
-  IOM (i) dynamic, (ii) nonlinear reflecting the economy of scale.
+  percentaged increase of the GDP in
+  order to re-attain the steady state.}
+
+\pause\itemAnswer\colAnswer{The change of the demand vector is
+    given by $\Delta \vec{y}=(0,..,r_ky_k,0,...)\tr$ and the change of
+the production vector components by
+$\Delta x_i=\sum_jB_{ij}y_j=r_kB_{ik}y_k$. Hence, the change of the 
+total GDP is given by $\Delta x=\sum_i\Delta x_i=r_k\sum_i B_{ik}y_k$
+and the old GDP itself by
+$x=\sum_ix_i=\sum_i\sum_jB_{ij}y_j$. Finally, the
+percentage increase of the total GDP  is given by $\Delta x/x$}
 \ei
+
+
+}
+
+
+
+
+%##############################################################
+\frame{\frametitle{Questions (ctnd.)} 
+%##############################################################
+
+\bi
+\pause\itemAsk \colAsk{Give some additional elements and concepts
+  needed to make the 
+  IOM  dynamic}
+%\ei}\end{document}
+
+\pause\itemAnswer\colAnswer{
+After a sudden change of the demand,
+  the demand vector $\vec{y}$ is no longer balanced against the
+  available production $(\m{1}-\m{A})\vec{x}$ and the excess demand or
+  supply is balanced by emptying or filling the stores. If the economy is
+  \bfdef{demand-driven (Keynes)}, this also induces ramping up/down
+  the production. In the simplest case, the rate of change of the
+  production is proportional to the excess demand,
+\bdm
+\abl{x_i}{t}
+=\frac{1}{\tau_i}\bigg[y_i(t)-\big( (\m{1}-\m{A})\vec{x}\big)_i\bigg] 
+\edm
+where $\tau_i$ is the time the sector $i$ needs to adapt to changing
+demands.
+}
+\\[1ex]
+
+\pause\itemAsk \colAsk{Give some additional elements and concepts
+  needed to introduce nonlinearity reflecting the economy of scale}
+
+\pause\itemAnswer\colAnswer{
+In an \bfdef{economy of scale}, the IO coefficients become
+  smaller with the number of produced units of the target sector which
+  may be modelled, 
+  e.g., by
+\bdm
+A_{ij}(x_j)=\frac{A_{ij}(0)}{1+x_j/x_{j0}}
+\edm
+where $x_{j0}$ is the production quantity where significal scale
+effects set in.
+}
+\ei
+
 }
 
 \subsection{11.2. Life-Cycle Assessment}
@@ -252,20 +317,20 @@ $\sum_jA_{ij}x_j>x_i$ would not be sustainable or needs external help
 \item The IOM reflects a \emph{snapshot} of \emph{all products} of a
   national economy in the \emph{steady  state}
 
-\item Sometimes, it is more instructive or relevant to consider
+\pause \item Sometimes, it is more instructive or relevant to consider
   \emph{the total 
   lifetime} of \emph{a single product} in a \emph{time dependent way}
   by assessing production, operation, and destruction/recycling of
   this product. 
 
-\item This is formalized by the methods of \bfdef{Life-Cycle
+\pause \item This is formalized by the methods of \bfdef{Life-Cycle
   Assessment (LCA)} (German: \bfdef{\"Okobilanz}).
 
-\item However, LCA only considers first-order indirect effects, e.g.,
+\pause \item However, LCA only considers first-order indirect effects, e.g.,
   \COii\ emissions caused by electric vehicles through the
   \COii\ footprint of electricity production
 
-\item The class of \bfdef{Econometric Input-Output (EIO)
+\pause \item The class of \bfdef{Econometric Input-Output (EIO)
   LCA models} combines both approaches. 
 \ei
 }
@@ -290,14 +355,14 @@ $\sum_jA_{ij}x_j>x_i$ would not be sustainable or needs external help
 \item destruction/recycling.
 \ei
 
-\item For each life phase, calculate the amount of needed
+\pause \item For each life phase, calculate the amount of needed
   materials/energy resulting in the \bfdef{life-cycle inventory}
   $\tily_j$ for product category $j$ 
 (the tilde denotes that the product is given in physical units such as
   kg or kWh 
   rather than in \euro).
 
-\item The total emissions $e_i$ of pollutant $i$ during the life time is
+\pause \item The total emissions $e_i$ of pollutant $i$ during the life time is
   obtained using the \bfdef{emission factor matrix} $\m{C}$:
 
   \maindm{e_i=\sum_j C_{ij}\tily_j}
@@ -350,44 +415,48 @@ so we have
 
 \vspace{1em}
 \bfblack{2. Total \COii\ emissions}
-\vspace{1em}
+\vspace{1ex}
 
-{\small
+{%\small
 Defining $e_1$ to be the \COii\ emissions in kg ($e_2$ could be
 NO$_x$, $e_3$ PM and so on), we have
 \bdm
 e_1=\sum_{j=1}^6 C_{1j}\tily_j
 \edm
+\vspace{-1em}
+
 with the row vector 
+\vspace{-1ex}
+
 \maindm{
-\vec{C}\sub{\COii}=(C_{1j})=(4,\ 30,\ 2,\ 2, 20,\ \unit[2.7]{kg/l}).
+\vec{C}\sub{\COii}=(C_{1j})=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[2.7]{kg/l}).
 }
 The last emission factor $C_{16}=C_{16}\sup{w2t}+C_{16}\sup{t2w}$ is
 the sum of two contributions: 
-\vspace{-1em}
 
 \bi
-\item \bfdef{Well-to-tank (w2t)}
+\pause \item \bfdef{Well-to-tank (w2t)}
 emissions of the production chain mining $\to$ transport to
 refinery $\to$ refining process $\to$ transport to the gas station:
-$C_{16}\sup{w2t}=\unit[0.4]{kg/l}$,
-\item \bfdef{Tank-to-wheel (t2w)} emissions dictated by the chemistry
+$C_{16}\sup{w2t}=\unit[0.4]{kg/l}$,\\[1ex]
+\pause \item \bfdef{Tank-to-wheel (t2w)} emissions dictated by the chemistry
 during the actual combustion: $C_{16}\sup{t2w} = \unit[2.3]{kg/l}$
-(gasoline) or = \unit[2.7]{kg/l} (Diesel)
+(it would be \unit[2.7]{kg/l} for Diesel, i.e., the total w2w
+emissions of gasoline are about the t2w emissions when burning Diesel).
 \ei
 }
 
 }
 
 %##############################################################
-\frame{\frametitle{Example: Battery-electric vehicle (BEV)}
+\frame{\frametitle{Example 2: Battery-electric vehicle (BEV)}
 %##############################################################
 
 {\normalsize
 \bi
 \item The \bfdef{Life-cycle inventory} of steel, aluminum, rubber, plastic
-etc is comparable to that of the ICVs. 
-\item The starter batteries are replaced by the Lithium driving
+etc is comparable to that of the ICVs.\\[1ex] 
+\pause \item The starter batteries are replaced by the Lithium driving
   batteries (2$\times$ \unit[300]{kg}) and the 
   gasoline is replaced 
   by the needed electrical energy, typically \unit[20]{kWh} per
@@ -397,18 +466,19 @@ etc is comparable to that of the ICVs.
 \vec{\tily}=(\unit[800]{kg},\ \unit[60]{kg},\ \unit[60]{kg},\
 \unit[60]{kg},\ \unit[600]{kg},\ \unit[50\,000]{kWh})\tr.
 }
+\vspace{1em}
 
-\item This leads to the new \COii\ emission factors vector
+\pause \item This leads to the new \COii\ emission factors vector
 \maindm{
 \vec{C}\sub{\COii}=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[0.45]{kg/kWh}).
 }
-
+\vspace{1em}
 
 \bi
 \item The Li driving batteries are expensive to produce and there is
   much controversy in extimating their overall emission factor
-  $C_{15}$
-\item The enery emission factor is based, e.g., on the present (2019)
+  $C_{15}$\\[1ex]
+\pause \item The enery emission factor is based, e.g., on the present (2019)
   German energy mix emitting \unit[450]{g} \COii\ per kWh of electrical
   energy at the socket 
 \ei
@@ -423,24 +493,83 @@ etc is comparable to that of the ICVs.
 %##############################################################
 
 \bi
-\item[\bfAsk{?}] Is it possible to check, at a glance, whether
+\itemAsk \colAsk{Is it possible to check, at a glance, whether
   the example BEV emits less \COii\  per km than the example ICV \emph{when
-    considering the driving phase alone}?
+    considering the driving phase alone}?}\\[1ex]
 
-\item[\bfAsk{?}] How would you proceed to calculate the
+\pause \itemAnswer \colAnswer{Per \unit[100]{km}, the BEV indirectly emits
+\unit[20]{kWh} * \unit[0.45]{kg/kWh}=\unit[9]{kg}. The ICV vehicle
+emits directly and indirectly
+\unit[6]{l} * \unit[2.7]{kg/l}=\unit[16.2]{kg}. So, the BEV ``wins''
+when considering the direct and indirect emissions in the driving
+phase alone. 
+\\[1ex]
+However, the BEV production emissions are significantly
+higher. Furthermore, less than ideal efficiencies when
+charging/discharging have not been considered.}\\[1em]
+
+\pause \itemAsk \colAsk{How would you proceed to calculate the
   \emph{break-even} mileage beyond which a BEV is more environmentally
-  friendly (``green'') than the ICV?
+  friendly (``green'') than the ICV?}\\[1ex]
 
-\item[\bfAsk{?}] Give the two most important factors influencing the total LCA
-  emissions of battery-electric vehicles.
+\pause \itemAnswer \colAnswer{We saw that the \emph{driving} emissions $C'$
+  per kilometer $x$ for the ICV are higher compared to the BEV. In
+  contrast, it is the other way round for the \emph{fixed} emissions
+  $C^0$ due to 
+  production/disposal/recycling.
+So, just calculate the break-even kilometrage $x_c$ by the equation
+\bdm
+C^0\sub{BEV}+C'\sub{BEV}x_c= C^0\sub{ICV}+C'\sub{ICVV}x_c
+\edm
+}
+\ei
+}
+
+%##############################################################
+\frame{\frametitle{Questions on LCA (ctnd.)}
+%##############################################################
+
+\bi
 
 
-\item[\bfAsk{?}] A common saying states that \emph{the Sun does not
+\itemAsk \colAsk{Give the two most important factors influencing the total LCA
+  emissions of battery-electric vehicles.}
+
+\pause \colAnswer{
+\bi
+\item[(i)] \colAnswer{The energy mix of the used electricity
+  (this is tricky! particularly, you cannot save your soul by paying
+  indulgences/ordering ``green'' electricity)}
+\pause \item[(ii)] \colAnswer{The production and disposal/recycling emissions of the
+  battery and whether you need more than one battery during lifetime
+  (to research this is even more trickky).}
+\ei
+}
+
+
+
+\pause \itemAsk \colAsk{A common saying states that \emph{the Sun does not
   issue invoices} nor does the production of electric energy by
   photovoltaic (PV) elements entail
   any direct \COii\ emissions. Discuss why PV energy still has a nonzero
   \COii\ footprint and how to calculate the PV \COii\ emission
-  factor. Use LCA arguments and assume a steady state.  
+  factor. Use LCA arguments and assume a steady state. } 
+
+\pause \colAnswer{
+\bi
+\item[(i)] \colAnswer{Get information about the usable lifetime $\tau$,}
+\pause \item[(ii)] \colAnswer{Check the climate where you want 
+to install your PV and
+  determine the average power (in Germany, it is about \unit[10]{\%} of the
+  installed power $P\sub{max}$) and calculate the total electric
+  energy delivered, e.g., $W\sub{el}=0.1\, \tau P\sub{max} $ }
+\pause \item[(iii)] \colAnswer{Get the production and recycling 
+emissions $C$ of your PV including 
+ the connection to the electric grid and calculate the
+ \COii\ footprint $e\sub{PV}=C/W\sub{el}$ [kg/kWh].}
+\ei
+}
+
 \ei
 }
 
