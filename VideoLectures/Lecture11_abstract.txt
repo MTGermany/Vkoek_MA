@@ -1,0 +1,5 @@
+Lecture 11: Input-Output Models and Life-Cycle Assessment
+
+In a national economic, everything is interconnected: The sector offering transportation services needs vehicles whose workers, in turn, need transpportation. The sector providing electricity needs, e.g., steel and other materials for the lines of electricity while the corresponding sectors need electricity (and transportation services). In this lecture, we learn about two approaches: The input-output model for the steady state of the complete economy at any given time, and the life-cycle assessment ("Ökobilanz") considering a given product over its lifetime. Using the latter, we can, e.g., assess whether an internal combustion vehicle or a battery-electric vehicle is more "eco-friendly" and on which factors this rating depends. 
+
+
