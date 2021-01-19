@@ -1,3 +1,4 @@
+
 \documentclass[mathserif,aspectratio=1610]{beamer}
 %\documentclass[mathserif,handout,aspectratio=1610]{beamer}
 %\usepackage{beamerthemeshadow}
@@ -71,13 +72,13 @@
 \item In a modern economy, nearly everything is connected to ``the
   rest'' of the economy.\\[1ex]
 \pause \item \emph{Wanted:} a quantitative description of the flows of
-material, 
+materials, products,
   services, and information between the different parts of an economy.
 \pause \item The \bfdef{input-output model (IOM) of Leontief} tackles
 this problem by 
   making several assumptions:\\[1ex]
 \bi
-\item Every material or service is associated with a
+\item Every material, product, or service is associated with a
   certain \bfdef{sector}\\[1ex]
 \pause \item To make all flows (kg, \euro, bytes, ...) commensurable, the
   common unit is a \emph{monetary unit}, e.g., \euro\\[1ex]
@@ -103,7 +104,10 @@ Linear, deterministic coupling of $n$ \bfdef{sectors} and an
 the steady state: 
 
 \maindm{
-x_i=y_i+\sum\limits_{j=1}^n x_{ij} =y_i+\sum\limits_{j=1}^n A_{ij} x_j.
+\visible<1->{x_i=}
+\visible<2->{y_i+}
+\visible<3->{\sum\limits_{j=1}^n x_{ij}}
+\visible<4->{=y_i+\sum\limits_{j=1}^n A_{ij} x_j}
 }
 
 \bi
@@ -145,7 +149,7 @@ IOM equation in vector-matrix notation:
 \item $\m{A}=(A_{ij}), i,j=1 \cdots n$ \bfdef{IOM coefficient matrix}
 \ei
 \vspace{1em}
-Solving for $\vec{x}$ by writing $(\m{1}-\m{A})\vec{x}=\vec{y}$:
+\pause Solving for $\vec{x}$ by writing $(\m{1}-\m{A})\vec{x}=\vec{y}$:
 \maindm{\vec{x}=(\m{1}-\m{A})^{-1}\vec{y} \equiv \m{B}\vec{y} }
 \bi
 \item $\m{B}=(\m{1}-\m{A})^{-1}$ 
@@ -163,7 +167,7 @@ Solving for $\vec{x}$ by writing $(\m{1}-\m{A})\vec{x}=\vec{y}$:
 \item $B_{ij}$ denotes the needed total production from sector $i$ in
   order to deliver one unit of $j$ to the end consumer (or the not
   considered sectors) in the steady state\\[1em]
-\item $\m{B}$ includes all indirect effect \emph{in an infinite
+\pause \item $\m{B}$ includes all indirect effect \emph{in an infinite
   recursion} as can be seen from the Taylor expansion:
 \ei
 \vspace{1ex}
@@ -185,10 +189,10 @@ Solving for $\vec{x}$ by writing $(\m{1}-\m{A})\vec{x}=\vec{y}$:
 
 {\small
 \bdm
-B_{11}= 1
-\visible<2->{+A_{11}}
-\visible<3->{+\sum\limits_{k=1}^2 A_{1k}A_{k1}}
-\visible<4->{+\sum\limits_{k=1}^2\sum\limits_{l=1}^2A_{1k}A_{kl}A_{l1} + \ \ldots}
+B_{11}= 1+
+\visible<2->{A_{11}+}
+\visible<3->{\sum\limits_{k=1}^2 A_{1k}A_{k1}+}
+\visible<4->{\sum\limits_{k=1}^2\sum\limits_{l=1}^2A_{1k}A_{kl}A_{l1} + \ \ldots}
 \edm
 
 \bi
@@ -267,7 +271,7 @@ percentage increase of the total GDP  is given by $\Delta x/x$}
 %##############################################################
 
 \bi
-\pause\itemAsk \colAsk{Give some additional elements and concepts
+\itemAsk \colAsk{Give some additional elements and concepts
   needed to make the 
   IOM  dynamic}
 %\ei}\end{document}
