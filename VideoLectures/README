@@ -29,6 +29,10 @@ guvcview
 
 ACHTUNG: Nicht vlc mit 'x' schliessen, sondern immer mit 'q' im
 Terminal, braucht extra Terminal
+!!!! Ansonsten geht Webcam nicht aus und laesst sich mit ps -a NICHT
+schliessen, muss Computer neustarten!!! Also wirklich mit 'q'
+schliessen!!!!
+
 
 3. Simple Screen recorder (Verhueterli) oeffnen
    - Profile Vorlesungen2020 lassen
