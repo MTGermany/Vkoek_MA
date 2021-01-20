@@ -1,0 +1,5 @@
+https://youtu.be/yY3E5nDKm_s
+
+Tutorial 05: Map Matching and Bayes inference
+
+A standard problem for navigation devices is "map matching", i.e., associating a measured GPS location "in the middle of nowhere" to a road nearby. In Problem 5.1, we use Bayesian inference to tackle this. Problem 5.2 applies Bayesian inference to (semi-) continuous random variables: Observed and a-priori modal split

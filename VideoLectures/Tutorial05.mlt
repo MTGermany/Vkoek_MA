@@ -1,0 +1,251 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="6.23.0" title="Shotcut version 20.11.28" producer="main_bin">
+  <profile description="automatic" width="1154" height="646" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1154" display_aspect_den="646" frame_rate_num="60" frame_rate_den="1" colorspace="709"/>
+  <producer id="producer0" in="00:00:00.000" out="00:08:43.000">
+    <property name="length">00:08:43.017</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05_1_ab.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:04:33</property>
+    <property name="shotcut:hash">0881d6195cfa568a8fb2c7d1fac9452a</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05_1_ab.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="00:13:06.583">
+    <property name="length">00:13:06.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05-1_cd.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:20:19</property>
+    <property name="shotcut:hash">baceb8091900ab80e6ff8e934025116d</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05-1_cd.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="00:08:27.650">
+    <property name="length">00:08:27.667</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05-2_ab.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:38:40</property>
+    <property name="shotcut:hash">0b4340ffc28baaf86d4a361c6bae7cd2</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05-2_ab.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="00:05:47.583">
+    <property name="length">00:05:47.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05-2_cd.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:45:35</property>
+    <property name="shotcut:hash">5c6371c008c64244f961770ad6d7897e</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05-2_cd.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="main_bin" title="Shotcut version 20.11.28">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="xml_retain">1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:08:43.000"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:13:06.583"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:08:27.650"/>
+    <entry producer="producer3" in="00:00:00.000" out="00:05:47.583"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:32:25.000">
+    <property name="length">00:32:25.017</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgb24a</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:32:25.000"/>
+  </playlist>
+  <producer id="producer4" in="00:00:00.000" out="00:08:43.000">
+    <property name="length">00:08:43.017</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05_1_ab.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:04:33</property>
+    <property name="shotcut:hash">0881d6195cfa568a8fb2c7d1fac9452a</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05_1_ab.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer5" in="00:00:00.000" out="00:13:06.583">
+    <property name="length">00:13:06.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05-1_cd.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:20:19</property>
+    <property name="shotcut:hash">baceb8091900ab80e6ff8e934025116d</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05-1_cd.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor0" global_feed="1" in="00:00:00.000" out="00:00:01.383">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer4" in="00:06:16.867" out="00:06:18.250"/>
+    <track producer="producer5" in="00:00:00.000" out="00:00:01.383"/>
+    <transition id="transition0" out="00:00:01.383">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition1" out="00:00:01.383">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer6" in="00:00:00.000" out="00:08:27.650">
+    <property name="length">00:08:27.667</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05-2_ab.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:38:40</property>
+    <property name="shotcut:hash">0b4340ffc28baaf86d4a361c6bae7cd2</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05-2_ab.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor1" global_feed="1" in="00:00:00.000" out="00:00:01.083">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer5" in="00:13:03.183" out="00:13:04.267"/>
+    <track producer="producer6" in="00:00:01.217" out="00:00:02.300"/>
+    <transition id="transition2" out="00:00:01.083">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition3" out="00:00:01.083">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer7" in="00:00:00.000" out="00:05:47.583">
+    <property name="length">00:05:47.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/Tutorial05-2_cd.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-20T11:45:35</property>
+    <property name="shotcut:hash">5c6371c008c64244f961770ad6d7897e</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Tutorial05-2_cd.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor2" global_feed="1" in="00:00:00.000" out="00:00:00.950">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer6" in="00:07:20.417" out="00:07:21.367"/>
+    <track producer="producer7" in="00:00:01.833" out="00:00:02.783"/>
+    <transition id="transition4" out="00:00:00.950">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition5" out="00:00:00.950">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer4" in="00:00:00.000" out="00:06:16.850"/>
+    <entry producer="tractor0" in="00:00:00.000" out="00:00:01.383"/>
+    <entry producer="producer5" in="00:00:01.400" out="00:13:03.167"/>
+    <entry producer="tractor1" in="00:00:00.000" out="00:00:01.083"/>
+    <entry producer="producer6" in="00:00:02.317" out="00:07:20.400"/>
+    <entry producer="tractor2" in="00:00:00.000" out="00:00:00.950"/>
+    <entry producer="producer7" in="00:00:02.800" out="00:05:47.583"/>
+  </playlist>
+  <tractor id="tractor3" title="Shotcut version 20.11.28" global_feed="1" in="00:00:00.000" out="00:32:25.000">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">0.0119531</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition6">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition7">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>
