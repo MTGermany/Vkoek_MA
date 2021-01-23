@@ -1,0 +1,114 @@
+
+Vorbereitung
+=============
+
+Drei Browser-Reiter England, Dresden und Deutschland
+
+Einleitung
+==========
+
+Halo liebe Freunde der Corona-Simulation
+jetzt geht es mal um die neuen Mutationen aus England.
+Kann man sie in den Daten sehen?
+Wie toedlich ist der Virus?
+wieviel mehr ansteckend?
+
+Schaun wir mal mit Hilfe von corona-simulation.de, ob man das anhand
+der Daten und Simulationen herausfinden kann
+
+
+England normal
+==============
+
+[England einstellen, startet]
+
+Stellen wir also in corona-simulation.de England ein und lasen laufen
+
+Zunaechst mal haben die Englaender anders als die Deutschen
+superschoene konsistente Daten. Die Todeszahlen hinken den Fallzahlen
+um 2-3 Wochen nach, wie erwartet, alle Todeszahlen werden sofort
+gemeldet, anders als z.B. in Sachsen und es gibt kaum
+Wochenschwankungen
+
+Anderer Browser Dresden
+=======================
+
+[switch tab]
+
+In Dresden beispielsweise wird gleichzeitig mit dem positiven Tets
+gestorben [PEAK NOV 11, Abfall zu Weihnachten] und zum Schluss stirbt
+nahezu keiner mehr, wobei da die Simulation (graue Kurve) anderer
+Meinung ist.
+
+[taegl Faelle]
+
+Bei den taeglichen Faellen ist es noch ausgepraegter. Am
+WE stirbt kaum jemand und die letzten 5 Tage schon gleich gar keiner
+
+Man
+muss jedenfalls bei der Datenanalyse extrem aufpassen. Werden
+beispielsweise 1000 Tote gemeldet, ist das einfach das
+Meldeaufkommen. Die Leute sind nicht gestern gestorben, sondern evtl
+schon vor 3 Wochen
+
+Ob das
+Feiertagsluecken - oder eher Faxpapiermangel - weiss ich nicht. 
+
+
+England normal
+==============
+
+Nun aber zurueck nach England und der neuen Mutation. Nach einen
+raschen Anstieg bis etwa zum 10. Januar geht es nun ebenso rasant
+zuruck. Ebenso wie in Tschechien, wo die Inzidenz noch hoeher war
+
+Aktuelles R=0.75 bei R0=1.00
+
+Es wurden auch schon 8.4% geimpft, Impf-Immunitaet 3.4%
+
+England Tagesansicht
+===================
+
+Die Wochen-OInzidenz ist immer eine halbe Woche verzoegert. Noch
+deutlicher sieht man das bei Tagesinzidenz: Von ueber 60 000 pro Tag
+auf etwa 35 000
+
+England Faelle vs Infizierte
+============================
+
+Die Simulation meint sogar, einen Rueckgang vom Max um mehr als Faktor
+zwei zu sehen, denn auch die gemeldeten Faelle sind ja verzoegert
+
+Aktuellen Infektionen gehen ab Anf Jan zurueck und da gab es ja auch
+einen Lockdown aehnl wie in D
+
+es wird auch immer mehr und sehr gleichmaessig getestet, in Gegensatz
+zu Deutschland: 500 000 pro Tag.
+
+Da ist auch das Hellfeld groesser, immerhin modelliert 33% aller Infizierten
+
+
+England Raten
+============
+
+
+Faelle vs InfizierteIFR relativ hoch bei 0.7% Krankenh an der Grenze
+
+
+England normal Prognose
+======================
+
+rapider Abfall
+
+England Zusammenfassung
+========================
+
+Ein Lockdown aehnlich wie in D bringt einen effektiven R-Wert von
+0.78, was einen Abfall um den Faktor zwei alle 2 Wochen entspricht, waehrend er in D ueber 0.8 liegt. So viel ansteckender kann das
+neue Virus also nicht sein, ausser es ist auch in England kaum
+verbreitet
+
+Unterschied zu D kann auch noch nicht durch Impfungen erklaert werden,
+da Immunitaet auch in E nur bei 4% liegt
+
+

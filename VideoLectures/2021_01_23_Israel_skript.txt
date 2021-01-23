@@ -1,0 +1,101 @@
+Einfuehrung
+===========
+
+Hallo liebe Simulationsfreunde. Ich selber war verbluefft, dass sich
+in Israel trotz der massivenm Impfung noch kaum Erfolge
+zeigen. Erfuellt der Impfstoff in der Realitaet, sozusagen in der
+unkontrollierten 
+freien Wildbahn, nicht seine Versprechungen?
+
+Das waere sehr, sehr, schlecht
+
+Deshalb analysiere ich mit corona-simulation.de Israel, um vielleicht
+Entwarnung geben zu koennen.
+
+
+[Start mit Laenderwahl Israel Standardansicht, Stopp zu Weihnachten]
+
+Etwa zu Weihnachten faengt mit massiver Geschwindigkeit die
+Impfkampagne an
+
+{Sim bis gegenwart]
+
+Dennoch erhoeht sich mit rasendem Tempo die
+Infektionszahlen. Irgendwas muss in Israel extrem Pandemiefoerdernd
+sein, evtl. die Palestinmenser (von den 9 Mio Israelis im Kernland
+sind 1.5 Palestinenser) oder die Ultraorthodoxen? Ich weiss es nicht,
+auf jeden Fall ist es so. Und geradezu panikerregend ist, dass bei 35%
+Geimpften immer noch kaum Rueckgang zu verzeichnen ist.
+
+Ist es wirklich panikerregend?
+
+Eine erste Entwarnung kann die Basisreproduktionszahl geben, die vom
+Verhalten der Leute und der jahreszeit abhaengt, aber nicht von der
+Impfrate und auch nicht von der Herden-Teilimmunitaet der Erkrankten.
+
+Sie ist seit November in sehr engem Bereich um 1.45 bis 1.6
+
+[simulieren bis Anfang Maerz]
+
+Und, in der Tat, die Simulation des Szenarios "Unveraendert" (an
+keinen Regler drehen oder schieben) zeigt ein rasches Ende.
+
+Sie bleibt
+zwar trotz der rueckgehenden Daten noch ein paar tage nahezu konstant,
+denn die Simulation meint, der gegenwaertige Abfall ist teils auf
+geringere Testungen zuruckzufuehren
+
+[Blatt "Tests"]
+
+[R0 auf 2, 2 Monate weiter]
+
+Jetzt kann man sogar schon Halli-Galli geben, Diskos, versammlungen,
+alles, und den R0-Wert auf Max stellen: Es tut sich nix!
+
+[mein Bild]
+
+Warum sieht man jetzt noch nix?
+
+Aufgrund mehrerer Verzuegerungen
+
+1. Die Impfung braucht Zeit zum Wirken. Bereits 35% geimpft, aber erst
+die haelfte immun. Es wird also auch jede Menge Covid-19 Faelle bei
+bereits Geimpften geben. Kein Grund Zur Beunruhigung!
+
+[Tagesfaelle]
+
+2. Die Wocheninzidenz gibt die lage, habe ich ja in anderen Videos
+bereits gesagt, mit 3.5 Tagen Verzoegerung an
+
+3. Auch die gemeldeten Faelle sind ja bereits verzoegert. Hier habe
+ich einen Test im Mittel 7 tage nach Infektion angeschaut
+
+[Nochmal laufen lassen]
+
+Weil's so schoen ist, nochmal die Prognose: Im Maerz vorbei, aus und
+vorbei! Halli Galli ohne Ende moeglich!
+
+
+Schluss
+=======
+
+Also, die gute Nachricht: Alles ist in Israel im Gruenen Bereich und
+laeuft nach Plan!
+
+Wenn sich allerdings in spaetestens zwei Wochen keine merklichen
+Rueckgaenge ergeben werden, ist das fuer die ganze Welt wirklich
+schlimm.
+
+Sehr sehr schlimm.
+
+Anders als die meisten
+Zukunfts-Simulationen, die eher Szenarienprojektionen denn Prognosen
+darstellen, ist diese sehr robust und kann, falls das Datenblatt des
+Impfstoffs zutrifft, als echte Prognose gelten.
+
+Hoffen wir also, dass sie zutrifft 
+
+
+
+
+

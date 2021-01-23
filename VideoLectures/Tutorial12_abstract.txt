@@ -3,9 +3,4 @@ https://youtu.be/c_6Dw4nT77s
 
 Tutorial 12: Econometric Input-Output-Model (IOM)
 
-We consider the interplay between the power-plant sector producing
-electricity and heat and the mechanical engineering sector producing
-machines while all the other sectors are attributed to the
-end-consumer sector. When increasing the demand for machines, but not
-for energy, we will see that the production of both sectors must
-increase to re-attain the steady state
+We consider the interplay between the power-plant sector producing electricity and heat and the mechanical engineering sector producing machines while all the other sectors are attributed to the end-consumer sector. When increasing the demand for machines, but not for energy, we will see that the production of both sectors must increase to re-attain the steady state 

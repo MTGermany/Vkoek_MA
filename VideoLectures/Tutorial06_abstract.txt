@@ -2,7 +2,4 @@ https://youtu.be/QWFwCEkzRPo
 
 Tutorial 06: Data Fusion and Stated-Choice Surveys
 
-Problem 6.1. discusses how to weight the input from different sensors
-measuring the same quantity, e.g., CAN-bus based, gyro-based, and GPS
-based sensors for the yaw rate.
-Problems 6.2 and 6.3 relate to simple stated choice surveys
+Problem 6.1. discusses how to weight the input from different sensors measuring the same quantity, e.g., CAN-bus based, gyro-based, and GPS based sensors for the yaw rate. Problems 6.2 and 6.3 relate to simple stated choice surveys 

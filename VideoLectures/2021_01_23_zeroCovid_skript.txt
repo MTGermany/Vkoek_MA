@@ -4,113 +4,75 @@ Vorbereitung
 
 Drei Browser-Reiter England, Dresden und Deutschland
 
+
 Einleitung
 ==========
 
-Zwei Themen: England-Mutation und Zero-Covid-Bewegung
+[grosses Photo]
 
+Hallo liebe Freunde der gepflegten Corona-Simulation,
+heute will ich mal das gegenwaertige Hot Topic der Corona-Themen unter
+die Lupe nehmen: Zero Covid. Fuer die, die davon noch nicht gehoert
+haben: Es geht dabei um einen vorgeschlagenen radikalen Shutdown mit
+dem Ziel, das Virus "auszutrocknen", wie es so schoen heisst, also
+komplett eliminieren, um danach zum normalen Vor-Covid-19 Leben
+zurueckzufuehren. Fuer den Fall, dass nicht alle mitmachen, sind
+sogenannte "gruene Zonen" angedacht.
 
-England normal
-==============
+Um klar zu sein, es handelt sich hier um einen unvorstellbar radialen
+Shutdown, gegen den der gegenwaertige - aehem, ich sollte schon
+laengst mal zum nichtgeoeffneten Friseaur - ein Kindergeburtstag ist.
 
-Zunaechst mal haben die Englaender anders als die Deutschen
-superschoene konsistente Daten. Die Todeszahlen hinken den Fallzahlen
-um 2-3 Wochen nach, wie erwartet, alle Todeszahlen werden sofort
-gemeldet, anders als z.B. in Sachsen und es gibt kaum
-Wochenschwankungen
+In diesem Video simuliere ich mit meinem Simulator
+corona-simulation.de, wie Zero-Covid
+ausgestaltet werden muesste und unter welchen Bedingungen er
+funktionieren koennte.
 
-Anderer Browser Dresden
-=======================
+Das Video ist als Anregung fuer eigene Simulation von Faellen
+gedacht. Laeuft auf jeden Browser, auch Smartphones,
+ohne irgendwelche Plugins oder Installationen 
 
-In Dresden beispielsweise wird gleichzeitig mit dem positiven Tets
-gestorben [PEAK NOV 11, Abfall zu Weihnachten] und zum Schluss stirbt
-nahezu keiner mehr, wobei da die Simulation (graue Kurve) anderer
-Meinung ist. Bei den taeglichen Faellen ist es noch ausgepraegter. Am
-WE stirbt kaum jemand und zum Schluss gleich gar nicht.
-
-Ob das
-Feiertagsluecken oder Faxpapiermangel ist, weiss ich nicht
-
-
-England normal
-==============
-
-Nun aber zurueck nach England und der neuen Mutation. Nach einen
-raschen Anstieg bis etwa zum 10. Januar geht es nun ebenso rasant
-zuruck. Ebenso wie in Tschechien, wo die Inzidenz noch hoeher war
-
-Aktuelles R=0.75
-
-Es wurden auch schon 8.4% geimpft, Impf-Immunitaet 3.4%
-
-England Tagesansicht
-===================
-
-Die Wochen-OInzidenz ist immer eine halbe Woche verzoegert. Noch
-deutlicher sieht man das bei Tagesinzidenz: Von ueber 60 000 pro Tag
-auf etwa 35 000
-
-England Faelle vs Infizierte
-============================
-
-Die Simulation meint sogar, einen Rueckgang vom Max um mehr als Faktor
-zwei zu sehen, denn auch die gemeldeten Faelle sind ja verzoegert
-
-Aktuellen Infektionen gehen ab Anf Jan zurueck und da gab es ja auch
-einen Lockdown aehnl wie in D
-
-es wird auch immer mehr und sehr gleichmaessig getestet, in Gegensatz
-zu Deutschland: 500 000 pro Tag.
-
-Da ist auch das Hellfeld groesser, immerhin modelliert 33% aller Infizierten
-
-
-England Raten
-============
-
-
-Faelle vs InfizierteIFR relativ hoch bei 0.7% Krankenh an der Grenze
-
-
-England normal Prognose
-======================
-
-rapider Abfall
-
-England Zusammenfassung
-========================
-
-Ein Lockdown aehnlich wie in D bringt einen effektiven R-Wert von
-0.78, was einen Abfall um den Faktor zwei alle 2 Wochen entspricht, waehrend er in D ueber 0.8 liegt. So viel ansteckender kann das
-neue Virus also nicht sein, ausser es ist auch in England kaum
-verbreitet
-
-Unterschied zu D kann auch noch nicht durch Impfungen erklaert werden,
-da Immunitaet auch in E nur bei 4% liegt
-
-
-
-
-Zero Covid Video
-###############
 
 Ausgangssituation
 =================
 
-[normal simulieren bis 15. Maerz
+[normal simulieren, zum Schluss etwas zoom out wg Text]
 
-* Weiter so wie bisher => Seuche nimmt auch ab, erreicht Anfang Maerz
-  50er Inzidenz, 15. Maerz 70xxx Todesfaelle.
-  Etwa diese Zahl sagte ich uebrigens schon Anfang Dezember in einem anderen
-  Video voraus.
-  
 * R0=1 Die Basisreproduktionszahl mit Lockdown
 
-* 15% Durchseuchung sowie 0.7% Impf-Immunitaet => effektive R bei 0.84
+* Die aktuellen Zahlen:
+ 16% Durchseuchung
+ geimpft 1.9%,
+ Impf-Immunitaet 0.7% => Biontech
+ effektive R bei 0.84
 
+[weiter wie bisher bis Anfang Maerz]
+
+* Weiter so wie bisher => Seuche nimmt auch ab, erreicht Anfang Maerz
+  50er Inzidenz, 15. Maerz 73000 Todesfaelle.
+  Etwa diese Zahl sagte ich uebrigens schon Anfang Dezember in einem anderen
+  Video voraus.
+
+* Im Sommer Seuche vorbei, dann Sommer ist (ja!) und bereits 15%
+  Impf-Immunitaet. knapp 80 000 Tote. Allerdings bis dahin
+  gegenwaertiger Lockdown. Unrealistisch und extrem schaedlich! 
+  
 
 Zero Covid bis Mitte Maerz
 =========================
+
+Wie sieht es dagegen beim Versprechen Zero-Covid aus, also ein
+ultraharter Lockdown, ich nenne es mal Shutdown, fuer eine kurze Zeit
+und dann Halli-Galli in der gruenen Zone?
+
+Es ist immer schwierig, serioes diversen Lockdown-Massnahmen eine
+Reduktion in R0 zuzuordnen (wohlgemerkt, R0 ist relevant, nicht
+R). Ich nehme mal Halabierung an, entspricht einen ultrahartem
+Shutdown nach dem Motto:
+
+Wollt ihr den totalen Shutdown? Totaler und
+haerter, als ihr euch ihn vorstellen koennt?
+
 
 [Neu simulieren, ab Gegenwart R0 um 0.5 runter, ab 15. Maerz gruene
 Zone]
@@ -121,12 +83,14 @@ Zone]
 
 [Umschalten auf Sim-Faelle]
 
-* Man sieht ploetzl Wirken des Zero-Covid bei den Neuinfektionen,
+* Man sieht ploetzl Wirken des Zero-Covid bei den Neuinfektionen.
+  Uebrigens auch den ploetzlichen Anstieg ueber Weihnachten
 
 [Umschalten auf taegl. Faelle]
 
 * waehrend die taeglichen "Faelle", also die positiv getesteten, erst
-  spaeter absinken.
+  spaeter absinken (und man dort auch bei den simulierten faellen
+  den Weihnachtsanstieg nicht sieht
 
 [Umschalten auf Wocheninzidenz]
 
@@ -140,7 +104,7 @@ Zone]
 [Umschalten auf Sim-Faelle, scrollen, dass mehr Vergangenheit]
 [Umschalten auf log Simulation, scrollen, dass mehr Vergangenheit]
 
-* Warum? Virus war halt nicvht ganz ausgetrocknet, nur um Faktor 1000
+* Warum? Virus war halt nicht ganz ausgetrocknet, nur um Faktor 1000
   zurueckgegangen, aber exponentieller Anstieg wirkt bei jeder
   Inzidenz, solange mind. ein ansteckender Infizerter da ist!
 
@@ -156,23 +120,6 @@ Zero Covid bis Austrocknung Anfang Mai
 
 
 
-Zero Covid bis Mitte Maerz, Drittel Israel-Impfrate
-================================================
-
-[Kalibr, sim bis Gegenwart, R0=0.5, Massnahmen-Ansicht, Impfrate 3%/Woche]
-[sim bis mitte Maerz]
-
-* Schaut nicht viel anders aus
-
-[R0=2]
-
-* Halli-Galli ab Mitte Maerz => erhoehte Impfung wirkt nachhaltig
-
-[log Ansicht]
-
-* Faelle gehen Anfang wieder etwas hoch, aber dann wirkt Impfung!
-
-* 67 000 Tote
 
 Zero Covid bis Anfang Mai, normale Impfrate, leichter externer Eintrag
 ===========================================================
@@ -194,6 +141,26 @@ Zero Covid bis Anfang Mai, normale Impfrate, minimaler externer Eintrag
 1/100000/Tag]
 
 * Aendert nix, sofort Anstieg, Zero-Covid wirkungslos!
+
+
+Zero Covid bis Mitte Maerz, Drittel Israel-Impfrate
+================================================
+
+[Kalibr, sim bis Gegenwart, R0=0.5, Massnahmen-Ansicht, Impfrate 3%/Woche]
+[sim bis mitte Maerz]
+
+* Schaut nicht viel anders aus
+
+[R0=2]
+
+* Halli-Galli ab Mitte Maerz => erhoehte Impfung wirkt nachhaltig
+
+[log Ansicht]
+
+* Faelle gehen Anfang wieder etwas hoch, aber dann wirkt Impfung!
+
+* 67 000 Tote
+
 
 Zero Covid bis Anfang Mai, 1/3 Israel-Impfrate, leichter externer Eintrag
 ===========================================================
@@ -232,8 +199,8 @@ Also, was sagt der Simulant?
   um danach in einer gruenen Zone wieder wie vor der Pandemie leben zu
   koennen.
 
-* In dieser Zeit ist aber die Wirtschaftskraft um mind 30 % down, der
-  Schaden ist also 1/4 jahr mal 30 % des BIP=1/10 deutsches BIP=300
+* In dieser Zeit ist aber die Wirtschaftskraft um etwa 50 % down, der
+  Schaden ist also 1/4 Jahr mal 50 % des BIP=1/8 deutsches BIP=400
   Milliarden Euro
 
 * In Wirklichkeit leben wir im Zentrum Europas mit 9 Nachbarlaendern,
@@ -292,7 +259,7 @@ Also, was sagt der Simulant?
   Voraussagen sind schwierig, vor allem, wenn Sie
   die Zukunft betreffen, deshalb verkaufe ich meine Simulationen als
   Szenarien-Projektionen, also wenn-dann-Aussagen, was uebrigens die
-  Klimamodelliere nicht anders machen.
+  Klimamodellierer nicht anders machen.
   Wenn jedoch all diese Szenarien dieselbe
   Schlussfolgerung ergeben, erhaelt man doch eine valide Prognose
   bzw. Aussage:  Zero Covid ist extrem schaedlich und gefaehrlich.

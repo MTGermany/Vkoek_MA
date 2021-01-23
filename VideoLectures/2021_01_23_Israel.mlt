@@ -1,0 +1,233 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="6.23.0" title="Shotcut version 20.11.28" producer="main_bin">
+  <profile description="automatic" width="1086" height="634" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1086" display_aspect_den="634" frame_rate_num="60" frame_rate_den="1" colorspace="709"/>
+  <producer id="producer0" in="00:00:00.000" out="00:08:20.717">
+    <property name="length">00:08:20.733</property>
+    <property name="eof">pause</property>
+    <property name="resource">01_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T18:37:40</property>
+    <property name="shotcut:hash">a96b87a919251a254810cfdffec4530d</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">01_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="00:02:49.650">
+    <property name="length">00:02:49.667</property>
+    <property name="eof">pause</property>
+    <property name="resource">02_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T18:46:29</property>
+    <property name="shotcut:hash">1af4965ae5bb35c862c4d0e3fb0f007f</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">02_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="00:00:06.233">
+    <property name="length">00:00:06.250</property>
+    <property name="eof">pause</property>
+    <property name="resource">03_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T18:43:13</property>
+    <property name="shotcut:hash">5e5c21067e487d7e5c089a4d7e776505</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">03_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="main_bin" title="Shotcut version 20.11.28">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <property name="xml_retain">1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:08:20.717"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:02:49.650"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:06.233"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:09:47.283">
+    <property name="length">00:09:47.300</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgb24a</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:09:47.283"/>
+  </playlist>
+  <producer id="producer3" in="00:00:00.000" out="00:08:20.717">
+    <property name="length">00:08:20.733</property>
+    <property name="eof">pause</property>
+    <property name="resource">01_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T18:37:40</property>
+    <property name="shotcut:hash">a96b87a919251a254810cfdffec4530d</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">01_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer4" in="00:00:00.000" out="00:02:49.650">
+    <property name="length">00:02:49.667</property>
+    <property name="eof">pause</property>
+    <property name="resource">02_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T18:46:29</property>
+    <property name="shotcut:hash">1af4965ae5bb35c862c4d0e3fb0f007f</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">02_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor0" global_feed="1" in="00:00:00.000" out="00:00:00.817">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer3" in="00:00:29.017" out="00:00:29.833"/>
+    <track producer="producer4" in="00:00:00.000" out="00:00:00.817"/>
+    <transition id="transition0" out="00:00:00.817">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition1" out="00:00:00.817">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer5" in="00:00:00.000" out="00:08:20.717">
+    <property name="length">00:08:20.733</property>
+    <property name="eof">pause</property>
+    <property name="resource">01_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T18:37:40</property>
+    <property name="shotcut:hash">a96b87a919251a254810cfdffec4530d</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">01_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor1" global_feed="1" in="00:00:00.000" out="00:00:00.733">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer4" in="00:02:48.917" out="00:02:49.650"/>
+    <track producer="producer5" in="00:01:50.333" out="00:01:51.067"/>
+    <transition id="transition2" out="00:00:00.733">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition3" out="00:00:00.733">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer6" in="00:00:00.000" out="00:00:06.233">
+    <property name="length">00:00:06.250</property>
+    <property name="eof">pause</property>
+    <property name="resource">03_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T18:43:13</property>
+    <property name="shotcut:hash">5e5c21067e487d7e5c089a4d7e776505</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">03_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor2" global_feed="1" in="00:00:00.000" out="00:00:00.750">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer5" in="00:08:14.650" out="00:08:15.400"/>
+    <track producer="producer6" in="00:00:00.000" out="00:00:00.750"/>
+    <transition id="transition4" out="00:00:00.750">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition5" out="00:00:00.750">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer3" in="00:00:00.000" out="00:00:29.000"/>
+    <entry producer="tractor0" in="00:00:00.000" out="00:00:00.817"/>
+    <entry producer="producer4" in="00:00:00.833" out="00:02:48.900"/>
+    <entry producer="tractor1" in="00:00:00.000" out="00:00:00.733"/>
+    <entry producer="producer5" in="00:01:51.083" out="00:08:14.633"/>
+    <entry producer="tractor2" in="00:00:00.000" out="00:00:00.750"/>
+    <entry producer="producer6" in="00:00:00.767" out="00:00:05.033"/>
+  </playlist>
+  <tractor id="tractor3" title="Shotcut version 20.11.28" global_feed="1" in="00:00:00.000" out="00:09:47.283">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">0.125706</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition6">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition7">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>

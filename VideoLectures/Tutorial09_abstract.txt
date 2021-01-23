@@ -1,7 +1,5 @@
 https://youtu.be/5ttmju7eCKk
 
-Tutorial 09: Maximum-Likelihood Estimation and Considerations of a Car
-Salesman
+Tutorial 09: Maximum-Likelihood Estimation and Considerations of a Car Salesman
 
-In this tutorial, you will analyse the factors that a car salesman can use
-to assess whether a certain customer will finally buy a new car or not
+In this tutorial, you will analyse the factors that a car salesman can use to assess whether a certain customer will finally buy a new car or not 

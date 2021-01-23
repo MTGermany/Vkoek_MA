@@ -1,0 +1,475 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="6.23.0" title="Shotcut version 20.11.28" producer="main_bin">
+  <profile description="automatic" width="1088" height="636" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1088" display_aspect_den="636" frame_rate_num="60" frame_rate_den="1" colorspace="709"/>
+  <producer id="producer0" in="00:00:00.000" out="00:03:40.167">
+    <property name="length">00:03:40.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">01_Einleitung.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T11:48:57</property>
+    <property name="shotcut:hash">7dc71a516e33f5ae9bd009456485cf9a</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">01_Einleitung.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="00:12:09.383">
+    <property name="length">00:12:09.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">02_Gegenwart_ZeroMaerzMai.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:03:41</property>
+    <property name="shotcut:hash">676d4b2eb7f9ebd4588586788d98afdf</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">02_Gegenwart_ZeroMaerzMai.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="00:07:56.767">
+    <property name="length">00:07:56.783</property>
+    <property name="eof">pause</property>
+    <property name="resource">03_zeroImpfUp.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:14:42</property>
+    <property name="shotcut:hash">504ae822f9f150dcf3993db71f8e8d33</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">03_zeroImpfUp.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="00:02:52.083">
+    <property name="length">00:02:52.100</property>
+    <property name="eof">pause</property>
+    <property name="resource">04_zeroImpfUpExtern.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:21:30</property>
+    <property name="shotcut:hash">ab39397bc7d380676ad1f486894cec70</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">04_zeroImpfUpExtern.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer4" in="00:00:00.000" out="00:05:06.650">
+    <property name="length">00:05:06.667</property>
+    <property name="eof">pause</property>
+    <property name="resource">05_optimaleStrategie.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:28:31</property>
+    <property name="shotcut:hash">1cd522f4f07200c4747a54546f235fa1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">05_optimaleStrategie.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer5" in="00:00:00.000" out="00:04:39.317">
+    <property name="length">00:04:39.333</property>
+    <property name="eof">pause</property>
+    <property name="resource">06_schluss.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:36:34</property>
+    <property name="shotcut:hash">eddda5f451a50072eec6b1dcb5705126</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">06_schluss.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer6" in="00:00:00.000" out="00:01:19.983">
+    <property name="length">00:01:20.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">07_letzterschluss.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:39:45</property>
+    <property name="shotcut:hash">93e1b280e575ffcd94559e37ab7e3de2</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">07_letzterschluss.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer7" in="00:00:00.000" out="00:00:23.817">
+    <property name="length">00:00:23.833</property>
+    <property name="eof">pause</property>
+    <property name="resource">08_letzterschluss.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T13:54:52</property>
+    <property name="shotcut:hash">3295f1521a445e419742de36427085e7</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">08_letzterschluss.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="main_bin" title="Shotcut version 20.11.28">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <property name="xml_retain">1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:03:40.167"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:12:09.383"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:07:56.767"/>
+    <entry producer="producer3" in="00:00:00.000" out="00:02:52.083"/>
+    <entry producer="producer4" in="00:00:00.000" out="00:05:06.650"/>
+    <entry producer="producer5" in="00:00:00.000" out="00:04:39.317"/>
+    <entry producer="producer6" in="00:00:00.000" out="00:01:19.983"/>
+    <entry producer="producer7" in="00:00:00.000" out="00:00:23.817"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:34:08.767">
+    <property name="length">00:34:08.783</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgb24a</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:34:08.767"/>
+  </playlist>
+  <producer id="producer8" in="00:00:00.000" out="00:03:40.167">
+    <property name="length">00:03:40.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">01_Einleitung.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T11:48:57</property>
+    <property name="shotcut:hash">7dc71a516e33f5ae9bd009456485cf9a</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">01_Einleitung.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer9" in="00:00:00.000" out="00:12:09.383">
+    <property name="length">00:12:09.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">02_Gegenwart_ZeroMaerzMai.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:03:41</property>
+    <property name="shotcut:hash">676d4b2eb7f9ebd4588586788d98afdf</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">02_Gegenwart_ZeroMaerzMai.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor0" global_feed="1" in="00:00:00.000" out="00:00:02.633">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer8" in="00:01:13.067" out="00:01:15.700"/>
+    <track producer="producer9" in="00:00:00.083" out="00:00:02.717"/>
+    <transition id="transition0" out="00:00:02.633">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition1" out="00:00:02.633">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer10" in="00:00:00.000" out="00:07:56.767">
+    <property name="length">00:07:56.783</property>
+    <property name="eof">pause</property>
+    <property name="resource">03_zeroImpfUp.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:14:42</property>
+    <property name="shotcut:hash">504ae822f9f150dcf3993db71f8e8d33</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">03_zeroImpfUp.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor1" global_feed="1" in="00:00:00.000" out="00:00:04.067">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer9" in="00:11:58.667" out="00:12:02.733"/>
+    <track producer="producer10" in="00:00:00.000" out="00:00:04.067"/>
+    <transition id="transition2" out="00:00:04.067">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition3" out="00:00:04.067">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer11" in="00:00:00.000" out="00:02:52.083">
+    <property name="length">00:02:52.100</property>
+    <property name="eof">pause</property>
+    <property name="resource">04_zeroImpfUpExtern.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:21:30</property>
+    <property name="shotcut:hash">ab39397bc7d380676ad1f486894cec70</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">04_zeroImpfUpExtern.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor2" global_feed="1" in="00:00:00.000" out="00:00:00.500">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer10" in="00:07:49.533" out="00:07:50.033"/>
+    <track producer="producer11" in="00:00:00.000" out="00:00:00.500"/>
+    <transition id="transition4" out="00:00:00.500">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition5" out="00:00:00.500">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer12" in="00:00:00.000" out="00:05:06.650">
+    <property name="length">00:05:06.667</property>
+    <property name="eof">pause</property>
+    <property name="resource">05_optimaleStrategie.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:28:31</property>
+    <property name="shotcut:hash">1cd522f4f07200c4747a54546f235fa1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">05_optimaleStrategie.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor3" global_feed="1" in="00:00:00.000" out="00:00:01.017">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer11" in="00:02:51.067" out="00:02:52.083"/>
+    <track producer="producer12" in="00:00:00.533" out="00:00:01.550"/>
+    <transition id="transition6" out="00:00:01.017">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition7" out="00:00:01.017">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer13" in="00:00:00.000" out="00:04:39.317">
+    <property name="length">00:04:39.333</property>
+    <property name="eof">pause</property>
+    <property name="resource">06_schluss.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:36:34</property>
+    <property name="shotcut:hash">eddda5f451a50072eec6b1dcb5705126</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">06_schluss.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor4" global_feed="1" in="00:00:00.000" out="00:00:01.300">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer12" in="00:05:01.817" out="00:05:03.117"/>
+    <track producer="producer13" in="00:00:00.000" out="00:00:01.300"/>
+    <transition id="transition8" out="00:00:01.300">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition9" out="00:00:01.300">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer14" in="00:00:00.000" out="00:01:19.983">
+    <property name="length">00:01:20.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">07_letzterschluss.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T12:39:45</property>
+    <property name="shotcut:hash">93e1b280e575ffcd94559e37ab7e3de2</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">07_letzterschluss.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor5" global_feed="1" in="00:00:00.000" out="00:00:00.033">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer13" in="00:03:53.150" out="00:03:53.183"/>
+    <track producer="producer14" in="00:00:01.600" out="00:00:01.633"/>
+    <transition id="transition10" out="00:00:00.033">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition11" out="00:00:00.033">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer15" in="00:00:00.000" out="00:00:23.817">
+    <property name="length">00:00:23.833</property>
+    <property name="eof">pause</property>
+    <property name="resource">08_letzterschluss.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T13:54:52</property>
+    <property name="shotcut:hash">3295f1521a445e419742de36427085e7</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">08_letzterschluss.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor6" global_feed="1" in="00:00:00.000" out="00:00:00.133">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer14" in="00:01:06.550" out="00:01:06.683"/>
+    <track producer="producer15" in="00:00:01.333" out="00:00:01.467"/>
+    <transition id="transition12" out="00:00:00.133">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition13" out="00:00:00.133">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer8" in="00:00:00.000" out="00:01:13.050"/>
+    <entry producer="tractor0" in="00:00:00.000" out="00:00:02.633"/>
+    <entry producer="producer9" in="00:00:02.733" out="00:11:58.650"/>
+    <entry producer="tractor1" in="00:00:00.000" out="00:00:04.067"/>
+    <entry producer="producer10" in="00:00:04.083" out="00:07:49.517"/>
+    <entry producer="tractor2" in="00:00:00.000" out="00:00:00.500"/>
+    <entry producer="producer11" in="00:00:00.517" out="00:02:51.050"/>
+    <entry producer="tractor3" in="00:00:00.000" out="00:00:01.017"/>
+    <entry producer="producer12" in="00:00:01.567" out="00:05:01.800"/>
+    <entry producer="tractor4" in="00:00:00.000" out="00:00:01.300"/>
+    <entry producer="producer13" in="00:00:01.317" out="00:03:53.133"/>
+    <entry producer="tractor5" in="00:00:00.000" out="00:00:00.033"/>
+    <entry producer="producer14" in="00:00:01.650" out="00:01:06.533"/>
+    <entry producer="tractor6" in="00:00:00.000" out="00:00:00.133"/>
+    <entry producer="producer15" in="00:00:01.483" out="00:00:18.467"/>
+  </playlist>
+  <tractor id="tractor7" title="Shotcut version 20.11.28" global_feed="1" in="00:00:00.000" out="00:34:08.767">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">0.174269</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition14">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition15">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>
