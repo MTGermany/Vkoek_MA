@@ -1,0 +1,77 @@
+\documentclass{beamer}
+\usepackage{multimedia}
+\input{defsSkript}
+
+%\includemovie{width}{height}{thumbnail}{videofile}
+\providecommand{\includemovie}[4]{
+  \movie[width=#1, height=#2, showcontrols]
+   {\includegraphics[width=#1, height=#2]{#3}} {#4}
+}
+
+
+\begin{document}
+
+%###############################################################
+\begin{frame}{What works}
+%###############################################################
+\bi
+\item Many hints in the internet but only this works
+\item Linux: only okular (with 'k'), not evince (only audio or errors), only local
+  $\Rightarrow$  can give presentations 
+  but not include it reliably on webpages
+\item The included video must reside in the current directory or
+  subdirectories 
+\item Format .mov works, .mkv as created by simplescreenrecorder only jumpy,
+  videos resampled by Shotcut work!
+
+\ei
+\end{frame}
+
+
+%###############################################################
+\begin{frame}{Including Movies}
+%###############################################################
+
+\begin{itemize}
+\item Video with manual start works in preview mode, with autostart
+  (see this command) in presentation mode, only
+\item option \texttt{externalviewer} calls up totem, not mplayer which
+  cannot play many formats + external window $\Rightarrow$ forget it
+\item duration=1.4s option DOS, start=3s DOS
+\item autostart and showcontrols together wreak havoc; double audio
+  etc in presentation mode. Only showcontrols and only autostart OK
+\end{itemize}
+
+\movie[width=0.65\textwidth, height=0.4\textwidth,autostart]
+  {\figSimple{0.65\textwidth}{videos/testMovieMovformat_thumb.png}}
+  {videos/testMovieMovformat.mov}
+%\movie[width=0.7\textwidth, height=0.4\textwidth,autostart,showcontrols,start=2s,duration=1.4s]
+%  {\figSimple{0.7\textwidth}{videos/testMovieMovformat_thumb.png}}
+%  {videos/testMovieMovformat.mov}
+\end{frame} 
+
+%###############################################################
+\begin{frame}{Example 2}
+%###############################################################
+
+\begin{itemize}
+\item Must give width AND height argument, otherwise minuscule video
+\item In order that the preview does not overlap, also this must be
+  given with width and height argument
+\end{itemize}
+\includemovie{0.7\textwidth}{0.4\textwidth}
+ {VideoLectures/Lecture11_thumbnail.png}{VideoLectures/Lecture11.mkv}
+\end{frame} 
+
+
+%###############################################################
+\begin{frame}{Properties}
+%###############################################################
+
+\begin{itemize}
+\item pdf in internet has DOS, locally it works both in preview and
+  presentation mode but only with okular  ('k', not 'c')
+\end{itemize}
+\end{frame} 
+
+\end{document}
