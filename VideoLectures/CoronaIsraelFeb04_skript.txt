@@ -1,0 +1,189 @@
+
+
+Israel: Die Impfung wirkt!
+
+
+Intro
+=====
+
+
+Hallo liebe Freunde der geplegten Corona-Simulation also known as
+... Corona-Simulanten!
+
+[Tab 1: Simulation Israel Inzidenz, Stand 18. Januar, Ausschnitt so, dass
+gerade 1 Woche]
+
+Vor knapp zwei Wochen habe ich schon einmal ein Israel-Video gemacht
+mit der Prognose, dass es mit den Zahlen dort demnaechst runtergeht.
+Zumindest dies in spaetestens 2 Wochen geschehen sollte. Die sind nun
+fast rum. Was geschieht??
+
+uuuuuuuuuund
+
+[gleichzeitig Simulation starten bis 8. Maerz]
+
+Rueckgang!
+
+Dies ist insofern beruhigend da ich sagte, dass diese Projektion sehr
+robust ist *SOFERN* die Impfung wie versprochen wirkt UND auch die
+Ansteckungsgefahr durch Geimpfte auf nahe null geht. Dann kann man
+diese Projektion, was selten ist, sogar in den Stand einer echten
+Prognose erheben
+
+
+Vergleich mit alten Video
+=========================
+
+Schauen wir uns mal die damalige Projektion bzw Prognose an und
+vergleichen Sie mit dem, was wirklich passiert ist. Dazu spiele ich
+zun\"achst mal die entscheidenden Stellen meines Videos vom 23. Januar
+an
+[nach 10 s diesen Schnipsel stoppen]
+
+[im Shotcut zweiten Kanal altes Israel-Video 266.8 s bis 284.2 einspielen]
+
+[erster Kanal, neuer Video-Schnipsel aufnehmen]
+
+Vergleichen wir die damalige Prognose mit der heutigen, zunaechst die
+direkte Validierung: Am 4. Februar liegt die Inzidenz tatsaechlich bei
+knapp ueber 500, [Pfeil VON LINKS] auf den Wert
+
+[CoronaIsraelFeb03_altesVideoShot1.png einschieben]
+
+die alte Prognose sagte auch knapp ueber 500 [Maus]. Passt. Dass das
+so genau passt, ist allerdings Zufall.
+
+Wenn Sie auf die Tagesinzidenz schauen, sieht das Ganze aber uebler
+aus. Ist das wirklich so uebel? Schauen wir einmal auf die
+Test-Ansicht
+
+[Test-Ansicht]
+
+Die letzten 4 tage gingen die Tests massiv rauf, 100 000 pro Tag. Das
+entspraeche in D 700 000      [Pause]  pro Tag
+Dementsprechend sagt die Simulation, Trotz Abfalls der realen
+Infizierten, einen Anstieg bei den tageswerten voraus. Also wietehin
+alles im gruenen Bereich
+
+
+
+Validierung
+==========
+
+[vorher nur im html unter validateDays das richtige Zeitintervall justieren]
+
+Schauen wir uns das Ganze mal genauer an, dazu habe ich im Simulator
+schon vor einiger Zeit den "Validieren"-Button einggefuehrt, den
+bisher wahrscheinlich kaum einer bemerkt hat. Mit diesem Knopf kann
+ich dem Simulator kuenstlich Daten wegnehmen, naemlich die letzten
+3,7,12,21 oder 28 Tage, und mit den reduzierten Daten neu
+kalibrieren. Dann macht man mit den damaligen Datenstand eine
+simulierte Prognose und vergleich sie mit den echten Ergebnissen:
+Genau das nennt man in der Oekonometrie Validierung. Hier ist es die
+Koenigsdisziplin der Validierung, der Prognosetest
+
+Validieren wir also die letzten 13 Tage, denn 13 Tage ist das letzte
+Video her
+[Validierung laufen lassen bis 8. Maerz]
+
+Fuer Experten: Sie koennen die Simulation ueber Github runterladen,
+siehe Impressum  und im html-File andere Werte
+einstellen, ohne das Javascript file zu beruehren. Hier habe ich die
+voreingestellten 14 Tage auf 13 Tage runtergesetzt
+
+[kurz html File mit Stelle zeigen]
+[html emacs wegschieben]
+
+Die Validierung ist nun beendet:
+(die Kurven erklaeren)
+[taegliche Faelle]
+[Faelle vs Infizierte]
+
+
+
+
+Impfwirkung
+===============
+
+Nun moechte ich noch die Wirkung der Impfung am Bsp Israels zeigen.
+Dazu habe ich eine Standardsimulation im Hintergrund bereits bis zur
+Gegenwart laufen lassen, z.B. die Ansicht taegliche Faelle
+
+[Tab 2 Fenster Inzidenz Israel 24.12 oeffnen, Zoomen dass 1 Woche]
+[3 Wochen weitersimulieren]
+
+[Tab 3 taegliche Faelle Stand erste Impfung 24.12, Zoomen dass 1 Woche]
+Nun lasse ich in einer unabhaengige Simulation das Szenario "keine
+Impfung" simulieren
+
+[Massnahmen-Ansicht] -> [Impfrate auf 0]
+
+Dazu schalte ich in die Massnahmen-Ansicht und stelle die Impfrate auf
+0 OHNE was am R0-Wert und damit am Verhalten der Isrelis bzw den
+massnahmen zu aendern.
+
+[beide Sim Tab 2 und 3 drei Wochen simulieren]
+
+Man sieh keinen Unterschied, es aendert sich nix!
+
+Liegt an den drei schon erwaehnten Verzoegerungsfaktoren Impfung
+braucht etwa 4 Wochen und davor zweite Dose bis sie voll wirkt,
+Infektion hat Inkubationszeit bis ein Test positiv waere und das
+Testergebnis braucht auch seine Zeit, obwohl es in Israel superschnell
+geht.
+
+[beide Fenster weitersimulieren]
+
+Die Impfung macht aber massiv was aus. Langsam kommt sie, doch dann
+kommt sie mit Gewalt!
+
+Warum die wahnsinnig hohe Welle ohne Impfung? Deutschland hat de-Fakto
+auch null Impf-Immunitaet bis jetzt? Sind wohl zwei Probleme: Die
+Ultraorthodoxen und die Palestinenser in Israel, die sich anders
+verhalten und viel hoehere Quoten haben, doch das ist eine andere
+Geschichte, das kann mein Modell nicht disaggregieren
+
+Wir halten fest: Die Impfung scheint wie erwartet zu wirken und die
+Prognose war genau richtig!
+
+
+Heimtueckischer Statistikfehler
+===============================
+
+[Tab 4 mit Israelsimulation Stand 23.1. oeffnen]
+
+Bei der Gelegenheit muss ich beichten, dass ich, obwohl anerkannter
+Oekonometriker, einem heimtueckischen Statistikfehler aufgesessen bin,
+wobei ich mich aber in guter Gesellschaft der meisten, wenn nicht
+aller Medien finde: 
+Es geht um die Impfraten
+
+[Standardsimulation bis 23.1.,
+Pfeile bei Geimpft und Impf-Immunitaet zeichnen]
+
+[CoronaIsraelFeb03_altesVideoShot2.png einschieben]
+
+Nun schiebe ich die alte Simulation ein. Ohne die Pfeile waere es 
+fast unmoeglich, den Unterschied zu finden, der auch bisher nur fuer
+Israel signifikante Auswirkungen hat: Die bei OWID angegebene
+Impfungen beziehen sich auf EINZELNEN IMPFDOSEN. Teilt man die
+Impfdosenzahl durch die Bevoelkerung, waere erst bei 200%, nicht 100%
+eine vollstaendige Durchimpfung erreicht.
+
+Ich sage voraus, und das ist eine echte Prognose, keine Projektion, dass das
+noch zu viel Verwirrung fuehren wird!
+
+
+Schluss, ich Vollbild
+======================
+
+So, das war's fuer heute. Ich habe durch Vergleich mit meinem alten
+Videos und der Validierungsfunktion meines Simulators meine damalige
+Prognose getestet und validiert.
+
+Vor allem habe ich wohl zum ersten Mal
+empirisch gezeigt, dass die Impfung im grossen volkswirtschaftlichen
+Massstab wirkt wie erwartet.
+
+Diese empirische Evidenz kann derzeit nur anhand Israel erbracht werden, da
+in allen anderen Laendern die Impf-Teilimmunitaeten viel zu gering sind.

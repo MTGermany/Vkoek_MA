@@ -1,0 +1,514 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="6.25.0" title="Shotcut version 21.01.29" producer="main_bin">
+  <profile description="automatic" width="1084" height="638" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1084" display_aspect_den="638" frame_rate_num="60" frame_rate_den="1" colorspace="709"/>
+  <producer id="producer0" in="00:00:00.000" out="00:01:37.633">
+    <property name="length">00:01:37.650</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_1.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:28:50</property>
+    <property name="shotcut:hash">019c406bb47e2971a40b8032039590bb</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_1.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="00:04:24.383">
+    <property name="length">00:04:24.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_2.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:35:34</property>
+    <property name="shotcut:hash">65a47eb94561ff5ce64a36142030f716</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_2.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="00:05:52.567">
+    <property name="length">00:05:52.583</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_3.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:49:31</property>
+    <property name="shotcut:hash">06f9827c53b7688ce651a0d182fcc548</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_3.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="00:06:19.767">
+    <property name="length">00:06:19.783</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_4.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:57:30</property>
+    <property name="shotcut:hash">39e4461688d8fe8b3785ba3ff550cdaf</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_4.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer4" in="00:00:00.000" out="00:03:26.267">
+    <property name="length">00:03:26.283</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_5.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T19:05:11</property>
+    <property name="shotcut:hash">48ac909d41a0c7e5f1f6a8dc365618e6</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_5.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer5" in="00:00:00.000" out="00:00:55.250">
+    <property name="length">00:00:55.267</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_7.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T19:10:08</property>
+    <property name="shotcut:hash">2945fc7cda8eb79c44a5320d60541a71</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_7.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer6" in="00:00:00.000" out="00:09:47.317">
+    <property name="length">00:09:47.333</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/2021_01_23_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T19:07:10</property>
+    <property name="shotcut:hash">e831e6911a2227134dc9779fb05b2eec</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">2021_01_23_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer7" in="00:00:00.000" out="00:00:05.533">
+    <property name="length">00:00:05.550</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_8.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T19:56:03</property>
+    <property name="shotcut:hash">abb7c5e2b9018b47a7d6fdf3736b9f00</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_8.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer8" in="00:00:00.000" out="00:00:05.933">
+    <property name="length">00:00:05.950</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_9.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T20:00:59</property>
+    <property name="shotcut:hash">b3f247d308cc601219593e4fb13053ef</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_9.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="main_bin" title="Shotcut version 21.01.29">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="xml_retain">1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:01:37.633"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:04:24.383"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:05:52.567"/>
+    <entry producer="producer3" in="00:00:00.000" out="00:06:19.767"/>
+    <entry producer="producer4" in="00:00:00.000" out="00:03:26.267"/>
+    <entry producer="producer5" in="00:00:00.000" out="00:00:55.250"/>
+    <entry producer="producer6" in="00:00:00.000" out="00:09:47.317"/>
+    <entry producer="producer7" in="00:00:00.000" out="00:00:05.533"/>
+    <entry producer="producer8" in="00:00:00.000" out="00:00:05.933"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:22:37.433">
+    <property name="length">00:22:37.450</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgb24a</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:22:37.433"/>
+  </playlist>
+  <producer id="producer9" in="00:00:00.000" out="00:01:37.633">
+    <property name="length">00:01:37.650</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_1.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:28:50</property>
+    <property name="shotcut:hash">019c406bb47e2971a40b8032039590bb</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_1.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer10" in="00:00:00.000" out="00:00:05.533">
+    <property name="length">00:00:05.550</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_8.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T19:56:03</property>
+    <property name="shotcut:hash">abb7c5e2b9018b47a7d6fdf3736b9f00</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_8.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor0" global_feed="1" in="00:00:00.000" out="00:00:01.100">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer9" in="00:01:23.350" out="00:01:24.450"/>
+    <track producer="producer10" in="00:00:00.000" out="00:00:01.100"/>
+    <transition id="transition0" out="00:00:01.100">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition1" out="00:00:01.100">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer11" in="00:00:00.000" out="00:00:05.933">
+    <property name="length">00:00:05.950</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_9.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T20:00:59</property>
+    <property name="shotcut:hash">b3f247d308cc601219593e4fb13053ef</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_9.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer12" in="00:00:00.000" out="00:04:24.383">
+    <property name="length">00:04:24.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_2.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:35:34</property>
+    <property name="shotcut:hash">65a47eb94561ff5ce64a36142030f716</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_2.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor1" global_feed="1" in="00:00:00.000" out="00:00:00.683">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer11" in="00:00:05.100" out="00:00:05.783"/>
+    <track producer="producer12" in="00:00:00.050" out="00:00:00.733"/>
+    <transition id="transition2" out="00:00:00.683">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition3" out="00:00:00.683">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer13" in="00:00:00.000" out="00:05:52.567">
+    <property name="length">00:05:52.583</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_3.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:49:31</property>
+    <property name="shotcut:hash">06f9827c53b7688ce651a0d182fcc548</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_3.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor2" global_feed="1" in="00:00:00.000" out="00:00:03.083">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer12" in="00:04:21.267" out="00:04:24.350"/>
+    <track producer="producer13" in="00:00:00.000" out="00:00:03.083"/>
+    <transition id="transition4" out="00:00:03.083">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition5" out="00:00:03.083">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer14" in="00:00:00.000" out="00:06:19.767">
+    <property name="length">00:06:19.783</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_4.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T18:57:30</property>
+    <property name="shotcut:hash">39e4461688d8fe8b3785ba3ff550cdaf</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_4.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor3" global_feed="1" in="00:00:00.000" out="00:00:00.417">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer13" in="00:05:52.133" out="00:05:52.550"/>
+    <track producer="producer14" in="00:00:01.483" out="00:00:01.900"/>
+    <transition id="transition6" out="00:00:00.417">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition7" out="00:00:00.417">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer15" in="00:00:00.000" out="00:03:26.267">
+    <property name="length">00:03:26.283</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_5.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T19:05:11</property>
+    <property name="shotcut:hash">48ac909d41a0c7e5f1f6a8dc365618e6</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_5.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor4" global_feed="1" in="00:00:00.000" out="00:00:01.567">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer14" in="00:06:18.167" out="00:06:19.733"/>
+    <track producer="producer15" in="00:00:00.050" out="00:00:01.617"/>
+    <transition id="transition8" out="00:00:01.567">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition9" out="00:00:01.567">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer16" in="00:00:00.000" out="00:00:55.250">
+    <property name="length">00:00:55.267</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/IsraelFeb04_7.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-04T19:10:08</property>
+    <property name="shotcut:hash">2945fc7cda8eb79c44a5320d60541a71</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">IsraelFeb04_7.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor5" global_feed="1" in="00:00:00.000" out="00:00:00.300">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer15" in="00:03:25.950" out="00:03:26.250"/>
+    <track producer="producer16" in="00:00:02.250" out="00:00:02.550"/>
+    <transition id="transition10" out="00:00:00.300">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition11" out="00:00:00.300">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer9" in="00:00:00.000" out="00:01:23.333"/>
+    <entry producer="tractor0" in="00:00:00.000" out="00:00:01.100"/>
+    <entry producer="producer10" in="00:00:01.117" out="00:00:05.533"/>
+    <blank length="00:00:17.983"/>
+    <entry producer="producer11" in="00:00:00.000" out="00:00:05.083"/>
+    <entry producer="tractor1" in="00:00:00.000" out="00:00:00.683"/>
+    <entry producer="producer12" in="00:00:00.750" out="00:04:21.250"/>
+    <entry producer="tractor2" in="00:00:00.000" out="00:00:03.083"/>
+    <entry producer="producer13" in="00:00:03.100" out="00:05:52.117"/>
+    <entry producer="tractor3" in="00:00:00.000" out="00:00:00.417"/>
+    <entry producer="producer14" in="00:00:01.917" out="00:06:18.150"/>
+    <entry producer="tractor4" in="00:00:00.000" out="00:00:01.567"/>
+    <entry producer="producer15" in="00:00:01.633" out="00:03:25.933"/>
+    <entry producer="tractor5" in="00:00:00.000" out="00:00:00.300"/>
+    <entry producer="producer16" in="00:00:02.567" out="00:00:51.767"/>
+  </playlist>
+  <producer id="producer17" in="00:00:00.000" out="00:09:47.317">
+    <property name="length">00:09:47.333</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/2021_01_23_Israel.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-01-23T19:07:10</property>
+    <property name="shotcut:hash">e831e6911a2227134dc9779fb05b2eec</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">2021_01_23_Israel.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="playlist1">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V2</property>
+    <blank length="00:01:28.633"/>
+    <entry producer="producer17" in="00:04:26.167" out="00:04:44.500"/>
+  </playlist>
+  <tractor id="tractor6" title="Shotcut version 21.01.29" global_feed="1" in="00:00:00.000" out="00:22:37.433">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:scaleFactor">0.228878</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1"/>
+    <transition id="transition12">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition13">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition14">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition15">
+      <property name="a_track">1</property>
+      <property name="b_track">2</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">0</property>
+    </transition>
+  </tractor>
+</mlt>

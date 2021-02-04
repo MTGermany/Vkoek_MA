@@ -26,7 +26,10 @@ in Playlist ablegen (ggf "Playlist" darunter druecken
    operations -> remove track
 - alle tracks werden parallel abgespielt, oft nur einziger Track noetig
 - Lupe vergroessert/verkleinert Ausschnitt der Timeline
-
+- Multiple "tracks" sind eigentlich nur fuer Soundbearbeitung
+  noetig oder wenn man mehr als 2 Videos "faden" will, das wird aber
+  dann kompliziert
+  
 4. Arbeiten mit der Timeline:
 Beispiel: playlist hat V1,V2,V3, will Video mit V1-erster Teil
 V2-V3-zweiter Teil V2
@@ -53,4 +56,7 @@ V2-V3-zweiter Teil V2
   Braucht lange! grosse Files
 
   links "Youtube" settings, dann aber advanced => Menu. Format ->
-  Matroska Frames/s 30 - Codec Reiter
+  Matroska Frames/s 30 - Codec Reiter - Rate control - average bitrate
+  - 1M
+  GOP (group of pictures, max keyframe) 30  [=1 s] - export File
+  - filename <projName>.mkv  (mit Extension, sonst DOS)
