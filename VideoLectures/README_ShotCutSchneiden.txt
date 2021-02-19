@@ -60,3 +60,5 @@ V2-V3-zweiter Teil V2
   - 1M
   GOP (group of pictures, max keyframe) 30  [=1 s] - export File
   - filename <projName>.mkv  (mit Extension, sonst DOS)
+  - Achtung, Gefahr! Nimmt automatisch mlt und ueberschreibt das
+    Projektfile, ausserdem in Unterdir. Aufpassen!

@@ -15,8 +15,8 @@ Screen aufnehmen
 Besser: vlc mit Crop-Moeglichkeiten
 
 [EXTRA Terminal:]
-vlc v4l2:///dev/video0
 
+vlc v4l2:///dev/video0
 vlc input "--video-filter=croppadd{cropright=200,cropleft=200}" v4l2:///dev/video0
 vlc input "--video-filter=croppadd{cropright=150,cropleft=150}" v4l2:///dev/video0
 vlc input "--video-filter=croppadd{cropright=100,cropleft=100}" v4l2:///dev/video0
@@ -63,8 +63,10 @@ ACHTUNG!!! vor 8. ALLES saven!!!!
 8. Schnitt: Entweder (besser) => README_YouTubeSchneiden.txt, ggf
 mkvmerge (s.u.) davor)
 
+oder (noch besser) README_ShotCutSchneiden.txt
 
-Oder
+
+Oder (fallback)
 
 8.1 Schnitt mit
 ~/scripts/lossless-cut/LosslessCut-linux-x64/LosslessCut

@@ -1,0 +1,12 @@
+
+https://www.youtube.com/watch?v=avYjrVrl8xc
+
+Corona-Simulation.de: Neue Features
+
+Posts: Mein Online-Simulator Corona-Simulation.de hat nun separate Kontrollelemente zur Einstellung des Lockdowns und fuer neue Virusmutationen
+
+Die neue Version meines Simulators vereint die wichtigsten Kontrollelemente in der Standardansicht. Neu wurde außerdem der "Stringency Index" von Our World in Data (OWID) eingeführt und mit der Infektionsdynamik verknüpft. Dieses Maß, was den Grad des totalen Lockdowns angibt, ist für alle Länder verfügbar und erlaubt nun eine unabhängige Simulation biologischer Veränderungen (aggressiverer Virus) und politischer Änderungen (Lockdowns, Grenzöffnungen, Impfrate) separat und in Kombination.
+
+Die biologischen (und jahreszeitlichen Änderungen werden nun durch eine neu definierte Basis-Reproduktionszahl charakterisiert: Die reproduktionszahl ohne (i) irgendwelche politischen Maßnahmen, (ii) ohne Impfungen, (iii) ohne Herdenimmunität der bereits Infizierten
+
+

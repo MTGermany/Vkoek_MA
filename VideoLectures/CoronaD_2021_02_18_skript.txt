@@ -1,0 +1,122 @@
+
+
+##################################################
+Neues Video "Szenarienanalyse für Deutschland"
+##################################################
+
+Einfuehrung
+===========
+
+
+[mein Bild]
+
+Hallo Liebe Simulanten und Freunde von corona-simulation.de
+In diesem Video demonstriere ich die neuen Funktionen des Simulators
+mit mehreren Szenarienanalysen für Deutschland. 
+
+Ich betrachte folgende Ereignisse:
+
+1. Es kommt ein aggressiverer Virus,
+2. Wir reduzieren den Lockdown oder kippen ihn ganz
+3. Wir oeffnen alle Grenzen
+4. Wir impfen mehr.
+
+Das sind genau die 4 Regler in der neuen Standardansicht.
+
+In den folgenden Szenarien betrachte ich diese Faktoren isoliert und
+in Kombination
+
+1. Infektioeserer Virus
+===============================
+
+[Vorbereitete Simulation bis 8. Februar, aufgezoomt, sodass die
+einzlenen Wochen sichtbar]
+
+[R0 auf 2 erhoehen, simulieren bis gegenwart]
+
+* Wuerde den aktuellen Stopp des Abfalls erklaeren. Meine Kalibrierung
+  kann das so schnell nicht entdecken, da ich immer genuegend
+  Datenpunkte dazu brauche
+
+[weiter simulieren]
+
+* Geht aber dann bald weiter runter aufgrund des Fruehlingseffekt und
+  erhoehter Impfraten
+
+
+2. Reduktion der Massnahmen
+===============================
+
+[Vorbereitete Simulation bis Gegenwart]
+
+* Jetzt Reduktion der Massnahmen auf Lockdown Light mit
+  Restaurant nur aussen 0.60 => ploetzl Stagnation in den Fallzahlen,
+  Anstieg der realen Zahlen [Faelle vs Infizierte], dann weiter
+  zurueck
+
+
+3. neue Virusvariante und Reduktion der Massnahmen
+===============================================
+
+[Vorbereitete Simulation bis 8. Februar, aufgezoomt, sodass die
+einzlenen Wochen sichtbar]
+
+[R0 auf 2, bis gegenwart sim] [Shutdown auf 60%] [weitersimulieren]
+
+* Etwas Erhoehung, aber dann rettet einen auch das Fruehjahr, und
+  Impf-Teilimmunitaet
+
+4. Grenzoeffnung Tschechien: 5 importierte Faelle pro Tag und 100000
+=====================================================================
+
+[Vorbereitete Simulation Gegenwart]
+Geht
+
+4b. Grenzoeffnung Tschechien mit neuem Virus und 60% Lockdown
+===========================================================
+
+[Vorbereitete Simulation 8. Februar, dann R0 auf 2]
+Geht nicht!
+
+
+5. Mehr Impfung neuem Virus und 60% Lockdown
+==========================================
+
+[Vorbereitete Simulation 8. Februar, dann R0 auf 2, Impfrate 1%/Woche]
+[sim bis gegenwart, dann Lockdown=60%]
+[sim, dann ab Juni Hulli-Galli]
+
+
+=> Geht!
+
+
+
+
+Schluss
+=======
+
+Mit der neuen Version von corona-simulation.de
+kann man nun sehr viel
+spezifischere und direktere Szenarienanalysen machen. Sie sagen
+insbesondere voraus, dass man den Lockdown jetzt schon reduzieren
+kann, selbst wenn eine moderat infektioesere Virusvariante sich
+verbreitet.
+
+Noch besser waere es mit Impfraten wie England oder USA.
+Dann koennte
+man schon im Juni auf alles verzichten und Halli-Galli machen
+
+Natuerlich sieht das anders aus,
+wenn der neue Virus nicht nur etwas,
+sondern viel infektioeser ist oder wenn es grosse Eintraege von
+anderen Laendern gibt, deshalb schliesse
+ich mit dem schon bekannten,
+angeblich Mark Twain zugeschriebenen Zitat
+
+"Prognosen sind schwierig,
+vor allem, wenn sie die Zukunft betreffen"
+
+Vielen Dank und, wenn es Ihnen gefallen hat,
+simulieren Sie selbst und
+empfehlen Sie die Videos und meinen Simulator z.B. auf sozialen
+Netzwerken weiter! 

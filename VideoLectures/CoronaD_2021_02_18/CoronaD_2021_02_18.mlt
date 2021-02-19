@@ -1,0 +1,645 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="6.25.0" title="Shotcut version 21.01.29" producer="main_bin">
+  <profile description="automatic" width="1116" height="634" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1116" display_aspect_den="634" frame_rate_num="60" frame_rate_den="1" colorspace="709"/>
+  <producer id="producer0" in="00:00:00.000" out="00:01:20.933">
+    <property name="length">00:01:20.950</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_1.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T21:53:52</property>
+    <property name="shotcut:hash">cfc297f8059cec6bb9900a9c1e751196</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_1.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="00:06:56.100">
+    <property name="length">00:06:56.117</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_2.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:02:20</property>
+    <property name="shotcut:hash">03beffbbbebf80b7a627696ea859396e</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_2.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="00:00:19.250">
+    <property name="length">00:00:19.267</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_3.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:04:48</property>
+    <property name="shotcut:hash">490fbe4fbb69608c470aae18b77d8f3b</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_3.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="00:01:35.800">
+    <property name="length">00:01:35.817</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_4.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:06:55</property>
+    <property name="shotcut:hash">ae88c0f85f7edad35d34001d1b42a636</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_4.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer4" in="00:00:00.000" out="00:00:42.317">
+    <property name="length">00:00:42.333</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_5.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:08:43</property>
+    <property name="shotcut:hash">5fe1e0b92bc223d11796022d6b7e92c4</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_5.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer5" in="00:00:00.000" out="00:01:57.917">
+    <property name="length">00:01:57.933</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_6.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:11:48</property>
+    <property name="shotcut:hash">5d40a3a7bad61b2aa87809c0d7554af4</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_6.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer6" in="00:00:00.000" out="00:00:20.567">
+    <property name="length">00:00:20.583</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_7.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:12:59</property>
+    <property name="shotcut:hash">38eb32661c60ea990d5caee96c40f81f</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_7.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer7" in="00:00:00.000" out="00:01:57.217">
+    <property name="length">00:01:57.233</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_8.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:15:52</property>
+    <property name="shotcut:hash">f6d0d95184b4f95269e5969afa7a0577</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_8.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer8" in="00:00:00.000" out="00:00:39.917">
+    <property name="length">00:00:39.933</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_9.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:17:19</property>
+    <property name="shotcut:hash">13928f550e131723fc6d1375da1da982</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_9.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer9" in="00:00:00.000" out="00:02:50.150">
+    <property name="length">00:02:50.167</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_10.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:21:41</property>
+    <property name="shotcut:hash">b3501a225da253bb7ae2638febb64d10</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_10.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer10" in="00:00:00.000" out="00:01:19.383">
+    <property name="length">00:01:19.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_11.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:24:18</property>
+    <property name="shotcut:hash">ed01dc4dad6e35d4d4d607106aed03c7</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_11.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="main_bin" title="Shotcut version 21.01.29">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="xml_retain">1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:01:20.933"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:06:56.100"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:19.250"/>
+    <entry producer="producer3" in="00:00:00.000" out="00:01:35.800"/>
+    <entry producer="producer4" in="00:00:00.000" out="00:00:42.317"/>
+    <entry producer="producer5" in="00:00:00.000" out="00:01:57.917"/>
+    <entry producer="producer6" in="00:00:00.000" out="00:00:20.567"/>
+    <entry producer="producer7" in="00:00:00.000" out="00:01:57.217"/>
+    <entry producer="producer8" in="00:00:00.000" out="00:00:39.917"/>
+    <entry producer="producer9" in="00:00:00.000" out="00:02:50.150"/>
+    <entry producer="producer10" in="00:00:00.000" out="00:01:19.383"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:19:23.767">
+    <property name="length">00:19:23.783</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgb24a</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:19:23.767"/>
+  </playlist>
+  <producer id="producer11" in="00:00:00.000" out="00:01:20.933">
+    <property name="length">00:01:20.950</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_1.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T21:53:52</property>
+    <property name="shotcut:hash">cfc297f8059cec6bb9900a9c1e751196</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_1.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer12" in="00:00:00.000" out="00:06:56.100">
+    <property name="length">00:06:56.117</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_2.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:02:20</property>
+    <property name="shotcut:hash">03beffbbbebf80b7a627696ea859396e</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_2.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor0" global_feed="1" in="00:00:00.000" out="00:00:01.683">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer11" in="00:01:16.483" out="00:01:18.167"/>
+    <track producer="producer12" in="00:00:00.200" out="00:00:01.883"/>
+    <transition id="transition0" out="00:00:01.683">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition1" out="00:00:01.683">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer13" in="00:00:00.000" out="00:00:19.250">
+    <property name="length">00:00:19.267</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_3.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:04:48</property>
+    <property name="shotcut:hash">490fbe4fbb69608c470aae18b77d8f3b</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_3.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor1" global_feed="1" in="00:00:00.000" out="00:00:02.800">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer12" in="00:06:49.717" out="00:06:52.517"/>
+    <track producer="producer13" in="00:00:00.000" out="00:00:02.800"/>
+    <transition id="transition2" out="00:00:02.800">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition3" out="00:00:02.800">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer14" in="00:00:00.000" out="00:01:35.800">
+    <property name="length">00:01:35.817</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_4.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:06:55</property>
+    <property name="shotcut:hash">ae88c0f85f7edad35d34001d1b42a636</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_4.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor2" global_feed="1" in="00:00:00.000" out="00:00:01.800">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer13" in="00:00:16.367" out="00:00:18.167"/>
+    <track producer="producer14" in="00:00:00.000" out="00:00:01.800"/>
+    <transition id="transition4" out="00:00:01.800">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition5" out="00:00:01.800">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer15" in="00:00:00.000" out="00:00:42.317">
+    <property name="length">00:00:42.333</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_5.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:08:43</property>
+    <property name="shotcut:hash">5fe1e0b92bc223d11796022d6b7e92c4</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_5.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor3" global_feed="1" in="00:00:00.000" out="00:00:01.917">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer14" in="00:01:33.667" out="00:01:35.583"/>
+    <track producer="producer15" in="00:00:00.000" out="00:00:01.917"/>
+    <transition id="transition6" out="00:00:01.917">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition7" out="00:00:01.917">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer16" in="00:00:00.000" out="00:01:57.917">
+    <property name="length">00:01:57.933</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_6.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:11:48</property>
+    <property name="shotcut:hash">5d40a3a7bad61b2aa87809c0d7554af4</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_6.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor4" global_feed="1" in="00:00:00.000" out="00:00:02.650">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer15" in="00:00:39.083" out="00:00:41.733"/>
+    <track producer="producer16" in="00:00:02.333" out="00:00:04.983"/>
+    <transition id="transition8" out="00:00:02.650">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition9" out="00:00:02.650">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer17" in="00:00:00.000" out="00:00:20.567">
+    <property name="length">00:00:20.583</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_7.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:12:59</property>
+    <property name="shotcut:hash">38eb32661c60ea990d5caee96c40f81f</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_7.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor5" global_feed="1" in="00:00:00.000" out="00:00:01.900">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer16" in="00:01:56.017" out="00:01:57.917"/>
+    <track producer="producer17" in="00:00:00.000" out="00:00:01.900"/>
+    <transition id="transition10" out="00:00:01.900">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition11" out="00:00:01.900">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer18" in="00:00:00.000" out="00:01:57.217">
+    <property name="length">00:01:57.233</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_8.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:15:52</property>
+    <property name="shotcut:hash">f6d0d95184b4f95269e5969afa7a0577</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_8.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor6" global_feed="1" in="00:00:00.000" out="00:00:01.383">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer17" in="00:00:19.183" out="00:00:20.567"/>
+    <track producer="producer18" in="00:00:01.617" out="00:00:03.000"/>
+    <transition id="transition12" out="00:00:01.383">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition13" out="00:00:01.383">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer19" in="00:00:00.000" out="00:00:39.917">
+    <property name="length">00:00:39.933</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_9.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:17:19</property>
+    <property name="shotcut:hash">13928f550e131723fc6d1375da1da982</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_9.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor7" global_feed="1" in="00:00:00.000" out="00:00:01.150">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer18" in="00:01:55.300" out="00:01:56.450"/>
+    <track producer="producer19" in="00:00:00.033" out="00:00:01.183"/>
+    <transition id="transition14" out="00:00:01.150">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition15" out="00:00:01.150">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer20" in="00:00:00.000" out="00:02:50.150">
+    <property name="length">00:02:50.167</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_10.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:21:41</property>
+    <property name="shotcut:hash">b3501a225da253bb7ae2638febb64d10</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_10.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor8" global_feed="1" in="00:00:00.000" out="00:00:01.567">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer19" in="00:00:37.917" out="00:00:39.483"/>
+    <track producer="producer20" in="00:00:00.067" out="00:00:01.633"/>
+    <transition id="transition16" out="00:00:01.567">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition17" out="00:00:01.567">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer21" in="00:00:00.000" out="00:01:19.383">
+    <property name="length">00:01:19.400</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/mtreiber/vorlesungen/Verkehrsoekonometrie_Ma/skript/VideoLectures/CoronaD_2021_02_18_11.mkv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="creation_time">2021-02-18T22:24:18</property>
+    <property name="shotcut:hash">ed01dc4dad6e35d4d4d607106aed03c7</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">CoronaD_2021_02_18_11.mkv</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <tractor id="tractor9" global_feed="1" in="00:00:00.000" out="00:00:01.200">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer20" in="00:02:48.617" out="00:02:49.817"/>
+    <track producer="producer21" in="00:00:00.700" out="00:00:01.900"/>
+    <transition id="transition18" out="00:00:01.200">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition19" out="00:00:01.200">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <blank length="00:00:00.567"/>
+    <entry producer="producer11" in="00:00:02.417" out="00:01:16.467"/>
+    <entry producer="tractor0" in="00:00:00.000" out="00:00:01.683"/>
+    <entry producer="producer12" in="00:00:01.900" out="00:06:49.700"/>
+    <entry producer="tractor1" in="00:00:00.000" out="00:00:02.800"/>
+    <entry producer="producer13" in="00:00:02.817" out="00:00:16.350"/>
+    <entry producer="tractor2" in="00:00:00.000" out="00:00:01.800"/>
+    <entry producer="producer14" in="00:00:01.817" out="00:01:33.650"/>
+    <entry producer="tractor3" in="00:00:00.000" out="00:00:01.917"/>
+    <entry producer="producer15" in="00:00:01.933" out="00:00:39.067"/>
+    <entry producer="tractor4" in="00:00:00.000" out="00:00:02.650"/>
+    <entry producer="producer16" in="00:00:05.000" out="00:01:56.000"/>
+    <entry producer="tractor5" in="00:00:00.000" out="00:00:01.900"/>
+    <entry producer="producer17" in="00:00:01.917" out="00:00:19.167"/>
+    <entry producer="tractor6" in="00:00:00.000" out="00:00:01.383"/>
+    <entry producer="producer18" in="00:00:03.017" out="00:01:55.283"/>
+    <entry producer="tractor7" in="00:00:00.000" out="00:00:01.150"/>
+    <entry producer="producer19" in="00:00:01.200" out="00:00:37.900"/>
+    <entry producer="tractor8" in="00:00:00.000" out="00:00:01.567"/>
+    <entry producer="producer20" in="00:00:01.650" out="00:02:48.600"/>
+    <entry producer="tractor9" in="00:00:00.000" out="00:00:01.200"/>
+    <entry producer="producer21" in="00:00:01.917" out="00:01:18.217"/>
+  </playlist>
+  <tractor id="tractor10" title="Shotcut version 21.01.29" global_feed="1" in="00:00:00.000" out="00:19:23.767">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">0.153379</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition20">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition21">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>

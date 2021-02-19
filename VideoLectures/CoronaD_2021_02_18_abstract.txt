@@ -1,0 +1,15 @@
+
+https://www.youtube.com/watch?v=VAWwM9y1weE
+
+Neue Virusmutation und Ende des Lockdowns: Simulation von Covid-19
+Projektionen für Deutschland
+
+In diesem Video wende ich die neue Version von corona-simulation.de
+für Deutschland an und simuliere vier Ereignisse isoliert und in
+Kombination:
+
+1. Es kommt ein aggressiverer Virus,
+2. Wir reduzieren den Lockdown oder kippen ihn ganz
+3. Wir oeffnen alle Grenzen
+4. Wir impfen mehr.
+

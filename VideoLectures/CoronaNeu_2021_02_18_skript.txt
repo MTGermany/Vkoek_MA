@@ -1,0 +1,181 @@
+
+[Vorbereitung]
+==============
+
+Ich Vollbild vor Simulator,
+Simulator Deutschland Standard gestoppt etwa Ende Mai
+
+
+Einfuehrung
+===========
+
+
+[mein Bild]
+
+Hallo liebe Simulationsfreunde. Angesichts der neuen
+Virusmutationen und unter Berücksichtigung neuer Daten und
+Simulationserfahrungen habe ich eine neue Version des Simulators
+corona-simulation.de erstellt.
+
+Bei den bisherigen Simulationen und Feedback von anderen hat
+sich gezeigt, dass die Infektions- und Testparameter kaum benutzt
+werden, wohl aber die Simulation der direkten Massnahmen.
+
+In der neuen Version ist die aufgepimpte Massnahmen-Ansicht
+die Standardansicht:
+
+Stringency Index
+================
+
+[Simulation nach vorne fokussieren]
+
+Hier sehen Sie die neue Standardansicht, nachdem bis zum Mai 2020
+simuliert wurde.
+
+* Als markante Neuerung habe ich die politischen Maßnahmen als
+  metrisch skalierte Größe eingeführt.
+
+* Diese gibt es in Our World in Data, eine meiner Datenquellen,
+  für fast
+  alle Länder als sogenannter "stringency Index" mit Werten zwischen
+  0 und 100.
+
+* "Stringency" bedeutet Strenge oder Striktheit und der Index als
+  Prozentzahl kann
+  hier als Grad des maximal möglichen
+  Shutdowns interpretiert werden:
+  0=vor Corona, 100=maximaler Shutdown
+
+* Am 23. Maerz 2020 waren nach Our World in Data die maximale
+  Lockdown-Stufe von 77% der ersten Welle erreicht,
+  ab Anfang Mai geht es runter
+
+[ vergroessern-scrollen]
+
+* Response verzoegert OK
+
+[weiter simulieren]
+
+* Der Lockdowngrad geht  minimal auf 50%, waehrend in der zweiten
+  Welle gute 80%  erreicht werden.
+
+* Natuerlich ist es schwierig, alles in eine einzige Prozentzahl zu
+  packen. Insbesondere gibt es den Index nur länderweit und in der
+  Beschreibung steht, es wird das Bundesland/Region innerhalb des
+  Landes mit den striktesten Massnahmen genommen.
+
+* Subjektiv fand ich zB. die Massnahmen im April einschneidender als
+  jetzt. Ausserdem scheint sie mir nicht
+  gleich-skaliert zu sein: Von
+  0-50 wesentlich weniger Einschraenkungen als von 50 auf 80, aber
+  damit muss man leben
+
+
+[fertig simuliert]
+
+Szenarien-Analyse: How to Do
+============================
+
+
+Was kann mun neu mit dem Simulator machen?
+
+Zunächst mal habe ich die vier wichtigsten Faktoren fuer die
+Szenarienanalyse auf die neue Standardansicht, die Massnahmenansicht
+gepackt
+
+
+* R0 habe ich uminterpretiert:
+  Ist nun die echte Basisreproduktionszahl ohne
+  Immunitaet durch Impfungen oder Erkrankungen sowie
+  - und das ist neu - ohne jede Massnahmen
+
+* Sie ist deshalb natuergemäß höher, weil die tatsächliche ja
+  durch 3 Effekte reduziert wqird:
+  1. Lockdown Massnahmen, 2. bereits
+  durchgemachte Erkrankungen, 3. Impfungen. Gäbe es alle drei nicht,
+  hätten wir ein R von 1.78, was etwa jede Woche einen Anstieg um
+  den Faktor zwei entspräche!
+
+* Der effektive R-Wert mit den drei
+  Faktoren liegt [zeigen] bei 0.83 
+
+[Umschalten auf Infektionsparameteransicht]
+
+* Schaut man sich die vergangenen echten
+  Basisreproduktionszahlen an,
+  liegen sie im Sommer so um 1.2 bis 1.6 [zeigen] mit einigen
+  Ausreissern, die von den Schlachthausinfektionen herruehren. Im
+  Winter, jetzt, ziemlich konstant um 1,7 bis 1.8, bis auf drei
+  Oktoberwochen (dann ueber 2),
+  wohl Eintrag von Tschechien und in der
+  Weihnachtswoche aufgrund von Reisen
+
+* Dass es zu Weihnachten trotztdem runtergeht, ist ein Artefakt
+  verringerter Testungen, die in meiner Simulation auch
+  beruecksichtigt werden: Von 24. bis Neujahr gehen die Fallzahlen
+  stark zurueck.
+
+  Uebrigens synchron auch die Todeszahlen. Da ist in
+  den Daten was faul, denn die muessten 3 Wochen verzoegert sein
+
+
+[ Testansicht]
+
+  die tatsaechlichen Infektionen steigen aber (violette Kurve)
+
+[Wocheninzidenz]
+
+* Also bis auf Saisonalitaet weitgehend konstant, waehrend die
+  Infektionszahlen Achterbahn fahren aufgrund von Maßnahmen, bereits
+  Infizierten  und seit neuesten auch Impfungen
+
+* => diese neue
+  Definition kommt der realen Infektiositaet der Viren also am
+  naehesten: Eine Aenderung bedeutet also abgesehen vom
+  Jahreszeiteneffekt, dass sich eine neue Sorte von Virus ausbreitet
+
+* Wichtig: Natürlich musste ich den Stringency-Index irgendwie auf
+  meine Infektionsdynamik wirken lassen.
+  Ich habe es so gemacht, dass
+  man einen weitgehend konstanten R0-Wert bis auf Sonderfaelle
+  erhaelt. Konkret wird der  R Wert mit einem Faktor multipliziert,
+  der 1 fuer 0 Massnahmen und 0.5 fuer maximale Massnahmen sind. Das
+  passt mit den Daten am besten.
+  Maximaler Shutdown reduziert also die
+  Ansteckungsrate um die Haelfte.
+
+* Mag gering erscheinen, kann aber mit der
+  erwaehnten Nichtlinearitaet des Index zusammenhaengen
+  
+
+
+[Umschalten auf Maßnahmenansicht]
+
+* Ich habe also nun die Infektiosität von den Lockdown- Maßnahmen
+  und Impfungen getrennt und kann alle drei  separat kontrollieren
+
+* Wie immer gilt: Schiebe ich selbst
+  an einen der drei sich von Geisterhand
+  nach den Daten bewegenden Regler,
+  ueberstimme ich die Einstellungen
+  und kann Szenarien in der Vergangenheit und Zukunft simulieren
+
+* Druecke ich in der simulierten gegenwart einfach auf Go, wird mit
+  den jetztigen Maßnahmen, der jetztigen Impfrate und dem jetztigen
+  Virustyp weitersimuliert.
+
+
+Schluss
+=======
+
+In diesem Video habe ich keine Szenarienanalysen gemacht, sondern
+Ihnen die neuen Funktionen von corona-simulation.de  vorgestellt.
+Damit  kann man nun sehr viel
+spezifischere und direktere Szenarienanalysen machen,
+die ich in einen
+separaten Video demonstrieren werde. Bleiben Sie dran und empfehlen
+Sie meinen Simulator und die Videos weiter, wenn es Ihnen gefallen
+hat!
+
+
+
