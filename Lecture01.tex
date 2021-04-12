@@ -31,7 +31,7 @@
 }
 
 %##############################################################
-\frame{\frametitle{Scope of econometrics --
+\frame{\frametitle{1.1 Scope of econometrics --
 from a mathematical point of view}
 %##############################################################
 
@@ -68,7 +68,7 @@ The field of \bfdef{Traffic
 
 
 %##############################################################
-\frame{\frametitle{General procedure of an econometric analysis}
+\frame{\frametitle{1.2 General procedure of an econometric analysis}
 %##############################################################
 
 \visible<1>{
@@ -92,12 +92,29 @@ The field of \bfdef{Traffic
 
 }
 
+%##############################################################
+\frame{\frametitle{1.3 Information flow of an econometric model}
+%##############################################################
+
+\placebox[center]{0.22}{0.45}
+{\figSimple{0.4\textwidth}{figsAllg/ModellTrichter_eng.png}}
+
+\pause
+\visible<2->{\placebox[center]{0.72}{0.45}
+{\figSimple{0.5\textwidth}{figsAllg/flussdiag-Kopplung_eng.png}}}
+
+}
+
+
 
 %##############################################################
-\frame{\frametitle{Examples of models and compatible data}
+\frame{\frametitle{1.4 General Criteria for the Model Selection}
 %##############################################################
+Since econometrics describes things quantitatively, its basic language
+is mathematics and its basic concept a \bfdef{(mathematical) model}
+
 \bi
-\item The model must be compatible to the research objective:
+\item The model must be compatible to the data and the research objective:
 
 \pause
 \bi
@@ -112,13 +129,13 @@ econometric \bfdef{discriminant analysis}
 \vspace{1em}
 
 \pause \item If the model is a \bfdef{discrete-choice model}, the questions
-  of the survey must be sets of alternatives that are ..
+  of the survey must be sets of alternatives that are ...
 \pause
 \bi
-\item exclusive: at most one alternative can be ticked
-\pause \item complete: at least one alternative may be ticked
+\item \textit{exclusive}: at most one alternative can be ticked
+\pause \item \textit{complete}: at least one alternative may be ticked
 $\Rightarrow$ exactly one
-\pause \item sufficiently different
+\pause \item sufficiently \textit{different}. \\[1em]
 \pause \itemAsk How to formulate a question regarding the kind of schools visited?
 \pause \itemAsk For route choice, we have two routes that only differ
  in that one route contains a small detour of to go to a bakery. Which
@@ -131,25 +148,10 @@ $\Rightarrow$ exactly one
 
 
 
-%##############################################################
-\frame{\frametitle{Information flow of an econometric model}
-%##############################################################
-
-\placebox[center]{0.22}{0.45}
-{\figSimple{0.4\textwidth}{figsAllg/ModellTrichter_eng.png}}
-
-\pause
-\visible<2->{\placebox[center]{0.72}{0.45}
-{\figSimple{0.5\textwidth}{figsAllg/flussdiag-Kopplung_eng.png}}}
-
-}
-
 
 %##############################################################
-\frame{\frametitle{Econometric models}
+\frame{\frametitle{1.5 Econometric models -- a Closer Look}
 %##############################################################
-Since econometrics describes things quantitatively, its basic language
-is mathematics and its basic concept a \bfdef{(mathematical) model}
 
 
 \maindm{
@@ -174,14 +176,14 @@ includes \emph{all} conceivable econometric models.
 }
 
 %##############################################################
-\frame{\frametitle{Endogenous Variables}
+\frame{\frametitle{1.5.1 Endogenous Variables}
 %##############################################################
 
 \bi
 \item The name \bfdef{endogenous variable} comes from the Greek
   \emph{endo} ($\epsilon\nu\delta$)  and the 
   suffix \emph{gen} ($\gamma \epsilon\nu o\varsigma$) meaning
-  generated from the inside [the model]
+  \emph{generated from the inside [the model]}
 \pause\item in systems theory, the endogenous variables are the
 \bfdef{output}
 \pause\item mathematically, the endogenous variable are the
@@ -191,17 +193,22 @@ includes \emph{all} conceivable econometric models.
 \pause \textit{Example mode choice}: $Y_k$: \#decisions for mode $k$ (e.g.,
 walking, cycling, public transport, car, combined/others)
 
+\vspace{1em}
+
+\colAsk{Formulate conditions for the $Y_k$ in order to ensure that the
+  choice set is exclusive and complete}
+
 }
 
 %##############################################################
-\frame{\frametitle{Exogeneous variables}
+\frame{\frametitle{1.5.2 Exogeneous variables}
 %##############################################################
 
 \bi
 \item The name \bfdef{exogenous variable} comes from the Greek
   \emph{exo} ($\epsilon\xi\omega$)  and the 
   suffix \emph{gen} ($\gamma \epsilon\nu o\varsigma$) meaning
-  ``coming from the outside''
+  \emph{coming from the outside}
 \pause\item in systems theory, the endogenous variables are the
 \bfdef{input}
 \pause\item mathematically, the endogenous variable are the
@@ -216,17 +223,17 @@ deferred to additional random terms $\epsilon_k$
 \vspace{1em}
 
 \pause \textit{Example mode choice}: $\tilde{x}_m$ can be travel times or costs for the
-different modes, and also socioeconomic factors such as age, gender,
-or income
+different modes, and also socioeconomic attributes such as age, gender,
+income, or the possession of a car
 
 
 }
 
 %##############################################################
-\frame{\frametitle{Random terms}
+\frame{\frametitle{1.5.3 Random terms}
 %##############################################################
 
-The \bfdef{random terms}, also called \bfdef{residual terms} $\epsilon_k$
+The \bfdef{random terms} $\epsilon_k$, also called \bfdef{residual terms} 
   (from \emph{residuum}: the rest) summarize all what is not known and
   cannot be explained by the exogenous/explanatory variables:
 \vspace{-0.5em}
@@ -236,9 +243,10 @@ The \bfdef{random terms}, also called \bfdef{residual terms} $\epsilon_k$
 \pause 
 possible reasons for $\epsilon_k$:
 \bi
-\item cannot include all factors \bfred{(watch out for bias!)}
-\pause \item the model is not appropriate (e.g., explaining the fuel
-  consumption by a linear function of speed)
+\item model does not include all relevant exogenous variables \bfred{(watch out for bias!)}
+\pause \item all relevant factors are there but are not bundled to
+appropriate linear factors  (e.g., explaining the fuel
+  consumption by a linear function of the speed)
 \pause\item the data used for model calibration contain errors
 \pause\item in case of human decisions: 
 \maintextbox{0.7\textwidth}{
