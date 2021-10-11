@@ -8,7 +8,8 @@
 
 %\documentclass[mathserif]{beamer}
 \documentclass[mathserif,handout]{beamer}
-%\usepackage{beamerthemeshadow}
+%\documentclass[mathserif,aspectratio=1610]{beamer}
+%\documentclass[mathserif,aspectratio=1610,handout]{beamer}
 \input{$HOME/tex/inputs/defsSkript}%$
 \input{$HOME/tex/inputs/styleBeamerVkoekMa}%$
 \usepackage{graphicx}
@@ -568,10 +569,22 @@ $\beta_1\in \left[\hat{\beta}_1-\Delta \hat{\beta}_1^{(\alpha)},
 \frame{\frametitle{4. Significance Tests\\
 4.1 General Four-Step Procedure}
 %###################################################
+%}\end{document}
+%\benum
+%\item test
+%\benum
+%\item 2nd level
+%\benum
+%\item 3rd level
+%\eenum
+%\eenum
+%\eenum
+%}\end{document}
 \benum
 \item Formulate a \bfdef{null hypothesis $H_0$} such that their rejection
   gives insight, e.g. $\beta_j=\beta_{j0}$ (point hypothesis) or
-  $\beta_j \le \beta_0$ (interval hypothesis): Notice: \emph{One cannot confirm $H_0$}
+  $\beta_j \le \beta_0$ (interval hypothesis): Notice: \emph{One
+    cannot confirm $H_0$}
 \pause \item Select a \bfdef{test function} or \bfdef{statistics $T$}
 \bi
 \item whose distribution is known provided the parameters are at the 
