@@ -1,5 +1,6 @@
 
 
+
 %#############################################
 % pdflatex beamer template
 %
@@ -9,26 +10,32 @@
 %~/tex/inputs/LectureTemplate_latex.tex
 %#############################################
 
-%aspectratio=1610 => 16:10, also 169 useful; default: 43 => 4:3
 
-\documentclass[mathserif,aspectratio=1610]{beamer} 
+\documentclass[mathserif,aspectratio=1610]{beamer}
 %\documentclass[mathserif,handout,aspectratio=1610]{beamer}
 %\usepackage{beamerthemeshadow}
-
 \input{$HOME/tex/inputs/defsSkript}  %$
 %\input{./defsSkript}  %$
-%\input{$HOME/tex/inputs/styleBeamerLatex}   %$
 \input{$HOME/tex/inputs/styleBeamerPdflatex}   %$
 
+
 \usepackage{graphicx}
+%\setbeamercovered{invisible}   % no shining through of future layers
+%\setbeamercovered{transparent} % constant transparency of all future layers
+                                % default: progressive shining through
 
 
 %##############################################################
 
 \begin{document}
 
-%\setbeamercovered{invisible} % following parts completely invisible
-\setbeamercovered{transparent} % following parts semi-transparent
+%########################################################
+\frame{\frametitle{Scrolling possible in fullscreen mode?}
+%########################################################
+
+see scrolltest.tex; although complete, does not work on ubuntu12
+}
+
 
 \section{10. Title of this lecture}
 
@@ -38,12 +45,13 @@
 %##############################################################
 
 \bi
-\item use with png,jpg images with styleBeamerPdflatex, pdflatex,
+\item use with png,jpg images with styleBeamerPdflatex and pdflatex;
   placebox works 
-\item use with eps images with styleBeamerLatex, tex2pdf
+\item use with eps images with png changed to eps in
+  styleBeamerPdflatex (->would be styleBeamerLatex) and tex2pdf
 \item Local link targets placed at first occurrence of page
 \item neither placebox nor makePale works for latex version
-\itemAnswer \myLocalLink{sec:IDM}{Link zu Target sec:IDM, 
+\itemAnswer \myLocalLink{sec:defs}{Link zu Target sec:defs, 
 angelegt mit hypertarget}
 \ei
 
@@ -54,7 +62,7 @@ angelegt mit hypertarget}
 %##############################################################
 
 \placebox{0.50}{0.49}
- {\figSimple{0.80\textwidth}{figsAllg/vierstufenmodell.png}}
+ {\figSimple{0.80\textwidth}{figsAllg_vpl/Vierstufenmodell.png}}
 
 \makePale{0.80}{0.50}{0.49}{0.90}{0.75}
 
@@ -65,20 +73,11 @@ angelegt mit hypertarget}
 \placebox{0.50}{0.45}
  {\parbox{0.8\textwidth}{
   \bi
-  \item 10.1 first Do not leave spaces! Otherwise ticz error!
+  \item 10.1 first
   \item 10.2 second
   \ei
 }}
 
-}
-
-%##############################################################
-\frame{\frametitle{Placebox with maintext}
-%##############################################################
- \placebox{0.50}{0.35}{\maintextSimple{Due to a  \bfdef{Latex bug} no
-     begin/end center possible within placebox. Therefore, use
-     \texttt{maintextSimple} instead of \texttt{maintext}
-}}
 
 }
 
@@ -93,25 +92,15 @@ effect future elements not transparent)
 \pause \item the visible command seems to override this (making future imgs
 opaque as in setbeamercovered\{invisible\} but only there:
 \visible<3->{
+
  \fig{0.4\textwidth}{$HOME/tex/inputs/TUlogo_weissAufBlau.png}%$
 % figSimple{0.4\textwidth}{TUlogo_weissAufBlau.png}%$
 }
-\pause item the strange argument 3- indicates image shown after 3rd pause
+\pause item the strange argument 3- indicates image shown after 3rd
+click as any text after the second ``pause'' keyword
+
 \pause with placebox: \texttt{visible<3->\{ placebox\{ ...\} \}}
 \ei
-}
-
-%###############################################################
-\frame{\frametitle{pause with images on same location}
-%###############################################################
-\visible<1>{
-  \placebox{0.50}{0.50}{\figSimple{0.5\textwidth}{$HOME/tex/inputs/TUlogo_weissAufBlau.png}%$
-}}
-
-\visible<2>{
-  \placebox{0.50}{0.50}{\figSimple{0.5\textwidth}{$HOME/tex/inputs/3Dtraffic_logo.jpg}%$
-}}
-
 }
 
 %###############################################################
@@ -136,6 +125,47 @@ a & b\\ \hline
 }
 
 \subsection{10.1 first} 
+
+%###############################################################
+\frame{\frametitle{visible instead of pause to temporarily override
+    semitransparency of future kayers}
+%###############################################################
+  \bi
+  \item 6.1 Allgemeines zur Umlegung
+  \visible<2->{\item 6.2 Nachfrageseite: Fahrtenmatrizen}
+  \visible<3->{\item 6.3 Netzmodellierung}
+  \visible<4->{\item 6.4 Capacity-Restraint Funktionen}
+  \visible<5->{\item 6.5 Erstes Wardrop'sches Prinzip: Nutzergleichgewicht}
+  \visible<6->{\item 6.6 Zweites Wardrop'sches Prinzip: Systemoptimum}
+  \visible<7->{\item 6.7 Zusammenhang zwischen Nutzergleichgewicht und
+    Systemoptimum} 
+  \visible<8->{\item 6.8 Fun Fact: Das Braess'sche Paradoxon}
+  \ei
+}
+
+%###############################################################
+\frame{\frametitle{visible braces can jump environemnts!}
+%###############################################################
+
+\bdm
+\begin{array}{lll}
+T_1(q,w_1)  &=& 10 + 8 q w_1 + q,\\
+T_2(q,w_1)  &=&  8 - 3 q w_1 + 4 q
+\end{array}
+\edm
+
+\visible<2->{
+\bdma 
+T\sub{sys}(\vec{w}) &=& w_1T_1(q,w_1)+w_2T_2(q,w_1)\\
+ &=& w_1T_1(q,w_1)+(1-w_1)T_2(q,w_1) \\[-0.3em]
+ &=& 11 q w_1^2+(2-6q)w_1 + 8+4q \stackrel{!}{=}\min_{w_1}\\[-0.3em]}
+\visible<3->{T'\sub{sys}(w_1) &=& 22 q w_1+2-6q\stackrel{!}{=}0  \Rightarrow \\[-0.3em]}
+\visible<4->{w_1\sup{SO}
+ &=& \twoCases{\frac{3q-1}{11q}}{\ q\le \frac{1}{3}}{0}{
+\ \text{sonst.}}}
+\edma
+%Die Fallunterscheidung ist durch die Bedingung $w_1\sup{SO}\ge 0$ verursacht
+}
 
 %###############################################################
 \frame{\frametitle{10.1 first}
@@ -163,86 +193,36 @@ behaviour \red{$\Rightarrow$ not satisfied by the OVM and FVDM})
 \ei
 }
 
+
+
+
 \subsection{10.2 second}
 
 
 %########################################################
-\frame{\frametitle{10.2 second}
+\frame{\frametitle{\hypertarget{sec:defs}{} 10.2 useful definitions}
 %########################################################
-\bi
-\itemAsk Calculate the homogeneous steady state
-\pause \itemAnswer \colAnswer{\small{
-$0=a\left[1-\left(\frac{v}{v_0}\right)^4
--\left(\frac{s_0+vT}{s}\right)^2\right]$\\
-\pause can be solved for $s=s_e(v)$:\\
-$s_e(v)=\frac{s_0+vT}{\sqrt{1-(v/v_0)^4}}$}}
-\ei
 
-also maineq\{eq label\}\{formula\},
-maindm\{eq\}, maindmIntext\{eq\}, maintextbox\{width\}\{text\},
-maintextbox\{text\}, itemgray, colDef, colAsk, colAnswer, bfAsk,
-bfAnswer, itemAsk, itemAnswer, itemGray,
- makePale\{opacity\}\{centerXrel\}\{centerYrel\}\{wrel\}\{hrel\} to
- make images pale, circled\{char\}, bfsf, myheading, mysubheadingq,
- mysubsubheading, fboxdm, fboxtext, myBox
 \vspace{2em}
 
+myheading, mysubheadingq, mysubsubheading, bfsf, 
+
+maineq\{eq label\}\{formula\},
+maindm\{eq\}, maindmIntext\{eq\}, maintextbox\{width\}\{text\},
+maintextbox\{text\}, fboxdm, fboxtext, myBox
+
+colDef, colAsk, colAnswer, bfAsk,
+bfAnswer,
+
+itemAsk, itemAnswer, itemGray,
+
+makePale\{opacity\}\{centerXrel\}\{centerYrel\}\{wrel\}\{hrel\} to
+make images pale, circled\{char\}
+
+
 
 }
 
-
-
-%###############################################################
-\frame{\hypertarget{sec:IDM}{}\frametitle{IDM equations}
-%###############################################################
-
-
-%Time-continuous model:
-
-\maindm{\abl{v}{t} = a \left[ 1 -\left(\frac{v}{v_0} \right)^4 
-     -\left( \frac{s^*(v,v_l)}{s} \right)^2
-   \right] \qquad \text{IDM acceleration}}
-\vspace{-0.5em}
-
-\pause \centering{free acceleration: $a(1-(v/v_0)^4)$, repulsive force:
-$-a(s^*/s)^2$}
-\vspace{0.5em}
-
-\pause \maindm{s^*(v,v_l)
- = s_0  + \max \left(0, v T
- + \frac{v (v-v_l)}{2\sqrt{a b}}\right) \qquad \text{desired gap}}
-
-\vspace{0.5em}
-
-\pause
-\begin{center}
-{\footnotesize
-\begin{tabular}{|p{0.25\textwidth}|p{0.12\textwidth}|p{0.12\textwidth}
-|p{0.12\textwidth}|p{0.12\textwidth}|}
-\hline\noalign{\smallskip}
-\bfdefTUD{Parameter} & \bfdefTUD{Cars Highway} & \bfdefTUD{Cars City}
-                      & \bfdefTUD{Trucks Hwy} & \bfdefTUD{Bicycles} \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-Desired speed $v_0$ & $\pause \unit[120]{km/h}$ & $\pause \unit[50]{km/h}$ 
-                    & $\pause \unit[80]{km/h}$ & $\pause \unit[20]{km/h}$ \\
-Time gap $T$ & $\pause \unit[1.0]{s}$ & $\pause \unit[1.0]{s}$
-             & $\pause \unit[1.8]{s}$ & $\pause \unit[0.6]{s}$ \\
-Minimum gap $s_0$ & $\pause \unit[2]{m}$ & $\pause \unit[2]{m}$ 
-                  & $\pause \unit[3]{m}$ & $\pause \unit[0.4]{m}$ \\
-%Acceleration exponent $\delta$ & 4 & 4 & 4 \\
-Acceleration $a$ & $\pause \unit[1.5]{m/s^2}$ & $\pause \unit[2.0]{m/s^2}$
-                 & $\pause \unit[0.5]{m/s^2}$ & $\pause \unit[1.0]{m/s^2}$ \\
-Comf. deceleration $b$ 
-                 & $\pause \unit[1.5]{m/s^2}$ & $\pause \unit[2.0]{m/s^2}$
-                 & $\pause \unit[1.0]{m/s^2}$ & $\pause \unit[1.5]{m/s^2}$ \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\end{tabular}
-}
-\end{center}
-\vspace{-0.5em}
-\myLocalLink{general}{back to intro}
-
-}
 
 
 
