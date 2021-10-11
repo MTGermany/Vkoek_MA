@@ -1,7 +1,19 @@
 
+
 % ACHTUNG Referenz bei $HOME/tex/inputs/desfsSkript.tex
 % gleich wie lokale defsSkript.tex bei den Skripten!!!
 % verlinke mit \input{$HOME/tex/inputs/defsSkript}
+
+
+%###################################################################
+% Graphik ACHTUNG [pdftex,dvips] wichtig, sonst Skalierungsbugs bei pdflatex
+%###################################################################
+%\usepackage[pdftex,dvips]{graphicx} 
+%\usepackage[pdftex,dvips]{color}     %Definiert \definecolor und 
+                              % red,yellow,green,blue,black,gray,white
+\usepackage{graphicx} 
+\usepackage{color}
+\usepackage{enumitem} % then \begin{enumerate}[(\roman*)] etc possible
 
 %#####################################################
 % Hyperlink
@@ -165,9 +177,11 @@
 
 \definecolor{TUDblue1}{rgb}{.05,.22,.410}
 \definecolor{TUDblue2}{rgb}{.11, .42, .81}
+\definecolor{green2}{rgb}{0.,0.7,0.1}
+\definecolor{greenSim}{rgb}{0.2,0.4,0.0}
 \definecolor{mygreen}{rgb}{0.,0.4,0.4}
 \definecolor{myred}{rgb}{1,0.0,0.0}
-\definecolor{blueTUD}{rgb}{0.1,0,0.5} %my color
+\definecolor{blueTUD}{rgb}{0.1,0,0.5} 
 
 %% !! only so cumbersome. Short search: 
 % No shortcut defining rgb directly (nov19)
@@ -189,11 +203,15 @@
 \newcommand{\myred}[1]{{\color{myred} #1}}
 \newcommand{\myblue}[1]{{\color{TUDblue1} #1}}
 \newcommand{\mygreen}[1]{{\color{mygreen} #1}}
+\newcommand{\greenSim}[1]{{\color{greenSim} #1}}
+\newcommand{\darkgreen}[1]{{\color{green2} #1}} %green2 in command,
+                                                %not in def, error
 \newcommand{\blueTUD}[1]{{\color{blueTUD} #1}}  %my color
-\providecommand{\bfdefTUD}[1]{\hspace*{0.01em}{\boldmath \textbf{\blueTUD{#1}}}}
+\providecommand{\bfblueTUD}[1]{\hspace*{0.01em}{\boldmath \textbf{\blueTUD{#1}}}}
 \providecommand{\bfblack}[1]{\hspace*{0.01em}{\boldmath \textbf{\black{ #1}}}}
 \providecommand{\bfgreen}[1]{\hspace*{0.01em}{\boldmath \textbf{\green{#1}}}}
 \providecommand{\bfred}  [1]{\hspace*{0.01em}{\boldmath \textbf{\red{#1}}}}
+\providecommand{\bfblue}  [1]{\hspace*{0.01em}{\boldmath \textbf{\blue{#1}}}}
 \providecommand{\bforange}[1]{\hspace*{0.01em}{\boldmath
     \textbf{\orange{#1}}}}
 \providecommand{\bfyellow}[1]{\hspace*{0.01em}{\boldmath 
@@ -231,8 +249,8 @@
 \providecommand{\bfAnswer}[1]{\hspace*{0.01em}{\boldmath
     \textbf{\colAnswer{#1}}}}
 
-\providecommand{\itemAsk}{\item[\bfAsk{?}]}
-\providecommand{\itemAnswer}{\item[\bfAnswer{!}]}
+\providecommand{\itemAsk}{\item[\bfAsk{?\ }]}
+\providecommand{\itemAnswer}{\item[\bfAnswer{!\ }]}
 
 % comments before '=' signs in calculation steps
 % example: 
@@ -269,7 +287,7 @@
 }
 %###########################################################
 
-% make images pale (see demo_makePale.tex)
+% make images pale (see demo_makePale.tex) transparency cover
 %\makePale{opacity}{centerXrel}{centerYrel}{wrel}{hrel}
 % e.g., \makePale{0.6}{0.5}{0.5}{1}{0.3}
 
@@ -308,8 +326,6 @@
 \definecolor{lblue}{rgb}{0.91,1,1}
 \providecommand{\lblue}[1]{\textcolor{lblue}{#1}}
 
-% (jul19, old notebook) ACHTUNG: \textsf{ statt \sffamily{ DOS !!
-
 % find keywords: caption, title
 \providecommand{\bfsf}[1]{\large{\sffamily\textbf{#1}}}
 \providecommand{\secfont}[1]{\Large{\sffamily\textbf{#1}}}
@@ -317,6 +333,9 @@
 \providecommand{\mysubheading}[1]{\large{\sffamily\textbf{\blueTUD{#1}}}}
 \providecommand{\mysubsubheading}[1]{\sffamily\textbf{\blueTUD{#1}}}
 
+\providecommand{\white}[1]{\textcolor{white}{#1}}
+\providecommand{\myheadingWhite}[1]{\Large{\sffamily\textbf{\white{#1}}}}
+\providecommand{\mysubheadingWhite}[1]{\large{\sffamily\textbf{\white{#1}}}}
 
 %******************************************************************
 % General defs for structural units and environments 
@@ -356,7 +375,12 @@
 \providecommand{\ei}{\end{itemize}}
 \providecommand{\benum}{\begin{enumerate}}
 \providecommand{\eenum}{\end{enumerate}}
-
+%F...ing new bug in beamer class: enum label not defined=> infinite loop
+% providecommand => only used if undefined
+\providecommand{\labelenumi}{\arabic*.}     %# 1st level
+\providecommand{\labelenumii}{(\alph*)}    %# 2nd level
+\providecommand{\labelenumiii}{(\Roman*)}  %# 3rd level
+\providecommand{\labelenumiv}{(\roman*)}   %# 4th level (Greek not defined)
 
 \providecommand{\dis}[1]{ {\displaystyle #1}}
 
@@ -752,16 +776,28 @@
 %usage: \maintextbox{width}{text}
 
 \providecommand{\maintextbox}[2]{
-\vspace{0.5mm}
+\vspace{0.1em}
 \begin{center}
   \colorbox{colMainText}{
-   \hspace*{0.5mm}
-     \parbox{#1}{\vspace*{0.5mm}
-     #2\vspace*{0.5mm}
+   \hspace*{0.1em}
+     \parbox{#1}{\vspace*{0.1em}
+     #2\vspace*{0.1em}
      }
-   \hspace*{0.5mm} 
+   \hspace*{0.1em} 
   }
 \end{center}
+\vspace{0mm}
+}
+
+\providecommand{\maintextboxNocenter}[2]{
+\vspace{0.1em}
+  \colorbox{colMainText}{
+   \hspace*{0.1em}
+     \parbox{#1}{\vspace*{0.1em}
+     #2\vspace*{0.1em}
+     }
+   \hspace*{0.1em} 
+  }
 \vspace{0mm}
 }
 
@@ -773,14 +809,26 @@
 
 \providecommand{\maintextSimple}[1]{ % bug: no center allowed in placebox
   \colorbox{colMainText}{
-   \hspace*{0.5mm}
-     \parbox{0.95\textwidth}{\vspace*{0.5mm}
-     #1\vspace*{0.5mm}
+   \hspace*{0.1em}
+     \parbox{0.95\textwidth}{\vspace*{0.1em}
+     #1\vspace*{0.1em}
      }
-   \hspace*{0.5mm} 
+   \hspace*{0.1em} 
   }
 }
 
+
+\providecommand{\maintextSimplebox}[2]{ % bug: no center allowed in placebox
+\vspace{0.1em}
+  \colorbox{colMainText}{
+   \hspace*{0.1em}
+     \parbox{#1}{\vspace*{0.1em}
+     #2\vspace*{0.1em}
+     }
+   \hspace*{0.1em} 
+  }
+\vspace{0mm}
+}
 
 
 %******************************************************************
@@ -830,20 +878,40 @@
 
 }
 
+\providecommand{\simulate}{
+  \parbox{0.22\textwidth}{
+    \figSimple{0.08\textwidth}
+      {$HOME/tex/inputs/figsGeneric/trafficSimulationDe-ring.png}
+    \\[-0.06\textwidth]
+    \hspace*{0.08\textwidth} \greenSim{%\boldmath{$\Rightarrow$}
+      \footnotesize{\textbf{simulate ...}}}
+}}
+
+\newcommand{\treiber}{\ \includegraphics[height=1.6em]
+   {$HOME/tex/inputs/figsGeneric/signMT_blue.jpg}}
+\newcommand{\treiberEps}{\ \includegraphics[height=1.6em]
+   {$HOME/tex/inputs/figsGeneric/signMT_blue.eps}}
+
+
+
 \newcommand{\OK}{\ \includegraphics[width=1.2em]
    {$HOME/tex/inputs/figsGeneric/OK.png}}
 \newcommand{\OKeps}{\includegraphics[width=1.2em]
    {$HOME/tex/inputs/figsGeneric/OK.eps}}
+
 \newcommand{\contradiction}{
   \parbox{1.2em}{\vspace*{-0.2em}
   \includegraphics[width=0.9em, origin=br]
    {$HOME/tex/inputs/figsGeneric/contradiction.png}\vspace*{0.2em}}
 }
+
 \newcommand{\contradictioneps}{
   \parbox{1.2em}{\vspace*{-0.2em}
   \includegraphics[width=0.9em, origin=br]
    {$HOME/tex/inputs/figsGeneric/contradiction.eps}\vspace*{0.2em}}
 }
+
+\newcommand{\false}{\text{{\Large\red{\bfmath{\!\!\times}}}}}
 
 \newcommand{\male}{\includegraphics[height=1em]
    {$HOME/tex/inputs/figsGeneric/male.eps}}
@@ -1091,15 +1159,9 @@
 
 \providecommand{\sub}[1]{dummy}
 \providecommand{\sup}[1]{dummy}
-% !! in some latex settings  \hspace{-0.8ex}, in some  \hspace{-0.0ex} right!
-%\renewcommand{\sub}[1]{_{\text{{\scriptsize \hspace{-0.8ex}#1}}}}
-%\renewcommand{\sup}[1]{^{\text{{\scriptsize \hspace{-0.8ex}#1}}}}
-%\renewcommand{\sub}[1]{_{\text{{\scriptsize \hspace{-0.4ex}#1}}}}
-%\renewcommand{\sup}[1]{^{\text{{\scriptsize \hspace{-0.4ex}#1}}}}
-\renewcommand{\sub}[1]{_{\text{{\scriptsize \hspace{-0.0ex}#1}}}}
-\renewcommand{\sup}[1]{^{\text{{\scriptsize \hspace{-0.0ex}#1}}}}
-%\renewcommand{\sub}[1]{_{\rm \hspace{-0.0ex}#1}} %bug if \sub{\"OV} etc
-%\renewcommand{\sup}[1]{^{\rm \hspace{-0.0ex}#1}}
+\renewcommand{\sub}[1]{_{\!\!\text{\scriptsize{#1}}}} % recommended \mathrm does not
+                                % work for \sub{\"OV} etc
+\renewcommand{\sup}[1]{^{\!\!\text{\scriptsize{#1}}}}
 %\providecommand{\tr}{^{\!\text{\scriptsize{T}}}}
 \providecommand{\tr}{'}
 \providecommand{\ueber}[2]{
