@@ -26,6 +26,7 @@ figsDiscr/calibDiscrChoice/*.outData
 *.fls
 *.out
 *.toc
+*.idx
 logfile
 
 ## Intermediate documents:

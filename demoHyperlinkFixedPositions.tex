@@ -1,0 +1,52 @@
+%###########################################################
+% relevant file location for reference/changes:
+% $HOME/tex/inputs/
+%###########################################################
+
+\documentclass[mathserif,aspectratio=1610]{beamer}
+%\input{$HOME/tex/inputs/styleBeamerTraffDyn}   %$
+\input{$HOME/tex/inputs/defsSkript}  %$ contains placebox
+
+\begin{document} 
+
+\frame[label=frameA]{
+\placebox{0.93}{0.03}{\hyperlink{frameB}{\beamergotobutton{to Frame B}}}
+\placebox{0.93}{0.07}{\hyperlink{frameC}{\beamergotobutton{to Frame C}}}
+\frametitle{Frame A}
+Note: correct target (whole page with heading at top, not somewhere in
+the middle) is only realized in the presentation mode
+}
+%\end{frame}
+
+\frame[label=frameB]{
+\placebox{0.93}{0.03}{\hyperlink{frameC}{\beamergotobutton{to Frame C}}}
+\placebox{0.07}{0.03}{\hyperlink{frameA}{\beamergotobutton{to Frame A}}}
+\frametitle{Frame B}
+\bi
+\item Frames can be defined with
+\textbackslash\texttt\{begin\{frame\}[options] ... 
+\textbackslash\texttt\{end\{frame\}
+\pause \item or with 
+%\item or with 
+\textbackslash\texttt\{frame[options] ... \}
+\pause \item WATCH OUT, many BUGS: Unlike usual robustness, \texttt{placebox}
+  \emph{not} robust together with \texttt{hyperlink,beamergotobutton}  AND \texttt{pause} or \texttt{visible}
+  statements:
+  The link is not visible although it should be, not at the place
+  required by placebox, history-dependent etc. 
+\pause \item ONLY following works:
+  \red{position \texttt{hyperlink} command before any pause's or
+    \texttt{visible} commands, best directly after defining the
+    frame} 
+  (can be done after the title), \red{without \texttt{visible} commands, inside \texttt{placebox}}
+\ei
+}
+
+\begin{frame}[label=frameC]
+\placebox{0.07}{0.03}{\hyperlink{frameB}{\beamergotobutton{to Frame B}}}
+\placebox{0.07}{0.07}{\hyperlink{frameA}{\beamergotobutton{to Frame A}}}
+\frametitle{Frame C}
+\end{frame}
+
+
+\end{document} 

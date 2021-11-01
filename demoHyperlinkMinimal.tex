@@ -1,0 +1,39 @@
+%###########################################################
+% relevant file location for reference/changes:
+% $HOME/tex/inputs/
+%###########################################################
+
+% distribute with 
+% for target in $HOME/vorlesungen/Verkehrsoekonometrie_Baskript_Ba $HOME/vorlesungen/Verkehrsoekonometrie_Ma/skript $HOME/versionedProjects/trafficflowdynamics/tex; do cp $HOME/tex/inputs/demoHyperlinkMinimal.tex $target; done
+
+ 
+\documentclass{beamer}
+
+
+\begin{document} 
+
+\begin{frame}[label=frameA]
+\frametitle{\hyperlink{frameB}{\beamergotobutton{to Frame B}}Frame A}
+Note: correct target (whole page with heading at top, not somewhere in
+the middle) is only realized in the presentation mode
+
+\hyperlink{frameB}{\beamergotobutton{to Frame B}}
+\hyperlink{frameC}{\beamergotobutton{to Frame C}}
+\end{frame}
+
+\begin{frame}[label=frameB]
+\frametitle{\hyperlink{frameC}{\beamergotobutton{to Frame C}}Frame B}
+\label{frameBalt}
+\hyperlink{frameA}{\beamergotobutton{to Frame A}}
+\hyperlink{framec}{\beamergotobutton{to Frame C}}
+\end{frame}
+
+\begin{frame}[label=frameC]
+\frametitle{Frame C}
+\hyperlink{frameA}{\beamergotobutton{to Frame A}}
+\hyperlink{frameB}{\beamergotobutton{to Frame B}}
+\hyperlink{frameBalt}{\beamergotobutton{to Frame Balt}}
+\end{frame}
+
+
+\end{document}
