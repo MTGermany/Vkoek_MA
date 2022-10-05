@@ -1,8 +1,6 @@
 %#############################################
-% New pdflatex format,
-% only png, jpg (or svg?) images but positioning now ok
-% template in ~/tex/inputs/template_folien.tex
-% [TODO now specialized to Vkoem_Ma; make general]
+% !!! Bereits in Bachelor zwei Lectures 02/03 gebracht. 
+% !!! Erwaehne/modifiziere!
 %#############################################
 
 
@@ -164,7 +162,7 @@ errors and the like
 no one missed (bottom).
 \pause \item \textbf{Consequences of missing factors:} a 
 \bfred{bias}, i.e., \bfred{``junk in, junk out''} 
-\pause \item \textbf{\hspace{1.5em} ``\hspace{1.5em} of superfluous factors:} 
+\pause \item \textbf{Consequences of superfluous factors:} 
 \bforange{no bias, higher estimation errors}
 \pause \item \textbf{Solution:} check for superfluous factors:
 \emph{F-test}; finding missing factors: \emph{your expertise!}
@@ -216,8 +214,7 @@ no one missed (bottom).
 \item Surface: model
 $\hat{y}(\vec{x})=\hat{\beta}_0+\hat{\beta}_1x_1+\hat{\beta}_2x_2$\\[0ex]
 
-\pause \item Black bullets: data (right graphics: rotated clockwise by
-90 degrees)
+\pause \item Black bullets: data (right graphics: twice mirrored)
 
 \pause \item OLS estimate: $\hatbeta_0=25.5$, $\hatbeta_1=38.2$, $\hatbeta_2=-0.953$.
 
@@ -263,7 +260,7 @@ driving resistance with the contributions
 \bi
 \item Friction tire-road: contributions independent of the speed
   $\tilde{x}_1$ and proportional to the mass $\tilde{x}_2$.
-\pause \item Air drag: proportional to speed squared, $x^2$, and independent
+\pause \item Air drag: proportional to speed squared, $\tilde{x}_1^2$, and independent
   from mass
 \pause \item Gradient: proportional to mass times gradient $\tilde{x}_3$
 \ei
@@ -292,7 +289,8 @@ x_4=\frac{1}{\tilde{x}_1}
 \placebox{0.5}{0.15}{
  \parbox{0.9\textwidth}{
   Transformation of time $\tilde{x}$ to a factor $x=\exp(\tilde{x})$
-  would lineariz but the fluctuations are not i.i.d (see statistical
+  would linearize the model but the fluctuations are not i.i.d (see
+  statistical 
   specification below)}}
 
 }
@@ -387,7 +385,7 @@ Dow-Jones example
 \item There should be no correlation of $\epsilon$ relative to $x_i$ or $y$
 (on the right). The model on the left is mis-specified.
 \pause \item \textbf{Consequences:} relatively \bforange{mild:}
-(OLS estimator not efficient; underestimation of model errors;
+(OLS estimator not efficient; underestimation of estimation errors;
 possibly a small bias).
 \pause \item \textbf{Solution:} try identify a missing systematic factor
 such as a periodicity.
@@ -428,14 +426,16 @@ requiring
 \pause
 \item This means, the data should overdetermine the model which is the
   basis for fitting.
-\pause \item \textbf{Consequences:} If $n=J+1$, the data determine the
+\pause \item \textbf{Consequence of a violation:} If $n=J+1$, the data determine the
 model exactly, i.e., 
 it can be calibrated to zero residuals 
   $\epsilon_i=0$: \emph{overfitting}. This is still \bfgreen{harmless}
 since OLS will detect it for you (zero residuals) and the inferential
 analysis will retur a ``0/0 error''
 
-\pause \item If there are only a few more data points than parameters, the
+\pause \item \textbf{Consequence of satisfying the requirement
+  borderline:} If there are only a few more data points than
+parameters, i.e., only a few \bfdef{degrees of freedom}, the
   data specification is OK, the estimation unbiased and efficient but
   the \bforange{estimation errors are big} 
 
@@ -452,7 +452,8 @@ analysis will retur a ``0/0 error''
 {\small
 \bi
 \item A given  exogenous variable  must not be represented as a linear
-combination of other exogenous variables. 
+combination of other exogenous variables. Otherwise, the data matrix
+is \emph{singular} 
 \pause \item However, nonperfect
 correlations $\neq \pm 1$ are allowed.
 \pause \item Nonperfect correlations appear regularly, e.g., price vs
@@ -499,8 +500,10 @@ x_{ik}=\sum_{j\neq k} c_j x_{ij} \quad \forall i=1, ..., n, \quad
 S_{jk}=\frac{1}{n}\sum_{i=1}^n(x_{ij}-\bar{x}_j)(
 x_{ik}-\bar{x}_k)
 \edm
-has the full rank $J+1$ or if $\text{det}\,\m{S}\neq 0$
+has the full rank $J+1$, i.e., $\text{det}\,\m{S}\neq 0$
 \ei
+\pause\item For $n<J+1$, this is not satisfied trivially
+
 }
 
 }
@@ -536,7 +539,8 @@ has the full rank $J+1$ or if $\text{det}\,\m{S}\neq 0$
 y(\vec{x})=\vecbeta\tr \vec{x}+\epsilon=\hat{y}(\vec{x})+\epsilon, 
 \quad \epsilon \sim i.i.d.\, N(0,\sigma^2)
 \edm 
-satisfying the Gau\3-Markow specifications,
+satisfying the Gau\3-Markow specifications (the Gaussian distribution
+of the $\epsilon_i$ is not required, here)
 
 \pause \item Given is also data in the form of $n$ multidimensional
 data points containing all observations and satisfying the

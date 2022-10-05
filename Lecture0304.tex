@@ -661,11 +661,11 @@ $P(\text{rejected}|H_0)\le P(\text{rejected}|H_0^*)$  $\Rightarrow$
 
 {\small
 \bi
-\item Testing  \red{parameters} such as $H_0$: $\beta_j=\beta_{j0}$ or
+\item (i) Testing  \red{parameters} such as $H_0$: $\beta_j=\beta_{j0}$ or
   $\beta_j\ge \beta_{j0}$ or  $\beta_j\le \beta_{j0}$:
 
   The test
-  function is the estimated deviation from the boundary of $H_0$ in
+  function is the estimated deviation from $H_0^*$ in
   units of the estimated error standard deviation. It is
   \bfdef{student-t} distributed with \#dataPoints- \#parameters
   \bfdef{degrees of 
@@ -673,13 +673,13 @@ $P(\text{rejected}|H_0)\le P(\text{rejected}|H_0^*)$  $\Rightarrow$
 \bdm 
 T =\frac{\hatbeta_j-\beta_{j0}}{\sqrt{\hat{V}_{jj}}} \sim T(n-1-J)
 \edm
-\pause \item Testing \red{functions of parameters} such as
+\pause \item (ii) Testing \red{functions of parameters} such as
   $H_0$: $\beta_1/\beta_2=2$, $\le 2$ or $\ge 2$: Transform into a linear
   combination. Then, the normalized estimated deviation is student-t
-  distributed under $H_0^*$. Here, the linear combination is
+  distributed under $H_0^*$. Here, at $H_0^*$, the linear combination is
   $b=\beta_1-2\beta_2=0$: 
 \bdma
-\hat{b} &=& \hatbeta_1-2\hatbeta_1, \\
+\hat{b} &=& \hatbeta_1-2\hatbeta_2, \\
 \hat{V}(\hat{b}) &=& \hat{V}_{11}+4\hat{V}_{22}-4\hat{V}_{12}, \\
 T &=& \frac{\hat{b}}{\sqrt{\hat{V}(\hat{b})}} \sim T(n-1-J)
 \edma
@@ -693,14 +693,14 @@ T &=& \frac{\hat{b}}{\sqrt{\hat{V}(\hat{b})}} \sim T(n-1-J)
 %###################################################
 
 \bi
-\item Testing the \red{correlation coefficient} in an $xy$ scatter plot:
+\item (iii) Testing the \red{correlation coefficient} in an $xy$ scatter plot:
 \bdm
 \hat{\rho}=\frac{s_{xy}}{s_xs_y}, \quad H_0: \rho=0, \quad
 T=\frac{\hat{\rho}}{\sqrt{1-\hat{\rho}^2}}\sqrt{n-2} \sim T(n-2)
 \edm
 
 \pause \footnotesize{\colAnswer{
-\emph{Derivation:} $\rho \neq 0$ if, and only if, 
+\emph{Derivation:} $\rho =0$ if, and only if, 
 in a simple linear regression
 $y=\beta_0+\beta_1x+\epsilon$, the slope parameter $\beta_1=0$, so
 test for $\beta_1=0$: Under $H_0$, the test statistics
@@ -715,7 +715,7 @@ explicitely calculated:
 
 \vspace{1em}
 
-\pause \item Test for the \red{residual variance}, $H_0$: $\sigma^2=\sigma_0^2$, 
+\pause \item (iv) Test for the \red{residual variance}, $H_0$: $\sigma^2=\sigma_0^2$, 
 $\sigma^2 \ge \sigma_0^2$, and $\sigma^2 \le \sigma_0^2$:
 \bdm
 T=\frac{\hatsig^2}{\sigma_0^2} \ (n-1-J) \sim \chi^2(n-1-J)
@@ -735,7 +735,7 @@ sum of squares of i.i.d. Gaussians. \emph{Its density is not symmetric,
 {\small
 \bi
 
-\item Tests of \red{simultaneous point null hypotheses}, e.g., $H_0$: 
+\item (v) Tests of \red{simultaneous point null hypotheses}, e.g., $H_0$: 
 $(\beta_1=0)$ AND $(\beta_2=2)$ using the
 \bfdef{Fisher-F test}:
 \bdm
@@ -755,8 +755,6 @@ F(n,d)=\frac{\chi_n^2/n}{\chi_d^2/d},
 with $n$ numerator and $d$ denominator degrees of freedom
 
 \pause \itemAsk  Argue that always $S_0\ge S$ 
-\pause \itemAsk  Justify that there is only a left-sided rejection region:
-  $H_0$ is rejected if $t\sub{data}>f^{(n,d)}_{1-\alpha}$
 
 \ei
 }
@@ -823,12 +821,11 @@ calibrated restrained model
 \frame{\frametitle{4.1.3 Step 4: Decision}
 %###################################################
 \bi
-\item Once the test statistics $T$ with a certain conditional distribution
-  under $H_0^*$ is defined and the data realisation $t\sub{data}$ is
-  calculated, we can decide based on the \emph{rejection region}:
+\item The decision is based on the \emph{rejection region}:
 \maintextbox{0.7\textwidth}{The \bfdef{rejection region
     $R^{(H_0)}(\alpha)$} contains the fraction $\alpha$ of all
-  realisations $t$ of the test statistics $T$ which are most distant
+  realisations $t$ of the test statistics $T$ which, under $H_0^*$,
+  are most distant 
   from $H_0$}
 
 \pause \item Decision: 
@@ -844,7 +841,7 @@ calibrated restrained model
 \pause \item In contrast to $T$ and the realisation $t\sub{data}$ which only depends
   on $H_0^*$ and therefore is the same for point and interval
   hypotheses of the same kind, the rejection region is different for
-  each null hypothesis
+  the different comparison operators $=$, $\ge$, $\le$
 \ei
 
 }
@@ -883,23 +880,23 @@ or ``$\ge$'' (interval hypothesis)}
  \item $H_0$ is rejected on the level $\alpha$ if
 \maindm{t\sub{data}<t_{\alpha}=1-t_{1-\alpha}}
 \pause \item The equality sign is only valid for symmetric test
-  statistics, e.g., not for the $\chi^2$ distributed statistics of the
-  variance test
+  statistics
 \ei
 }}
 
 }
 
 %###################################################
-\frame{\frametitle{3. Rejection region for $\vec{H}_0$: ``='' (point hypothesis)
-or ``$\le$''}
+\frame{\frametitle{3. Rejection region for $\vec{H}_0$: ``='' (point hypothesis)}
 %###################################################
 
-\placebox{0.5}{0.61}{
- \figSimple{0.7\textwidth}{figsRegr/annahmeAblehn_einZweiseit3_eng.png}}
+\placebox{0.5}{0.65}{
+ \figSimple{0.6\textwidth}{figsRegr/annahmeAblehn_einZweiseit3_eng.png}}
 
-\placebox{0.5}{0.12}{\parbox{\textwidth}{
+\placebox{0.5}{0.21}{\parbox{\textwidth}{
+{\small
 \bi
+
  \item For symmetric test statistics, 
 $H_0$ is rejected on the level $\alpha$ if
 \maindm{|t\sub{data}|>t_{1-\alpha/2}}
@@ -912,6 +909,7 @@ $H_0$ is rejected on the level $\alpha$ if
 (t\sub{data}<t_{\alpha/2}) \cup (t\sub{data}>t_{1-\alpha/2})
 \edm
 \ei
+}
 }}
 
 }
@@ -1000,7 +998,7 @@ the risk of losing customers is less than \unit[5]{\%}}}
 
 \pause \itemAnswer \scriptsize{\colAnswer{Full model: 
 $\hatvecbeta=(25.5, 38.2, -0.952)\tr$, $S(\hatvecbeta)=498.2$; \\
-Reduced model with fixed $\beta_1=30$, $\beta_2=1$ and $\hatbeta_0=49.0$:
+Reduced model with fixed $\beta_1=30$, $\beta_2=1$ leading to $\hatbeta_0=49.0$:
 $\hatvecbeta_r=(49.0, 30, -1)\tr$, $S_0=S(\hatvecbeta_r)=1808$;
 \pause
 $M-M_0=\unit[2]{df}$,
@@ -1014,7 +1012,7 @@ $H_0$ rejected}}
 
 
 
-\subsubsection{4.1.4 Step 4a: the $p$-value}
+\subsubsection{4.1.4 The $p$-value}
 
 %###################################################
 \frame{\frametitle{4.1.4 The $\bfmath{p}$-value}
@@ -1031,10 +1029,10 @@ $\alpha$ for rejection (notice the \emph{statistical
 \maindm{p=\text{Prob}(T\in E\sub{data}|H_0^*))} 
 where the \emph{extreme region} $E\sub{data}$ contains all
 realisations of $T$ that are
-further away from $H^*_0$ than $t\sub{data}$.
-\pause \colAsk{\small{Rejection region?}}
-\pause \colAnswer{\small{$p$ is defined such that the rejection region
-just touches $t\sub{data}$: $E\sub{data}=R(p)$}}
+further away from $H_0$ than $t\sub{data}$. Hence, $t\sub{data}$ lies
+on the boundary of $E\sub{data}$
+\pause \colAsk{\small{Relation to the rejection region?}}
+\pause \colAnswer{\small{$p$ is defined such that $E\sub{data}=R(p)$}}
 
 \vspace{1ex}
 
@@ -1130,26 +1128,29 @@ p=1-F_F^{(2,9)}(t\sub{data})=\unit[0.30]{\%}^{**}$
 %###################################################
 \frame{\frametitle{Visualization}
 %###################################################
+\vspace{-0.5em}
 \fig{0.82\textwidth}{figsRegr/hotel_f2_hatbeta1_hatbeta2_eng.png}
-\vspace{-1em}
+\vspace{-0.8em}
 
 {\scriptsize
 \bi
-\pause \item Simple null hypotheses ($t$-test):
+\pause\item Turquoise lines: boundaries of the $\alpha=\unit[5]{\%}$-CIs of $\beta_1$ and $\beta_2$
+\pause \item Black line: Simple null hypotheses ($t$-test):
 $H_0: \beta_1=45$
 
-\pause \item Correlated null hypotheses ($t$-test), e.g.,
+\pause \item Blue bullets: border of the function intervall hypothesis
+ ($t$-test)
 $H_0=H_{04}: \gamma=\beta_1+30\beta_2<0$
 
-\pause \item Compound null hypotheses ($F$-test), e.g.,
+\pause \item Black symbols: simultaneous point hypotheses ($F$-test)\\
 $\bullet$: \ $H_0=H_{05}: (\beta_1=30) \cap \beta_2=-1)$,
-or
+\quad
 $\triangle$: \ $H_0: (\beta_1=30) \cap (\beta_2=-0.6)$.
 \ei
 }
 }
 
-\subsection{4.1 Dependence on the True Parameter Value}
+\subsection{4.2 Dependence on the True Parameter Value}
 
 %###################################################
 \frame{\frametitle{4.2 Dependence on the True Parameter Value}
@@ -1393,13 +1394,13 @@ Problem Statement}
 \placebox{0.50}{0.45}
 {\parbox{0.80\textwidth}{
 \bi
-\item With every additional parameter, the fit quality in terms of a
-  reduced SSE or $\hat{\sigma}^2=\text{SSE}/(n-J-1)$ becomes better
+\item With every additional parameter, the fit quality in terms of the
+  SSE becomes better (\bfAsk{why?})\\[1em]
 \pause \item However, the risk of overfitting increases. In the words of John
   Neumann: \textit{With four parameters I can fit an elephant, and
-    with five I can make him wiggle [its] trunk.}
+    with five I can make him wiggle [its] trunk.}\\[1em]
 \pause \item Overfitted models do not validate and can make neither
-  statements nor predictions.
+  statements nor predictions.\\[1em]
 \pause \item \red{$\Rightarrow$ we need selection criteria taking care of
   overfitting!}
 \ei
@@ -1437,7 +1438,7 @@ S =\text{SSE(calibr. full model)}, \quad S_0=\text{SSE(calibr. constant-only mod
 \visible<3->{Notice that the descriptive
   $\hat{\sigma}\sub{descr}^2=S/n$ instead of 
   the unbiased 
-$\hat{\sigma}^2=S/(n-1-J)$ is taken in these criteria.
+$\hat{\sigma}^2=S/(n-1-J)$ are assumed when defining AIC and BIC.
 }
 
 }
@@ -1449,14 +1450,15 @@ $\hat{\sigma}^2=S/(n-1-J)$ is taken in these criteria.
 \item Identify $J$ possibly relevant exogenous factors (the constant
   is always included) and calculate
   $\bar{R}^2$, AIC, or BIC for all $2^J$ combinations of these
-      factors (\emph{brute force}).
+      factors (a given factor is either contained or not) by
+      \emph{brute force}). 
 \pause \item The best model is that maximizing $\bar{R}^2$ or minimizing AIC
   or BIC. 
 \pause \item Since AIC and also $\bar{R}^2$ penalize complex models (with
   many parameters) too little, the BIC is usually the best bet.
 \pause \item Besides the \emph{brute-force} approach, there are two
   faster strategies that may not find the
-  ``best'' model, however:  
+  ``best'' model (BIC etc are not transitive)
 \bi
 \item \bfdef{Top-down approach}: Start with all the $J$
   factors. In each round, eliminate a single factor such that the
@@ -1492,11 +1494,10 @@ model chaining with an unobservable intermediate continuous
 where $\epsilon$ obeys the \bfdef{logistic distribution} with
 $F_{\epsilon}(x)=e^x/(e^x+1)$
 
-\pause \item Probability $P_1$ for the outcome $Y=1$ for symmetric
-distributions:
+\pause \item Probability $P_1$ for the outcome $Y=1$:
 \bdm
  P_1 = P(Y^*(\vec{x})> 0)=F_{\epsilon}(\vecbeta\tr \vec{x})
-= \frac{e^{\vecbeta\tr \vec{x}}}{e^{\vecbeta\tr \vec{x}}+1}\text{ (logistic)}
+= \frac{e^{\vecbeta\tr \vec{x}}}{e^{\vecbeta\tr \vec{x}}+1}
 \edm
 
 \pause \item Formally, this is a normal linear regression model for

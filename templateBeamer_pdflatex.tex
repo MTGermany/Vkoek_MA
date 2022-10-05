@@ -5,21 +5,29 @@
 % pdflatex beamer template
 %
 % authoritative sources at
-%~/tex/inputs/LectureTemplate_pdflatex.tex
+%~/tex/inputs/templates/templateBeamer_pdflatex.tex
 % include with cmd \input{$HOME/tex/inputs/styleBeamerPdflatex} %$
 
+% cf also the templates demoHyperlin*
+
 % disatribute with
-% for target in $HOME/vorlesungen/Verkehrsoekonometrie_Baskript_Ba $HOME/vorlesungen/Verkehrsoekonometrie_Ma/skript $HOME/versionedProjects/trafficflowdynamics/tex; do cp $HOME/tex/inputs/LectureTemplate_pdflatex.tex $target; done
+% for target in $HOME/vorlesungen/Verkehrsoekonometrie_Baskript_Ba $HOME/vorlesungen/Verkehrsoekonometrie_Ma/skript $HOME/versionedProjects/trafficflowdynamics/tex; do cp $HOME/tex/inputs/templates/templateBeamer_pdflatex.tex $target; done
 %#############################################
  
-
-\documentclass[mathserif,aspectratio=1610]{beamer}  %default 43=4:3
-%\documentclass[mathserif,aspectratio=169]{beamer}
-%\documentclass[mathserif,aspectratio=1610handout]{beamer}
+%\documentclass[mathserif,aspectratio=1610]{beamer}
+\documentclass[mathserif,handout,aspectratio=1610]{beamer}
 %\usepackage{beamerthemeshadow}
-
 \input{$HOME/tex/inputs/defsSkript}  %$
-\input{$HOME/tex/inputs/styleBeamerPdflatex}   %$
+ 
+
+%\input{$HOME/tex/inputs/styleBeamerPdflatex}   %$
+%\input{$HOME/tex/inputs/styleBeamerDPG_Springmeeting}   %$
+%\input{$HOME/tex/inputs/styleBeamerTraffDyn}   %$
+%\input{$HOME/tex/inputs/styleBeamerVkoekBa}   %$
+%\input{$HOME/tex/inputs/styleBeamerVkoekMa}   %$
+%\input{$HOME/tex/inputs/styleBeamerCorona}   %$
+\input{$HOME/tex/inputs/styleBeamerReadingGroup}   %$
+
 
 \usepackage{graphicx}
 
@@ -28,15 +36,19 @@
 
 \begin{document}
 
+
 %\setbeamercovered{invisible} % following parts completely invisible
 %\setbeamercovered{transparent} % following parts semi-transparent
 
 \subsection{10. Title of this lecture}
-
+ 
 
 %##############################################################
 \frame[label=frame1]{\frametitle{\hypertarget{general}{} General and Bugs}
 %##############################################################
+
+
+
 \placebox{0.10}{0.05}{\hyperlink{secIDM}{\beamergotobutton{to secIDM}}}
 \placebox{0.90}{0.05}{\hyperlink{frameB}{\beamergotobutton{to FrameB}}}
 
