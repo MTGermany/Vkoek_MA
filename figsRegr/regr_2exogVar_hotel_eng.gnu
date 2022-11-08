@@ -40,19 +40,19 @@ set style line 7 lt 1 lw 1 pt 4 ps 2.0  lc rgb "#1100AA"  #blau,offenes Quadrat
 set style line 8 lt 4 lw 1 pt 8 ps 1.5 #lila, aufrechtes geschloss. Dreieck
 set style line 9 lt 7 lw 1 pt 9 ps 1.5  lc rgb "#999999"  #grau, aufr. gschl. Dreieck
 
-set style line 11 lt 1 lw 4 pt 8 ps 1.9  lc rgb "#000000" #schwarz,dreieck
-set style line 12 lt 1 lw 2 pt 5 ps 0.5  lc rgb "#CC0022" #rot, dash, Kreuz
-set style line 13 lt 8 lw 2 pt 3 ps 1.2  lc rgb "#FF4400"
-set style line 14 lt 6 lw 2 pt 4 ps 1.5  lc rgb "#FFAA00"  #gelb, offenes Quadrat
-set style line 15 lt 1 lw 2 pt 5 ps 0.5  lc rgb "#008888"  #gruen,solid,ClosedBox
-set style line 16 lt 5 lw 2 pt 7 ps 0.5  lc rgb "#00AAAA" #offener Kreis
-set style line 17 lt 1 lw 2 pt 7 ps 0.8  lc rgb "#1100AA"  #blau,solid,Bullet
-set style line 18 lt 4 lw 2 pt 8 ps 1.5  lc rgb "#6600AA"  #lila, aufrechtes geschloss. Dreieck
-set style line 19 lt 7 lw 4 pt 9 ps 1.5  lc rgb "#999999"  #grau, aufr. gschl. Dreieck
+set style line 11 lt 1 lw 3 pt 8 ps 1.9  lc rgb "#000000" #schwarz,dreieck
+set style line 12 lt 1 lw 3 pt 5 ps 0.5  lc rgb "#CC0022" #rot, dash, Kreuz
+set style line 13 lt 8 lw 3 pt 3 ps 1.2  lc rgb "#FF4400"
+set style line 14 lt 6 lw 3 pt 4 ps 1.5  lc rgb "#FFAA00"  #gelb, offenes Quadrat
+set style line 15 lt 1 lw 3 pt 5 ps 0.5  lc rgb "#008888"  #gruen,solid,ClosedBox
+set style line 16 lt 5 lw 3 pt 7 ps 0.5  lc rgb "#00AAAA" #offener Kreis
+set style line 17 lt 1 lw 3 pt 7 ps 0.8  lc rgb "#1100AA"  #blau,solid,Bullet
+set style line 18 lt 4 lw 3 pt 8 ps 1.5  lc rgb "#6600AA"  #lila, aufrechtes geschloss. Dreieck
+set style line 19 lt 7 lw 3 pt 9 ps 1.5  lc rgb "#999999"  #grau, aufr. gschl. Dreieck
 
-set style line 21 lt 1 lw 2 pt 5 ps 0.15  lc rgb "#000000" 
-set style line 22 lt 1 lw 2 pt 5 ps 0.1  lc rgb "#CC0022" 
-set style line 25 lt 1 lw 2 pt 5 ps 0.1  lc rgb "#008888" 
+set style line 21 lt 1 lw 3 pt 5 ps 0.15  lc rgb "#000000" 
+set style line 22 lt 1 lw 3 pt 5 ps 0.1  lc rgb "#CC0022" 
+set style line 25 lt 1 lw 3 pt 5 ps 0.1  lc rgb "#008888" 
 set style line 29 lt 1 lw 10 pt 5 ps 0.1  lc rgb "#888888" 
 
 
@@ -138,7 +138,7 @@ min(x,y)    = (x>y) ? y : x
 
 
 #set term post eps enhanced color solid "Helvetica" 18
-set term pngcairo enhanced color notransparent crop font "Helvetica, 14"
+set term pngcairo enhanced color notransparent crop font "Helvetica, 12"
 
 
 ####################################################
@@ -1204,18 +1204,19 @@ print "CI(beta_2)=[",beta2-dbeta2,",",beta2+dbeta2,"]"
 unset pm3d; unset surface # here unset surface necessary!
 set cntrparam levels discrete densityAtAlpha5  # one contour
 
-set key at screen 0.02,0.28
+set key opaque box at screen 0.73,0.58
 
 # BUG doppelt; workaround left label left unvisible
 
 splot[x=xmin:xmax][y=ymin:ymax]\
   x,y,student2d((x-beta1)/sigbeta1,(y-beta2)/sigbeta2,r_12,n-3)\
-   t "Confidence Region F-Test" w l ls 17
+   t "Conf. Region  (F-test)" w l ls 17
 
 #(3) one-parameter confidence limits
 
 set surface; # here set surface necessary!
-set key at screen 0.88,0.96
+
+set key opaque box at screen 0.50,0.99
 
 #BUGS in TUD gnuplot but not at home (aber Ubuntu 12 LTS!)
 
@@ -1224,28 +1225,37 @@ set key at screen 0.88,0.96
 # BUG surface necessary but produces huge files for reasonable sampling=>png
 # set isosamples 100  # because of points ("w l" <-> "w l" etc)
 # BUG: cannot control parametric lines/workaround with points
+# to make line keys, addtl plot with lines first
 
 set isosamples 80
 splot[t=0:1]\
- 45, ymin+t*(ymax-ymin),0\
-      t "H_0: {/Symbol b_1=45}" w p ls 21,\
- 20+30*1.2*t,-2./3. -1.2*t,0 \
-  t "H_0=H_{04}: {/Symbol g}={/Symbol b_1 + 30 b_2}<0" w p ls 17,\
  beta1-dbeta1, ymin+t*(ymax-ymin),10\
-      t "Confidence intervals for {/Symbol b_1, b_2}" w p ls 15,\
+      t "Confidence intervals for {/Symbol b_1, b_2}" w l ls 15,\
+ beta1-dbeta1, ymin+t*(ymax-ymin),0 t "" w p ls 15,\
  beta1+dbeta1, ymin+t*(ymax-ymin),0 t "" w p ls 15,\
  xmin+t*(xmax-xmin), beta2-dbeta2,0 t "" w p ls 15,\
- xmin+t*(xmax-xmin), beta2+dbeta2,0 t "" w p ls 15
+ xmin+t*(xmax-xmin), beta2+dbeta2,0 t "" w p ls 15,\
+ xmin+t*(xmax-xmin), -1,0\
+      t "H_{03}^{*}: {/Symbol b_2=-1}" w l ls 21,\
+ xmin+t*(xmax-xmin), -1,0 t "" w p ls 21,\
+ 20+30*1.2*t,-2./3. -1.2*t,0 \
+  t "H_{04}: {/Symbol g}={/Symbol b_1 + 30 b_2}<0" w l ls 12,\
+ 20+30*1.2*t,-2./3. -1.2*t,0 t "" w p ls 12
+
+
+# 45, ymin+t*(ymax-ymin),0\
+#       t "H_0: {/Symbol b_1=45}" w p ls 21,\
 
 
 #(4) verbundene H0 (always w p, not w l !!)
 
-set key at screen 0.46,0.96
+set key opaque box at screen 0.95,0.99
 
 splot[t=0:1]\
-  beta101,beta201,0.01 t "Compound Null Hypothesis H_{05}" w p ls 1,\
-  beta103,beta203,0.01 t\
-  "Compound H_0: {/Symbol b}_1=30 AND {/Symbol b}_2=-0.6" w p ls 11
+  beta101,beta201,0.01\
+    t "H_{05}: {/Symbol b}_1=30 AND {/Symbol b}_2=-1.0" w p ls 1,\
+  beta103,beta203,0.01\
+    t "H_{06}: {/Symbol b}_1=30 AND {/Symbol b}_2=-0.6" w p ls 11
 
 
 set nomultiplot

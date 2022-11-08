@@ -1,8 +1,8 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Title: annahmeAblehn_zweiseitig.fig
+%%Title: annahmeAblehn_einZweiseit3_eng.fig
 %%Creator: fig2dev Version 3.2.7a
 %%CreationDate: 2022-11-08 20:42:38
-%%BoundingBox: 0 0 705 521
+%%BoundingBox: 0 0 664 367
 %%Magnification: 2.0000
 %%EndComments
 %%BeginProlog
@@ -13,6 +13,7 @@ $F2psDict /mtrx matrix put
 /col0 {0.000 0.000 0.000 srgb} bind def
 /col4 {1.000 0.000 0.000 srgb} bind def
 /col7 {1.000 1.000 1.000 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
 
 end
 
@@ -86,13 +87,26 @@ newfontname newfont definefont pop end } def
 8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
 8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
 /Times-Roman /Times-Roman-iso isovec ReEncode
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
 /$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
 /$F2psEnd {$F2psEnteredState restore end} def
 
 /pageheader {
 sa
-n 0 521 m 0 0 l 705 0 l 705 521 l cp clip
--94.5 750.2 tr
+n 0 367 m 0 0 l 664 0 l 664 367 l cp clip
+-395.0 619.8 tr
 1 -1 sc
 $F2psBegin
 10 setmiterlimit
@@ -114,145 +128,145 @@ pageheader
 0 slj
 0 slc
 7.500 slw
-n 3240 2790 m
- 3240 4365 l gs col0 s gr % Polyline
+n 5625 2475 m
+ 5625 4050 l gs col0 s gr % Polyline
 gs  clippath
-3239 4374 m 3231 4364 l 3394 4171 l 3395 4246 l 3467 4266 l cp
+5624 4059 m 5616 4049 l 5779 3856 l 5780 3931 l 5852 3951 l cp
 eoclip
-n 3622 4072 m
- 3240 4365 l gs col0 s gr gr
+n 6007 3757 m
+ 5625 4050 l gs col0 s gr gr
 % arrowhead
-n 3394 4171 m 3252 4356 l 3467 4266 l 3395 4246 l 3394 4171 l 
+n 5779 3856 m 5637 4041 l 5852 3951 l 5780 3931 l 5779 3856 l 
  cp gs 0.00 setgray ef gr  col0 s
 % Polyline
-n 2430 4050 m
- 2430 5490 l gs col0 s gr % Polyline
-n 4185 4095 m
- 4185 5625 l gs col0 s gr % Polyline
+n 4815 3735 m
+ 4815 4500 l gs col0 s gr % Polyline
+n 6570 3780 m
+ 6570 4500 l gs col0 s gr % Polyline
 gs  clippath
-2303 4325 m 2290 4328 l 2181 4100 l 2250 4130 l 2298 4073 l cp
+4689 4009 m 4676 4014 l 4534 3805 l 4606 3824 l 4645 3760 l cp
 eoclip
-n 1890 2610 m
- 2295 4320 l gs col0 s gr gr
+n 4275 3015 m
+ 4680 4005 l gs col0 s gr gr
 % arrowhead
-n 2181 4100 m 2292 4305 l 2298 4073 l 2250 4130 l 2181 4100 l 
+n 4534 3805 m 4674 3991 l 4645 3760 l 4606 3824 l 4534 3805 l 
  cp gs 0.00 setgray ef gr  col0 s
 % Polyline
 gs  clippath
-4292 4321 m 4279 4316 l 4308 4065 l 4350 4127 l 4421 4104 l cp
+6675 4006 m 6664 3999 l 6749 3761 l 6776 3831 l 6851 3825 l cp
 eoclip
-n 4860 2610 m
- 4288 4312 l gs col0 s gr gr
+n 7200 3150 m
+ 6673 3997 l gs col0 s gr gr
 % arrowhead
-n 4308 4065 m 4293 4298 l 4421 4104 l 4350 4127 l 4308 4065 l 
+n 6749 3761 m 6681 3984 l 6851 3825 l 6776 3831 l 6749 3761 l 
  cp gs 0.00 setgray ef gr  col0 s
 % Polyline
 15.000 slw
-n 1758 4380 m 2140 4290 l 2332 4170 l 2427 4080 l 2427 4380 l
- cp gs col4 1.00 shd ef gr gs col0 s gr % Polyline
+n 4143 4065 m 4525 3975 l 4717 3855 l 4812 3765 l 4812 4065 l
+ cp gs col4 0.90 shd ef gr gs col0 s gr % Polyline
 7.500 slw
-n 900 2610 m 900 4365 l
- 5490 4365 l gs col0 s gr % Polyline
+n 3285 2295 m 3285 4050 l
+ 7875 4050 l gs col0 s gr % Polyline
 15.000 slw
-n 4950 4365 m 4481 4319 l 4320 4230 l 4185 4140 l 4185 4365 l
- cp gs col4 1.00 shd ef gr gs col0 s gr /Times-Roman-iso ff 270.00 scf sf
-810 4770 m
-gs 1 -1 sc (Ablehnungs-) col0 sh gr
-/Times-Roman-iso ff 270.00 scf sf
-810 5100 m
-gs 1 -1 sc (bereich) col0 sh gr
-/Times-Roman-iso ff 270.00 scf sf
-2655 5055 m
-gs 1 -1 sc (bereich) col0 sh gr
-/Times-Roman-iso ff 270.00 scf sf
-2655 4725 m
-gs 1 -1 sc (Nichtablehnungs--) col0 sh gr
-/Times-Roman-iso ff 300.00 scf sf
-3870 5895 m
+n 7335 4050 m 6866 4004 l 6705 3915 l 6570 3825 l 6570 4050 l
+ cp gs col4 0.90 shd ef gr gs col0 s gr /Times-Roman-iso ff 240.00 scf sf
+4545 4815 m
 gs 1 -1 sc (t) col0 sh gr
-/Times-Roman-iso ff 300.00 scf sf
-2160 5850 m
+/Times-Roman-iso ff 240.00 scf sf
+6300 4860 m
 gs 1 -1 sc (t) col0 sh gr
-/Times-Roman-iso ff 270.00 scf sf
-4500 4770 m
-gs 1 -1 sc (Ablehnungs-) col0 sh gr
-/Times-Roman-iso ff 270.00 scf sf
-4500 5100 m
-gs 1 -1 sc (bereich) col0 sh gr
-/Times-Roman-iso ff 300.00 scf sf
-4050 2115 m
-gs 1 -1 sc (P\(t>t        \)= ) col0 sh gr
-/Symbol ff 300.00 scf sf
-5850 2115 m
+/Times-Roman-iso ff 240.00 scf sf
+6660 2654 m
+gs 1 -1 sc (P\(t>t         \)= ) col0 sh gr
+/Symbol ff 240.00 scf sf
+7991 2681 m
 gs 1 -1 sc (a/2) col0 sh gr
-/Times-Roman-iso ff 300.00 scf sf
-1215 2070 m
-gs 1 -1 sc (P\(t<t    \)= ) col0 sh gr
-/Symbol ff 300.00 scf sf
-2610 2070 m
+/Times-Roman-iso ff 240.00 scf sf
+3645 2514 m
+gs 1 -1 sc (P\(t<t     \)= ) col0 sh gr
+/Symbol ff 240.00 scf sf
+4716 2519 m
 gs 1 -1 sc (a/2) col0 sh gr
-/Times-Roman-iso ff 300.00 scf sf
-3375 4050 m
+/Times-Roman-iso ff 240.00 scf sf
+5760 3735 m
 gs 1 -1 sc (t= 0) col0 sh gr
-/Times-Roman-iso ff 300.00 scf sf
-5670 4455 m
+/Times-Roman-iso ff 240.00 scf sf
+8055 4140 m
 gs 1 -1 sc (t) col0 sh gr
-/Times-Roman-iso ff 300.00 scf sf
-765 2475 m
+/Times-Roman-iso ff 240.00 scf sf
+3150 2160 m
 gs 1 -1 sc (w) col0 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+5040 4410 m
+gs 1 -1 sc (no rejection) col0 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+3690 4410 m
+gs 1 -1 sc (rejection) col0 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+6885 4410 m
+gs 1 -1 sc (rejection) col0 sh gr
 % Polyline
 2 slj
 30.000 slw
-n 1789 4381 m 1792 4380 l 1798 4379 l 1809 4376 l 1826 4372 l 1847 4367 l
- 1874 4360 l 1904 4353 l 1937 4344 l 1970 4335 l 2003 4326 l
- 2036 4316 l 2067 4306 l 2096 4297 l 2123 4287 l 2149 4277 l
- 2172 4267 l 2195 4256 l 2216 4245 l 2237 4234 l 2257 4222 l
- 2277 4209 l 2293 4197 l 2310 4185 l 2327 4171 l 2344 4157 l
- 2361 4142 l 2378 4127 l 2396 4110 l 2414 4092 l 2432 4073 l
- 2450 4053 l 2469 4033 l 2487 4011 l 2505 3989 l 2523 3966 l
- 2541 3942 l 2559 3918 l 2577 3893 l 2594 3868 l 2610 3843 l
- 2626 3817 l 2642 3792 l 2657 3766 l 2672 3740 l 2687 3713 l
- 2701 3687 l 2715 3660 l 2727 3634 l 2740 3608 l 2753 3581 l
- 2766 3553 l 2779 3525 l 2792 3496 l 2805 3466 l 2818 3436 l
- 2832 3405 l 2845 3374 l 2859 3342 l 2873 3311 l 2886 3279 l
- 2900 3248 l 2914 3217 l 2928 3186 l 2941 3156 l 2955 3127 l
- 2968 3099 l 2981 3072 l 2994 3047 l 3007 3022 l 3020 2999 l
- 3032 2977 l 3044 2956 l 3057 2937 l 3069 2919 l 3081 2902 l
- 3093 2886 l 3106 2871 l 3118 2857 l 3131 2845 l 3144 2833 l
- 3158 2823 l 3171 2813 l 3185 2805 l 3200 2798 l 3214 2792 l
- 3229 2787 l 3243 2784 l 3258 2782 l 3273 2781 l 3288 2782 l
- 3303 2784 l 3317 2787 l 3331 2792 l 3346 2798 l 3360 2805 l
- 3373 2813 l 3386 2823 l 3399 2833 l 3412 2845 l 3424 2857 l
- 3436 2871 l 3448 2886 l 3460 2902 l 3471 2919 l 3482 2937 l
- 3494 2956 l 3505 2977 l 3517 2999 l 3528 3022 l 3540 3047 l
- 3552 3073 l 3564 3100 l 3577 3128 l 3590 3157 l 3602 3187 l
- 3615 3217 l 3628 3248 l 3642 3280 l 3655 3312 l 3668 3344 l
- 3682 3375 l 3695 3407 l 3709 3438 l 3722 3469 l 3736 3499 l
- 3749 3528 l 3763 3557 l 3777 3585 l 3790 3612 l 3804 3639 l
- 3818 3665 l 3834 3693 l 3850 3720 l 3867 3747 l 3884 3774 l
- 3902 3800 l 3920 3827 l 3940 3853 l 3959 3879 l 3980 3905 l
- 4001 3930 l 4022 3955 l 4044 3980 l 4065 4004 l 4087 4027 l
- 4110 4049 l 4132 4070 l 4153 4090 l 4175 4110 l 4196 4128 l
- 4217 4145 l 4237 4161 l 4257 4176 l 4277 4190 l 4296 4204 l
- 4315 4216 l 4333 4227 l 4355 4240 l 4377 4252 l 4398 4262 l
- 4421 4272 l 4444 4282 l 4468 4290 l 4493 4299 l 4520 4306 l
- 4549 4314 l 4579 4321 l 4611 4328 l 4643 4335 l 4675 4341 l
- 4706 4347 l 4734 4352 l 4760 4356 l 4780 4360 l 4796 4362 l
- 4806 4364 l 4812 4365 l
- 4815 4365 l gs col0 s gr % here ends figure;
+n 4174 4066 m 4177 4065 l 4183 4064 l 4194 4061 l 4211 4057 l 4232 4052 l
+ 4259 4045 l 4289 4038 l 4322 4029 l 4355 4020 l 4388 4011 l
+ 4421 4001 l 4452 3991 l 4481 3982 l 4508 3972 l 4534 3962 l
+ 4557 3952 l 4580 3941 l 4601 3930 l 4622 3919 l 4642 3907 l
+ 4662 3894 l 4678 3882 l 4695 3870 l 4712 3856 l 4729 3842 l
+ 4746 3827 l 4763 3812 l 4781 3795 l 4799 3777 l 4817 3758 l
+ 4835 3738 l 4854 3718 l 4872 3696 l 4890 3674 l 4908 3651 l
+ 4926 3627 l 4944 3603 l 4962 3578 l 4979 3553 l 4995 3528 l
+ 5011 3502 l 5027 3477 l 5042 3451 l 5057 3425 l 5072 3398 l
+ 5086 3372 l 5100 3345 l 5112 3319 l 5125 3293 l 5138 3266 l
+ 5151 3238 l 5164 3210 l 5177 3181 l 5190 3151 l 5203 3121 l
+ 5217 3090 l 5230 3059 l 5244 3027 l 5258 2996 l 5271 2964 l
+ 5285 2933 l 5299 2902 l 5313 2871 l 5326 2841 l 5340 2812 l
+ 5353 2784 l 5366 2757 l 5379 2732 l 5392 2707 l 5405 2684 l
+ 5417 2662 l 5429 2641 l 5442 2622 l 5454 2604 l 5466 2587 l
+ 5478 2571 l 5491 2556 l 5503 2542 l 5516 2530 l 5529 2518 l
+ 5543 2508 l 5556 2498 l 5570 2490 l 5585 2483 l 5599 2477 l
+ 5614 2472 l 5628 2469 l 5643 2467 l 5658 2466 l 5673 2467 l
+ 5688 2469 l 5702 2472 l 5716 2477 l 5731 2483 l 5745 2490 l
+ 5758 2498 l 5771 2508 l 5784 2518 l 5797 2530 l 5809 2542 l
+ 5821 2556 l 5833 2571 l 5845 2587 l 5856 2604 l 5867 2622 l
+ 5879 2641 l 5890 2662 l 5902 2684 l 5913 2707 l 5925 2732 l
+ 5937 2758 l 5949 2785 l 5962 2813 l 5975 2842 l 5987 2872 l
+ 6000 2902 l 6013 2933 l 6027 2965 l 6040 2997 l 6053 3029 l
+ 6067 3060 l 6080 3092 l 6094 3123 l 6107 3154 l 6121 3184 l
+ 6134 3213 l 6148 3242 l 6162 3270 l 6175 3297 l 6189 3324 l
+ 6203 3350 l 6219 3378 l 6235 3405 l 6252 3432 l 6269 3459 l
+ 6287 3485 l 6305 3512 l 6325 3538 l 6344 3564 l 6365 3590 l
+ 6386 3615 l 6407 3640 l 6429 3665 l 6450 3689 l 6472 3712 l
+ 6495 3734 l 6517 3755 l 6538 3775 l 6560 3795 l 6581 3813 l
+ 6602 3830 l 6622 3846 l 6642 3861 l 6662 3875 l 6681 3889 l
+ 6700 3901 l 6718 3912 l 6740 3925 l 6762 3937 l 6783 3947 l
+ 6806 3957 l 6829 3967 l 6853 3975 l 6878 3984 l 6905 3991 l
+ 6934 3999 l 6964 4006 l 6996 4013 l 7028 4020 l 7060 4026 l
+ 7091 4032 l 7119 4037 l 7145 4041 l 7165 4045 l 7181 4047 l
+ 7191 4049 l 7197 4050 l
+ 7200 4050 l gs col0 s gr % here ends figure;
 % 
 % here starts figure with depth 50
-/Symbol ff 210.00 scf sf
-4005 5940 m
-gs 1 -1 sc (1-a/2) col0 sh gr
-/Symbol ff 210.00 scf sf
-2295 5895 m
+% Ellipse
+7.500 slw
+n 5580 4065 91 91 0 360 DrawEllipse gs col10 1.00 shd ef gr gs col10 s gr
+/Times-Roman-iso ff 270.00 scf sf
+5130 3915 m
+gs 1 -1 sc (H) col10 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+5385 3945 m
+gs 1 -1 sc (0) col10 sh gr
+/Symbol ff 180.00 scf sf
+4680 4860 m
 gs 1 -1 sc (a/2) col0 sh gr
-/Symbol ff 210.00 scf sf
-4725 2205 m
+/Symbol ff 180.00 scf sf
+6435 4905 m
 gs 1 -1 sc (1-a/2) col0 sh gr
 /Symbol ff 210.00 scf sf
-1890 2160 m
+7165 2745 m
+gs 1 -1 sc (1-a/2) col0 sh gr
+/Symbol ff 180.00 scf sf
+4168 2610 m
 gs 1 -1 sc (a/2) col0 sh gr
 % here ends figure;
 pagefooter

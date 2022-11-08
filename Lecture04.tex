@@ -368,7 +368,7 @@ or ``$\ge$'' (interval hypothesis)}
 \pause \placebox{0.5}{0.16}{\parbox{\textwidth}{
 \bi
  \item $H_0$ is rejected on the level $\alpha$ if
-\maindm{t\sub{data}<t_{\alpha}=1-t_{1-\alpha}}
+\maindm{t\sub{data}<t_{\alpha}=-t_{1-\alpha}}
 \pause \item The equality sign is only valid for symmetric test
   statistics
 \ei
@@ -619,23 +619,22 @@ p=1-F_F^{(2,9)}(t\sub{data})=\unit[0.30]{\%}^{**}$
 \frame{\frametitle{Visualization}
 %###################################################
 \vspace{-0.5em}
-\fig{0.82\textwidth}{figsRegr/hotel_f2_hatbeta1_hatbeta2_eng.png}
+\fig{0.72\textwidth}{figsRegr/hotel_f2_hatbeta1_hatbeta2_eng.png}
 \vspace{-0.8em}
 
 {\scriptsize
 \bi
 \pause\item Turquoise lines: boundaries of the $\alpha=\unit[5]{\%}$-CIs of $\beta_1$ and $\beta_2$
-\pause \item Black line: Simple null hypotheses ($t$-test):
-$H_0: \beta_1=45$
+\pause \item Black line: boundary of simple interval
+null hypothesis $H_{03}: \beta_2\le -1$ ($t$-test)
 
-\pause \item Blue bullets: border of the function intervall hypothesis
- ($t$-test)
-$H_0=H_{04}: \gamma=\beta_1+30\beta_2<0$
+\pause \item Red boxes: boundary of the function intervall hypothesis
+$H_{04}: \gamma=\beta_1+30\beta_2<0$ ($t$-test)
 
 \pause \item Black symbols: simultaneous point hypotheses ($F$-test)\\
-$\bullet$: \ $H_0=H_{05}: (\beta_1=30) \cap \beta_2=-1)$,
+$\bullet$: \ $H_{05}: (\beta_1=30) \cap \beta_2=-1)$,
 \quad
-$\triangle$: \ $H_0: (\beta_1=30) \cap (\beta_2=-0.6)$.
+$\triangle$: \ $H_{06}: (\beta_1=30) \cap (\beta_2=-0.6)$.
 \ei
 }
 }
