@@ -161,8 +161,8 @@ P(H_0|B)=\frac{P(B|H_0)P(H_0)}{P(B)}
 \bi
 \pause \item[$\bullet$] Sensitivity $P(B|H_0)=\unit[95]{\%}$
 \quad $P(\bar{B}|H_0)=\unit[5]{\%}$
-\pause \item[$\bullet$] Specificity $P(\bar{B}|\bar{H_0})=\unit[99]{\%}$,
-\quad $P(B|\bar{H_0})=\unit[1]{\%}$
+\pause \item[$\bullet$] Specificity $P(\bar{B}|\bar{H_0})=\unit[97]{\%}$,
+\quad $P(B|\bar{H_0})=\unit[3]{\%}$
 \pause \item[$\bullet$] Incidence $P(H_0)=\unit[5]{\%}$
 \ei
 \ei
@@ -174,18 +174,18 @@ P(H_0|B)=\frac{P(B|H_0)P(H_0)}{P(B)}
 \begin{align*}
 \visible<8->{
 \text{Bayes: pos. rate: \hspace{4ex} }P(B) \!&= P(B|H_0)P(H_0)+P(B|\bar{H_0})P(\bar{H_0})
-%=0.99 * 0.05 + 0.05*0.95
-=\unit[9.7]{\%},\\[-0.4ex]}
+% see Lecture05.gnu
+=\unit[7.6]{\%},\\[-0.4ex]}
 \visible<9->{
 \text{$H_0$ after pos. test: }
 P(H_0|B)      \! &=P(B|H_0)P(H_0)\, /\, P(B)
 %=\frac{0.99 * 0.05}{0.097}
-=\unit[51.0]{\%}\\[-0.4ex]}
+=\unit[62.5]{\%}\\[-0.4ex]}
 \visible<10->{
 \text{$H_0$ after neg. test: } 
 P(H_0|\bar{B}) \! &=P(\bar{B}|H_0)P(H_0)\, /\, P(\bar{B})
 %=\frac{0.01 * 0.05}{1-0.097}
-=\unit[0.055]{\%} }
+=\unit[0.27]{\%} }
 \end{align*}
 }
 

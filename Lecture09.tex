@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\section{Chapter 9: Inferential Statistics of Discrete-Choice Models}
+\section{Chapter 9: Inferential Statistics I: Maximum-Likelihood Estimation}
 
 %###################################################
 \frame{  %title layout
@@ -28,9 +28,12 @@
 %makePale{opacity}{centerXrel}{centerYrel}{wrel}\{hrel} 
 \makePale{0.80}{0.50}{0.70}{1.40}{1.40}
 
-\placebox{0.50}{0.82}{\parbox{0.6\textwidth}{\myheading{
-Chapter 9: Inferential Statistics of Discrete-Choice Models
-}}}
+\placebox{0.50}{0.82}{
+\parbox{0.6\textwidth}{
+\myheading{9: Inferential Statistics I}\\
+\myheading{\hspace*{1.0em} of Discrete-Choice Models:}\\
+\myheading{\hspace*{1.0em} Maximum-Likelihood Estimation}
+}}
 
 \placebox{0.50}{0.44}{\parbox{0.6\textwidth}{
 {\large
@@ -41,8 +44,6 @@ Chapter 9: Inferential Statistics of Discrete-Choice Models
 \item 9.2.1 Example 1: SP Survey in the Audience
 \item 9.2.2 Example 2: RP Survey in the Audience
 \ei
-\item 9.3 Significance Tests
-\item 9.4 Goodness-of-Fit Measures
 \ei
 }
 }}
@@ -790,306 +791,6 @@ $V_i=\sum_{m=1}^3\beta_m\delta_{m,i}
 }
 
 
-
-
-\subsection{9.3 Significance Tests}
-
-
-%##############################################################
-\frame{\frametitle{9.3 Significance Tests: Parametric Tests}
-%##############################################################
-\bi
-\item The parameter test procedures are exactly the same as that of
-regression models. Because we only consider the asymptotic limit, the test
-  statistic is always Gaussian:
-
-\pause \item Confidence interval of a parameter $\beta_m$:
-\bdm
-\text{CI}_{\alpha}(\beta_m)=[\hatbeta_m-\Delta_{\alpha},
-  \hatbeta_m+\Delta_{\alpha}], \quad 
-\Delta_{\alpha}=z_{1-\alpha/2}\sqrt{V_{mm}}
-\edm
-
-\pause \item Test of a parameter $\beta_m$ for 
-$H_0: \beta_j=\beta_{j0}$, \ $\ge
-  \beta_{j0}$, \ or $\le \beta_{j0}$:
-\bdm
-T=\frac{\hatbeta_j-\hatbeta_{j0}}{\sqrt{V_{jj}}}\sim N(0,1) \ | H_0^*
-\edm
-
-\pause \item $p$-values for 
-$H_0: \beta_j=\beta_{j0}$, \ $\ge
-  \beta_{j0}$, \ or $\le \beta_{j0}$, respectively:
-{\small
-\bdm
-p_{=}=2\big(1-\Phi(|t\sub{data}|)\big), \quad
-p_{\le}=1-\Phi(t\sub{data}), \quad
-p_{\ge}=\Phi(t\sub{data})
-\edm
-}
-\pause \item As in regression, a factor 4 of more data halves the error
-\ei
-
-}
-
-%##############################################################
-\frame{\frametitle{Significance tests II: Likelihood-ratio (LR) test}
-%##############################################################
-Like in regression (F-test), one sometimes wants to test null hypotheses
-fixing
-several parameters \emph{simultaneously} to given values, i.e., $H_0$
-corresponds to a \bfdef{restraint model}
-\bi
-\pause \item $H_0$: The restraint model with some fixed parameters and
-  $M_r$ remaining parameters describes the data as well as the full
-  model with $M$ parameters
-
-\pause \item Test statistics: 
-
-{\small
-\maindm{
-\lambda\sup{LR}=2\ln\left(
-  \frac{L\left(\hatvecbeta\right)}{L\sup{r}\left(\hatvecbeta\sup{r}\right)}\right)
-=2\left[
-  \tilL\left(\hatvecbeta\right) 
- - \tilL\sup{r}\left(\hatvecbeta\sup{r}\right)
-\right]
-\sim \chi^2(M-M_r) \ \text{if}\ H_0
-}
-}
-\vspace{1ex}
-
-\pause \item Data realization:
-calibrate both $M$ and $M_r$ and evaluate $\lambda\sup{LR}\sub{data}$
-
-\pause \item Result:
-reject $H_0$ at $\alpha$ based on the
-$1-\alpha$ quantile:
-\bdm
-\lambda\sup{LR}\sub{data}>\chi^2_{1-\alpha, M-M_r}
-\edm
-$p$-value: $p=1-F_{\chi^2(M-M_r)}\left(\lambda\sup{LR}\sub{data}\right)$
-\ei
-}
-
-%##############################################################
-\frame{\frametitle{Example: Mode choice for the route to this lecture}
-%##############################################################
-
-{\small
-\begin{center}
-\begin{tabular}{|l||r|r|r|} \hline
-Distance class $n$ & \myBox{4em}{Distance $r_n$} &
-$i=1$ (ped/bike) & $i=2$ (PT/car) \\
-\hline\hline
-$n=1$: 0-1 km    & \unit[0.5]{km}  & 7 & 1\\
-$n=2$: 1-2 km    & \unit[1.5]{km}  & 6 & 4\\
-$n=3$: 2-5 km    & \unit[3.5]{km}  & 6 & 12\\
-$n=4$: 5-10 km   & \unit[7.5]{km}  & 1 & 10\\
-$n=5$: 10-20 km  & \unit[15.0]{km} & 0 & 5\\ \hline
-\end{tabular}
-\end{center}
-\vspace{-0.5em}
-
-\bdma
-V_{n1}(\beta_1,\beta_2) &=& \beta_1r_n+\beta_2,\\
-V_{n2}(\beta_1,\beta_2) &=& 0
-\edma
-\vspace{-1.5em}
-
-\bi
-\item $\beta_1$: Difference in distance sensitivity (utility/km)
-  for choosing ped/bike over PT/car (expected $<0$)
-\item $\beta_2$: Utility difference ped/bike over PT/car at zero
-  distance ($>0$)
-\ei
-\pause \bfAsk{Do the data allow to distinguish this model from the trivial
-  model $V_{ni}=0$?}
-}
-
-}
-
-%##############################################################
-\frame{\frametitle{LR test for the corresponding Logit models}
-%##############################################################
-\vspace{1ex}
-
-\fig{0.56\textwidth}{figsDiscr/BNL_Entfernung_smallSample_logL_eng.png}
-\vspace{-1em}
-
-{\small
-\bi
-\item $H_0$: The trivial model $V_{ni}=0$ describes the data as well
-  as the full model
-  $V_{n1}(\beta_1,\beta_2)=(\beta_1r_n+\beta_2)\delta_{i1}$
-\pause \item Test statistics: \  $\lambda\sup{LR}=2\left[
-  \tilL(\hatbeta_1,\hatbeta_2)-\tilL(0,0)\right] \sim \chi^2(2)|H_0$
-\pause \item Data realization (1 $\tilL$-unit per contour): \  
-$\lambda\sup{LR}\sub{data}=2(-26.5+35.5)=18$
-\pause \item Decision: \ Rejection range $\lambda\sup{LR}>\chi^2_{2,0.95}=5.99
-  \ \Rightarrow$ \red{$H_0$ rejected.}
-\ei
-}
-
-}
-
-%##############################################################
-\frame{\frametitle{Fit quality of the full model}
-%##############################################################
-
-\placebox{0.31}{0.45}{\figSimple{0.64\textwidth}
- {figsDiscr/BNL_Entfernung_smallSample_relHaeuf_eng.png}}
-
-\placebox{0.77}{0.45}{\parbox{0.40\textwidth}{\small
-\bi
-\itemAsk \colAsk{ What would be the modeled ped/bike modal split for
-  the null model $V_{ni}=0$?} \pause \colAnswer{50:50}
-\pause \itemAsk \colAsk{ Read off from the $\tilL$ contour plot the parameter of
-  the AC-only model $V_{ni}=\beta_2\delta_{i1}$ and give the modeled
-  modal split} \pause \colAnswer{$\hatbeta_2=\ln(P_1/P_2)=-0.5$, OK
-  with $P_1/P_2=e^{\hatbeta_2} \approx N_1/N_2=20/32$}
-\pause \itemAsk \colAsk{ Motivate the negative correlation between the
-  parameter errors} \pause \colAnswer{This makes at least sure that,
-  in case of correlated errors,
-about the same fraction chooses
-  alternative~2 as for the calibrated model}
-\ei
-}}
-
-}
-
-\subsection{9.4 Goodness-of-Fit Measures}
-
-%##############################################################
-\frame{\frametitle{9.4 Goodness-of-Fit Measures}
-%##############################################################
-
-\bi
-\item The parameter tests for equality and the LR test are related to
-  \bfdef{significance}: Is the more complicated of two nested models
-  significantly better in describing the data?
-\item This can be used to find the best model using the
-  \bfdef{top-down ansatz}: \\
-  \EinsteinPdflatex \emph{Make is as simple
-    as possible but not simpler!}
-\pause \item Problem: For very big samples, nearly any new parameter gives
-  significance and the top-down ansatz fails
-\pause \item More importantly: Significance/LR tests cannot give
-evidence for missing 
-  but relevant factors 
-\pause \item A further problem: We cannot compare non-nested models
-\pause \item Finally, in reality, one often is interested in \bfdef{effect
-  strength} (difference in the fit and validation quality), not
-  significance
-\ei
-
-\pause 
-\centering{\bfred{$\Rightarrow$ we need measures for absolute fit
-    quality}}
-}
-
-%##############################################################
-\frame{\frametitle{Information-based goodness-of-fit (GoF) measures}
-%##############################################################
-
-
-\bi
-\item \bfdef{Akaike's information criterion}: % \vspace{-1ex}
-  \bdm \text{AIC}=-2\tilL+2M\frac{N}{N-(M+1)} \edm
-
-\item \bfdef{Bayesian information criterion:} % \vspace{-1ex}
-   \bdm \text{BIC}=-2\tilL+M\ln N \edm
-\ei
-
-
-$N$: number of decisions; $M$: number of parameters
-
-{\small
-\bi
-\pause \item Both criteria give the needed additional information (in
-bit) to obtain the actual micro-data from the
-  model's prediction, including an over-fitting penalty: the lower, the better.
-\pause \item Both the AIC and BIC are equivalent to the corresponding
-GoF measures of regression.
-\pause \item the BIC focuses more on parsimonious models (low $M$).
-\pause \item For nested models satisfying the null hypothesis of the LR test
-  and $N\gg M$,
-  the expected AIC is the same (\bfAsk{verify!}). However, since the
-  AIC is an absolute 
-  measure, it allows comparing non-nested models.
-\ei
-}
-
-}
-
-%##############################################################
-\frame{\frametitle{GoF measures corresponding to the coefficient of
-    determination $\bfmath{R^2}$ of linear models 
-($\tilL\sup{0}$: log-likelihood of the
-estimated AC-only or trivial model)}
-%##############################################################
-
-{\small
-\bi
-\item \bfdef{LR-Index} resp. \bfdef{McFadden's $R^2$}:  \vspace{-2ex}
-   \bdm \rho^2=1-\frac{\tilL}{\tilL\sup{0}} \edm
- 
-\item \bfdef{Adjusted LR-Index/McFadden's $R^2$:}  \vspace{-1ex}
-  \bdm \bar{\rho}^2=1-\frac{\tilL-M}{\tilL\sup{0}}\edm
-\ei
-}
-
-{\footnotesize
-\bi
-\pause \item The LR-Index $\rho^2$ and the adjusted LR-Index $\bar{\rho}^2$
-   correspond to the coefficient of
-    determination $R^2$ and the adjusted coefficient $\tilde{R}^2$ of
-    regression models, respectively: The higher, the better.
-\pause \item In contrast to regression models, even the best-fitting model
-  has $\rho^2$ and $\bar{\rho}^2$ values far from 1. Values as low as
-  0.3 may characterize a good model, \emph{see
-    \hyperlink{sec:SP}{\beamerbutton{the Example 9.2.1}}},
-  while $R^2=0.3$ means a really bad fit for a regression model.
-\pause \item An over-fitted model with $M$ parameters fitting
-  $N=M$ decisions reaches the ``ideal'' LR-index value $\rho^2=1$ 
- while $\bar{\rho}^2$ is near
-  zero.
-\ei
-}
-
-}
-
-
-%##############################################################
-\frame{\frametitle{Questions on GoF metrics}
-%##############################################################
-
-\bi
-\itemAsk \colAsk{Discuss the model to be tested, the AC-only model, and the
-trivial model in the context of weather forecasts}\\
-\pause \colAnswer{Full forecast info, info from climate table, 50:50}
-\\[1em]
-\pause \itemAsk \colAsk{Give the log-likelihood of the AC-only and trivial models
-if there are $I$ alternatives and $N_i$ decisions for alternative $i$ 
-(total number of decisions $N=\sum_{i=1}^IN_i$)}\\
-\pause \colAnswer{Trivial model: 
-$P_{ni}=1/I$, $\tilL=\sum_n \ln P_{i_n}=\sum_i N_i \ln P_i=-N\ln I$;\\
-  AC-only model: $P_{ni}=N_i/N$, 
-$\tilL=\sum_i N_i \ln P_i=N\ln N-\sum_iN_i\ln N_i$}
-\\[1em]
-\pause \itemAsk \colAsk{Consider a binary choice situation where the $N/2$ persons with
-short trips chose the pedestrian/bike
-option with a probability of 3/4,  and the PT/car option with 1/4. The
-other $N/2$ persons with long trips had the reverse modal split with
-a ped/bike usage of \unit[25]{\%}, only.
-
-What would be the LR-index for the ``perfect'' model exactly reproducing the
-observed 3:1 and 1:3 modal splits for the short and long trips,
-respectively?} \\
-\colAnswer{(less than 0.18)} 
-\ei
-
-}
 
 
 

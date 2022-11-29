@@ -1,0 +1,325 @@
+
+\documentclass[mathserif,aspectratio=1610]{beamer}
+%\documentclass[mathserif,handout,aspectratio=1610]{beamer}
+%\usepackage{beamerthemeshadow}
+
+\input{$HOME/tex/inputs/defsSkript}%$
+\input{$HOME/tex/inputs/styleBeamerVkoekMa}%$
+%\input{styleBeamerVkoekMa}%$
+
+\usepackage{graphicx}
+
+%\newcommand{\pathDiscrChoice}{$HOME/vorlesungen/Verkehrsoekonometrie_Ma/discrChoice_cc_Levmar} %$
+\newcommand{\pathDiscrChoice}{figsDiscr} 
+
+%##############################################################
+
+\begin{document}
+%###################################################
+\frame{  %title layout
+%###################################################
+\makePale{1.00}{0.50}{0.70}{1.40}{1.40}
+
+\placebox{0.50}{0.42}{
+  \figSimple{1.60\textwidth}{figsIOM/AKWfig.png}}
+%makePale{opacity}{centerXrel}{centerYrel}{wrel}\{hrel} 
+\makePale{0.80}{0.50}{0.70}{1.40}{1.40}
+
+\placebox{0.55}{0.89}{\parbox{0.45\textwidth}{\myheading{
+13 \ Life-Cycle Assessment}}}
+
+\placebox{0.43}{0.14}{\parbox{0.8\textwidth}{
+{\large
+\bi
+\item 13.1. Classical Life-Cycle Assessment (LCA)
+\item 13.2. Econometric Input-Output LCA (EIO-LCA)
+
+\ei
+}
+}}
+
+}
+
+
+
+\subsection{13.1. Classical Life-Cycle Assessment}
+
+%##############################################################
+\frame{\frametitle{13.1. Life-Cycle Assessment (LCA): Motivation} 
+%##############################################################
+
+\bi
+\item The IOM reflects a \emph{snapshot} of \emph{all products} of a
+  national economy in the \emph{steady  state}
+
+\pause \item Sometimes, it is more instructive or relevant to consider
+  \emph{the total 
+  lifetime} of \emph{a single product} in a \emph{time dependent way}
+  by assessing production, operation, and destruction/recycling of
+  this product. 
+
+\pause \item This is formalized by the methods of \bfdef{Life-Cycle
+  Assessment (LCA)} (German: \bfdef{\"Okobilanz}).
+
+\pause \item However, LCA only considers first-order indirect effects, e.g.,
+  \COii\ emissions caused by electric vehicles through the
+  \COii\ footprint of electricity production
+
+\pause \item The class of \bfdef{Econometric Input-Output (EIO)
+  LCA models} combines both approaches. 
+\ei
+}
+
+
+
+\providecommand{\tily}{\tilde{y}}
+\providecommand{\tilC}{\tilde{C}}
+\providecommand{\tilmC}{\tilde{\m{C}}}
+
+
+%##############################################################
+\frame{\frametitle{The standard LCA procedure} 
+%##############################################################
+
+
+\benum
+\item Define the life phases of the product in question:
+\bi
+\item production
+\item operation/usage
+\item destruction/recycling.
+\ei
+
+\pause \item For each life phase, calculate the amount of needed
+  materials/energy resulting in the \bfdef{life-cycle inventory}
+  $\tily_j$ for product category $j$ 
+(the tilde denotes that the product is given in physical units such as
+  kg or kWh 
+  rather than in \euro).
+
+\pause \item The total emissions $e_i$ of pollutant $i$ during the life time is
+  obtained using the \bfdef{emission factor matrix} $\m{C}$:
+
+  \maindm{e_i=\sum_j C_{ij}\tily_j}
+
+where the emission factor $C_{ij}$ gives the units of pollutant
+$i$ caused by one unit of product $j$ (including the production
+chain).
+
+\end{enumerate}
+
+}
+
+%##############################################################
+\frame{\frametitle{Example: Gasoline  vehicle}
+%##############################################################
+
+Gasoline and Diesel vehicles are two examples of \bfdef{internal
+  combustion vehicles (ICV)}
+
+\vspace{1em}
+
+\bfblack{1. Life-cycle inventory}
+\vspace{1em}
+
+\bi
+\item $\tily_1=\unit[800]{kg}$ steel (\unit[900]{kg} at production
+  time, \unit[80]{kg} spare parts during lifetime, \unit[20]{\%}
+  emission-neutral recycling contribution),
+\item $\tily_2=\unit[60]{kg}$ aluminum (\unit[100]{kg} production,
+  \unit[40]{\%} of it can be recycled without additional emissions)
+\item $\tily_3=\unit[100]{kg}$ plastic
+\item $\tily_4=\unit[50]{kg}$ rubber
+\item $\tily_5=\unit[36]{kg}$ lead (three starter batteries \`a \unit[12]{kg})
+\item $\tily_6=\unit[15\,000]{l}$ gazoline (\unit[250\,000]{km} at
+  \unit[6]{l/\unit[100]{km}} during
+  lifetime)
+\ei
+so we have
+
+\maindm{
+\vec{\tily}=(\unit[800]{kg},\ \unit[60]{kg},\ \unit[60]{kg},\
+\unit[60]{kg},\ \unit[36]{kg},\ \unit[15\,000]{l})\tr.
+}
+
+}
+
+%##############################################################
+\frame{\frametitle{Example: Gasoline  vehicle (ctnd)}
+%##############################################################
+
+\vspace{1em}
+\bfblack{2. Total \COii\ emissions}
+\vspace{1ex}
+
+{%\small
+Defining $e_1$ to be the \COii\ emissions in kg ($e_2$ could be
+NO$_x$, $e_3$ PM and so on), we have
+\bdm
+e_1=\sum_{j=1}^6 C_{1j}\tily_j
+\edm
+\vspace{-1em}
+
+with the row vector 
+\vspace{-1ex}
+
+\maindm{
+\vec{C}\sub{\COii}=(C_{1j})=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[2.7]{kg/l}).
+}
+The last emission factor $C_{16}=C_{16}\sup{w2t}+C_{16}\sup{t2w}$ is
+the sum of two contributions: 
+
+\bi
+\pause \item \bfdef{Well-to-tank (w2t)}
+emissions of the production chain mining $\to$ transport to
+refinery $\to$ refining process $\to$ transport to the gas station:
+$C_{16}\sup{w2t}=\unit[0.4]{kg/l}$,\\[1ex]
+\pause \item \bfdef{Tank-to-wheel (t2w)} emissions dictated by the chemistry
+during the actual combustion: $C_{16}\sup{t2w} = \unit[2.3]{kg/l}$
+(it would be \unit[2.7]{kg/l} for Diesel, i.e., the total w2w
+emissions of gasoline are about the t2w emissions when burning Diesel).
+\ei
+}
+
+}
+
+%##############################################################
+\frame{\frametitle{Example 2: Battery-electric vehicle (BEV)}
+%##############################################################
+
+{\normalsize
+\bi
+\item The \bfdef{Life-cycle inventory} of steel, aluminum, rubber, plastic
+etc is comparable to that of the ICVs.\\[1ex] 
+\pause \item The starter batteries are replaced by the Lithium driving
+  batteries (2$\times$ \unit[300]{kg}) and the 
+  gasoline is replaced 
+  by the needed electrical energy, typically \unit[20]{kWh} per
+  \unit[100]{km}:
+
+\maindm{
+\vec{\tily}=(\unit[800]{kg},\ \unit[60]{kg},\ \unit[60]{kg},\
+\unit[60]{kg},\ \unit[600]{kg},\ \unit[50\,000]{kWh})\tr.
+}
+\vspace{1em}
+
+\pause \item This leads to the new \COii\ emission factors vector
+\maindm{
+\vec{C}\sub{\COii}=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[0.45]{kg/kWh}).
+}
+\vspace{1em}
+
+\bi
+\item The Li driving batteries are expensive to produce and there is
+  much controversy in extimating their overall emission factor
+  $C_{15}$\\[1ex]
+\pause \item The enery emission factor is based, e.g., on the present (2019)
+  German energy mix emitting \unit[450]{g} \COii\ per kWh of electrical
+  energy at the socket 
+\ei
+
+\ei
+}
+
+}
+
+%##############################################################
+\frame{\frametitle{Questions on LCA}
+%##############################################################
+
+\bi
+\itemAsk \colAsk{Is it possible to check, at a glance, whether
+  the example BEV emits less \COii\  per km than the example ICV \emph{when
+    considering the driving phase alone}?}\\[1ex]
+
+\pause \itemAnswer \colAnswer{Per \unit[100]{km}, the BEV indirectly emits
+\unit[20]{kWh} * \unit[0.45]{kg/kWh}=\unit[9]{kg}. The ICV vehicle
+emits directly and indirectly
+\unit[6]{l} * \unit[2.7]{kg/l}=\unit[16.2]{kg}. So, the BEV ``wins''
+when considering the direct and indirect emissions in the driving
+phase alone. 
+\\[1ex]
+However, the BEV production emissions are significantly
+higher. Furthermore, less than ideal efficiencies when
+charging/discharging have not been considered.}\\[1em]
+
+\pause \itemAsk \colAsk{How would you proceed to calculate the
+  \emph{break-even} mileage beyond which a BEV is more environmentally
+  friendly (``green'') than the ICV?}\\[1ex]
+
+\pause \itemAnswer \colAnswer{We saw that the \emph{driving} emissions $C'$
+  per kilometer $x$ for the ICV are higher compared to the BEV. In
+  contrast, it is the other way round for the \emph{fixed} emissions
+  $C^0$ due to 
+  production/disposal/recycling.
+So, just calculate the break-even kilometrage $x_c$ by the equation
+\bdm
+C^0\sub{BEV}+C'\sub{BEV}x_c= C^0\sub{ICV}+C'\sub{ICVV}x_c
+\edm
+}
+\ei
+}
+
+%##############################################################
+\frame{\frametitle{Questions on LCA (ctnd.)}
+%##############################################################
+
+\bi
+
+
+\itemAsk \colAsk{Give the two most important factors influencing the total LCA
+  emissions of battery-electric vehicles.}
+
+\pause \colAnswer{
+\bi
+\item[(i)] \colAnswer{The energy mix of the used electricity
+  (this is tricky! particularly, you cannot save your soul by paying
+  indulgences/ordering ``green'' electricity)}
+\pause \item[(ii)] \colAnswer{The production and disposal/recycling emissions of the
+  battery and whether you need more than one battery during lifetime
+  (to research this is even more trickky).}
+\ei
+}
+
+
+
+\pause \itemAsk \colAsk{A common saying states that \emph{the Sun does not
+  issue invoices} nor does the production of electric energy by
+  photovoltaic (PV) elements entail
+  any direct \COii\ emissions. Discuss why PV energy still has a nonzero
+  \COii\ footprint and how to calculate the PV \COii\ emission
+  factor. Use LCA arguments and assume a steady state. } 
+
+\pause \colAnswer{
+\bi
+\item[(i)] \colAnswer{Get information about the usable lifetime $\tau$,}
+\pause \item[(ii)] \colAnswer{Check the climate where you want 
+to install your PV and
+  determine the average power (in Germany, it is about \unit[10]{\%} of the
+  installed power $P\sub{max}$) and calculate the total electric
+  energy delivered, e.g., $W\sub{el}=0.1\, \tau P\sub{max} $ }
+\pause \item[(iii)] \colAnswer{Get the production and recycling 
+emissions $C$ of your PV including 
+ the connection to the electric grid and calculate the
+ \COii\ footprint $e\sub{PV}=C/W\sub{el}$ [kg/kWh].}
+\ei
+}
+
+\ei
+}
+
+
+\subsection{13.2. Econometric Input-Output Life-Cycle Assessment (EIO-LCA}
+
+%##############################################################
+\frame{\frametitle{13.2. Econometric Input-Output LCA}
+%##############################################################
+
+See the
+\href{https://mtreiber.de/Vkoek_Ma_Skript/Verkehrsoekonometrie_Ma.pdf}{\beamerbutton{German
+    script, Chapter 5.3}}.
+
+}
+
+
+\end{document}
