@@ -316,7 +316,7 @@ available. Give the new Logit choice probabilities.}\\
 \pause \colAnswer{No need to re-calculate using the Logit probability
   formula. Just use the IIA property: 
 \bdm
-\frac{P_1}{P_2}=2=\text{const.} \ \Rightarrow \ P_1=1/3, \ P_2=2/3
+\frac{P_1}{P_2}=1/2=\text{const.} \ \Rightarrow \ P_1=1/3, \ P_2=2/3
 \edm
 }
 \\[1em]
@@ -374,274 +374,10 @@ available. Give the new Logit choice probabilities.}\\
 }
 
 
-%#############################################################
+
+
+%###################################################
 \frame{\frametitle{Model 1: generic times and costs, no weather}
-%#############################################################
-
-\placebox[center]{0.35}{0.43}{
- \figSimple{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_fProb.png}
-}
-
-\placebox{0.84}{0.63}{\parbox{0.3\textwidth}{
-{\small
-\begin{center}
-$
-\begin{array}{lll}
- V_i &= & \beta_0\delta_{i1} + \beta_1\delta_{i2}\\
-& + & \beta_2 K_i + \beta_3 T_i
-\end{array}
-$
-\visible<2->{
-\\[1ex]
-or
-\\[1ex]
-$
-\begin{array}{l}
-V_1 =  \beta_0 + \beta_2 K_1 + \beta_{3} T_1,\\
-V_2 =  \beta_1 + \beta_2 K_2 + \beta_{3} T_2,\\
-V_3 =            \beta_2 K_3 + \beta_{3} T_3
-\end{array}
-$
-\end{center}
-}
-}
-}}
-
-
-
-
-\visible<3->{
-\placebox[center]{0.82}{0.36}{\parbox{0.20\textwidth}{\small\fbox{ 
-  $
-  \begin{array}{l}
- % \ln L\sub{init}=-176.9,\\
- % \ln L=-141.5, \\
-  \beta_0=-0.95 \pm 0.37, \\
-  \beta_1=-0.28 \pm 0.24, \\
-  \beta_2=+0.17 \pm 0.19, \\
-  \beta_3=-0.04 \pm 0.02
-  \end{array}
- $
-}}}}
-
-\visible<4->{
-\placebox[center]{0.82}{0.13}{{\small
-   $
-   \begin{array}{l}
-   \frac{\beta_0}{-\beta_3}=\unit[-22.4]{min},\\[1ex]
-   \frac{\beta_1}{-\beta_3}=\unit[-6.6]{min},\\[1ex]
-   \frac{60\beta_3}{\beta_2}=\unit[-15]{\text{\euro{}}/h}
-   \end{array}
-   $
-}}}
-
-}
-
-
-%###################################################
-\frame{\frametitle{Dependence of the modal split on the PT attributes}
-%###################################################
-
-\visible<1>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T1.png}}}
-
-\visible<2>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T2.png}}}
-
-\visible<3>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T3.png}}}
-
-\visible<4->{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T.png}}}
-%                    SC_WS1819_3alt_globalT_ProbPT_T.png
-\visible<2->{\placebox{0.5}{0.1}
-{Wrong sign for cost sensitivity, too low time sensitivity!}}
-
-}
-
-
-%###################################################
-\frame{\frametitle{Dependence on the distance}
-%###################################################
-{\small assuming plausible speeds 5, 15, and \unit[25]{km/h} for each
-  mode, respectively} 
-\vspace{-0.5em}
-
-\fig{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_Entf.png}
-}
-
-
-
-%###################################################
-\frame{\frametitle{Model 2: generic times and costs\\
-plus weather factor (\red{bad weather, $W=1$})}
-%###################################################
-
-\placebox[center]{0.35}{0.40}{
-  \figSimple{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_fProb.png}
-}
-
-
-\placebox{0.84}{0.74}{\parbox{0.3\textwidth}{
-{\small
-$
-\begin{array}{lll}
- V_i &= & \beta_0\delta_{i1} + \beta_1\delta_{i2}\\
-& + & \beta_2 K_i + \beta_{3} T_1\\
-& + & \beta_4 W\delta_{i3}
-\end{array}
-$
-}}}
-
-
-\pause
-
-\placebox[center]{0.81}{0.52}{\parbox{0.20\textwidth}{\small\fbox{ 
-  $
-  \begin{array}{l}
-  \beta_0=-0.65 \pm 0.37, \\
-  \beta_1=-0.42 \pm 0.25, \\
-  \beta_2=-0.10 \pm 0.20, \\
-  \beta_3=-0.09 \pm 0.02, \\
-  \beta_4= 4.2  \pm 1.1
-  \end{array}
- $
-}}}
-
-\pause
-
-\placebox[center]{0.80}{0.18}{{\small
-   $
-   \begin{array}{l}
-   \frac{\beta_0}{-\beta_3}=\unit[-7.1]{min},\\
-   \frac{\beta_1}{-\beta_3}=\unit[-4.6]{min},\\
-   \frac{\beta_0}{-\beta_2}=\unit[-6.7]{\text{\euro{}}},\\
-   \frac{\beta_1}{-\beta_2}=\unit[-4.3]{\text{\euro{}}},\\
-   \frac{60\beta_3}{\beta_2}=\unit[+57]{\text{\euro{}}/h},\\
-   \frac{\beta_4}{-\beta_2}=\unit[+44]{\text{\euro{}}}
-   \end{array}
-   $
-}}
-
-}
-
-
-%###################################################
-\frame{\frametitle{Dependence of the modal split on the PT attributes}
-%###################################################
-\visible<1>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T1.png}}}
-
-\visible<2>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T2.png}}}
-
-\visible<3>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T3.png}}}
-
-\visible<4->{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T.png}}}
-
-\visible<2->{\placebox{0.5}{0.1}
-{Too low cost sensitivity!}}
-
-}
-%###################################################
-\frame{\frametitle{Dependence on the distance}
-%###################################################
-{\small assuming plausible speeds 5, 15, and \unit[25]{km/h} for each
-  mode, respectively} 
-\vspace{-0.5em}
-
-\fig{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_Entf.png}
-}
-
-%###################################################
-\frame{\frametitle{Model 3: alt-spec time sensitivities
-    plus weather factor}
-%###################################################
-\placebox[center]{0.35}{0.40}{
-  \figSimple{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_fProb.png}
-}
-
-\placebox{0.80}{0.77}{\parbox{0.3\textwidth}{
-{\small
-$
-\begin{array}{lll}
- V_i &= & \beta_0\delta_{i1} + \beta_1\delta_{i2}\\
- &+& \beta_2 K + \beta_3 T_1\delta_{i1}\\
- &+& \beta_4 T_2\delta_{i2} + \beta_5 T_3\delta_{i3}\\
- &+& \beta_6 W\delta_{i3}
-\end{array}
-$
-}}}
-
-
-\placebox[center]{0.80}{0.50}{\parbox{0.20\textwidth}{\small
-  \fbox{ $
-   \begin{array}{l}
-   \beta_0=+1.03 \pm 0.74, \\
-   \beta_1=+0.66 \pm 0.40, \\
-   \beta_2=-0.53 \pm 0.25, \\
-   \beta_3=-0.14 \pm 0.03, \\
-   \beta_4=-0.11 \pm 0.03, \\
-   \beta_5=-0.06 \pm 0.03, \\
-   \beta_6=+3.6  \pm 1.1
-   \end{array}
-   $
-}}}
-
-\pause
-
-\placebox[center]{0.80}{0.16}{{\small
-   $
-   \begin{array}{l}
-   \frac{\beta_0}{-\beta_3}=+\unit[7.5]{min},\\
-   \frac{\beta_1}{-\beta_3}=+\unit[4.7]{min},\\
-   \frac{\beta_0}{-\beta_2}=+\unit[1.9]{\text{\euro{}}},\\
-   \frac{\beta_1}{-\beta_2}=+\unit[4.7]{\text{\euro{}}},\\
-   \frac{60\beta_5}{\beta_2}=+\unit[6.7]{\text{\euro{}}/h},\\
-   \frac{\beta_4}{-\beta_2}=+\unit[6.7]{\text{\euro{}}}
-   \end{array}
-   $
-}}
-
-}
-
-
-%###################################################
-\frame{\frametitle{Dependence of the modal split on the PT attributes}
-%###################################################
-\visible<1>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T1.png}}}
-
-\visible<2>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T2.png}}}
-
-\visible<3>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T3.png}}}
-
-\visible<4->{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
-  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T.png}}}
-
-\visible<2->{\placebox{0.5}{0.1}
-{Everything plausible}}
-\vspace{1em}
-
-
-}
-%###################################################
-\frame{\frametitle{Dependence on the distance}
-%###################################################
-{\small assuming plausible speeds 5, 15, and \unit[25]{km/h} for each
-  mode, respectively} 
-\vspace{-0.5em}
-
-\fig{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_Entf.png}
-}
-
-
-%###################################################
-\frame{\label{sec:SPcomparison}\frametitle{Comparison: Model 1}
 %###################################################
 
 \placebox[center]{0.35}{0.43}{
@@ -666,7 +402,7 @@ $
  % \ln L=-141.5, \\
   \beta_0=-0.95 \pm 0.37, \\
   \beta_1=-0.28 \pm 0.24, \\
-  \beta_2=+0.17 \pm 0.19, \\
+  \red{\beta_2=+0.17 \pm 0.19}, \\
   \beta_3=-0.04 \pm 0.02
   \end{array}
  $
@@ -692,7 +428,8 @@ $\tilde{\rho}^2=0.177$
 }
 
 %###################################################
-\frame{\frametitle{Model 2}
+\frame{\frametitle{Model 2: generic times/costs
+plus weather factor (\red{bad weather, $W=1$})}
 %###################################################
 
 \placebox[center]{0.35}{0.43}{
@@ -717,7 +454,7 @@ $
   \begin{array}{l}
   \beta_0=-0.65 \pm 0.37, \\
   \beta_1=-0.42 \pm 0.25, \\
-  \beta_2=-0.10 \pm 0.20, \\
+  \green{\beta_2=-0.10 \pm 0.20}, \\
   \beta_3=-0.09 \pm 0.02, \\
   \beta_4= 4.2  \pm 1.1
   \end{array}
@@ -731,11 +468,11 @@ $
    \frac{\beta_1}{-\beta_3}=\unit[-4.6]{min},\\
    \frac{\beta_0}{-\beta_2}=\unit[-6.7]{\text{\euro{}}},\\
    \frac{\beta_1}{-\beta_2}=\unit[-4.3]{\text{\euro{}}},\\
-   \frac{60\beta_3}{\beta_2}=\unit[+57]{\text{\euro{}}/h},\\
-   \frac{\beta_4}{-\beta_2}=\unit[+44]{\text{\euro{}}}
+   \red{\frac{60\beta_3}{\beta_2}=\unit[+57]{\text{\euro{}}/h}},\\
+   \red{\frac{\beta_4}{-\beta_2}=\unit[+44]{\text{\euro{}}}}
    \end{array}
    $
-}}
+}
 
 \placebox[center]{0.16}{0.048}{\parbox{0.3\textwidth}{\scriptsize
 AIC=247,
@@ -743,11 +480,13 @@ BIC=282,\\
 $\rho^2=0.273$,
 $\tilde{\rho}^2=0.245$
 }}
+}
 
 }
 
 %###################################################
-\frame{\frametitle{Model 3}
+\frame{\frametitle{Model 3: alt-spec time sensitivities
+    plus weather factor}
 %###################################################
 
 \placebox[center]{0.35}{0.43}{
@@ -773,9 +512,9 @@ $
    \beta_0=+1.03 \pm 0.74, \\
    \beta_1=+0.66 \pm 0.40, \\
    \beta_2=-0.53 \pm 0.25, \\
-   \beta_3=-0.14 \pm 0.03, \\
-   \beta_4=-0.11 \pm 0.03, \\
-   \beta_5=-0.06 \pm 0.03, \\
+   \green{\beta_3=-0.14 \pm 0.03}, \\
+   \green{\beta_4=-0.11 \pm 0.03}, \\
+   \green{\beta_5=-0.06 \pm 0.03}, \\
    \beta_6=+3.6  \pm 1.1
    \end{array}
    $
@@ -787,9 +526,9 @@ $
    \frac{\beta_0}{-\beta_3}=+\unit[7.5]{min},\\
    \frac{\beta_1}{-\beta_3}=+\unit[4.7]{min},\\
    \frac{\beta_0}{-\beta_2}=+\unit[1.9]{\text{\euro{}}},\\
-   \frac{\beta_1}{-\beta_2}=+\unit[4.7]{\text{\euro{}}},\\
-   \frac{60\beta_5}{\beta_2}=+\unit[6.7]{\text{\euro{}}/h},\\
-   \frac{\beta_4}{-\beta_2}=+\unit[6.7]{\text{\euro{}}}
+   \frac{\beta_1}{-\beta_2}=+\unit[1.2]{\text{\euro{}}},\\
+   \green{\frac{60\beta_5}{\beta_2}=+\unit[6.7]{\text{\euro{}}/h}},\\
+   \green{\frac{60\beta_4}{-\beta_2}=+\unit[12.5]{\text{\euro{}}/h}}
    \end{array}
    $
 }}
@@ -803,6 +542,37 @@ $\tilde{\rho}^2=0.279$
 }}
 
 
+}
+
+%###################################################
+\frame{\frametitle{Model 3: Dependence of the modal split on the PT attributes}
+%###################################################
+\visible<1>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T1.png}}}
+
+\visible<2>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T2.png}}}
+
+\visible<3>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T3.png}}}
+
+\visible<4->{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_T.png}}}
+
+\visible<2->{\placebox{0.5}{0.1}
+{Everything plausible}}
+\vspace{1em}
+
+
+}
+%###################################################
+\frame{\frametitle{Model 3: Dependence on the distance}
+%###################################################
+{\small assuming plausible speeds 5, 15, and \unit[25]{km/h} for each
+  mode, respectively} 
+\vspace{-0.5em}
+
+\fig{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_ProbPT_Entf.png}
 }
 
 
@@ -932,12 +702,13 @@ difference  $V_1-V_2$
 {\figSimple{0.60\textwidth}{figsDiscr/pLogitTrinom_V1V2.png}}
 
 \placebox[center]{0.20}{0.14}
-{Symmetrie considerations:}
+{\parbox{0.3\textwidth}{Symmetrie considerations\\
+(for $P_2$, swap $1 \leftrightarrow 2$):}}
 \placebox[center]{0.67}{0.14}
 {\parbox{0.6\textwidth}{\small
 \bdma
-P_2(V_2-V_3, V_1-V_3) &=& P_1(V_1-V_3,V_2-V_3),\\
-P_3(V_2-V_3, V_1-V_3) &=& 1-P_1-P_2
+P_2(V_1-V_3, V_2-V_3) &=& P_1(V_2-V_3,V_1-V_3),\\
+P_3  &=& 1-P_1-P_2
 \edma}}
 
 }
@@ -962,8 +733,8 @@ P_3(V_2-V_3, V_1-V_3) &=& 1-P_1-P_2
 \maintextbox{0.8\textwidth}
 {Elasticities denote the percentaged change of endogenous
   variables $y_i$ per small percentaged change of exogenous variables
-  $x_j$ for an average situation
-\vspace{-1em}
+  $x_j$ for an average situation, colloquially:\bfdef{`` \% change of $y$ per \unit[1]{\%} change of $x$''}
+\vspace{-0em}
 \bdm
 \epsilon_{ij}=\frac{\bar{x}_j}{\bar{y}_i}
 \left.\ablpart{y_i}{x_j}\right|_{\vec{x}=\bar{\vec{x}},\vec{y}=\bar{\vec{y}}}
@@ -984,8 +755,8 @@ y=\sum_j\beta_jx_j+\epsilon, \quad
 
 Generally, with several endogenous variables,  one distinguishes between
 \bi
-\item \bfdef{Substitution} vs, \bfdef{full/ordinary} elastities,
-\item \bfdef{Microscopic} vs, \bfdef{macroscopic} elastities,
+\item \bfdef{substitution} vs, \bfdef{full/ordinary} elastities,
+\item \bfdef{microscopic} vs, \bfdef{macroscopic} elastities,
 \item \bfdef{proper elasticity} vs. \bfdef{cross-elasticity}
 \ei
 
@@ -1026,8 +797,8 @@ we derive the
   (characteristic) $m$ of an alternative $j$ feeds back on the demand
   for another alternative $i\neq j$:
 \maindm{\epsilon_{nij}\sup{(mic,m)}=
-\frac{x_{nmj}}{P_{ni}}\ablpart{P_{ni}}{x_{nmj}}
-=-\beta_mx_{nmj}P_{nj}
+\frac{x_{mnj}}{P_{ni}}\ablpart{P_{ni}}{x_{mnj}}
+=-\beta_mx_{mnj}P_{nj}
 }
 \ei
 }
@@ -1045,33 +816,33 @@ we derive the
 We start with the normal  MNL choice probability 
 $P_{ni}=e^{V_{ni}}/\sum_k e^{V_{nk}}$ and first calculate the
 sensitivities in terms of the derivatives of $V_{ni}$ with respect to
-$x_{nmj}$: 
+$x_{mnj}$: 
 \bdma
-\ablpart{P_{ni}}{x_{nmj}}
- &=& \frac{e^{V_{ni}}}{\sum_k e^{V_{nk}}}\ablpart{V_{ni}}{x_{nmj}}
+\ablpart{P_{ni}}{x_{mnj}}
+ &=& \frac{e^{V_{ni}}}{\sum_k e^{V_{nk}}}\ablpart{V_{ni}}{x_{mnj}}
   - \frac{e^{V_{ni}}}{\left(\sum_k e^{V_{nk}}\right)^2}
-    \ablpart{}{x_{nmj}}\left(\sum_l e^{V_{nl}}\right) \\
-\visible<3->{ &=& P_{ni}\ablpart{V_{ni}}{x_{nmj}}
+    \ablpart{}{x_{mnj}}\left(\sum_l e^{V_{nl}}\right) \\
+\visible<3->{ &=& P_{ni}\ablpart{V_{ni}}{x_{mnj}}
   - \sum_l \frac{e^{V_{ni}}e^{V_{nl}} }{\left(\sum_k e^{V_{nk}}\right)^2}
-    \ablpart{V_{nl}}{x_{nmj}} \\}
-\visible<4->{ &=& P_{ni}\ablpart{V_{ni}}{x_{nmj}}
-  - \sum_l P_{ni} P_{nl} \ablpart{V_{nl}}{x_{nmj}}}
+    \ablpart{V_{nl}}{x_{mnj}} \\}
+\visible<4->{ &=& P_{ni}\ablpart{V_{ni}}{x_{mnj}}
+  - \sum_l P_{ni} P_{nl} \ablpart{V_{nl}}{x_{mnj}}}
 \edma
 \visible<5->{where
 \bdm
-\ablpart{V_{ni}}{x_{nmj}}=\beta_m\delta_{ij}, \quad
-\ablpart{V_{nl}}{x_{nmj}}=\beta_m\delta_{lj}}
+\ablpart{V_{ni}}{x_{mnj}}=\beta_m\delta_{ij}, \quad
+\ablpart{V_{nl}}{x_{mnj}}=\beta_m\delta_{lj}}
 \edm
 \visible<6->{Hence
 \bdm
-\ablpart{P_{ni}}{x_{nmj}}=\beta_mP_{ni}\left(\delta_{ij}-P_{nj}\right),\quad
-\epsilon_{nij}\sup{(mic,m)}=\frac{x_{nmj}}{P_{ni}}\ablpart{P_{ni}}{x_{nmj}}
-=\beta_mx_{nmj}\left(\delta_{ij}-P_{nj}\right)
+\ablpart{P_{ni}}{x_{mnj}}=\beta_mP_{ni}\left(\delta_{ij}-P_{nj}\right),\quad
+\epsilon_{nij}\sup{(mic,m)}=\frac{x_{mnj}}{P_{ni}}\ablpart{P_{ni}}{x_{mnj}}
+=\beta_mx_{mnj}\left(\delta_{ij}-P_{nj}\right)
 \edm
 }
 \visible<7->{$j=i$: 
-$\epsilon_{nii}=\beta_mx_{nmi}\left(1-P_{ni}\right)$, \quad $j\neq i$:
-$\epsilon_{nij}=-\beta_mx_{nmj}P_{nj}$}
+$\epsilon_{nii}=\beta_mx_{mni}\left(1-P_{ni}\right)$, \quad $j\neq i$:
+$\epsilon_{nij}=-\beta_mx_{mnj}P_{nj}$}
 }}
 \ei
 }
@@ -1087,12 +858,19 @@ $\epsilon_{nij}=-\beta_mx_{nmj}P_{nj}$}
 \begin{align*}
 \visible<2->{\sum_i P_{ni}\epsilon\sup{(m)}_{nij}
  &=\sum_{i\neq j} P_{ni}\epsilon\sup{(m)}_{nij}+ P_{ni}\epsilon\sup{(m)}_{nii}\\}
-\visible<3->{ &=-\sum_{i\neq j} P_{ni}\beta_mx_{nmj}P_{nj}
- + P_{ni}\beta_mx_{nmi}\left(1-P_{ni}\right)\\}
-\visible<4->{ &=\beta_m \left(-\sum_i P_{ni} P_{nj} x_{nmj}+P_{ni}x_{nmi}\right)=0}
+\visible<3->{ &=-\sum_{i\neq j} P_{ni}\beta_mx_{mnj}P_{nj}
+ + P_{ni}\beta_mx_{mni}\left(1-P_{ni}\right)\\}
+\visible<4->{ &=\beta_m \left(-\sum_i P_{ni} P_{nj} x_{mnj}+P_{ni}x_{mni}\right)=0}
 \end{align*}
 \visible<4->{(Notice $\sum_i P_{ni}=1$ in the last step!)}
-}
+
+\visible<5->{{\small Motivation: a change of characteristic $m$ in alternative
+  $j$ shifts the preferences. However, they must be shifted somewhere
+  (completeness! no option outside of the alternative set available!),
+  so the net change is zero (notice that 
+$P_{ni}\epsilon\sup{(m)}_{nij}=x_{mnj}\ablpart{P_{ni}}{x_{mnj}}$ and
+    $x_{mnj}$ is constant for the summation over $i$)}
+}}
 
 \ei
 }
@@ -1105,11 +883,13 @@ $\epsilon_{nij}=-\beta_mx_{nmj}P_{nj}$}
   $i$, i.e., on the target alternative for the changing
   demand. Motivate this by the IIA condition}\\
 \pause \colAnswer{According 
-to the IIA, if the utility of an alternative $j$
-  changes, the changes of the relative preferences with respect to all
-  other alternatives are the same. Moreover, the relative preferences
-  are the
-  probability ratios and their changes are the cross elasticities}\\[1em]
+to the IIA, if the utility of a ``third'' alternative $j$
+  changes, the relative preferences $P_{ni}/p_{ni'}$ of all other
+  alternatives $i,i' \neq j$ remains unchanged, i.e., a change of
+  alternative $j$ \emph{simultaneously} changes all other alternatives
+  such that the ratios remain the same. This is only possible if the
+  relative changes of all probabilities $P_{ni}, i \neq j$, i.e., the cross
+  elasticities, are the same.}\\[1em]
 
 \pause \itemAsk \colAsk{Given are three airports $i$ from
   which person $n$ can book flights to a desired destination at cost
@@ -1141,24 +921,25 @@ chosing their products is not relevant but the aggregate over all
 customers. Hence, the macroscopic elasticity
 
 \maindm{\epsilon_{ij}\sup{(mac,m)}=\frac{X_{mj}}{N_i}\ablpart{N_i}{X_{mj}},
-\quad X_{mj}=\sum_{n=1}^N x_{nmj}, \quad
+\quad X_{mj}=\sum_{n=1}^N x_{mnj}, \quad
 N_i=\sum_{n=1}^NP_{ni}
 }
 gives the percentage increase of people chosing alternative $i$ when the
-sum of attributes $m$ increases at alternative $j$ by one percent.
+sum of attribute $m$ over all persons booking a flight increases at
+alternative $j$  by one percent.
 \vspace{1ex}
 \bi
 \item[(i)] Same absolute changes for all persons,
-  $\diff{x_{nmj}}=\diff{X_{mj}}/N$:
+  $\diff{x_{mnj}}=\diff{X_{mj}}/N$:
 \bdm
 \epsilon_{ij}\sup{(mac,abs,m)}
 = \frac{X_{mj}}{N_i}\ 
-\frac{1}{N}\sum_n\frac{P_{ni}}{x_{nmj}}\epsilon_{nij}\sup{(mic,m)}
+\frac{1}{N}\sum_n\frac{P_{ni}}{x_{mnj}}\epsilon_{nij}\sup{(mic,m)}
 \edm
 \vspace{-1ex}
 
 \pause \item[(ii)] Same relatives changes for all,
-$\diff{x_{nmj}}/x_{nmj}=\diff{X_{mj}}/X_{mj}$:
+$\diff{x_{mnj}}/x_{mnj}=\diff{X_{mj}}/X_{mj}$:
 \bdm
 \epsilon_{ij}\sup{(mac,rel,m)}
 =\sum_n w_{ni}\ \epsilon_{nij}\sup{(mic,m)}, \quad
@@ -1168,8 +949,250 @@ w_{ni}=\frac{P_{ni}}{N_i}=\frac{P_{ni}}{\sum_n P_{ni}}
 }
 
 
+%###################################################
+\frame{\frametitle{Appendix}
+%###################################################
+
+}
+
+%###################################################
+\frame{\frametitle{Model1: Dependence of the modal split on the PT attributes}
+%###################################################
+
+\visible<1>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T1.png}}}
+
+\visible<2>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T2.png}}}
+
+\visible<3>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T3.png}}}
+
+\visible<4->{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_T.png}}}
+%                    SC_WS1819_3alt_globalT_ProbPT_T.png
+\visible<2->{\placebox{0.5}{0.1}
+{\red{Wrong sign for cost sensitivity, too low time sensitivity!}}}
+
+}
 
 
+%###################################################
+\frame{\frametitle{Model 1: Dependence on the distance}
+%###################################################
+{\small assuming plausible speeds 5, 15, and \unit[25]{km/h} for each
+  mode, respectively} 
+\vspace{-0.5em}
+
+\fig{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_ProbPT_Entf.png}
+}
+
+%###################################################
+\frame{\frametitle{Model 2: Dependence of the modal split on the PT attributes}
+%###################################################
+\visible<1>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T1.png}}}
+
+\visible<2>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T2.png}}}
+
+\visible<3>{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T3.png}}}
+
+\visible<4->{\placebox{0.5}{0.51}{\figSimple{0.7\textwidth}
+  {\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_T.png}}}
+
+\visible<2->{\placebox{0.5}{0.1}
+{\red{Too low cost sensitivity!}}}
+
+}
+%###################################################
+\frame{\frametitle{Model 2: Dependence on the distance}
+%###################################################
+{\small assuming plausible speeds 5, 15, and \unit[25]{km/h} for each
+  mode, respectively} 
+\vspace{-0.5em}
+
+\fig{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_ProbPT_Entf.png}
+}
 
 
 \end{document}
+
+
+
+%#############################################################
+\frame{\frametitle{Model 1: generic times and costs, no weather}
+%#############################################################
+
+\placebox[center]{0.35}{0.40}{
+ \figSimple{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_fProb.png}
+}
+
+\placebox{0.84}{0.63}{\parbox{0.3\textwidth}{
+{\small
+\begin{center}
+$
+\begin{array}{lll}
+ V_i &= & \beta_0\delta_{i1} + \beta_1\delta_{i2}\\
+& + & \beta_2 K_i + \beta_3 T_i
+\end{array}
+$
+\\[1ex]
+or
+\\[1ex]
+$
+\begin{array}{l}
+V_1 =  \beta_0 + \beta_2 K_1 + \beta_{3} T_1,\\
+V_2 =  \beta_1 + \beta_2 K_2 + \beta_{3} T_2,\\
+V_3 =            \beta_2 K_3 + \beta_{3} T_3
+\end{array}
+$
+\end{center}
+}
+}}
+
+
+
+
+\visible<2->{
+\placebox[center]{0.82}{0.36}{\parbox{0.20\textwidth}{\small\fbox{ 
+  $
+  \begin{array}{l}
+ % \ln L\sub{init}=-176.9,\\
+ % \ln L=-141.5, \\
+  \beta_0=-0.95 \pm 0.37, \\
+  \beta_1=-0.28 \pm 0.24, \\
+  \red{\beta_2=+0.17 \pm 0.199}, \\
+  \beta_3=-0.04 \pm 0.02
+  \end{array}
+ $
+}}}}
+
+\visible<3->{
+\placebox[center]{0.82}{0.13}{{\small
+   $
+   \begin{array}{l}
+   \frac{\beta_0}{-\beta_3}=\unit[-22.4]{min},\\[1ex]
+   \frac{\beta_1}{-\beta_3}=\unit[-6.6]{min},\\[1ex]
+   \frac{60\beta_3}{\beta_2}=\unit[-15]{\text{\euro{}}/h}
+   \end{array}
+   $
+}}}
+
+}
+
+
+%###################################################
+%\frame{\frametitle{Model 1: Dependence of the modal split on the PT attributes}
+%###################################################
+%as optional last slides
+
+
+%###################################################
+\frame{\frametitle{Model 2: generic times and costs\\
+plus weather factor (\red{bad weather, $W=1$})}
+%###################################################
+
+\placebox[center]{0.35}{0.40}{
+  \figSimple{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_globalT_weather_fProb.png}
+}
+
+
+\placebox{0.84}{0.74}{\parbox{0.3\textwidth}{
+{\small
+$
+\begin{array}{lll}
+ V_i &= & \beta_0\delta_{i1} + \beta_1\delta_{i2}\\
+& + & \beta_2 K_i + \beta_{3} T_1\\
+& + & \beta_4 W\delta_{i3}
+\end{array}
+$
+}}}
+
+
+\pause
+
+\placebox[center]{0.81}{0.52}{\parbox{0.20\textwidth}{\small\fbox{ 
+  $
+  \begin{array}{l}
+  \beta_0=-0.65 \pm 0.37, \\
+  \beta_1=-0.42 \pm 0.25, \\
+  \green{\beta_2=-0.10 \pm 0.20}, \\
+  \beta_3=-0.09 \pm 0.02, \\
+  \beta_4= 4.2  \pm 1.1
+  \end{array}
+ $
+}}}
+
+\pause
+
+\placebox[center]{0.80}{0.18}{{\small
+   $
+   \begin{array}{l}
+   \frac{\beta_0}{-\beta_3}=\unit[-7.1]{min},\\
+   \frac{\beta_1}{-\beta_3}=\unit[-4.6]{min},\\
+   \frac{\beta_0}{-\beta_2}=\unit[-6.7]{\text{\euro{}}},\\
+   \frac{\beta_1}{-\beta_2}=\unit[-4.3]{\text{\euro{}}},\\
+   \red{\frac{60\beta_3}{\beta_2}=\unit[+57]{\text{\euro{}}/h}},\\
+   \red{\frac{\beta_4}{-\beta_2}=\unit[+44]{\text{\euro{}}}}
+   \end{array}
+   $
+}}
+
+}
+
+
+
+%###################################################
+\frame{\frametitle{Model 3: alt-spec time sensitivities
+    plus weather factor}
+%###################################################
+\placebox[center]{0.35}{0.40}{
+  \figSimple{0.75\textwidth}{\pathDiscrChoice/SC_WS1819_3alt_altspecT_weather_fProb.png}
+}
+
+\placebox{0.80}{0.77}{\parbox{0.3\textwidth}{
+{\small
+$
+\begin{array}{lll}
+ V_i &= & \beta_0\delta_{i1} + \beta_1\delta_{i2}\\
+ &+& \beta_2 K + \beta_3 T_1\delta_{i1}\\
+ &+& \beta_4 T_2\delta_{i2} + \beta_5 T_3\delta_{i3}\\
+ &+& \beta_6 W\delta_{i3}
+\end{array}
+$
+}}}
+
+
+\placebox[center]{0.80}{0.50}{\parbox{0.20\textwidth}{\small
+  \fbox{ $
+   \begin{array}{l}
+   \beta_0=+1.03 \pm 0.74, \\
+   \beta_1=+0.66 \pm 0.40, \\
+   \beta_2=-0.53 \pm 0.25, \\
+   \green{\beta_3=-0.14 \pm 0.03}, \\
+   \green{\beta_4=-0.11 \pm 0.03}, \\
+   \green{\beta_5=-0.06 \pm 0.03}, \\
+   \beta_6=+3.6  \pm 1.1
+   \end{array}
+   $
+}}}
+
+\pause
+
+\placebox[center]{0.80}{0.16}{{\small
+   $
+   \begin{array}{l}
+   \frac{\beta_0}{-\beta_3}=+\unit[7.5]{min},\\
+   \frac{\beta_1}{-\beta_3}=+\unit[4.7]{min},\\
+   \frac{\beta_0}{-\beta_2}=+\unit[1.9]{\text{\euro{}}},\\
+   \frac{\beta_1}{-\beta_2}=+\unit[1.2]{\text{\euro{}}},\\
+   \frac{60\beta_5}{\beta_2}=+\unit[6.7]{\text{\euro{}}/h},\\
+   \frac{60\beta_4}{-\beta_2}=+\unit[12.5]{\text{\euro{}}/h}
+   \end{array}
+   $
+}}
+
+}
+
