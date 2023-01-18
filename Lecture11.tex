@@ -1,5 +1,5 @@
-%\documentclass[mathserif,aspectratio=1610]{beamer}
-\documentclass[mathserif,handout,aspectratio=1610]{beamer}
+\documentclass[mathserif,aspectratio=1610]{beamer}
+%\documentclass[mathserif,handout,aspectratio=1610]{beamer}
 %\usepackage{beamerthemeshadow}
 
 \input{$HOME/tex/inputs/defsSkript}%$
@@ -221,7 +221,7 @@ for the choice probabilities?
 
 
 %##############################################################
-\frame{\frametitle{The \red{Red-Bus}-\blue{Blue-Bus} Problem}
+\frame{\frametitle{MNL: The \red{Red-Bus}-\blue{Blue-Bus} Problem}
 %##############################################################
 \visible<1>{\placebox{0.52}{0.45}{\figSimple{0.8\textwidth}
   {figsDiscr/redBus_only.png}}}
@@ -236,7 +236,7 @@ for the choice probabilities?
 }
 
 %##############################################################
-\frame{\frametitle{The \red{Red-Bus}-\blue{Blue-Bus} Problem}
+\frame{\frametitle{MNL: The \red{Red-Bus}-\blue{Blue-Bus} Problem}
 %##############################################################
 
 \visible<1>{\placebox{0.52}{0.45}{\figSimple{0.8\textwidth}
@@ -256,7 +256,7 @@ for the choice probabilities?
 
 
 %##############################################################
-\frame{\frametitle{Problem solved: 100\% correlated random utilities}
+\frame{\frametitle{100\% correlated random utilities: Problem solved!}
 %##############################################################
 
 \placebox{0.52}{0.45}{\figSimple{0.9\textwidth}
@@ -457,6 +457,10 @@ P_i=P_{lm}=P_l P_{m|l}
     e^{V_{l'm'}/\lambda_{l'}}\right)^{\lambda_{l'}}}
 \edm
 
+\pause
+\vspace{1em}
+\red{$\Rightarrow$ complicated and non-intuitive!}
+
 %\pause
 %{\small
 %\bi
@@ -503,28 +507,33 @@ with the \bfdef{inclusion values}
 \maindmIntext{
   I_l=\ln\left(\sum_{m}e^{\tilde{V}_{lm}/\lambda_l}\right)
 }
+\pause
+\parbox{0.30\textwidth}{\footnotesize{(calibrate first
+    $e^{\tilde{V}_{lm}/\lambda_l}$, then determine $\lambda_l$ with
+    fixed $I_l$ in the outer MNL calibration)}}
 \ei
 
-{\small
+{\scriptsize
 \bi
 \pause \itemAsk Argue that the outer nest decision is a normal MNL with the
 \emph{effective nest utilities} given by $\lambda_lI_l$.
-\pause \scriptsize{\colAnswer{Because for these assumptions $P_l$ has
-    the normal  MNL form}}
+\pause \colAnswer{Because for these assumptions $P_l$ has
+    the normal  MNL form}
 \pause \itemAsk Show that  $\lambda_lI_l$ is
 at least as high as the utility $\tilde{V}_{lm^*_l}$ 
 of the best alternative within the nest and
-that $\lambda_lI=\tilde{V}_{lm^*_l}$ for $\lambda_l\to 0$.
-\pause \scriptsize{\colAnswer{All contributions of the sum inside the log are
-  exponentials and thus positive. \\[-0.7ex]
+that $\lambda_lI_l=\tilde{V}_{lm^*_l}$ for $\lambda_l\to 0$.
+\pause \colAnswer{All contributions of the sum inside the log are
+  exponentials and thus positive.\\[-0.7ex]Furthermore, the $\ln$ function is
+  strictly monotonously increasing. 
   Hence, $\lambda_lI_l$ is larger than
   any single $\tilde{V}_{lm}$ including the maximum. For $\lambda_l\to
-  0$, only the maximum contributes to the sum}}
+  0$, only the maximum contributes to the sum}
 \pause \itemAsk Argue that the (potential) selection within a nest is
 independent 
 from the outer decision and obeys a normal MNL
-\pause \scriptsize{\colAnswer{Independent because $P_{lm}=P_l P_{m|l}$, MNL for
-  the utilities $\tilde{V}_{lm}/\lambda_l$ for fixed $l$}}
+\pause \colAnswer{Independent because $P_{lm}=P_l P_{m|l}$, MNL for
+  the utilities $\tilde{V}_{lm}/\lambda_l$ for fixed $l$}
 \ei
 }
 
