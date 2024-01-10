@@ -6,8 +6,8 @@
 %#############################################
  
 
-%\documentclass[mathserif]{beamer}
-\documentclass[mathserif,handout]{beamer}
+\documentclass[mathserif]{beamer}
+%\documentclass[mathserif,handout]{beamer}
 %\usepackage{beamerthemeshadow}
 \input{$HOME/tex/inputs/defsSkript}%$
 \input{$HOME/tex/inputs/styleBeamerVkoekMa}%$
@@ -111,12 +111,12 @@ $B:  \hatbeta=b$ or
   weather forecast (or the general probability 
   based on climate tables)
 \pause \item $B$: tomorrow's weather forecast 
-$B\in \text{will be nice}, \text{not nice}\}$
+$B\in \{ \text{will be nice}, \text{not nice}\}$
 \pause \item $P(H_0|B)$: a-posteriori probability 
   after hearing the forecast
 \ei
 \pause \item Relation to classical frequentist's statistics: Known are some
-  observation $B$ and conditional probability $P(B|H_0)$ that can be
+  observation $B$ and conditional probability $P(B|H_0)$ that often can be
   expressed in terms of $p$. Want $P(H_0|B)$
 \pause \item Four scaling possibilities
 \bi
@@ -125,7 +125,7 @@ $B\in \text{will be nice}, \text{not nice}\}$
 \pause \item[(iii)] continuous $\beta$, discrete observation ($H_0$ rejected
   or not) 
 \pause \item[(iv)] continuous sought-after quantity
-  $\beta$ (continuous $H_0$) and continuous observation $\hatbeta$
+  $\beta$ and continuous observation $\hatbeta$
   (e.g., regression models) 
 \ei
 \ei
@@ -140,8 +140,8 @@ Discrete Quantities and Observations}
 \vspace{1em}
 
 {\small
-The classical textbook case are binary variables (values
-  ``true'', ``false'', each set has one element; generalisations easy):
+Textbook case: binary variables
+  $\in \{$``true'', ``false''$\}$ (generalisations easy):
 \bdm
 H_0: \beta=\text{true}, \quad \bar{H_0}: \beta=\text{false}, \quad
 B: \hatbeta=\text{true}; \quad \bar{B}: \hatbeta=\text{false}
@@ -149,44 +149,46 @@ B: \hatbeta=\text{true}; \quad \bar{B}: \hatbeta=\text{false}
 \maindm{
 P(H_0|B)=\frac{P(B|H_0)P(H_0)}{P(B)}
 }
+}
 
 \pause
 \vspace{1ex}
 
 \mysubsubheading{Example: Covid-19 tests}
+{\footnotesize
 \bi
 \pause \item $H_0$: person is infected; $B$: person is
   tested positive
+
 \pause \item Known: 
 \bi
-\pause \item[$\bullet$] Sensitivity $P(B|H_0)=\unit[95]{\%}$
-\quad $P(\bar{B}|H_0)=\unit[5]{\%}$
-\pause \item[$\bullet$] Specificity $P(\bar{B}|\bar{H_0})=\unit[97]{\%}$,
-\quad $P(B|\bar{H_0})=\unit[3]{\%}$
-\pause \item[$\bullet$] Incidence $P(H_0)=\unit[5]{\%}$
+\pause \item[$\bullet$] {\footnotesize Sensitivity $P(B|H_0)=\unit[95]{\%}$
+\quad $P(\bar{B}|H_0)=\unit[5]{\%}$}
+\pause \item[$\bullet$] {\footnotesize Specificity 
+$P(\bar{B}|\bar{H_0})=\unit[97]{\%}$,
+\quad $P(B|\bar{H_0})=\unit[3]{\%}$}
+\pause \item[$\bullet$] {\footnotesize Incidence $P(H_0)=\unit[5]{\%}$}
 \ei
-\ei
-}
-\vspace{-1em}
+%
+\pause \item Bayes: % see Lecture05.gnu
+\bi
+\item[$\bullet$] {\footnotesize  
+Test incidence: $P(B) = P(B|H_0)P(H_0)+P(B|\bar{H_0})P(\bar{H_0})
+=\unit[7.6]{\%}$} \\[-0.4ex]
 
-
-{\small
-\begin{align*}
-\visible<8->{
-\text{Bayes: pos. rate: \hspace{4ex} }P(B) \!&= P(B|H_0)P(H_0)+P(B|\bar{H_0})P(\bar{H_0})
-% see Lecture05.gnu
-=\unit[7.6]{\%},\\[-0.4ex]}
-\visible<9->{
-\text{$H_0$ after pos. test: }
-P(H_0|B)      \! &=P(B|H_0)P(H_0)\, /\, P(B)
+\pause \item[$\bullet$] {\footnotesize  $H_0$ after test positive:
+$P(H_0|B) =P(B|H_0)P(H_0)\, /\, P(B)
 %=\frac{0.99 * 0.05}{0.097}
-=\unit[62.5]{\%}\\[-0.4ex]}
-\visible<10->{
-\text{$H_0$ after neg. test: } 
-P(H_0|\bar{B}) \! &=P(\bar{B}|H_0)P(H_0)\, /\, P(\bar{B})
+=\unit[62.5]{\%}$} \\[-0.4ex]
+
+\pause \item[$\bullet$] {\footnotesize  $H_0$ after test negative:
+$P(H_0|\bar{B}) =P(\bar{B}|H_0)P(H_0)\, /\, P(\bar{B})
 %=\frac{0.01 * 0.05}{1-0.097}
-=\unit[0.27]{\%} }
-\end{align*}
+ =\unit[0.27]{\%}$} \\[-0.4ex]
+
+\ei
+
+\ei
 }
 
 
@@ -217,7 +219,7 @@ $g(\hatbeta \ | \ \beta=\beta_j)=f(\hatbeta-\beta_j)$
 
 \pause \item Assume $H_0: \beta=\beta_{j_0}$ with $\beta_{j_0}\in \{\beta_j\}$
 and the observation $B$: $\hatbeta\in [b-\delta/2, b+\delta/2]$ with
-arbitraruly small $\delta$:
+arbitrarily small $\delta$:
 
 \pause \item \text{Bayes: } 
 $P(H_0)=p_{j_0}$, $P(B|H_0)=\delta f(b-\beta_{j_0})$, and 
@@ -257,29 +259,32 @@ $P(H_0|\hat{y}=b)=\frac{0.8 f(b)}{0.8f(b)+0.2f(b-d)}$
 \frame{\frametitle{Map matching II}
 % for $P(H_0)=P(\text{freeway})=0.8$}
 %###################################################
-\placebox[center]{0.35}{0.45}
+\placebox[center]{0.33}{0.45}
 {\figSimple{0.7\textwidth}{figsRegr/PH0_PriorBinaryProb08_b.png}}
 
 %}\end{document}
 
-\placebox[center]{0.84}{0.45}
-{\parbox{0.35\textwidth}{\footnotesize
+\placebox[center]{0.83}{0.45}
+{\parbox{0.39\textwidth}{\footnotesize
+
 True vehicle position:\\
-$y=\twoCases{0}{\text{freeway}}{d}{\text{parallel road}}$
-\\[1em]
-\pause Lateral GPS measurement:\\[0.5em]
+$y\!=\!\twoCases{0}{\text{freeway}}{d\!=\!\unit[50]{m}}{\text{parallel road}}$
+\\[2em]
+\visible<2->{
+ Lateral GPS measurement:\\[0.5em]
 $\hat{y} \sim 
 \twoCases{N(0,\sigma^2)}{\text{freeway}}{N(d,\sigma^2)}{\text{road}}$
-\\[1em]
-\pause Measured:\\
- $\hat{y}=\unit[30]{m}$, $\sigma=\unit[10]{m}$,\\ 
- at a distance $d=\unit[50]{m}$
-\\[1em]
-\pause Read from graphics:\\
+\\[2em]}
+\visible<3->{
+Measured:\\
+ $\hat{y}=\unit[30]{m}$, $\sigma=\unit[10]{m}$
+\\[2em]}
+\visible<4->{
+Read from graphics:\\
 $\frac{\sigma}{d}=0.2$, $\frac{\hat{y}}{d}=0.6$ \\
 $\Rightarrow P(H_0|\hat{y})=0.23$\\[0.5em]
 \red{$\Rightarrow$ 
-you are on the parallel road with a probability of \unit[77]{\%}}
+you are on the parallel\\road with a probability of \unit[77]{\%}}}
 }}
 
 }
@@ -293,15 +298,23 @@ you are on the parallel road with a probability of \unit[77]{\%}}
   Measurements }
 %###################################################
 
+{\small
 \bi
 \item The quantity $\beta$ has the a-priori distribution
   density $h(\beta)$\\[1ex]
-\pause \item Unlike discrete quantities/parameters, $H_0$ meeds to be an
+\pause \item Unlike discrete quantities/parameters, $H_0$ needs to be an
   interval instead of a point \colAsk{(why?)} $\Rightarrow P(H_0)$ and
   $P(B|H_0)$ are integrals over the values of $H_0$\\[1ex]
-\pause \item Probability for $H_0$ based on measurements lying in the extreme
-region of a given measurement ($B=E\sub{data}$):
 \ei
+
+\vspace{1em}
+\pause 
+ \mysubsubheading{Relation of Bayesian inference to the $p$-value
+  and the power function}
+
+Probability for $H_0$ based on measurements lying in the extreme
+region of a given measurement ($B=E\sub{data}$):
+
 
 \bdma
 \visible<4->{
@@ -309,12 +322,14 @@ P(H_0|E\sub{data}) &=& \frac{P(E\sub{data}|H_0)P(H_0)}{P(E\sub{data})}\\}
 \visible<5->{
  & \stackrel{P(H_0)\to \int_{\beta\in H_0} h(\beta)\diff(\beta)}{=} &
    \frac{\int_{\beta\in H_0}P(E\sub{data}|\beta)h(\beta)\diff{\beta}}
-        {\int_{\beta\in \IR}P(E\sub{data}|\beta)h(\beta)\diff{\beta}}\\}
-\visible<6->{
- & \stackrel{\text{def power function $\pi$}}{=} &
-   \frac{\int_{\beta\in H_0}\pi(\beta)h(\beta)\diff{\beta}}
-        {\int_{\beta\in \IR}\pi(\beta)h(\beta)\diff{\beta}} }
+        {\int_{\beta\in \IR}P(E\sub{data}|\beta)h(\beta)\diff{\beta}} }
 \edma
+\visible<6->{$P(E\sub{data}|\beta)$ is related to the
+  $p$-value $P(E\sub{data}|\beta_0 \in H_0^*)$ and also to the power
+  function $\pi_{\alpha}(\beta)=P(R_\alpha|\beta)$ \  [$R_\alpha$=
+  rejection region at $\alpha$]}
+}
+
 }
 
 %###################################################
@@ -355,7 +370,7 @@ P(H_0|B) &=& \frac{P(B|H_0)P(H_0)}{P(B)}\\}
   \frac{\int_{\beta\in H_0}f(b-\beta)h(\beta)\diff{\beta}}
        {\int_{\beta\in \IR}f(b-\beta)h(\beta)\diff{\beta}}
 }
-Notice that the denominator is just the convolution $[f*g]$ at $\hatbeta=b$
+Notice that the denominator is just the convolution $[f*h]$ at $\hatbeta=b$
 }
 
 }
@@ -370,16 +385,14 @@ Notice that the denominator is just the convolution $[f*g]$ at $\hatbeta=b$
 
 {\small
 \bi
-\item Prior $\beta \sim N(0,\sigma_\beta^2)$ (expectation=0 is
-  no restriction)
+\item Prior $\beta \sim N(0,\sigma_\beta^2)$ (maximum ignorance), so
+  $\beta/\sigma_\beta \sim N(0,1)$  
 
-\pause \item Unbiased estimator $ \hatbeta \sim N(\beta,\sigma_b^2)$
-\pause \item Null hypothesis $H_0$: $\beta \le \beta_0$\\
-$\Rightarrow
-f(b-\beta)= \phi\left(\frac{b-\beta}{\sigma_b}\right), \quad
-h(\beta)=\phi\left(\frac{\beta}{\sigma_{\beta}}\right), \quad
-\int_{H_0}\diff{\beta}=\int_{-\infty}^{\beta_0}\diff{\beta}
-$
+\pause \item Unbiased estimator $ \hatbeta \sim N(\beta,\sigma_b^2)$,
+so  $(b-\beta)/\sigma_\beta \sim N(0,1)$
+
+\pause \item Null hypothesis $H_0$: $\beta \le \beta_0$, 
+so $\int_{H_0}\diff{\beta}=\int_{-\infty}^{\beta_0}\diff{\beta}$
 
 \pause \item Bayesian inference for $H_0$ under the observation
   $\hatbeta=b$ (long calc.):
@@ -414,6 +427,39 @@ result is valid for
 
 {\small
 \bi
+\itemAsk \colAsk{Show that, on the previous slide,
+  $b=\beta_0+\sigma_b\Phi^{-1}(1-p)$}
+\pause \itemAnswer \colAnswer {\scriptsize We assume known variance, so 
+$T=(\hatbeta-\beta_0)/\sigma_b \sim N(0,1)$. For $H_0$: $\beta\le\beta_0$ we
+  have
+\bdma
+\pause p &=&1-\Phi(t\sub{data})\\
+  &=& 1-\Phi\left(\frac{b-\beta_0}{\sigma_b}\right)\\
+\pause \Phi\left(\frac{b-\beta_0}{\sigma_b}\right) &=& 1-p\\
+\frac{b-\beta_0}{\sigma_b} &=& \Phi^{-1}(1-p)\\
+  b &=& \beta_0+\sigma_b\Phi^{-1}(1-p)
+\edma
+}
+
+\pause \itemAsk \colAsk{Show that, on the previous slide,
+  $\beta_0 = \sigma_{\beta}\Phi^{-1}(P(H_0))$}
+\pause \itemAnswer \colAnswer {\scriptsize We have 
+$P(H_0)=P(\beta\le \beta_0)=\Phi\left(\frac{\beta_0}{\sigma_\beta}\right)$, 
+so
+$\Phi^{-1}(P(H_0))=\beta_0/\sigma_\beta$.
+}
+\ei
+}
+
+}
+
+%###################################################
+\frame{\frametitle{Questions II} 
+%###################################################
+
+{\small
+\bi
+
 \pause \itemAsk \colAsk{Show that, if the variance of the prior distribution
   is much larger than that of the measurement, we have $P(H_0|\hatbeta)\to p$
   and, if it is much smaller, we have $P(H_0|\hatbeta)\to P(H_0)$}
@@ -453,9 +499,12 @@ P(H_0|\hatbeta) &\to & \Phi\left(\frac{\beta_0-b}{\sigma_b}\right) }
 \visible<11->{
  \stackrel{\text{def quantile}}{=}\uu{p} \OK }
 \edma
-\visible<12->{\colAnswer{! Limiting case $\sigma_{\beta} \ll \sigma_{b}$:
- $\mu\to 0$, $\sigma\to \sigma_{\beta}$,
-  $P(H_0|\hatbeta)=\Phi(\beta/\sigma_{\beta})= P(H_0) \OK$}}
+\visible<12->{ \itemAnswer \colAnswer{Answer to the second question,
+  $\sigma_{\beta} \ll \sigma_b$:}}
+\vspace{1em}
+
+\visible<13->{we have $\mu\to 0$, $\sigma\to \sigma_{\beta}$,
+  $P(H_0|\hatbeta)=\Phi(\beta/\sigma_{\beta})= P(H_0) \OK$}
 
 
 \ei
@@ -505,7 +554,7 @@ $P(H_0|\hatbeta)=\unit[8]{\%}$ $\Rightarrow$ \red{no!}\\
 \placebox[center]{0.83}{0.45}
 {\parbox{0.39\textwidth}{\small
 \bi
-\pause \item $\sigma_b \ll \sigma_{\beta}$\\
+\item $\sigma_b \ll \sigma_{\beta}$\\
 $\Rightarrow P(H_0|\hatbeta) \approx p$\\
 $\Rightarrow$ \green{precise a-posteri information changes much.}
 \pause \item $\sigma_b \gg \sigma_{\beta}$
@@ -530,9 +579,9 @@ $\Rightarrow$ \red{fuzzy a-posteri data essentially give no information
 Again, new data with 
 $\sigma_b \ll \sigma_{\beta}$ gives \green{much a-posteriori
 information (at least if $p$ is significantly different from
-$P(H_0)$)},\\[1em]
-\pause new data with $\sigma_b \gg \sigma_{\beta}$ are
-\red{tantamount to essentially no new information.}
+$P(H_0)$)},\\[2em]
+\visible<2->{New data with $\sigma_b \gg \sigma_{\beta}$ are
+\red{tantamount to essentially no new information.}}
 }}
 
 }

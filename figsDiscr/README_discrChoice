@@ -11,11 +11,11 @@ Multinomial-Logit direkt mit Newton-Verfahren:
 Verschiedene Logit- und Probitmodelle mit allgemeinen Levenberg-Marquardt-Solver:
   * Anwendungs-Projekte: ~/vorlesungen/Verkehrsoekonometrie_Ma/discrChoice_cc_Levmar/
   * Template-Projkte: statedChoiceWS1213
-  * Eigentl. Solver: ~/trafficSim/sources/levmar-2.5/calibDiscrChoice.cpp
+  * Eigentl. Solver: ~/trafficSim/sources/calibLevmar/calibDiscrChoice.cpp
 
 Spezialisierte Untersuchung "Schwellen"
 (noch nicht im allg. calibDiscrChoic Projekt):
-  * Eigentl. Solver: ~/trafficSim/sources/levmar-2.5/calibDiscrChoiceThreshold.cpp
+  * Eigentl. Solver: ~/trafficSim/sources/calibLevmar/calibDiscrChoiceThreshold.cpp
 
 Projekte mit Biogeme:
   * Anwendungs-Projekte: ~/vorlesungen/Verkehrsoekonometrie_Ma/discrChoice_cc_BIOGEME/

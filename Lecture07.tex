@@ -253,13 +253,15 @@ V_{ni}=\sum_m \beta_{m} X_{mni}
   convention) and $X_{mni}$ corresponds to the system matrix.
 \\[1em]
 
-\pause \item The factors may contain alternative-specific constants and
-three categories of exogenous variables: 
+\pause \item The factors come in four categories, three of which
+contain exogeneous variables:
 \bi
 \item \bfdef{alternative-specific constants (ACs)}
   play the role of constants in regression models,
-\item \bfdef{characteristics} are attributes of the alternatives,
-\item \bfdef{socioeconomic factors} are attributes of the decision makers,
+\item \bfdef{characteristics} are attributes of the alternatives (and
+  may also depend on the decision maker)
+\item \bfdef{socioeconomic factors} are attributes of the decision
+  makers alone,
 \item \bfdef{external factors} depend neither on the alternatives nor the
   persons but influence the decisions.
 \ei
@@ -307,8 +309,10 @@ alternative $j$ over $k$, $j,k \neq I$}\\[-0.5ex]
 
 \pause \itemAsk \colAsk{What changes when making Alternative 1 the
 reference?}\\[-0.5ex]
-\pause \colAnswer{\scriptsize{$V_{ni}=\beta_{02}\delta_{2i}+ ... 
-+ \beta_{0I}\delta_{Ii}$}}
+\pause \colAnswer{\scriptsize{
+$V_{ni}=\beta^*_{02}\delta_{2i}+ ... + \beta^*_{0I}\delta_{Ii}$ where 
+$\beta^*_{0i}=\beta_{0i}-\beta_{01}$,
+particularly $\beta^*_{0I}=-\beta_{01}$}}
 \ei
 
 }
@@ -332,9 +336,9 @@ reference?}\\[-0.5ex]
 \pause \item Characteristics can be identified directly with factors,
 $X_{mni}=C_{mni}$. Modelling variants:
 \bi
-\item \bfdef{generic} ansatz
+\item \bfdef{generic:} \ 
   $V_{ni}=...+\beta_mC_{mni}$  (the same parameter $\beta_m$ for all alternatives $i$),
-\item \bfdef{alternative-specific} ansatz
+\item \bfdef{alternative-specific:} \
   $V_{ni}=...+\beta_{mi}C_{mni}$ with
   alternative-specific parameters $\beta_{mi}$.
 \ei
@@ -387,13 +391,18 @@ g_n=\twoCases{1}{\visible<2->{\femalepng}}{0}{\visible<2->{\malepng}}
 \pause \item Instead, there are two ways to specify valid linear factors: 
 \benum
 \item formulate it in an alternative-specific way with ACs:
+% !!! I use the \sum_j notation only if the reference has another
+% expression Otherwise (e.g. interacting S with C, a direct
+% formulation is easier:
+% +
 \bdm
 V_{ni}=...+\beta_{m1}S_{mn}\delta_{1i}+...+\beta_{m,I-1}S_{mn}\delta_{I-1,i},\quad
 \delta_{ji}=\twoCases{1}{i=j}{0}{i\neq j}
 \edm
 \pause \item let it \bfdef{interact} with a characteristic $m'$, e.g.,
-  $X_{mni}=S_{mn}C_{m'ni}$ and model it in an alternative-specific way
-  $V_{ni}= ... + \beta_{mi}S_{mn}C_{m'ni}$
+  $X_{mni}=S_{mn}C_{m'ni}$ and formulate it in a generic 
+($V_{ni}=...+\beta_mS_{mn}C_{m'ni}$) or alternativ-specific way,
+($V_{ni}=...+\beta_{mi}S_{mn}C_{m'ni}$).
 \eenum
 
 \ei
@@ -410,11 +419,10 @@ $V_{ni}=...+\beta_mS_{mn}$ for all $i$?}\\
 \pause \colAnswer{\small{nothing}}
 
 \pause \itemAsk \colAsk{How to model that woman prefer 
-PT over other modes more than men?}\\
+PT (Alt. $i=3$) over other modes more than men?}\\
 
 \pause \colAnswer{\small{
-Assume $i=3$ is the PT
- and $S_{mn}=g_n=1$ for woman and =0 for men. 
+Assume $S_{mn}=g_n=1$ for woman and =0 for men. 
 
 \bi
 \colAnswer{
@@ -434,7 +442,8 @@ $-\beta_g g_n\sum_{j\neq 3} \delta_{ji}$
 \pause \itemAsk \colAsk{How to model an income-dependent time sensitivity?}\\
 \pause \colAnswer{\small{Let the income $I_n$ interact with the
     travel time by a factor $+\beta_{I}I_nT_{ni}$ with $\beta_{I}$
-    expected to be negative}}
+    expected to be negative. Still better is an alternative-specific
+    formulation: $+\beta_{Ii}I_nT_{ni}$ }}
 \pause \itemAsk \colAsk{Why it is not possible to use the age directly?}\\
 \pause \colAnswer{\small{Since very young and very old persons
     often act more similar than middle-aged persons, age (as a
@@ -585,8 +594,8 @@ or
 \\[2em]
 $
 \begin{array}{l}
-V_1 =  \beta_0 + \beta_2 K_1 + \beta_{31} K_1,\\
-V_2 =  \beta_1 + \beta_2 K_2 + \beta_{32} K_2,\\
+V_1 =  \beta_0 + \beta_2 K_1 + \beta_{31} T_1,\\
+V_2 =  \beta_1 + \beta_2 K_2 + \beta_{32} T_2,\\
 V_3 =  \beta_2 K_3 + \beta_{33} K_3+\beta_4 W  
 \end{array}
 $

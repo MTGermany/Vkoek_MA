@@ -1,0 +1,124 @@
+https://dynamicecology.wordpress.com/2015/11/04/is-it-a-fixed-or-random-effect/
+
+https://www.statsimprove.com/en/what-is-the-difference-between-anova-and-regression-and-which-one-to-choose/
+
+https://en.wikipedia.org/wiki/Mixed_model
+
+
+
+Hallo Martin,
+
+der Student will offensichtlich zwei statistische Methoden anwenden, mixed models und MANOVA. Zunaechst sind beides Erweiterungen von Standardmethoden, wenn man manche Faktoren nur mittels "random effects" beruecksichtigen will:
+
+
+* Mixed models erweitern die Regression (fixed effects), indem sie auch Faktoren mit random effects beruecksichtigen,
+
+
+* MANOVA erweitert die Analysis of variance (ANOVA, fixed effects) auf random effects.
+
+Hier muss man sich ueber zwei Dinge klarwerden:
+
+(1) Was sind fixed und random effects und wann verwendet man welchen Ansatz?
+
+(2) Was ist der Unterschied zwischen Regression und ANOVA und wann verwendet man welchen?
+
+Zu (1): Fixed effects sind die Sensitivitaeten zu Faktoren, deren Einfluss man wissen moechte, hier der Einfluss des subjektiven Muedigkeitslevels x=1-9 auf Kennwerte des Fahrverhaltens y wie mittlere Geschwindigkeit, TTC, Abstaende, Beschleunigungen (jede endogene Variable hat i.A. eine separate Analyse)
+
+Random effects sind die "confounder", also Sensitivitaeten zu Faktoren, die zwar durchaus relevant sind, also y als Funktion der Faktoren systematisch veraendern, aber die man nicht wissen will. Das sind hier die einzelnen Probanden.
+
+Was 'fixed" und was "random" ist, liegt allein an der Zielsetzung. Beispielsweise koennte man auch die Personen mittels Personendummy als fixed effects formulieren, wenn man auch die Unterschiede zwischen individuellen Personen und nicht nur den mittleren Einfluss der Muedigkeit wissen will. Will man aber nicht wirklich Details ueber die Personen wissen, formuliert man die Personeneinfluesse als random effects. Man spart viele Freiheitsgrade, da nur eine Inter-Personen-Varianz anstelle all der Sensitivitaeten (fixed effects) der Personendummies geschaetzt wird, hat aber dafuer stochastische Sensitivitaeten ("random effects") statt fester beta-Werte (wohlgemerkt: in der Population; dass die Schaetzer von beta stochastisch sind, ist etwas anderes) und hat keine p-Werte. 
+
+Faktoren zu den random effects muesen ausserdem diskret (i. A. nominalskaliert/qualitativ) sein und sollten mehr als 4 oder 5 Auspraegungen haben (sonst besser als fixed effects behandeln). All das ist hier erfuellt (31 Personen).
+
+
+(2) Unterschied zwischen Regression und ANOVA. Im Wesentlichen ist ANOVA eine Untermenge der Regressionsrechnung: Alle Aussagen von ANOVA kann man auch mit der Regressionsrechnung machen, aber nicht umgekehrt. ANOVA berechnet nur Varianzanteile, die durch die Faktoren erklaert werden, waehrend Regressionsrechnung auch Staerke und Richtung des Effekts beschreibt. Das ist aehnlich, als ob man bei Korrelationsanalysen R^2 oder die Korrelation r ausgibt. Bei r weiss man die Richtung der Korrelation, bei R^2 nur die Staerke. Vorteil von ANOVA: oft leichter zu formulieren.
+
+
+Konkrete Fragestellung 1: Einfluss nur der Muedigkeit: ein Mixed Model ist nach oben gesagten das Richtige. Insbesondere will ich ja wissen, ob Muedigkeit z.B. den Abstand verringert oder vergroessert, ich brauche also die Vorzeichen, die MANOVA nicht liefert. 
+
+Gibt es Evidenz, dass die Response auf Muedigkeit nichtlinear ist (Sie haben ja kaum Sensitivitaet bis Stufe 6, dann starker Einfluss erwaehnt), gibt es mehrere Moeglichkeiten:
+
+(i) Volle Beruecksichtigung der Nichtlinearitaet der ordinalskalierten Variable "Muedigkeitslevel" statt einer Behandlung als pseudo-intervallskalierte Variable (letzteres ist nur gerechtfertigt ifalls die Response linear ist): Bei 9 Muedigkeitslevels 8 Dummies x_i=1 falls Level x=1, x_i=0 sonst mit Level 9 der Referenz (dann sind alle Dummies=0)
+
+(ii) will man Freiheitsgrade sparen, Polynomial-Regression mit zweiter Ordnung in Level x
+
+(iii) will man etwas Robusteres, z.B. bereichsweise lineares Modell mit Kink bei x=6: y=b0+b1*x falls x<=6, y=b0+b1*6+b2*(x-6) falls x>6. Beides benoetigt nur 3 statt 8 Parameter, (iii) ist zwar robuster als (ii), dafuer hat man das Level festgelegt, wo sich die Sensitivitaet aendert.
+
+Konkrete Fragestellung 2: Verteilung der Fahrvariablen. Meinen Sie da eine Verteilungsfunktion von y(x)? Ich denke, der Erwartungswert (Aufgabenstellung 1) und zusaetzlich die Varianz der y-Werte als Funktion von x sollte genug sein. Das liefert das obige Mixed Model, aber natuerlich auch eine MANOVA.
+
+LG
+
+Martin
+
+
+
+Dr. Martin Treiber
+         Institute for Transport & Economics, TU Dresden
+         Chair of Traffic Modelling, Econometrics, and Statistics
+         Falkenbrunnen, Room 123 (two floors up from the entrance!)
+         Würzburger Str. 35, D-01062 Dresden
+         martin.treiber@tu-dresden.de or   martin@mtreiber.de
+         www.mtreiber.de
+         phone/fax:     +49 (351) 463 36794 / 36809
+
+On 09.11.23 08:40, Waltz, Martin wrote:
+>
+> Hallo Martin,
+>
+>  
+>
+> unser Lehrstuhl hat die untere Mail bekommen und Ostap hat sie an mich weitergeleitet. Da Du in solchen Thematiken aber viel mehr Erfahrung hast, würde ich mich freuen, wenn Du vielleicht kurz deine Einschätzung abgeben könntest.
+>
+>  
+>
+> In meinen Augen ist eine multivariate Varianzanalyse sinnvoll, aber mit Mixed Model Analysen habe ich noch keine Erfahrungen gesammelt, obwohl ich denke, dass das durch die wiederholten Messungen an der gleichen Person sinnvoll sein könnte.
+>
+>  
+>
+> Ich würde mich freuen, wenn Du mir hier weiterhelfen könntest.
+>
+>  
+>
+> Viele Grüße,
+>
+> Martin
+>
+>     Anfang der weitergeleiteten Nachricht:
+>
+>      
+>
+>     Von: Zöllner, Robert <robert.zoellner@mailbox.tu-dresden.de>
+>
+>     Betreff: Frage zu statistischer Methode
+>
+>     Datum: 6. November 2023 um 23:54:43 MEZ
+>
+>     An: "Okhrin, Ostap" <ostap.okhrin@tu-dresden.de>
+>
+>      
+>
+>     Sehr geehrter Herr Prof. Okhrin,
+>
+>      
+>
+>     ich bin Student am Lehrstuhl für Kraftfahrzeugtechnik der TU Dresden und beschäftige mich derzeit im Zuge meiner Diplomarbeit u. a. mit einer statistischen Fragestellung, zu der ich eine Expertenmeinung brauche und mich daher an Sie wende.
+>
+>      
+>
+>     Ich untersuche die Auswirkungen von Müdigkeit auf die Fahrleistung von Proband:innen, um diese in ein Fahrerverhaltensmodell zu überführen und somit realistischere Multiagentensimulationen zu ermöglichen. Dazu liegen mir Daten aus einer Fahrsimulatorstudie, in der die Fahrleistung von 31 Proband:innen unter zunehmender Müdigkeit aufgezeichnet wurde, vor. Das Studiendesign sieht dabei so aus, dass zunächst eine 15-minütige manuelle Fahrt durchgeführt wird, in der in drei 5-Minutenblöcken jeweils die subjektive Müdigkeit der Proband:innen auf einer Skala von 1-9 abgefragt wurde. Anschließend erfolgt eine hochautomatisierte Fahrt, welche zu einer Müdigkeitszunahme führt. Wird ein gewisser Grenzbereich der Müdigkeit erreicht (Wert 7), erfolgt eine weitere 15-minütige manuelle Fahrt mit dreimaliger Abfrage der Müdigkeit im Abstand von 5 min. Während der kompletten Studie werden mit einer Messfrequenz von 100Hz Fahrleistungsvariablen wie Geschwindigkeit, TTC, Beschleunigungen, Abstände zum Vorderfahrzeug etc. aufgenommen. 
+>
+>      
+>
+>     Nun meine konkrete Fragestellung. Ich will zunächst untersuchen, ob Müdigkeit einen signifikanten Effekt auf die einzelnen Fahrleistungsvariablen erkennen lässt bzw. mit den einzelnen Variablen korreliert. Mein Ansatz dazu wäre eine Mixed Model Analyse. Weiterhin will ich feststellen, ob die Verteilungen der Fahrleistungsvariablen (bspw. von Geschwindigkeit) in den einzelnen Gruppen der Müdigkeit signifikante Unterschiede aufweisen, um somit ggf. auf Abstufungen der Beeinträchtigungsausprägung zu schließen (bspw. sind die Geschwindigkeitsverteilungen in den Müdigkeitsstufen7-9 ähnlich, jedoch signifikant unterschiedlich zu den Stufen 1-6 à 1-6: nicht ermüdet, 7-9: ermüdet). Dazu will ich eine MANOVA durchführen. Halten Sie diese Herangehensweisen für sinnvoll und sehen sie da ggf. Probleme bei der Anwendung der jeweiligen Verfahren im Bezug auf die Struktur der Daten?
+>
+>      
+>
+>     Ich würde mich über eine Experteneinschätzung und Hinweisen zu den statistischen Auswertungen Ihrerseits sehr freuen. Gern auch zur ausführlicheren Diskussion in einem Remote-Meeting. Da ich die Arbeit in Kooperation mit der BMW Group in München bearbeite, ist leider kein vor Ort Austausch in Dresden möglich. Ich freue mich auf Ihre Rückmeldung.
+>
+>      
+>
+>     Beste Grüße
+>
+>     Robert Zöllner
+>
+>  

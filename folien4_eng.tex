@@ -823,7 +823,7 @@ choice probabilities $P_i$ rather than the discrete actual choices as
 endogenous 
 variables. For the general deterministic utilities
 \bdm
-V_{ni}=\sum_m\beta_{mi}{x_{mni}}
+V_{ni}=\sum_m\beta_{mi}{x_{nmi}}
 \edm
 \vspace{-2em}
 
@@ -834,8 +834,8 @@ we derive the
   (characteristic) $m$ of an alternative $i$ feeds back on the demand
   for this alternative:
 \maindm{\epsilon_{nii}\sup{(mic,m)}=
-\frac{x_{mni}}{P_{ni}}\ablpart{P_{ni}}{x_{mni}}
-=\beta_mx_{mni}(1-P_{ni})
+\frac{x_{nmi}}{P_{ni}}\ablpart{P_{ni}}{x_{nmi}}
+=\beta_mx_{nmi}(1-P_{ni})
 }
 \pause\item \bfdef{Cross elasticities:} The attribute
   (characteristic) $m$ of an alternative $j$ feeds back on the demand
@@ -1149,8 +1149,8 @@ the estimation problem:
   factors $X$ for a given parameter $m$ should be the same
 \bdma
 X_m\sup{MNL} &=& X_m\sup{data}, \\
-\sum_{n, i} x_{mni}\, P_{ni}(\hatvecbeta) &=&
-\sum_{n, i} x_{mni}\, y_{ni} = \sum_n x_{mni_n}
+\sum_{n, i} x_{nmi}\, P_{ni}(\hatvecbeta) &=&
+\sum_{n, i} x_{nmi}\, y_{ni} = \sum_n x_{nmi_n}
 \edma
 \vspace{-1em}
 }

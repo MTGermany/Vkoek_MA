@@ -117,11 +117,11 @@ by fixed, generally nonlinear functions $g_j(.)$
 \placebox{0.50}{0.53}{\parbox{0.90\textwidth}{
 \maintextbox{0.90\textwidth}{If the
  econometric model is not specified
-  correctly, all sorts of problems occur, from mild to nasty:
+  correctly, all sorts of problems occur, from irrelevant to nasty:
 \bi
 \pause \item \blue{irrelevant:} some mis-specification are
 detected automatically during model estimation producing ``zero/zero''
-errors and the like
+errors and the like, or even self-corrected.
  \pause \item \green{mild:} a mis-specification is not detected
  automatically but there is no bias and the estimation method is even
  efficient. However, inferential conclusions may be incorrect
@@ -349,7 +349,7 @@ variable} with values 0 before, 1 after the break.
 \bi
 \item The expectation value of the residual deviation should be
   $E(\epsilon)=0$.
-\pause\item \textbf{Consequences:} \bfdef{None}: The Ordinary Least
+\pause\item \textbf{Consequences:} \blue{None}: The Ordinary Least
 Squares (OLS) method takes care for you. If only differences matter
 (discrete-choice theory), this 
 is even not relevant at all.
@@ -368,7 +368,7 @@ is even not relevant at all.
   not heteroscedastic (left). 
 \pause \item \textbf{Consequences:} if violated, OLS estimation
 remains \bforange{unbiased 
-but is no longer efficient} (a relatively ``mild'' error).
+but is no longer efficient} (a medium error).
 \pause \item \textbf{Solution:} Advanced methods, e.g. weighted OLS;
 sometimes automatically resolved when transforming $y$ as in the
 Dow-Jones example 
@@ -384,7 +384,7 @@ Dow-Jones example
 \bi
 \item There should be no correlation of $\epsilon$ relative to $x_i$ or $y$
 (on the right). The model on the left is mis-specified.
-\pause \item \textbf{Consequences:} relatively \bforange{mild:}
+\pause \item \textbf{Consequences:} \bforange{medium:}
 (OLS estimator not efficient; underestimation of estimation errors;
 possibly a small bias).
 \pause \item \textbf{Solution:} try identify a missing systematic factor
@@ -402,8 +402,7 @@ such as a periodicity.
 \bi
 \item The residual $\epsilon$ should be Gaussian distributed (right),
 not, e.g., bimodally distributed (left).
-\pause \item \textbf{Consequences:} a violation has \bfgreen{very
-  mild}  consequences: OLS remains
+\pause \item \textbf{Consequences:} a violation has \bfgreen{mild}  consequences: OLS remains
 unbiased \emph{and} efficient but the error estimates are wrong).
 \pause \item All four statistical specifications can be summarized by
 requiring
@@ -431,7 +430,7 @@ model exactly, i.e.,
 it can be calibrated to zero residuals 
   $\epsilon_i=0$: \emph{overfitting}. This is still \bfgreen{harmless}
 since OLS will detect it for you (zero residuals) and the inferential
-analysis will retur a ``0/0 error''
+analysis will return a ``0/0 error''
 
 \pause \item \textbf{Consequence of satisfying the requirement
   borderline:} If there are only a few more data points than
@@ -467,7 +466,7 @@ perfect multicollinearity will lead to \bforange{large estimation errors}
 \pause \maintextbox{0.8\textwidth}{If all items of all three specification
   categories are 
 fulfilled, the econometric problem satisfies the 
-\bfred{Gau\3-Markov assumptions}}
+\bfdef{Gau\3-Markov assumptions}}
 
 }
 

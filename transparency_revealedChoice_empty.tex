@@ -1,0 +1,81 @@
+
+
+\documentclass[a4paper]{foils}
+\pagestyle{empty}
+\parindent0mm
+
+\usepackage{graphicx} 
+\usepackage{ngerman} 
+
+\textheight250mm
+\textwidth190mm
+\oddsidemargin-10mm
+\topmargin-20mm
+
+\input{$HOME/tex/inputs/defsSkript}
+
+%###########################################################
+%###########################################################
+
+\begin{document}
+
+\providecommand{\entry}[6]{
+       \hspace{0mm}\parbox{26mm}{\vspace*{1mm}#1\vspace*{1mm}} \hspace*{-1mm}
+     & \hspace{0mm}\parbox{12mm}{\vspace*{1mm}#2\vspace*{1mm}} \hspace*{-1mm}
+     & \hspace{0mm}\parbox{12mm}{\vspace*{1mm}#3\vspace*{1mm}} \hspace*{-1mm}
+     & \hspace{0mm}\parbox{20mm}{\vspace*{1mm}#4\vspace*{1mm}} \hspace*{-1mm}
+     & \hspace{0mm}\parbox{12mm}{\vspace*{1mm}#5\vspace*{1mm}} \hspace*{-1mm}
+     & \hspace{0mm}\parbox{25mm}{\vspace*{1mm}#6\vspace*{1mm}} \hspace*{-1mm}
+                        \\ \hline
+                       }
+
+\begin{center}
+
+
+
+%!! Achtung  bei waagerechter Anordnung bei BEIDEN Elementen parboxen!
+
+
+%##############################################################
+\centering{\myheading{Survey in the Audience II}}
+%##############################################################
+
+\vspace{1em}
+
+
+
+Transport mode for your\\ trip to the lectures today:
+\vspace{1em}
+
+Date: \ldots\ldots \hspace{5em}
+Weather: \ldots\ldots
+
+\begin{tabular}{|l||l|l|l|l||l|}  \hline
+\entry{Mode}{Ped}{Bike}{Public\\Trans-\\[-0.4ex]port}{Car}{$\sum$}
+   \hline \hline
+\entry{0-1 km}{}{}{}{}{}
+\entry{1-2 km}{}{}{}{}{}
+\entry{2-5 km}{}{}{}{}{}
+\entry{5-10 km}{}{}{}{}{}
+\entry{$>10$ km}{}{}{}{}{} \hline \hline
+\entry{$\sum$}{}{}{}{}{$n=$} \hline \hline
+\entry{$A_k\sup{(WB)}$}{}{}{}{}{1} \hline
+\end{tabular}
+
+\vspace{1em}
+\parbox{0.8\textwidth}{
+\# students with car availability: \ \ldots\ldots \\[1ex]
+\# students with bike availability:\ \ldots\ldots \\
+}
+
+\end{center}
+\end{document}
+
+
+
+
+
+
+
+
+

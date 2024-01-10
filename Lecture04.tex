@@ -601,7 +601,7 @@ p= 1-F_T^{(9)}(t\sub{data})=1.9E-5^{***}$
 per addtl \euro{}'':
 interval hypothesis $\beta_2<-1$ \\ $t\sub{data}=0.24,\
 p=1-F_T^{(9)}(t\sub{data})=\unit[40]{\%} $
-\pause \item $H_{04}$ One star more is worth $\ge$ \unit[30]{\euro{}}'':\\
+\pause \item $H_{04}$ One star more is worth less than \unit[30]{\euro{}}'':\\
  function interval hypothesis
   $\gamma=\beta_1+30\beta_2<0$\\ $t\sub{data}=4.20,\ 
 p= 1-F_T^{(9)}(t\sub{data})=\unit[0.12]{\%}^{**}$
@@ -656,13 +656,16 @@ values take on other values?
   quantified by following conditional probability called
   \bfdef{statistical power
     function}: 
-\maindm{\pi(\beta)=\text{Pr}(\text{test rejected} | \beta)}
+\maindm{\pi_{\alpha}(\beta)=\text{Pr}(\text{test rejected at error
+    probability $\alpha$} | \beta)}
 \pause\item If $\beta\notin H_0$, then $\pi(\beta)$ indicates the
   \bfdef{statistical power} or \bfdef{specificity} of a test and 
  $1-\pi(\beta)$ its probability for a type-II error
 \pause\item If $\beta\in H_0$, then $\pi(\beta)$ is the type-I ($\alpha$)
   error and $1-\pi(\beta)$ the \bfdef{sensitivity} of a test
-\pause\item By definition, $\pi(\beta_0)=\alpha$
+\pause\item Sensitivity and specificity depend on the assumed error
+probability $\alpha$. By definition, $\pi(\beta_0)=\alpha$ if
+$\beta_0\in  H_0^*$
 \ei
 }
 

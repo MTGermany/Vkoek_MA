@@ -777,9 +777,12 @@ discrete-choice models? \\
 Since elasticities describe average aspects, we take the
 choice probabilities $P_i$ rather than the discrete actual choices as
 endogenous 
-variables. For the general deterministic utilities
+variables. For the general deterministic utilities with generically
+modeled attributes\footnote{With alternative-specific attributes,
+  $\beta_{m'}$ changes to $\beta_{m'i}$ but I assume the simpler case
+  for the sake of clarity.}
 \bdm
-V_{ni}=\sum_m\beta_{mi}{x_{mni}}
+V_{ni}=\sum_{m'}\beta_{m'}{x_{nm'i}}
 \edm
 \vspace{-2em}
 
@@ -790,15 +793,15 @@ we derive the
   (characteristic) $m$ of an alternative $i$ feeds back on the demand
   for this alternative:
 \maindm{\epsilon_{nii}\sup{(mic,m)}=
-\frac{x_{mni}}{P_{ni}}\ablpart{P_{ni}}{x_{mni}}
-=\beta_mx_{mni}(1-P_{ni})
+\frac{x_{nmi}}{P_{ni}}\ablpart{P_{ni}}{x_{nmi}}
+=\beta_mx_{nmi}(1-P_{ni})
 }
 \pause\item \bfdef{Cross elasticities:} The attribute
   (characteristic) $m$ of an alternative $j$ feeds back on the demand
   for another alternative $i\neq j$:
 \maindm{\epsilon_{nij}\sup{(mic,m)}=
-\frac{x_{mnj}}{P_{ni}}\ablpart{P_{ni}}{x_{mnj}}
-=-\beta_mx_{mnj}P_{nj}
+\frac{x_{nmj}}{P_{ni}}\ablpart{P_{ni}}{x_{nmj}}
+=-\beta_mx_{nmj}P_{nj}
 }
 \ei
 }
@@ -816,33 +819,33 @@ we derive the
 We start with the normal  MNL choice probability 
 $P_{ni}=e^{V_{ni}}/\sum_k e^{V_{nk}}$ and first calculate the
 sensitivities in terms of the derivatives of $V_{ni}$ with respect to
-$x_{mnj}$: 
+$x_{nmj}$: 
 \bdma
-\ablpart{P_{ni}}{x_{mnj}}
- &=& \frac{e^{V_{ni}}}{\sum_k e^{V_{nk}}}\ablpart{V_{ni}}{x_{mnj}}
+\ablpart{P_{ni}}{x_{nmj}}
+ &=& \frac{e^{V_{ni}}}{\sum_k e^{V_{nk}}}\ablpart{V_{ni}}{x_{nmj}}
   - \frac{e^{V_{ni}}}{\left(\sum_k e^{V_{nk}}\right)^2}
-    \ablpart{}{x_{mnj}}\left(\sum_l e^{V_{nl}}\right) \\
-\visible<3->{ &=& P_{ni}\ablpart{V_{ni}}{x_{mnj}}
+    \ablpart{}{x_{nmj}}\left(\sum_l e^{V_{nl}}\right) \\
+\visible<3->{ &=& P_{ni}\ablpart{V_{ni}}{x_{nmj}}
   - \sum_l \frac{e^{V_{ni}}e^{V_{nl}} }{\left(\sum_k e^{V_{nk}}\right)^2}
-    \ablpart{V_{nl}}{x_{mnj}} \\}
-\visible<4->{ &=& P_{ni}\ablpart{V_{ni}}{x_{mnj}}
-  - \sum_l P_{ni} P_{nl} \ablpart{V_{nl}}{x_{mnj}}}
+    \ablpart{V_{nl}}{x_{nmj}} \\}
+\visible<4->{ &=& P_{ni}\ablpart{V_{ni}}{x_{nmj}}
+  - \sum_l P_{ni} P_{nl} \ablpart{V_{nl}}{x_{nmj}}}
 \edma
 \visible<5->{where
 \bdm
-\ablpart{V_{ni}}{x_{mnj}}=\beta_m\delta_{ij}, \quad
-\ablpart{V_{nl}}{x_{mnj}}=\beta_m\delta_{lj}}
+\ablpart{V_{ni}}{x_{nmj}}=\beta_m\delta_{ij}, \quad
+\ablpart{V_{nl}}{x_{nmj}}=\beta_m\delta_{lj}}
 \edm
 \visible<6->{Hence
 \bdm
-\ablpart{P_{ni}}{x_{mnj}}=\beta_mP_{ni}\left(\delta_{ij}-P_{nj}\right),\quad
-\epsilon_{nij}\sup{(mic,m)}=\frac{x_{mnj}}{P_{ni}}\ablpart{P_{ni}}{x_{mnj}}
-=\beta_mx_{mnj}\left(\delta_{ij}-P_{nj}\right)
+\ablpart{P_{ni}}{x_{nmj}}=\beta_mP_{ni}\left(\delta_{ij}-P_{nj}\right),\quad
+\epsilon_{nij}\sup{(mic,m)}=\frac{x_{nmj}}{P_{ni}}\ablpart{P_{ni}}{x_{nmj}}
+=\beta_mx_{nmj}\left(\delta_{ij}-P_{nj}\right)
 \edm
 }
 \visible<7->{$j=i$: 
-$\epsilon_{nii}=\beta_mx_{mni}\left(1-P_{ni}\right)$, \quad $j\neq i$:
-$\epsilon_{nij}=-\beta_mx_{mnj}P_{nj}$}
+$\epsilon_{nii}=\beta_mx_{nmi}\left(1-P_{ni}\right)$, \quad $j\neq i$:
+$\epsilon_{nij}=-\beta_mx_{nmj}P_{nj}$}
 }}
 \ei
 }
@@ -858,9 +861,9 @@ $\epsilon_{nij}=-\beta_mx_{mnj}P_{nj}$}
 \begin{align*}
 \visible<2->{\sum_i P_{ni}\epsilon\sup{(m)}_{nij}
  &=\sum_{i\neq j} P_{ni}\epsilon\sup{(m)}_{nij}+ P_{ni}\epsilon\sup{(m)}_{nii}\\}
-\visible<3->{ &=-\sum_{i\neq j} P_{ni}\beta_mx_{mnj}P_{nj}
- + P_{ni}\beta_mx_{mni}\left(1-P_{ni}\right)\\}
-\visible<4->{ &=\beta_m \left(-\sum_i P_{ni} P_{nj} x_{mnj}+P_{ni}x_{mni}\right)=0}
+\visible<3->{ &=-\sum_{i\neq j} P_{ni}\beta_mx_{nmj}P_{nj}
+ + P_{ni}\beta_mx_{nmi}\left(1-P_{ni}\right)\\}
+\visible<4->{ &=\beta_m \left(-\sum_i P_{ni} P_{nj} x_{nmj}+P_{ni}x_{nmi}\right)=0}
 \end{align*}
 \visible<4->{(Notice $\sum_i P_{ni}=1$ in the last step!)}
 
@@ -868,8 +871,8 @@ $\epsilon_{nij}=-\beta_mx_{mnj}P_{nj}$}
   $j$ shifts the preferences. However, they must be shifted somewhere
   (completeness! no option outside of the alternative set available!),
   so the net change is zero (notice that 
-$P_{ni}\epsilon\sup{(m)}_{nij}=x_{mnj}\ablpart{P_{ni}}{x_{mnj}}$ and
-    $x_{mnj}$ is constant for the summation over $i$)}
+$P_{ni}\epsilon\sup{(m)}_{nij}=x_{nmj}\ablpart{P_{ni}}{x_{nmj}}$ and
+    $x_{nmj}$ is constant for the summation over $i$)}
 }}
 
 \ei
@@ -921,7 +924,7 @@ chosing their products is not relevant but the aggregate over all
 customers. Hence, the macroscopic elasticity
 
 \maindm{\epsilon_{ij}\sup{(mac,m)}=\frac{X_{mj}}{N_i}\ablpart{N_i}{X_{mj}},
-\quad X_{mj}=\sum_{n=1}^N x_{mnj}, \quad
+\quad X_{mj}=\sum_{n=1}^N x_{nmj}, \quad
 N_i=\sum_{n=1}^NP_{ni}
 }
 gives the percentage increase of people chosing alternative $i$ when the
@@ -930,16 +933,16 @@ alternative $j$  by one percent.
 \vspace{1ex}
 \bi
 \item[(i)] Same absolute changes for all persons,
-  $\diff{x_{mnj}}=\diff{X_{mj}}/N$:
+  $\diff{x_{nmj}}=\diff{X_{mj}}/N$:
 \bdm
 \epsilon_{ij}\sup{(mac,abs,m)}
 = \frac{X_{mj}}{N_i}\ 
-\frac{1}{N}\sum_n\frac{P_{ni}}{x_{mnj}}\epsilon_{nij}\sup{(mic,m)}
+\frac{1}{N}\sum_n\frac{P_{ni}}{x_{nmj}}\epsilon_{nij}\sup{(mic,m)}
 \edm
 \vspace{-1ex}
 
 \pause \item[(ii)] Same relatives changes for all,
-$\diff{x_{mnj}}/x_{mnj}=\diff{X_{mj}}/X_{mj}$:
+$\diff{x_{nmj}}/x_{nmj}=\diff{X_{mj}}/X_{mj}$:
 \bdm
 \epsilon_{ij}\sup{(mac,rel,m)}
 =\sum_n w_{ni}\ \epsilon_{nij}\sup{(mic,m)}, \quad

@@ -1,0 +1,63 @@
+%#############################################
+% New pdflatex format,
+% only png, jpg (or svg?) images but positioning now ok
+%#############################################
+
+\documentclass{article}
+%\documentclass[mathserif,aspectratio=1610]{beamer}
+%\documentclass[mathserif]{beamer}
+%\usepackage[size=a4,orientation=portrait]{beamerposter}
+
+%\usepackage{beamerthemeshadow}
+\input{$HOME/tex/inputs/defsSkript}  %$
+%\input{./defsSkript}  %$
+%\input{$HOME/tex/inputs/styleBeamerLatex}   %$
+%\input{$HOME/tex/inputs/styleBeamerPdflatex}   %$
+%\input{$HOME/tex/inputs/styleBeamerVkoekMa}   %$
+
+\oddsidemargin0em
+\textwidth180mm
+\textheight255mm
+\usepackage{graphicx}
+
+
+%##############################################################
+
+\begin{document}
+
+
+
+%##############################################################
+\centering{\myHugeheading{Survey in the Audience II, WS 2023/24}}
+%##############################################################
+
+\vspace{1em}
+
+\begin{center}
+{\huge
+\begin{tabular}{|c|c|c|c||r|r|r|r|}
+\hline 
+  \myBox{3em}{Alt. 1:\\Pe\-des\-tri\-an} &
+  \myBox{3em}{Alt. 2:\\Bike} &
+  \myBox{3em}{Alt. 3:\\ Public transport} &
+  \myBox{3em}{Alt. 4:\\ Car} &
+  \#1 & \#2 & \#3 & \#4 \\ \hline\hline
+30\,min & 30\,min & 30\,min+0\euro{} & 30\,min+0\euro{}
+   &  4 &  5 & 19 &  9 \\[0.5em] \hline
+15\,min & 15\,min & 30\,min+0\euro{} & 30\,min+0\euro{}
+   &  8 & 11 & 10 &  8 \\[0.5em] \hline
+20\,min & 20\,min & 20\,min+0\euro{} & 20\,min+2\euro{}
+   &  4 &  8 & 23 &  5 \\[0.5em] \hline
+60\,min & 60\,min & 60\,min+0\euro{} & 60\,min+2\euro{}
+   &  0 &  2 & 26 &  8 \\[0.5em] \hline
+20\,min & 15\,min & 20\,min+2\euro{} & 20\,min+0\euro{}
+   &  2 &  8 &  2 & 19 \\[0.5em] \hline
+30\,min & 10\,min & 10\,min+2\euro{} & 10\,min+2\euro{}
+   &  0 & 27 &  2 &  9 \\[0.5em] \hline
+\end{tabular}
+}
+\end{center}
+
+
+\end{document}
+
