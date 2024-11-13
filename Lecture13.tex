@@ -128,10 +128,11 @@ Gasoline and Diesel vehicles are two examples of \bfdef{internal
   emission-neutral recycling contribution),
 \item $\tily_2=\unit[60]{kg}$ aluminum (\unit[100]{kg} production,
   \unit[40]{\%} of it can be recycled without additional emissions)
-\item $\tily_3=\unit[100]{kg}$ plastic
-\item $\tily_4=\unit[50]{kg}$ rubber
+\item $\tily_3=\unit[100]{kg}$ plastic (\unit[40]{\%} of which 
+      can be recycled)
+\item $\tily_4=\unit[80]{kg}$ rubber  (\unit[25]{\%} of which can be recycled)
 \item $\tily_5=\unit[36]{kg}$ lead (three starter batteries \`a \unit[12]{kg})
-\item $\tily_6=\unit[15\,000]{l}$ gazoline (\unit[250\,000]{km} at
+\item $\tily_6=\unit[15\,000]{l}$ gasoline (\unit[250\,000]{km} at
   \unit[6]{l/\unit[100]{km}} during
   lifetime)
 \ei
@@ -203,7 +204,8 @@ etc is comparable to that of the ICVs.\\[1ex]
 }
 \vspace{1em}
 
-\pause \item This leads to the new \COii\ emission factors vector
+\pause \item The last changed repository items lead to a
+ new \COii\ emission factors vector
 \maindm{
 \vec{C}\sub{\COii}=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[0.45]{kg/kWh}).
 }
@@ -211,11 +213,11 @@ etc is comparable to that of the ICVs.\\[1ex]
 
 \bi
 \item The Li driving batteries are expensive to produce and there is
-  much controversy in extimating their overall emission factor
+  much controversy in estimating their overall emission factor
   $C_{15}$\\[1ex]
-\pause \item The enery emission factor is based, e.g., on the present (2019)
-  German energy mix emitting \unit[450]{g} \COii\ per kWh of electrical
-  energy at the socket 
+\pause \item The energy emission factor is based, e.g., on the present (2023)
+  German energy mix emitting \unit[400]{g} \COii\ per kWh of electrical
+  energy at the socket %450 g/kWh as of 2019
 \ei
 
 \ei
@@ -233,11 +235,11 @@ etc is comparable to that of the ICVs.\\[1ex]
     considering the driving phase alone}?}\\[1ex]
 
 \pause \itemAnswer \colAnswer{Per \unit[100]{km}, the BEV indirectly emits
-\unit[20]{kWh} * \unit[0.45]{kg/kWh}=\unit[9]{kg}. The ICV vehicle
+\unit[20]{kWh} * \unit[0.4]{kg/kWh}=\unit[8]{kg}. The ICV vehicle
 emits directly and indirectly
-\unit[6]{l} * \unit[2.7]{kg/l}=\unit[16.2]{kg}. So, the BEV ``wins''
-when considering the direct and indirect emissions in the driving
-phase alone. 
+\unit[6]{l} * \unit[2.7]{kg/l}=\unit[16.2]{kg}. So, the BEV \COii
+emissions per kilometer are about half that of the ICE
+(internal combustion engine, gasoline) vehicle. 
 \\[1ex]
 However, the BEV production emissions are significantly
 higher. Furthermore, less than ideal efficiencies when
@@ -274,10 +276,10 @@ C^0\sub{BEV}+C'\sub{BEV}x_c= C^0\sub{ICV}+C'\sub{ICVV}x_c
 \bi
 \item[(i)] \colAnswer{The energy mix of the used electricity
   (this is tricky! particularly, you cannot save your soul by paying
-  indulgences/ordering ``green'' electricity)}
+  indulgences [ger: \emph{Ablassbriefe}] /ordering ``green'' electricity)}
 \pause \item[(ii)] \colAnswer{The production and disposal/recycling emissions of the
   battery and whether you need more than one battery during lifetime
-  (to research this is even more trickky).}
+  (to research this is even more tricky).}
 \ei
 }
 
@@ -295,9 +297,10 @@ C^0\sub{BEV}+C'\sub{BEV}x_c= C^0\sub{ICV}+C'\sub{ICVV}x_c
 \item[(i)] \colAnswer{Get information about the usable lifetime $\tau$,}
 \pause \item[(ii)] \colAnswer{Check the climate where you want 
 to install your PV and
-  determine the average power (in Germany, it is about \unit[10]{\%} of the
+  determine the average power (in Germany, this so-called
+  \emph{availability} is about \unit[12]{\%} of the
   installed power $P\sub{max}$) and calculate the total electric
-  energy delivered, e.g., $W\sub{el}=0.1\, \tau P\sub{max} $ }
+  energy delivered, e.g., $W\sub{el}=0.12\, \tau P\sub{max} $ }
 \pause \item[(iii)] \colAnswer{Get the production and recycling 
 emissions $C$ of your PV including 
  the connection to the electric grid and calculate the

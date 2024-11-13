@@ -87,7 +87,7 @@ this problem by
 \pause \item The whole system is in the \bfdef{steady state}, e.g., there are no
   temporal changes (constant supply and demand); storage (if
   applicable)  is
-  neither built up nor depleted.
+  neither accumulated nor depleted.
 \ei
 \ei
 }
@@ -123,7 +123,7 @@ the steady state:
   supply $y_j$ to the end consumer\\[1ex]
 \pause \item $A_{ij}=x_{ij}/x_j$: \bfdef{IO coefficient}
   reflecting linearity: In order to
-  produce one unit, sector $j$ needs $A_{ij}$ units from all the other
+  produce one unit, sector $j$ needs $A_{ij}$ units from the other
   sectors $i$, including the own.
 \ei
 
@@ -167,8 +167,9 @@ IOM equation in vector-matrix notation:
 
 \bi
 \item $B_{ij}$ denotes the needed total production from sector $i$ in
-  order to deliver one unit of $j$ to the end consumer (or the not
-  considered sectors) in the steady state\\[1em]
+  order to keep the whole system in the steady state and deliver one
+  unit of $j$ to the end consumer (or the not 
+  considered sectors)\\[1em]
 \pause \item $\m{B}$ includes all indirect effect \emph{in an infinite
   recursion} as can be seen from the Taylor expansion:
 \ei
@@ -243,7 +244,8 @@ must deliver more units to operate itself ($A_{ii}x_i$) and the
 \pause\itemAsk \colAsk{Give reasons why all $A_{ij}$ and $B_{ij}$ are $\ge 0$ and
   $B_{ii}\ge 1$.}
 \pause\itemAnswer\colAnswer{Since sectors \emph{need} products and
-services from other sectors. }
+services from other sectors and generally not all production is
+delivered to the end consumer but needed to maintain the steady state. }
 
 \pause\itemAsk \colAsk{Assume that the external demand $y_k$ for
   products/services of 

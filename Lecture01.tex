@@ -163,15 +163,21 @@ Y_k=f_k(\tilx_1, ..., \tilx_m, ..,\tilx_M, \beta_0, ..., \beta_j, ..., \beta_J)
 
 \pause
 \bi
-\item A model consists of one or more equations $Y_k=f_k(\tilvecx,
+\item The above formulation is the most general one and
+includes \emph{all} conceivable econometric models. \\[0.5em]
+
+\pause\item A model consists of one or more equations $Y_k=f_k(\tilvecx,
   \vec{\beta}) + \epsilon_k$ explaining the output quantity $Y_k$ as a
-  function of the input $\tilvecx$
-\pause \item to \emph{tune} the model, there are \bfdef{model parameters}
-  $\vec{\beta}$
-\pause \item a model can be stochastic ($\epsilon_k \neq 0$) or deterministic
-  ($\epsilon_k = 0$)
-\pause \item the above formulation is the most general one and
-includes \emph{all} conceivable econometric models. 
+  function of the input $\tilvecx$ \\[0.5em]
+\pause \item While the model equation define the \emph{qualitative structure} of
+the relations to be described, the \bfdef{model parameters} $\vecbeta$
+serve to \emph{quantitatively tune} the model output. \\[0.5em]
+\pause \item In a newer \emph{machine-learning} development, a purely
+data-driven 
+simultaneous estimation of the model structure and its parameters has
+been proposed, called \bfdef{symbolic regression}.\\[0.5em]
+\pause \item A model can be stochastic ($\epsilon_k \neq 0$) or deterministic
+  ($\epsilon_k = 0$).
 \ei
 }
 

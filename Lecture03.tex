@@ -178,7 +178,7 @@ of squared Gaussians as follows (derivation for the experts):
  &=\left(\hat{\vec{y}}-\vec{y}\right)\tr\left(\hat{\vec{y}}-\vec{y}\right)\\
  &=(\m{X}\hatvecbeta-\vec{y})\tr(\m{X}\hatvecbeta-\vec{y})\\
  &=(\m{X}\hatvecbeta)\tr(\m{X}\hatvecbeta)
- - (\m{X}\vecbeta)\tr\vec{y}-\vec{y}\tr(\m{X}\vecbeta)
+ - (\m{X}\hatvecbeta)\tr\vec{y}-\vec{y}\tr(\m{X}\hatvecbeta)
  + \vec{y}\tr\vec{y}
 \end{align*}
 With following rule for scalar products:
@@ -197,29 +197,39 @@ two middle terms resulting in
 \frame{\frametitle{Estimation of the residual variance (ctned)}
 %###################################################
 
-Finally, we replace the observed endogeneous data vector $\vec{y}$ by
-the model $\vec{y}=\m{X}\vecbeta+\veceps$ {\scriptsize \red{Notice: the
-    true and, 
-  according to the Gau\3-Markow assumptions, immutable 
-  parameter vector $\vecbeta$ is used here!}}:
+Replace the observed endogeneous data vector $\vec{y}$ by
+the model $\vec{y}=\m{X}\vecbeta+\veceps$ {\scriptsize \red{Notice:
+    $\vecbeta$ is the
+    true and immutable 
+  parameter vector $\vecbeta$ }}:
 
+{\small
 \begin{align*}
 (n-J-1)\hatsig^2
 &= (\m{X}\vecbeta+\veceps)\tr
  \left(\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr\right)(\m{X}\vecbeta+\veceps)\\
 &= \veceps\tr (\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\veceps\\
-& \ \ + 2(\m{X}\vecbeta)\tr(\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\veceps
- + \vecbeta\tr\m{X}\tr(\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\m{X}\vecbeta
+& + 2(\m{X}\vecbeta)\tr(\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\veceps\\
+& + \vecbeta\tr\m{X}\tr(\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\m{X}\vecbeta
 \end{align*}
-After doing the simplification, we realize that the second and third
-term are each equal to zero, so we have the final result
+
+After doing some simplifications, we realize that the second and third
+term are each equal to zero, so
 \bdm
 (n-J-1)\hatsig^2
-=\veceps\tr (\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\veceps
+=\veceps\tr (\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\veceps.
 \edm
-With the Gau\3-Markow-assumptions, this is proportional to a sum of
-$(n-J-1)$ squared Gaussians, i.e., a $\chi^2(n-J-1)$ distributed
-random variable
+With the Gau\3-Markow-assumptions, we have 
+% could not derive this!!
+\bdm
+(n-J-1)\hatsig^2
+=\sigma^2 \sum_{i=1}^{n-J-1}Z_i^2 \sim \chi^2(n-1-J)
+\edm
+where $Z_i\sim \text{i.i.d. } N(0,1)$ are standard Gaussians and the
+sum of i.i.d. such Gaussians defines the $\chi^2$ distribution with
+$n-J-1$ degrees of freedom (df)
+}  %small
+
 }
 
 
@@ -234,12 +244,25 @@ random variable
 \maindm{\hat{\m{V}}_{\hatvecbeta}= 2\hatsig^2 \m{H}^{-1}
 =\hatsig^2 \left(\m{X}\tr\m{X}\right)^{-1}
 }
-\vspace{2em}
+\vspace{1em}
 
-\pause \item The normalized 
-approximate estimation errors are student-t distributed (a Gaussian in
-the numerator and the square root of a $\chi^2$ distributed random
-variable in the denominator):
+\pause \item \emph{Normalized} 
+estimation errors for unknown variance:
+{\small
+\begin{align*}
+\frac{\hatbeta_j-\beta_j}{\sqrt{\hat{V}_{jj}}} 
+ &= \frac{\hatbeta_j-\beta_j}{\sqrt{V_{jj}}} \, \frac{\sigma}{\hatsig}
+ = Z \frac{\sigma}{\hatsig}\\
+ &= Z \sqrt{\frac{\sigma^2}{\hatsig^2}} 
+ = \frac{Z}{\sqrt{\frac{\sum_{i=1}^{n-J-1}Z_i^2}{n-1-J}}}
+\end{align*}
+}
+A random variable with a standard Gaussian in the numerator and, in
+the denominator, the
+square root of a $\chi^2$ distributed random variable with df degrees
+of freedom divided by df, defines a \bfdef{student-t distribution} with
+df degrees of freedom:
+
 \maindm{
 \frac{\hatbeta_j-\beta_j}{\sqrt{\hat{V}_{jj}}} \sim T(n-1-J)
 }
