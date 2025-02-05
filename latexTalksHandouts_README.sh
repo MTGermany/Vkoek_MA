@@ -1,2 +1,2 @@
 relevantes Skript in ~/scripts/ 
-latexTalksHandouts.sh
+latexTalksHandouts.sh *.tex

@@ -56,8 +56,7 @@
 \subsection{4.1 General Four-Step Procedure}
 
 %###################################################
-\frame{\frametitle{4. Significance Tests\\
-4.1 General Four-Step Procedure}
+\frame{\frametitle{4.1 General Four-Step Procedure}
 %###################################################
 %}\end{document}
 %\benum
@@ -70,6 +69,7 @@
 %\eenum
 %\eenum
 %}\end{document}
+{\small
 \benum
 \item Formulate a \bfdef{null hypothesis $H_0$} such that their rejection
   gives insight, e.g. $\beta_j=\beta_{j0}$ (point hypothesis) or
@@ -90,18 +90,19 @@ null hypothesis)
 \pause \item which has distinct \bfdef{rejection regions $R(\alpha)$} which
   are reached rarely 
   (with a probability $\le \alpha$) if $H_0$ but more often if
-  $H_1=\overline{H_0}$ 
+  $H_1=\overline{H_0}$ (giving statistical insight)
 \ei
 
 \pause \item Evaluate a realisation $t\sub{data}$ of $T$ from the data
 
-\pause \item Check if $t\sub{data} \in R(\alpha)$. If yes, $H_0$ can be
+\pause \item Check if $t\sub{data} \in R(\alpha)$. If so, $H_0$ can be
   rejected at an error probability or \bfdef{significance level
-  $\alpha$}. Otherwise, \emph{nothing can be said} \colAsk{(mask
-    example with $H_0$: ``mask useless'')}.
+  $\alpha$}. Otherwise, \emph{nothing can be said} \colAsk{(for
+    example $H_0$: ``this medicament has no effect'')}.
 \pause \item[4a] Alternatively, calculate the \bfdef{$p$-value} as
 the minimum $\alpha$ at which $H_0$ can be rejected.
 \eenum
+}
 }
 
 %###################################################
@@ -122,8 +123,8 @@ Type I and II errors}
  \figSimple{0.59\textwidth}{figsRegr/fehlerErsterZweiterArt4_eng.png}}}
 
 \placebox{0.5}{0.25}{\parbox{\textwidth}{
-{\small
 \bi
+{\small
 \visible<1->{\item A significance test reduces reality to a ``binary
   in-binary out'' setting.}
 \visible<2->{There are two combinations corresponding to a
@@ -133,15 +134,16 @@ Type I and II errors}
   $P(\text{$H_0$ rejected}|H_0) \le \alpha$ in \bfdef{significance tests}}
 \visible<4->{\item Since the \bfdef{type II or $\beta$-error} probability 
   $P(\text{$H_0$ not rejected}|\overline{H_0})$ is unknown, the more serious
-error type should be the $\alpha$ error}
+error type should be the $\alpha$ error {\small{\colAsk{bridges!}}}}
+}
 \visible<5->{\item \maintextbox{0.85\textwidth}{Fundamental problem: I want $P(H_0|\text{rejected})$ and
 $P(H_0|\overline{\text{rejected}})$ while I get control over 
 $P(\text{rejected}|H_0)\le P(\text{rejected}|H_0^*)$  $\Rightarrow$
 \bfdef{Bayesian statistics}} }
 \ei
-}}}
-
 }
+
+}}
 
 
 \subsubsection{4.1.2 Test statistics}
@@ -157,7 +159,7 @@ $P(\text{rejected}|H_0)\le P(\text{rejected}|H_0^*)$  $\Rightarrow$
   The test
   function is the estimated deviation from $H_0^*$ in
   units of the estimated error standard deviation. It is
-  \bfdef{student-t} distributed with \#dataPoints- \#parameters
+  \bfdef{student-t} distributed with \#dataPoints $-$ \#parameters
   \bfdef{degrees of 
   freedom (df)}:  
 \bdm 
@@ -212,7 +214,7 @@ T=\frac{\hatsig^2}{\sigma_0^2} \ (n-1-J) \sim \chi^2(n-1-J)
 \edm
 The one-parameter \bfdef{chi-squared distribution with $\bfmath{m}$ degrees of
   freedom} $\chi^2(m)=\sum_{i=1}^mZ_i^2$ is the
-sum of squares of i.i.d. Gaussians. \emph{Its density is not symmetric,
+sum of squares of i.i.d. standard Gaussians. \emph{Its density is not symmetric,
   so we need to calculate both the $\alpha$ and $1-\alpha$ quantiles} 
 
 \ei
@@ -244,7 +246,7 @@ F(n,d)=\frac{\chi_n^2/n}{\chi_d^2/d},
 \edm
 with $n$ numerator and $d$ denominator degrees of freedom
 
-\pause \itemAsk  Argue that always $S_0\ge S$ 
+\pause \itemAsk  \colAsk{Argue that always $S_0\ge S$} 
 
 \ei
 }
@@ -253,7 +255,8 @@ with $n$ numerator and $d$ denominator degrees of freedom
 
 
 %###################################################
-\frame{\frametitle{Equivalence of the F and T-tests for one parameter}
+\frame{\frametitle{\small{Equivalence of the F and T-tests for one
+      parameter (experts)}}
 %###################################################
 \vspace{1em}
 
@@ -516,7 +519,7 @@ $\alpha$ for rejection (notice the \emph{statistical
   reliability-sensitivity uncertainty 
   relation)}  or the \bfdef{$p$-value}. 
 \pause \item The most general definition is:
-\maindm{p=\text{Prob}(T\in E\sub{data}|H_0^*))} 
+\maindm{p=\text{prob}(T\in E\sub{data}|H_0^*)} 
 where the \emph{extreme region} $E\sub{data}$ contains all
 realisations of $T$ that are
 further away from $H_0$ than $t\sub{data}$. Hence, $t\sub{data}$ lies
@@ -658,13 +661,13 @@ values take on other values?
     function}: 
 \maindm{\pi_{\alpha}(\beta)=\text{Pr}(\text{test rejected at error
     probability $\alpha$} | \beta)}
-\pause\item If $\beta\notin H_0$, then $\pi(\beta)$ indicates the
+\pause\item If $\beta\notin H_0$, then $\pi_{\alpha}(\beta)$ indicates the
   \bfdef{statistical power} or \bfdef{specificity} of a test and 
- $1-\pi(\beta)$ its probability for a type-II error
-\pause\item If $\beta\in H_0$, then $\pi(\beta)$ is the type-I ($\alpha$)
-  error and $1-\pi(\beta)$ the \bfdef{sensitivity} of a test
+ $1-\pi_{\alpha}(\beta)$ its probability for a type-II error
+\pause\item If $\beta\in H_0$, then $\pi_{\alpha}(\beta)$ is the type-I ($\alpha$)
+  error and $1-\pi_{\alpha}(\beta)$ the \bfdef{sensitivity} of a test
 \pause\item Sensitivity and specificity depend on the assumed error
-probability $\alpha$. By definition, $\pi(\beta_0)=\alpha$ if
+probability $\alpha$. By definition, $\pi_{\alpha}(\beta_0)=\alpha$ if
 $\beta_0\in  H_0^*$
 \ei
 }
@@ -1064,7 +1067,7 @@ $\hat{y}^*(x_1)=\beta_0  + \beta_1 x_1 $
 
 \fig{0.7\textwidth}{figsRegr/revealedChoiceWS1516cum_2al_4dataPoints_fProb_r.png}
 \bi
-\item Model: Logit, $V_i(x_1)=\beta_0 \delta_{i1} + \beta_1 x_1 \delta_{i1}$, 
+\item Model: Logit, $V_1(x_1)=\beta_0 + \beta_1 x_1$, 
 $V_2=0$.
 \item Estimation: $\beta_0=-0.50\pm 0.65, \ \beta_1=+0.71\pm 0.30$
 \ei

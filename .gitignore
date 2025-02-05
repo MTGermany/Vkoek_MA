@@ -61,4 +61,7 @@ epsfiles
 uml_savedFiles
 
 
-## Auxiliary and intermediate files from other packages:
+## Auxiliary and intermediate files 
+
+err
+log

@@ -165,7 +165,7 @@ with the row vector
 \vspace{-1ex}
 
 \maindm{
-\vec{C}\sub{\COii}=(C_{1j})=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[2.7]{kg/l}).
+\vec{C}'\sub{\COii}=(C_{1j})=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[2.7]{kg/l}).
 }
 The last emission factor $C_{16}=C_{16}\sup{w2t}+C_{16}\sup{t2w}$ is
 the sum of two contributions: 
@@ -191,8 +191,10 @@ emissions of gasoline are about the t2w emissions when burning Diesel).
 {\normalsize
 \bi
 \item The \bfdef{Life-cycle inventory} of steel, aluminum, rubber, plastic
-etc is comparable to that of the ICVs.\\[1ex] 
-\pause \item The starter batteries are replaced by the Lithium driving
+etc is comparable to that of the ICE vehicles, including the (smaller,
+\unit[8]{kg} instead of \unit[12]{kg})
+lead starter batteries.\\[1ex] 
+\pause \item Additionally, a BEV has Lithium driving
   batteries (2$\times$ \unit[300]{kg}) and the 
   gasoline is replaced 
   by the needed electrical energy, typically \unit[20]{kWh} per
@@ -200,14 +202,14 @@ etc is comparable to that of the ICVs.\\[1ex]
 
 \maindm{
 \vec{\tily}=(\unit[800]{kg},\ \unit[60]{kg},\ \unit[60]{kg},\
-\unit[60]{kg},\ \unit[600]{kg},\ \unit[50\,000]{kWh})\tr.
+\unit[60]{kg},\ \unit[24]{kg},\ \unit[600]{kg},\ \unit[50\,000]{kWh})\tr.
 }
 \vspace{1em}
 
-\pause \item The last changed repository items lead to a
- new \COii\ emission factors vector
+\pause \item The changed inventory items items lead to a
+ new \COii\ emission factors row vector
 \maindm{
-\vec{C}\sub{\COii}=(4,\ 30,\ 2,\ 2,\ 20,\ \unit[0.45]{kg/kWh}).
+\vec{C}'\sub{\COii}=(4,\ 30,\ 2,\ 2,\ 20,\ 20,\ \unit[0.38]{kg/kWh}).
 }
 \vspace{1em}
 
@@ -215,8 +217,8 @@ etc is comparable to that of the ICVs.\\[1ex]
 \item The Li driving batteries are expensive to produce and there is
   much controversy in estimating their overall emission factor
   $C_{15}$\\[1ex]
-\pause \item The energy emission factor is based, e.g., on the present (2023)
-  German energy mix emitting \unit[400]{g} \COii\ per kWh of electrical
+\pause \item The energy emission factor is based on the latest (2023)
+  German energy mix emitting \unit[380]{g} \COii\ per kWh of electrical
   energy at the socket %450 g/kWh as of 2019
 \ei
 
@@ -235,15 +237,16 @@ etc is comparable to that of the ICVs.\\[1ex]
     considering the driving phase alone}?}\\[1ex]
 
 \pause \itemAnswer \colAnswer{Per \unit[100]{km}, the BEV indirectly emits
-\unit[20]{kWh} * \unit[0.4]{kg/kWh}=\unit[8]{kg}. The ICV vehicle
+\unit[20]{kWh} * \unit[0.38]{kg/kWh}=\unit[7.6]{kg}. The ICV vehicle
 emits directly and indirectly
 \unit[6]{l} * \unit[2.7]{kg/l}=\unit[16.2]{kg}. So, the BEV \COii
-emissions per kilometer are about half that of the ICE
+emissions per kilometer are somewhat less than half that of the ICE
 (internal combustion engine, gasoline) vehicle. 
 \\[1ex]
 However, the BEV production emissions are significantly
 higher. Furthermore, less than ideal efficiencies when
-charging/discharging have not been considered.}\\[1em]
+charging/discharging (total efficiency $\approx \unit[80]{\%}$) have
+not been considered.}\\[1em] 
 
 \pause \itemAsk \colAsk{How would you proceed to calculate the
   \emph{break-even} mileage beyond which a BEV is more environmentally
@@ -253,8 +256,9 @@ charging/discharging have not been considered.}\\[1em]
   per kilometer $x$ for the ICV are higher compared to the BEV. In
   contrast, it is the other way round for the \emph{fixed} emissions
   $C^0$ due to 
-  production/disposal/recycling.
-So, just calculate the break-even kilometrage $x_c$ by the equation
+  production/disposal/recycling. So, we have a positive break-even
+  kilometrage obtained by solving for $x$ the
+break-even condition
 \bdm
 C^0\sub{BEV}+C'\sub{BEV}x_c= C^0\sub{ICV}+C'\sub{ICVV}x_c
 \edm
@@ -269,7 +273,7 @@ C^0\sub{BEV}+C'\sub{BEV}x_c= C^0\sub{ICV}+C'\sub{ICVV}x_c
 \bi
 
 
-\itemAsk \colAsk{Give the two most important factors influencing the total LCA
+\itemAsk \colAsk{Give the two most important external factors influencing the total LCA
   emissions of battery-electric vehicles.}
 
 \pause \colAnswer{
@@ -302,7 +306,7 @@ to install your PV and
   installed power $P\sub{max}$) and calculate the total electric
   energy delivered, e.g., $W\sub{el}=0.12\, \tau P\sub{max} $ }
 \pause \item[(iii)] \colAnswer{Get the production and recycling 
-emissions $C$ of your PV including 
+emissions $C$ of your PV with an indicated power $P\sub{max}$ including 
  the connection to the electric grid and calculate the
  \COii\ footprint $e\sub{PV}=C/W\sub{el}$ [kg/kWh].}
 \ei

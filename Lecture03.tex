@@ -220,7 +220,13 @@ term are each equal to zero, so
 =\veceps\tr (\m{1}-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}\tr)\veceps.
 \edm
 With the Gau\3-Markow-assumptions, we have 
-% could not derive this!!
+% can derive E(\hatsig^2) =\sigma^2 for df=1,2 by direct insertion
+% with E(\veceps\tr \m{M} \veceps)=\sigma^2\sum_i M_{ii} 
+% (df=2: n from $\m{1}$ and $-2$ from
+% $-\m{X}(\m{X}\tr\m{X})^{-1}\m{X}$)
+% but the M_{ii} are not identical, so, on the level of distributions, 
+% it does not work. But all contributions are at least positive. 
+% Approximation?
 \bdm
 (n-J-1)\hatsig^2
 =\sigma^2 \sum_{i=1}^{n-J-1}Z_i^2 \sim \chi^2(n-1-J)
